@@ -63,6 +63,7 @@
             this.pnlRender.Size = new System.Drawing.Size(600, 456);
             this.pnlRender.TabIndex = 0;
             this.pnlRender.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRender_Paint);
+            this.pnlRender.MouseLeave += new System.EventHandler(this.pnlRender_MouseLeave);
             this.pnlRender.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlRender_MouseMove);
             // 
             // Mori4MapEditor

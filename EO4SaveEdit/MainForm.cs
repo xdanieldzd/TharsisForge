@@ -65,6 +65,7 @@ namespace EO4SaveEdit
                     {
                         case "MOR4OPTI": dataFiles.Add(new Mori4Option(reader)); break;
                         case "MOR4MAPA": dataFiles.Add(new Mori4Map(reader)); break;
+                        case "MOR4GAME": dataFiles.Add(new Mori4Game(reader)); break;
                     }
                 }
             }

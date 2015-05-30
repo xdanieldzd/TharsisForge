@@ -195,5 +195,10 @@ namespace EO4SaveEdit.FileHandlers
                 mapData.FileHeader.Signature = fhd.Header.Signature;
             }
         }
+
+        private void pnlRender_MouseLeave(object sender, EventArgs e)
+        {
+            if (tip != null) tip.Hide((sender as PanelEx));
+        }
     }
 }
