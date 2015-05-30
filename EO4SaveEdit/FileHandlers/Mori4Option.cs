@@ -8,6 +8,8 @@ namespace EO4SaveEdit.FileHandlers
 {
     public class Mori4Option : BaseMori4File
     {
+        public const string ExpectedFileSignature = "MOR4OPTI";
+
         public string Signature { get; set; }
         public byte Option1 { get; set; }
         public byte Option2 { get; set; }

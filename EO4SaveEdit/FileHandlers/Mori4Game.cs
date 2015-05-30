@@ -83,7 +83,7 @@ namespace EO4SaveEdit.FileHandlers
         public byte Unknown1 { get; set; }
         public PortraitType Portrait { get; set; }
         public byte ID { get; set; }
-        public byte UnknownStatus { get; set; }
+        public byte Level { get; set; }
         public Class Class { get; set; }
         public Class Subclass { get; set; }
         public ushort Unknown2 { get; set; }
@@ -106,11 +106,11 @@ namespace EO4SaveEdit.FileHandlers
         public ushort CurrentTP { get; set; }
         public uint CurrentEXP { get; set; }
         public string Name { get; set; }
+        public ushort Unknown8 { get; set; }
         public ushort UnknownTotalSkillPoints { get; set; }
         public byte[] MainSkillLevels { get; set; }
         public byte[] SubSkillLevels { get; set; }
-        public byte Unknown8 { get; set; }
-        public byte Unknown9 { get; set; }
+        public ushort Unknown9 { get; set; }
         public byte Unknown10 { get; set; }
         public byte Unknown11 { get; set; }
         public byte Unknown12 { get; set; }
@@ -126,9 +126,11 @@ namespace EO4SaveEdit.FileHandlers
         public byte Unknown22 { get; set; }
         public byte Unknown23 { get; set; }
         public byte Unknown24 { get; set; }
+        public byte Unknown25 { get; set; }
+        public byte Unknown26 { get; set; }
         public byte DuplicateID { get; set; }
         public byte PartySlot { get; set; }
-        public byte Unknown25 { get; set; }
+        public byte Unknown27 { get; set; }
         public string OriginGuildName { get; set; }
         // ...
         // ...
@@ -138,7 +140,7 @@ namespace EO4SaveEdit.FileHandlers
             Unknown1 = reader.ReadByte();
             Portrait = (PortraitType)reader.ReadByte();
             ID = reader.ReadByte();
-            UnknownStatus = reader.ReadByte();
+            Level = reader.ReadByte();
             Class = (Class)reader.ReadByte();
             Subclass = (Class)reader.ReadByte();
             Unknown2 = reader.ReadUInt16();
@@ -160,12 +162,12 @@ namespace EO4SaveEdit.FileHandlers
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
             CurrentEXP = reader.ReadUInt32();
-            Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(20)).TrimEnd('\0').SjisToAscii();
+            Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
+            Unknown8 = reader.ReadUInt16();
             UnknownTotalSkillPoints = reader.ReadUInt16();
-            MainSkillLevels = reader.ReadBytes(26);
-            SubSkillLevels = reader.ReadBytes(26);
-            Unknown8 = reader.ReadByte();
-            Unknown9 = reader.ReadByte();
+            MainSkillLevels = reader.ReadBytes(25);
+            SubSkillLevels = reader.ReadBytes(25);
+            Unknown9 = reader.ReadUInt16();
             Unknown10 = reader.ReadByte();
             Unknown11 = reader.ReadByte();
             Unknown12 = reader.ReadByte();
@@ -181,9 +183,11 @@ namespace EO4SaveEdit.FileHandlers
             Unknown22 = reader.ReadByte();
             Unknown23 = reader.ReadByte();
             Unknown24 = reader.ReadByte();
+            Unknown25 = reader.ReadByte();
+            Unknown26 = reader.ReadByte();
             DuplicateID = reader.ReadByte();
             PartySlot = reader.ReadByte();
-            Unknown25 = reader.ReadByte();
+            Unknown27 = reader.ReadByte();
             OriginGuildName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
             //...
             reader.BaseStream.Seek(0x30, SeekOrigin.Current);   //temp
@@ -194,6 +198,8 @@ namespace EO4SaveEdit.FileHandlers
 
     public class Mori4Game : BaseMori4File
     {
+        public const string ExpectedFileSignature = "MOR4GAME";
+
         public string SignatureGAME { get; set; }
 
         public string SignaturePRTY { get; set; }

@@ -71,7 +71,7 @@ namespace EO4SaveEdit.FileHandlers
         ResourceTake = 0x0A,
         ResourceCut = 0x0B,
         ResourceMine = 0x0C,
-        Airship = 0x0D,
+        Skyship = 0x0D,
         PassageNorth = 0x0E,
         PassageSouth = 0x0F,
         PassageNorthSouth = 0x10,
@@ -142,6 +142,8 @@ namespace EO4SaveEdit.FileHandlers
 
     public class Mori4Map : BaseMori4File
     {
+        public const string ExpectedFileSignature = "MOR4MAPA";
+
         public string Signature { get; set; }
 
         public MapLayer[] MazeMaps { get; set; }

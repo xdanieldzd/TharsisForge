@@ -58,9 +58,10 @@ namespace EO4SaveEdit
 
                     switch (signature)
                     {
-                        case "MOR4OPTI": dataFiles.Add(new Mori4Option(reader)); break;
-                        case "MOR4MAPA": dataFiles.Add(new Mori4Map(reader)); break;
-                        case "MOR4GAME": dataFiles.Add(new Mori4Game(reader)); break;
+                        case Mori4Option.ExpectedFileSignature: dataFiles.Add(new Mori4Option(reader)); break;
+                        case Mori4Map.ExpectedFileSignature: dataFiles.Add(new Mori4Map(reader)); break;
+                        case Mori4Game.ExpectedFileSignature: dataFiles.Add(new Mori4Game(reader)); break;
+                        case Mori4GdCard.ExpectedFileSignature: dataFiles.Add(new Mori4GdCard(reader)); break;
                     }
                 }
             }

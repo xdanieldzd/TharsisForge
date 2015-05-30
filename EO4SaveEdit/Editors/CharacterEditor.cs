@@ -118,6 +118,7 @@ namespace EO4SaveEdit.Editors
             currentCharacter = character;
 
             nudCharaID.Value = currentCharacter.ID;
+            nudLevel.Value = currentCharacter.Level;
             txtName.Text = currentCharacter.Name;
             cmbClass.SelectedItem = currentCharacter.Class;
             cmbSubclass.SelectedItem = currentCharacter.Subclass;
