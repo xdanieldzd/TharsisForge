@@ -21,17 +21,12 @@ namespace EO4SaveEdit
         {
             InitializeComponent();
 
-            /*
-            //LoadSaveData(baseFolder = @"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150528024805\00000ea6"); //older
-            LoadSaveData(baseFolder = @"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150529080428\00000ea6"); //last save ca 29.05.2015 08:01:xx
+            LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150529080428\00000ea6");
 
-            StringBuilder builder = new StringBuilder();
-
-            builder.AppendLine("Loaded files...\n");
-            foreach (BaseMori4File file in dataFiles) builder.AppendFormat("{0}: '{1}', last modified {2}\n", Path.GetFileName(file.Filename), file.FileHeader.Signature, file.FileHeader.LastSavedTime.DateTime);
-
-            //MessageBox.Show(builder.ToString(), "File Info Test", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            */
+            /*RomFSDataDumper.DumpItemData(
+                @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\equipitemnametable.tbl",
+                @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\equipitemtable.tbl",
+                @"C:\Temp\equipitemnametable.xml");*/
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

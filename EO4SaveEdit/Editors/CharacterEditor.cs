@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 using EO4SaveEdit.FileHandlers;
 
@@ -17,6 +18,7 @@ namespace EO4SaveEdit.Editors
         Character currentCharacter;
 
         TextBox[] weaponForgeSlots, equipForgeSlots, armor1ForgeSlots, armor2ForgeSlots;
+        List<int> numForgeSlots;
 
         public CharacterEditor()
         {
@@ -38,6 +40,19 @@ namespace EO4SaveEdit.Editors
             {
                 txtEquipArmor2Forge1, txtEquipArmor2Forge2, txtEquipArmor2Forge3, txtEquipArmor2Forge4, txtEquipArmor2Forge5, txtEquipArmor2Forge6, txtEquipArmor2Forge7, txtEquipArmor2Forge8
             };
+
+            numForgeSlots = new List<int>();
+
+            XmlDocument xmlItemData = new XmlDocument();
+            xmlItemData.Load("Data\\ItemData.xml");
+            foreach (XmlNode node in xmlItemData.DocumentElement.ChildNodes)
+            {
+                numForgeSlots.Add(int.Parse(node.Attributes["NumSlots"].InnerText));
+                cmbEquipWeaponItem.Items.Add(node.InnerText);
+                cmbEquipEquipItem.Items.Add(node.InnerText);
+                cmbEquipArmor1Item.Items.Add(node.InnerText);
+                cmbEquipArmor2Item.Items.Add(node.InnerText);
+            }
         }
 
         public void Initialize(Mori4Game game)
@@ -68,10 +83,10 @@ namespace EO4SaveEdit.Editors
             cmbClass.SelectedItem = currentCharacter.Class;
             cmbSubclass.SelectedItem = currentCharacter.Subclass;
 
-            cmbEquipWeaponItem.Text = currentCharacter.WeaponSlot.ItemID.ToString("X");
-            cmbEquipEquipItem.Text = currentCharacter.EquipmentSlot.ItemID.ToString("X");
-            cmbEquipArmor1Item.Text = currentCharacter.ArmorSlot1.ItemID.ToString("X");
-            cmbEquipArmor2Item.Text = currentCharacter.ArmorSlot2.ItemID.ToString("X");
+            cmbEquipWeaponItem.SelectedIndex = currentCharacter.WeaponSlot.ItemID;
+            cmbEquipEquipItem.SelectedIndex = currentCharacter.EquipmentSlot.ItemID;
+            cmbEquipArmor1Item.SelectedIndex = currentCharacter.ArmorSlot1.ItemID;
+            cmbEquipArmor2Item.SelectedIndex = currentCharacter.ArmorSlot2.ItemID;
 
             txtEquipWeaponNumForgeSlots.Text = currentCharacter.WeaponSlot.NumForgeableSlots.ToString();
             txtEquipEquipNumForgeSlots.Text = currentCharacter.EquipmentSlot.NumForgeableSlots.ToString();
@@ -86,16 +101,16 @@ namespace EO4SaveEdit.Editors
 
         private void InitializeForgeSlots(TextBox[] slotTextBoxes, EquipmentSlot slotData)
         {
-            // TODO: Assumes max possible slots on all items, which is not true!
-
-            for (int i = slotTextBoxes.Length - 1, j = 0; i >= 0; i--, j++)
+            for (int i = 0; i < slotTextBoxes.Length; i++)
             {
-                if (j < slotData.NumForgeableSlots)
-                    slotTextBoxes[i].BackColor = SystemColors.Window;
-                else
-                    slotTextBoxes[i].BackColor = Color.LightSteelBlue;
-
-                slotTextBoxes[j].Text = slotData.EffectSlots[j].ToString("X");
+                slotTextBoxes[i].ReadOnly = true;
+                slotTextBoxes[i].Text = string.Empty;
+            }
+            for (int i = numForgeSlots[slotData.ItemID] - 1, j = slotData.NumForgeableSlots - 1; i >= 0; i--, j--)
+            {
+                slotTextBoxes[i].Text = slotData.EffectSlots[i].ToString("X");
+                if (j >= 0)
+                    slotTextBoxes[i].ReadOnly = false;
             }
         }
 
