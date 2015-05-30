@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Editors\CharacterEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\CharacterEditor.Designer.cs">
+      <DependentUpon>CharacterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="FileHandlers\BaseMori4File.cs" />
     <Compile Include="FileHandlers\Mori4Game.cs" />
     <Compile Include="FileHandlers\Mori4GdCard.cs" />
@@ -81,6 +88,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Editors\CharacterEditor.resx">
+      <DependentUpon>CharacterEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FileHandlers\Mori4MapEditor.resx">
       <DependentUpon>Mori4MapEditor.cs</DependentUpon>
     </EmbeddedResource>

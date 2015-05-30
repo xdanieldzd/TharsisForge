@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
+using EO4SaveEdit.Extensions;
+
 namespace EO4SaveEdit.FileHandlers
 {
     [Flags]
@@ -37,23 +39,16 @@ namespace EO4SaveEdit.FileHandlers
     {
         public ushort ItemID { get; set; }
         public byte NumForgeableSlots { get; set; }
-        public byte EffectSlot1 { get; set; }
-        public byte EffectSlot2 { get; set; }
-        public byte EffectSlot3 { get; set; }
-        public byte EffectSlot4 { get; set; }
-        public byte EffectSlot5 { get; set; }
-        public uint Unknown { get; set; }
+        public byte[] EffectSlots { get; set; }
+        public byte Unknown { get; set; }
 
         public EquipmentSlot(BinaryReader reader)
         {
             ItemID = reader.ReadUInt16();
             NumForgeableSlots = reader.ReadByte();
-            EffectSlot1 = reader.ReadByte();
-            EffectSlot2 = reader.ReadByte();
-            EffectSlot3 = reader.ReadByte();
-            EffectSlot4 = reader.ReadByte();
-            EffectSlot5 = reader.ReadByte();
-            Unknown = reader.ReadUInt32();
+            EffectSlots = new byte[8];
+            for (int i = 0; i < EffectSlots.Length; i++) EffectSlots[i] = reader.ReadByte();
+            Unknown = reader.ReadByte();
         }
     }
 
@@ -83,6 +78,8 @@ namespace EO4SaveEdit.FileHandlers
 
     public class Character
     {
+        public const string UnusedName = "---";
+
         public byte Unknown1 { get; set; }
         public PortraitType Portrait { get; set; }
         public byte ID { get; set; }
@@ -163,7 +160,7 @@ namespace EO4SaveEdit.FileHandlers
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
             CurrentEXP = reader.ReadUInt32();
-            Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(20)).TrimEnd('\0');
+            Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(20)).TrimEnd('\0').SjisToAscii();
             UnknownTotalSkillPoints = reader.ReadUInt16();
             MainSkillLevels = reader.ReadBytes(26);
             SubSkillLevels = reader.ReadBytes(26);
@@ -187,9 +184,11 @@ namespace EO4SaveEdit.FileHandlers
             DuplicateID = reader.ReadByte();
             PartySlot = reader.ReadByte();
             Unknown25 = reader.ReadByte();
-            OriginGuildName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0');
+            OriginGuildName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
             //...
             reader.BaseStream.Seek(0x30, SeekOrigin.Current);   //temp
+
+            if (Name == string.Empty) Name = UnusedName;
         }
     }
 

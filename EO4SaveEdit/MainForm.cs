@@ -78,6 +78,7 @@ namespace EO4SaveEdit
             {
                 m4Map.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Map) as Mori4Map);
                 m4Options.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Option) as Mori4Option);
+                characterEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
             }
         }
 
