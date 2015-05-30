@@ -14,31 +14,83 @@ namespace EO4SaveEdit.Editors
 {
     public partial class CharacterEditor : UserControl
     {
+        static Dictionary<byte, string> effectNames = new Dictionary<byte, string>()
+        {
+            // TODO: complete the list!
+            { 0x00, "None" },
+            { 0x01, "HP" },
+            { 0x02, "TP" },
+            { 0x03, "STR" },
+            { 0x04, "TEC" },
+            { 0x05, "VIT" },
+            { 0x06, "AGI" },
+            { 0x07, "LUC" },
+            { 0x08, "BRS" },
+            { 0x09, "SPD" },
+            { 0x0A, "ATK" },
+            { 0x0B, "ELM" },
+            { 0x0C, "HIT" },
+            { 0x0D, "CRI" },
+            { 0x0E, "Fire" },
+            { 0x0F, "Ice" },
+            { 0x10, "Volt" },
+            { 0x11, "Rst Fire" },
+            { 0x12, "Rst Ice" },
+            { 0x13, "Rst Volt" },
+            { 0x14, "0x14" },
+            { 0x15, "0x15" },
+            { 0x16, "0x16" },
+            { 0x17, "Paralyze" },   //?
+            { 0x18, "0x18" },
+            { 0x19, "0x19" },
+            { 0x1A, "Rst Death" },
+            { 0x1B, "Death" },
+            { 0x1C, "0x1C" },
+            { 0x1D, "0x1D" },
+            { 0x1E, "0x1E" },
+            { 0x1F, "0x1F" },
+            { 0x20, "Rst Cut" },    //?
+            { 0x21, "0x21" },
+        };
+
         Mori4Game gameData;
         Character currentCharacter;
 
-        TextBox[] weaponForgeSlots, equipForgeSlots, armor1ForgeSlots, armor2ForgeSlots;
+        ComboBox[] weaponForgeSlots, equipForgeSlots, armor1ForgeSlots, armor2ForgeSlots;
         List<int> numForgeSlots;
 
         public CharacterEditor()
         {
             InitializeComponent();
+        }
 
-            weaponForgeSlots = new TextBox[] 
+        public void Initialize(Mori4Game game)
+        {
+            this.gameData = game;
+
+            if (this.gameData == null)
             {
-                txtEquipWeaponForge1, txtEquipWeaponForge2, txtEquipWeaponForge3, txtEquipWeaponForge4, txtEquipWeaponForge5, txtEquipWeaponForge6, txtEquipWeaponForge7, txtEquipWeaponForge8
+                this.Enabled = false;
+                return;
+            }
+
+            this.Enabled = true;
+
+            weaponForgeSlots = new ComboBox[] 
+            {
+                cmbEquipWeaponForge1, cmbEquipWeaponForge2, cmbEquipWeaponForge3, cmbEquipWeaponForge4, cmbEquipWeaponForge5, cmbEquipWeaponForge6, cmbEquipWeaponForge7, cmbEquipWeaponForge8
             };
-            equipForgeSlots = new TextBox[]
+            equipForgeSlots = new ComboBox[]
             {
-                txtEquipEquipForge1, txtEquipEquipForge2, txtEquipEquipForge3, txtEquipEquipForge4, txtEquipEquipForge5, txtEquipEquipForge6, txtEquipEquipForge7, txtEquipEquipForge8
+                cmbEquipEquipForge1, cmbEquipEquipForge2, cmbEquipEquipForge3, cmbEquipEquipForge4, cmbEquipEquipForge5, cmbEquipEquipForge6, cmbEquipEquipForge7, cmbEquipEquipForge8
             };
-            armor1ForgeSlots = new TextBox[]
+            armor1ForgeSlots = new ComboBox[]
             {
-                txtEquipArmor1Forge1, txtEquipArmor1Forge2, txtEquipArmor1Forge3, txtEquipArmor1Forge4, txtEquipArmor1Forge5, txtEquipArmor1Forge6, txtEquipArmor1Forge7, txtEquipArmor1Forge8
+                cmbEquipArmor1Forge1, cmbEquipArmor1Forge2, cmbEquipArmor1Forge3, cmbEquipArmor1Forge4, cmbEquipArmor1Forge5, cmbEquipArmor1Forge6, cmbEquipArmor1Forge7, cmbEquipArmor1Forge8
             };
-            armor2ForgeSlots = new TextBox[]
+            armor2ForgeSlots = new ComboBox[]
             {
-                txtEquipArmor2Forge1, txtEquipArmor2Forge2, txtEquipArmor2Forge3, txtEquipArmor2Forge4, txtEquipArmor2Forge5, txtEquipArmor2Forge6, txtEquipArmor2Forge7, txtEquipArmor2Forge8
+                cmbEquipArmor2Forge1, cmbEquipArmor2Forge2, cmbEquipArmor2Forge3, cmbEquipArmor2Forge4, cmbEquipArmor2Forge5, cmbEquipArmor2Forge6, cmbEquipArmor2Forge7, cmbEquipArmor2Forge8
             };
 
             numForgeSlots = new List<int>();
@@ -53,19 +105,6 @@ namespace EO4SaveEdit.Editors
                 cmbEquipArmor1Item.Items.Add(node.InnerText);
                 cmbEquipArmor2Item.Items.Add(node.InnerText);
             }
-        }
-
-        public void Initialize(Mori4Game game)
-        {
-            this.gameData = game;
-
-            if (this.gameData == null)
-            {
-                this.Enabled = false;
-                return;
-            }
-
-            this.Enabled = true;
 
             cmbClass.DataSource = Enum.GetValues(typeof(Class));
             cmbSubclass.DataSource = Enum.GetValues(typeof(Class));
@@ -99,18 +138,22 @@ namespace EO4SaveEdit.Editors
             InitializeForgeSlots(armor2ForgeSlots, currentCharacter.ArmorSlot2);
         }
 
-        private void InitializeForgeSlots(TextBox[] slotTextBoxes, EquipmentSlot slotData)
+        private void InitializeForgeSlots(ComboBox[] slotControls, EquipmentSlot slotData)
         {
-            for (int i = 0; i < slotTextBoxes.Length; i++)
+            foreach (ComboBox ctrl in slotControls)
             {
-                slotTextBoxes[i].ReadOnly = true;
-                slotTextBoxes[i].Text = string.Empty;
+                ctrl.DataSource = null;
+                ctrl.Enabled = false;
             }
+
             for (int i = numForgeSlots[slotData.ItemID] - 1, j = slotData.NumForgeableSlots - 1; i >= 0; i--, j--)
             {
-                slotTextBoxes[i].Text = slotData.EffectSlots[i].ToString("X");
+                slotControls[i].ValueMember = "Key";
+                slotControls[i].DisplayMember = "Value";
+                slotControls[i].DataSource = effectNames.ToList();
+                slotControls[i].SelectedValue = slotData.EffectSlots[i];
                 if (j >= 0)
-                    slotTextBoxes[i].ReadOnly = false;
+                    slotControls[i].Enabled = true;
             }
         }
 
