@@ -43,6 +43,30 @@ namespace EO4SaveEdit.FileHandlers
         public byte[] MainSkillLevels { get; set; }
         public byte[] SubSkillLevels { get; set; }
 
+        public bool IsValid
+        {
+            get { return (Level != 0); }
+            set { Level = 0; }
+        }
+
+        public GuildCardCharacter()
+        {
+            Portrait = PortraitType.Male;
+            Level = 1;
+            Class = Class.Landsknecht;
+            Subclass = Class.None;
+            WeaponSlot = new EquipmentSlot();
+            EquipmentSlot = new EquipmentSlot();
+            ArmorSlot1 = new EquipmentSlot();
+            ArmorSlot2 = new EquipmentSlot();
+            CumulativeStats = new Stats();
+            CurrentHP = (ushort)CumulativeStats.HP;
+            CurrentTP = (ushort)CumulativeStats.TP;
+            Name = "NoName";
+            MainSkillLevels = new byte[25];
+            SubSkillLevels = new byte[25];
+        }
+
         public GuildCardCharacter(BinaryReader reader)
         {
             Portrait = (PortraitType)reader.ReadByte();

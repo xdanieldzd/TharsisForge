@@ -42,6 +42,14 @@ namespace EO4SaveEdit.FileHandlers
         public byte[] EffectSlots { get; set; }
         public byte Unknown { get; set; }
 
+        public EquipmentSlot()
+        {
+            ItemID = 0;
+            NumForgeableSlots = 0;
+            EffectSlots = new byte[8];
+            Unknown = 0;
+        }
+
         public EquipmentSlot(BinaryReader reader)
         {
             ItemID = reader.ReadUInt16();
@@ -62,6 +70,18 @@ namespace EO4SaveEdit.FileHandlers
         public ushort LUC { get; set; }
         public ushort TEC { get; set; }
         public ushort Unknown { get; set; }
+
+        public Stats()
+        {
+            HP = 10;
+            TP = 10;
+            STR = 1;
+            VIT = 1;
+            AGI = 1;
+            LUC = 1;
+            TEC = 1;
+            Unknown = 0;
+        }
 
         public Stats(BinaryReader reader)
         {

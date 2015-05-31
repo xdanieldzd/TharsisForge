@@ -21,6 +21,8 @@ namespace EO4SaveEdit.Editors
         NumericUpDown[] levelNumericUpDowns;
         ComboBox[] classComboBoxes;
 
+        bool changingGuildCards;
+
         public GuildCardEditor()
         {
             InitializeComponent();
@@ -58,6 +60,7 @@ namespace EO4SaveEdit.Editors
         private void InitializeControls(GuildCard guildCard)
         {
             currentGuildCard = guildCard;
+            changingGuildCards = true;
 
             for (int i = 0; i < currentGuildCard.CharacterListings.Length; i++)
             {
@@ -97,11 +100,72 @@ namespace EO4SaveEdit.Editors
 
             numericUpDown16.Value = currentGuildCard.Background;
             comboBox6.SelectedIndex = currentGuildCard.TreasureMap;
+
+            checkBox7.Checked = (currentGuildCard.GuildCardCharacter.Level != 0);
+            InitializeRegisteredCharaControls();
+
+            changingGuildCards = false;
+        }
+
+        private void InitializeRegisteredCharaControls()
+        {
+            if (!checkBox7.Checked)
+            {
+                textBox14.Enabled = false;
+                textBox14.Text = string.Empty;
+                numericUpDown17.Enabled = false;
+                numericUpDown17.Minimum = 0;
+                numericUpDown17.Value = 0;
+                comboBox7.Enabled = false;
+                comboBox7.DataSource = null;
+                comboBox8.Enabled = false;
+                comboBox8.DataSource = null;
+
+                //
+            }
+            else
+            {
+                textBox14.Enabled = true;
+                textBox14.Text = currentGuildCard.GuildCardCharacter.Name;
+                numericUpDown17.Enabled = true;
+                numericUpDown17.Minimum = 1;
+                numericUpDown17.Value = currentGuildCard.GuildCardCharacter.Level;
+                comboBox7.Enabled = true;
+                comboBox7.DataSource = Enum.GetValues(typeof(Class));
+                comboBox7.SelectedItem = currentGuildCard.GuildCardCharacter.Class;
+                comboBox8.Enabled = true;
+                comboBox8.DataSource = Enum.GetValues(typeof(Class));
+                comboBox8.SelectedItem = currentGuildCard.GuildCardCharacter.Subclass;
+                
+                //
+            }
         }
 
         private void lbGuildCards_SelectedIndexChanged(object sender, EventArgs e)
         {
             InitializeControls((sender as ListBox).SelectedItem as GuildCard);
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (changingGuildCards) return;
+
+            CheckBox checkBox = (sender as CheckBox);
+            if (!checkBox.Checked && currentGuildCard.GuildCardCharacter.IsValid)
+            {
+                if (MessageBox.Show("Warning: This will delete the existing Guild Card character. Really continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    currentGuildCard.GuildCardCharacter.IsValid = false;
+                    InitializeRegisteredCharaControls();
+                }
+                else
+                    checkBox.Checked = true;
+            }
+            else
+            {
+                if (!currentGuildCard.GuildCardCharacter.IsValid) currentGuildCard.GuildCardCharacter = new GuildCardCharacter();
+                InitializeRegisteredCharaControls();
+            }
         }
     }
 }
