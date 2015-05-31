@@ -33,6 +33,10 @@ namespace EO4SaveEdit
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Skill\playerskilltable.tbl",
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Skill\SkillTreeTable.tbl",
                 @"C:\Temp\playerskillnametable.xml");*/
+
+            /*RomFSDataDumper.DumpTreasureMapData(
+                @"E:\[SSD User Data]\Downloads\EOIV\romfs\Dungeon\HiddenTreasureName.tbl",
+                @"C:\Temp\HiddenTreasureName.xml");*/
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,6 +85,7 @@ namespace EO4SaveEdit
                 m4Map.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Map) as Mori4Map);
                 m4Options.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Option) as Mori4Option);
                 characterEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
+                guildCardEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4GdCard) as Mori4GdCard);
             }
         }
 

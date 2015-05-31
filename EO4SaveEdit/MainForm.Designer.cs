@@ -42,20 +42,24 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.tpGuildCards = new System.Windows.Forms.TabPage();
             this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
             this.m4Map = new EO4SaveEdit.FileHandlers.Mori4MapEditor();
             this.m4Options = new EO4SaveEdit.FileHandlers.Mori4OptionEditor();
+            this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
             this.tabControl1.SuspendLayout();
             this.tpCharas.SuspendLayout();
             this.tpMaps.SuspendLayout();
             this.tpOptions.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tpGuildCards.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tpCharas);
+            this.tabControl1.Controls.Add(this.tpGuildCards);
             this.tabControl1.Controls.Add(this.tpMaps);
             this.tabControl1.Controls.Add(this.tpOptions);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -175,6 +179,17 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // tpGuildCards
+            // 
+            this.tpGuildCards.Controls.Add(this.guildCardEditor1);
+            this.tpGuildCards.Location = new System.Drawing.Point(4, 22);
+            this.tpGuildCards.Name = "tpGuildCards";
+            this.tpGuildCards.Padding = new System.Windows.Forms.Padding(3);
+            this.tpGuildCards.Size = new System.Drawing.Size(846, 540);
+            this.tpGuildCards.TabIndex = 3;
+            this.tpGuildCards.Text = "Guild Cards";
+            this.tpGuildCards.UseVisualStyleBackColor = true;
+            // 
             // characterEditor1
             // 
             this.characterEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -201,6 +216,14 @@
             this.m4Options.Size = new System.Drawing.Size(834, 289);
             this.m4Options.TabIndex = 0;
             // 
+            // guildCardEditor1
+            // 
+            this.guildCardEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guildCardEditor1.Location = new System.Drawing.Point(3, 3);
+            this.guildCardEditor1.Name = "guildCardEditor1";
+            this.guildCardEditor1.Size = new System.Drawing.Size(840, 534);
+            this.guildCardEditor1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +246,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tpGuildCards.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,6 +271,8 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TabPage tpCharas;
         private Editors.CharacterEditor characterEditor1;
+        private System.Windows.Forms.TabPage tpGuildCards;
+        private Editors.GuildCardEditor guildCardEditor1;
 
     }
 }

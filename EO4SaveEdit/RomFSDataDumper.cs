@@ -11,9 +11,10 @@ namespace EO4SaveEdit
 {
     /* Temp stuff to get names etc from RomFS, so that the editor won't require RomFS! */
     /* SUPER UGLY, I know, but it's just for ripping stuff out of somewhere else! It's not supposed to be "production-quality code" or what have you */
+    /* Yeah, yeah, adding more and more to this, it's still temporary! */
     static class RomFSDataDumper
     {
-        private static List<string> ReadNameTable(string file)
+        public static List<string> ReadNameTable(string file)
         {
             List<string> nameTable = new List<string>();
             using (BinaryReader reader = new BinaryReader(File.OpenRead(file)))
@@ -131,6 +132,28 @@ namespace EO4SaveEdit
                         writer.WriteValue(skill.Item3);
                         writer.WriteEndElement();
                     }
+                    writer.WriteEndElement();
+                }
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
+        }
+
+        public static void DumpTreasureMapData(string inPathNames, string outPath)
+        {
+            List<string> nameTable = ReadNameTable(inPathNames);
+
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+
+            using (XmlWriter writer = XmlWriter.Create(File.CreateText(outPath), settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Table");
+                for (int i = 0; i < nameTable.Count; i++)
+                {
+                    writer.WriteStartElement("Map");
+                    writer.WriteValue(nameTable[i]);
                     writer.WriteEndElement();
                 }
                 writer.WriteEndElement();

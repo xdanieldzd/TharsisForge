@@ -76,6 +76,12 @@
     <Compile Include="FileHeaderDialog.Designer.cs">
       <DependentUpon>FileHeaderDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\GuildCardEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\GuildCardEditor.Designer.cs">
+      <DependentUpon>GuildCardEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelEx.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <EmbeddedResource Include="FileHeaderDialog.resx">
       <DependentUpon>FileHeaderDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editors\GuildCardEditor.resx">
+      <DependentUpon>GuildCardEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +134,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\TreasureMapData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\ItemData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
