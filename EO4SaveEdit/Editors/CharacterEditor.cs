@@ -59,6 +59,8 @@ namespace EO4SaveEdit.Editors
         ComboBox[] weaponForgeSlots, equipForgeSlots, armor1ForgeSlots, armor2ForgeSlots;
         List<int> numForgeSlots;
 
+        Dictionary<Class, List<Tuple<byte, string>>> skillData;
+
         public CharacterEditor()
         {
             InitializeComponent();
@@ -106,6 +108,19 @@ namespace EO4SaveEdit.Editors
                 cmbEquipArmor2Item.Items.Add(node.InnerText);
             }
 
+            skillData = new Dictionary<Class, List<Tuple<byte, string>>>();
+            XmlDocument xmlSkillData = new XmlDocument();
+            xmlSkillData.Load("Data\\SkillData.xml");
+            foreach (XmlNode classNode in xmlSkillData.DocumentElement.ChildNodes)
+            {
+                List<Tuple<byte, string>> classSkills = new List<Tuple<byte, string>>();
+                foreach (XmlNode skillNode in classNode.ChildNodes)
+                {
+                    classSkills.Add(new Tuple<byte, string>(byte.Parse(skillNode.Attributes["MaxLevel"].InnerText), skillNode.InnerText));
+                }
+                skillData[(Class)Enum.Parse(typeof(Class), classNode.Attributes["Name"].InnerText)] = classSkills;
+            }
+
             cmbClass.DataSource = Enum.GetValues(typeof(Class));
             cmbSubclass.DataSource = Enum.GetValues(typeof(Class));
 
@@ -137,6 +152,12 @@ namespace EO4SaveEdit.Editors
             InitializeForgeSlots(equipForgeSlots, currentCharacter.EquipmentSlot);
             InitializeForgeSlots(armor1ForgeSlots, currentCharacter.ArmorSlot1);
             InitializeForgeSlots(armor2ForgeSlots, currentCharacter.ArmorSlot2);
+
+            // TODO: Reinitialize when class/subclass changes!
+            gbSkillsMainClass.Text = string.Format("Main Skills ({0})", currentCharacter.Class);
+            gbSkillsSubclass.Text = string.Format("Sub Skills ({0})", currentCharacter.Subclass);
+            InitializeSkillDataGrid(dgvSkillsMainClass, currentCharacter.Class, currentCharacter.MainSkillLevels);
+            InitializeSkillDataGrid(dgvSkillsSubclass, currentCharacter.Subclass, currentCharacter.SubSkillLevels);
         }
 
         private void InitializeForgeSlots(ComboBox[] slotControls, EquipmentSlot slotData)
@@ -158,9 +179,72 @@ namespace EO4SaveEdit.Editors
             }
         }
 
+        private void InitializeSkillDataGrid(DataGridView dgv, Class charaClass, byte[] skillLevels)
+        {
+            dgv.AutoGenerateColumns = false;
+
+            if (charaClass != Class.None)
+            {
+                DataTable table = new DataTable("SkillTable");
+                table.Columns.Add("Skill", typeof(string));
+                table.Columns.Add("Level", typeof(byte));
+                table.Columns.Add("MaxLevel", typeof(byte));
+                for (int i = 0; i < skillData[charaClass].Count; i++)
+                {
+                    DataRow row = table.NewRow();
+                    row["Skill"] = skillData[charaClass][i].Item2;
+                    row["Level"] = skillLevels[i];
+                    row["MaxLevel"] = skillData[charaClass][i].Item1;
+                    table.Rows.Add(row);
+                }
+                table.AcceptChanges();
+                dgv.DataSource = table;
+            }
+            else
+                dgv.DataSource = null;
+        }
+
         private void lbCharacters_SelectedIndexChanged(object sender, EventArgs e)
         {
             InitializePages((sender as ListBox).SelectedItem as Character);
+        }
+
+        private void dgvSkillsMainClass_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            DataGridView dgv = (sender as DataGridView);
+            if (e.RowIndex >= 0 && e.RowIndex < currentCharacter.MainSkillLevels.Length && e.ColumnIndex == 1)
+                e.Cancel = ((string)e.FormattedValue == string.Empty || IsSkillLevelInvalid(e.RowIndex, currentCharacter.Class, byte.Parse((string)e.FormattedValue)));
+        }
+
+        private void dgvSkillsMainClass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < currentCharacter.MainSkillLevels.Length && e.ColumnIndex == 1)
+                currentCharacter.MainSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+        }
+
+        private void dgvSkillsSubclass_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            DataGridView dgv = (sender as DataGridView);
+            if (e.RowIndex >= 0 && e.RowIndex < currentCharacter.SubSkillLevels.Length && e.ColumnIndex == 1)
+                e.Cancel = ((string)e.FormattedValue == string.Empty || IsSkillLevelInvalid(e.RowIndex, currentCharacter.Class, byte.Parse((string)e.FormattedValue)));
+        }
+
+        private void dgvSkillsSubclass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < currentCharacter.SubSkillLevels.Length && e.ColumnIndex == 1)
+                currentCharacter.SubSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+        }
+
+        private bool IsSkillLevelInvalid(int skillIdx, Class charaClass, byte newLevel)
+        {
+            if (newLevel > skillData[charaClass][skillIdx].Item1)
+            {
+                MessageBox.Show(
+                    string.Format("Invalid skill level specified. The maximum level for this skill is {0}.", skillData[currentCharacter.Class][skillIdx].Item1), "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return false;
         }
     }
 }

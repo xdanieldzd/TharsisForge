@@ -27,6 +27,12 @@ namespace EO4SaveEdit
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\equipitemnametable.tbl",
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\equipitemtable.tbl",
                 @"C:\Temp\equipitemnametable.xml");*/
+
+            /*RomFSDataDumper.DumpSkillData(
+                @"E:\[SSD User Data]\Downloads\EOIV\romfs\Skill\playerskillnametable.tbl",
+                @"E:\[SSD User Data]\Downloads\EOIV\romfs\Skill\playerskilltable.tbl",
+                @"E:\[SSD User Data]\Downloads\EOIV\romfs\Skill\SkillTreeTable.tbl",
+                @"C:\Temp\playerskillnametable.xml");*/
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
