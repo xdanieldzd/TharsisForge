@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using EO4SaveEdit.FileHandlers;
+using EO4SaveEdit.Extensions;
 
 namespace EO4SaveEdit
 {

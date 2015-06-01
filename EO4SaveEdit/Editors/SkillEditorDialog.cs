@@ -19,8 +19,6 @@ namespace EO4SaveEdit.Editors
 
         Class mainClass, subClass;
 
-        Dictionary<Class, List<Tuple<byte, string>>> skillData;
-
         public SkillEditorDialog(Class mainClass, byte[] mainSkillLevels, Class subClass, byte[] subSkillLevels)
         {
             InitializeComponent();
@@ -29,19 +27,6 @@ namespace EO4SaveEdit.Editors
             this.SubSkillLevels = subSkillLevels;
             this.mainClass = mainClass;
             this.subClass = subClass;
-
-            skillData = new Dictionary<Class, List<Tuple<byte, string>>>();
-            XmlDocument xmlSkillData = new XmlDocument();
-            xmlSkillData.Load("Data\\SkillData.xml");
-            foreach (XmlNode classNode in xmlSkillData.DocumentElement.ChildNodes)
-            {
-                List<Tuple<byte, string>> classSkills = new List<Tuple<byte, string>>();
-                foreach (XmlNode skillNode in classNode.ChildNodes)
-                {
-                    classSkills.Add(new Tuple<byte, string>(byte.Parse(skillNode.Attributes["MaxLevel"].InnerText), skillNode.InnerText));
-                }
-                skillData[(Class)Enum.Parse(typeof(Class), classNode.Attributes["Name"].InnerText)] = classSkills;
-            }
 
             gbSkillsMainClass.Text = string.Format("Main Skills ({0})", mainClass);
             gbSkillsSubclass.Text = string.Format("Sub Skills ({0})", subClass);
@@ -59,12 +44,12 @@ namespace EO4SaveEdit.Editors
                 table.Columns.Add("Skill", typeof(string));
                 table.Columns.Add("Level", typeof(byte));
                 table.Columns.Add("MaxLevel", typeof(byte));
-                for (int i = 0; i < skillData[charaClass].Count; i++)
+                for (int i = 0; i < XmlHelper.SkillData[charaClass].Length; i++)
                 {
                     DataRow row = table.NewRow();
-                    row["Skill"] = skillData[charaClass][i].Item2;
+                    row["Skill"] = XmlHelper.SkillData[charaClass][i].Item2;
                     row["Level"] = skillLevels[i];
-                    row["MaxLevel"] = skillData[charaClass][i].Item1;
+                    row["MaxLevel"] = XmlHelper.SkillData[charaClass][i].Item1;
                     table.Rows.Add(row);
                 }
                 table.AcceptChanges();
@@ -102,10 +87,10 @@ namespace EO4SaveEdit.Editors
 
         private bool IsSkillLevelInvalid(int skillIdx, Class charaClass, byte newLevel)
         {
-            if (newLevel > skillData[charaClass][skillIdx].Item1)
+            if (newLevel > XmlHelper.SkillData[charaClass][skillIdx].Item1)
             {
                 MessageBox.Show(
-                    string.Format("Invalid skill level specified. The maximum level for {0} is {1}.", skillData[charaClass][skillIdx].Item2, skillData[charaClass][skillIdx].Item1), "Error",
+                    string.Format("Invalid skill level specified. The maximum level for {0} is {1}.", XmlHelper.SkillData[charaClass][skillIdx].Item2, XmlHelper.SkillData[charaClass][skillIdx].Item1), "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
@@ -114,7 +99,7 @@ namespace EO4SaveEdit.Editors
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
         }
     }

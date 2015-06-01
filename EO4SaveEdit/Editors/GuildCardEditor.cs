@@ -48,10 +48,8 @@ namespace EO4SaveEdit.Editors
 
             foreach (ComboBox comboBox in classComboBoxes) comboBox.DataSource = Enum.GetValues(typeof(Class));
 
-            XmlDocument xmlItemData = new XmlDocument();
-            xmlItemData.Load("Data\\TreasureMapData.xml");
-            for (int i = 1; i < xmlItemData.DocumentElement.ChildNodes.Count; i++)
-                comboBox6.Items.Add(xmlItemData.DocumentElement.ChildNodes[i].InnerText);
+            foreach (string mapName in XmlHelper.TreasureMapNames.Where(x => x != null))
+                comboBox6.Items.Add(mapName);
 
             lbGuildCards.DataSource = this.guildCardData.GuildCards;
             lbGuildCards.DisplayMember = "GuildName";
@@ -178,6 +176,12 @@ namespace EO4SaveEdit.Editors
                 currentGuildCard.GuildCardCharacter.Subclass, currentGuildCard.GuildCardCharacter.SubSkillLevels);
 
             sed.ShowDialog();
+        }
+
+        private void btnEditWeaponEffect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.WeaponSlot);
+            eed.ShowDialog();
         }
     }
 }

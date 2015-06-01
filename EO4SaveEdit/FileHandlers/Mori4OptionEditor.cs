@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using EO4SaveEdit.Extensions;
+
 namespace EO4SaveEdit.FileHandlers
 {
     public partial class Mori4OptionEditor : UserControl

@@ -98,6 +98,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.gbRegCharacter = new System.Windows.Forms.GroupBox();
+            this.btnSkillEditor = new System.Windows.Forms.Button();
             this.chkIsCharaRegistered = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
@@ -112,7 +113,7 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.btnSkillEditor = new System.Windows.Forms.Button();
+            this.btnEditWeaponEffect = new System.Windows.Forms.Button();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -834,6 +835,7 @@
             this.gbRegCharacter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbRegCharacter.Controls.Add(this.btnEditWeaponEffect);
             this.gbRegCharacter.Controls.Add(this.btnSkillEditor);
             this.gbRegCharacter.Controls.Add(this.chkIsCharaRegistered);
             this.gbRegCharacter.Controls.Add(this.button1);
@@ -855,6 +857,16 @@
             this.gbRegCharacter.TabIndex = 4;
             this.gbRegCharacter.TabStop = false;
             this.gbRegCharacter.Text = "Registered Character";
+            // 
+            // btnSkillEditor
+            // 
+            this.btnSkillEditor.Location = new System.Drawing.Point(6, 202);
+            this.btnSkillEditor.Name = "btnSkillEditor";
+            this.btnSkillEditor.Size = new System.Drawing.Size(100, 23);
+            this.btnSkillEditor.TabIndex = 19;
+            this.btnSkillEditor.Text = "Edit Skills";
+            this.btnSkillEditor.UseVisualStyleBackColor = true;
+            this.btnSkillEditor.Click += new System.EventHandler(this.btnSkillEditor_Click);
             // 
             // chkIsCharaRegistered
             // 
@@ -990,15 +1002,15 @@
             this.textBox14.Size = new System.Drawing.Size(120, 20);
             this.textBox14.TabIndex = 5;
             // 
-            // btnSkillEditor
+            // btnEditWeaponEffect
             // 
-            this.btnSkillEditor.Location = new System.Drawing.Point(6, 202);
-            this.btnSkillEditor.Name = "btnSkillEditor";
-            this.btnSkillEditor.Size = new System.Drawing.Size(100, 23);
-            this.btnSkillEditor.TabIndex = 19;
-            this.btnSkillEditor.Text = "Edit Skills";
-            this.btnSkillEditor.UseVisualStyleBackColor = true;
-            this.btnSkillEditor.Click += new System.EventHandler(this.btnSkillEditor_Click);
+            this.btnEditWeaponEffect.Location = new System.Drawing.Point(112, 202);
+            this.btnEditWeaponEffect.Name = "btnEditWeaponEffect";
+            this.btnEditWeaponEffect.Size = new System.Drawing.Size(100, 23);
+            this.btnEditWeaponEffect.TabIndex = 20;
+            this.btnEditWeaponEffect.Text = "Edit Effects";
+            this.btnEditWeaponEffect.UseVisualStyleBackColor = true;
+            this.btnEditWeaponEffect.Click += new System.EventHandler(this.btnEditWeaponEffect_Click);
             // 
             // GuildCardEditor
             // 
@@ -1124,5 +1136,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox chkIsCharaRegistered;
         private System.Windows.Forms.Button btnSkillEditor;
+        private System.Windows.Forms.Button btnEditWeaponEffect;
     }
 }

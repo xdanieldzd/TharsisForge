@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
 
-namespace EO4SaveEdit
+namespace EO4SaveEdit.Extensions
 {
     public enum CustomTextBoxDataType
     {
