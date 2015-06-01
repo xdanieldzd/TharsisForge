@@ -98,20 +98,21 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.gbRegCharacter = new System.Windows.Forms.GroupBox();
+            this.chkIsCharaRegistered = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.btnSkillEditor = new System.Windows.Forms.Button();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -833,7 +834,8 @@
             this.gbRegCharacter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbRegCharacter.Controls.Add(this.checkBox7);
+            this.gbRegCharacter.Controls.Add(this.btnSkillEditor);
+            this.gbRegCharacter.Controls.Add(this.chkIsCharaRegistered);
             this.gbRegCharacter.Controls.Add(this.button1);
             this.gbRegCharacter.Controls.Add(this.label33);
             this.gbRegCharacter.Controls.Add(this.label32);
@@ -853,6 +855,107 @@
             this.gbRegCharacter.TabIndex = 4;
             this.gbRegCharacter.TabStop = false;
             this.gbRegCharacter.Text = "Registered Character";
+            // 
+            // chkIsCharaRegistered
+            // 
+            this.chkIsCharaRegistered.AutoSize = true;
+            this.chkIsCharaRegistered.Location = new System.Drawing.Point(6, 19);
+            this.chkIsCharaRegistered.Name = "chkIsCharaRegistered";
+            this.chkIsCharaRegistered.Size = new System.Drawing.Size(176, 17);
+            this.chkIsCharaRegistered.TabIndex = 18;
+            this.chkIsCharaRegistered.Text = "Has Character been registered?";
+            this.chkIsCharaRegistered.UseVisualStyleBackColor = true;
+            this.chkIsCharaRegistered.CheckedChanged += new System.EventHandler(this.chkIsCharaRegistered_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(90, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 80);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "PLACEHOLDER\r\nMake seperate dialog for each?";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 176);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(46, 13);
+            this.label33.TabIndex = 16;
+            this.label33.Text = "Armor 2:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(6, 152);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(46, 13);
+            this.label32.TabIndex = 15;
+            this.label32.Text = "Armor 1:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 131);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(60, 13);
+            this.label31.TabIndex = 14;
+            this.label31.Text = "Equipment:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 109);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(51, 13);
+            this.label30.TabIndex = 13;
+            this.label30.Text = "Weapon:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(188, 71);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(53, 13);
+            this.label29.TabIndex = 12;
+            this.label29.Text = "Subclass:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 71);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(35, 13);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "Class:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(188, 45);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(36, 13);
+            this.label27.TabIndex = 10;
+            this.label27.Text = "Level:";
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(247, 68);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(120, 21);
+            this.comboBox8.TabIndex = 9;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 45);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(38, 13);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "Name:";
             // 
             // comboBox7
             // 
@@ -887,106 +990,15 @@
             this.textBox14.Size = new System.Drawing.Size(120, 20);
             this.textBox14.TabIndex = 5;
             // 
-            // label26
+            // btnSkillEditor
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 45);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 13);
-            this.label26.TabIndex = 8;
-            this.label26.Text = "Name:";
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(247, 68);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(120, 21);
-            this.comboBox8.TabIndex = 9;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(188, 45);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 13);
-            this.label27.TabIndex = 10;
-            this.label27.Text = "Level:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 71);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(35, 13);
-            this.label28.TabIndex = 11;
-            this.label28.Text = "Class:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(188, 71);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(53, 13);
-            this.label29.TabIndex = 12;
-            this.label29.Text = "Subclass:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 109);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(51, 13);
-            this.label30.TabIndex = 13;
-            this.label30.Text = "Weapon:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 131);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(60, 13);
-            this.label31.TabIndex = 14;
-            this.label31.Text = "Equipment:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 152);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(46, 13);
-            this.label32.TabIndex = 15;
-            this.label32.Text = "Armor 1:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 176);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(46, 13);
-            this.label33.TabIndex = 16;
-            this.label33.Text = "Armor 2:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(90, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 80);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "PLACEHOLDER\r\nMake seperate dialog for each?";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(6, 19);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(176, 17);
-            this.checkBox7.TabIndex = 18;
-            this.checkBox7.Text = "Has Character been registered?";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            this.btnSkillEditor.Location = new System.Drawing.Point(6, 202);
+            this.btnSkillEditor.Name = "btnSkillEditor";
+            this.btnSkillEditor.Size = new System.Drawing.Size(100, 23);
+            this.btnSkillEditor.TabIndex = 19;
+            this.btnSkillEditor.Text = "Edit Skills";
+            this.btnSkillEditor.UseVisualStyleBackColor = true;
+            this.btnSkillEditor.Click += new System.EventHandler(this.btnSkillEditor_Click);
             // 
             // GuildCardEditor
             // 
@@ -1110,6 +1122,7 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox chkIsCharaRegistered;
+        private System.Windows.Forms.Button btnSkillEditor;
     }
 }

@@ -1,0 +1,121 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Xml;
+
+using EO4SaveEdit.FileHandlers;
+
+namespace EO4SaveEdit.Editors
+{
+    public partial class SkillEditorDialog : Form
+    {
+        public byte[] MainSkillLevels { get; private set; }
+        public byte[] SubSkillLevels { get; private set; }
+
+        Class mainClass, subClass;
+
+        Dictionary<Class, List<Tuple<byte, string>>> skillData;
+
+        public SkillEditorDialog(Class mainClass, byte[] mainSkillLevels, Class subClass, byte[] subSkillLevels)
+        {
+            InitializeComponent();
+
+            this.MainSkillLevels = mainSkillLevels;
+            this.SubSkillLevels = subSkillLevels;
+            this.mainClass = mainClass;
+            this.subClass = subClass;
+
+            skillData = new Dictionary<Class, List<Tuple<byte, string>>>();
+            XmlDocument xmlSkillData = new XmlDocument();
+            xmlSkillData.Load("Data\\SkillData.xml");
+            foreach (XmlNode classNode in xmlSkillData.DocumentElement.ChildNodes)
+            {
+                List<Tuple<byte, string>> classSkills = new List<Tuple<byte, string>>();
+                foreach (XmlNode skillNode in classNode.ChildNodes)
+                {
+                    classSkills.Add(new Tuple<byte, string>(byte.Parse(skillNode.Attributes["MaxLevel"].InnerText), skillNode.InnerText));
+                }
+                skillData[(Class)Enum.Parse(typeof(Class), classNode.Attributes["Name"].InnerText)] = classSkills;
+            }
+
+            gbSkillsMainClass.Text = string.Format("Main Skills ({0})", mainClass);
+            gbSkillsSubclass.Text = string.Format("Sub Skills ({0})", subClass);
+            InitializeSkillDataGrid(dgvSkillsMainClass, mainClass, MainSkillLevels);
+            InitializeSkillDataGrid(dgvSkillsSubclass, subClass, SubSkillLevels);
+        }
+
+        private void InitializeSkillDataGrid(DataGridView dgv, Class charaClass, byte[] skillLevels)
+        {
+            dgv.AutoGenerateColumns = false;
+
+            if (charaClass != Class.None)
+            {
+                DataTable table = new DataTable("SkillTable");
+                table.Columns.Add("Skill", typeof(string));
+                table.Columns.Add("Level", typeof(byte));
+                table.Columns.Add("MaxLevel", typeof(byte));
+                for (int i = 0; i < skillData[charaClass].Count; i++)
+                {
+                    DataRow row = table.NewRow();
+                    row["Skill"] = skillData[charaClass][i].Item2;
+                    row["Level"] = skillLevels[i];
+                    row["MaxLevel"] = skillData[charaClass][i].Item1;
+                    table.Rows.Add(row);
+                }
+                table.AcceptChanges();
+                dgv.DataSource = table;
+            }
+            else
+                dgv.DataSource = null;
+        }
+
+        private void dgvSkillsMainClass_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            DataGridView dgv = (sender as DataGridView);
+            if (e.RowIndex >= 0 && e.RowIndex < MainSkillLevels.Length && e.ColumnIndex == 1)
+                e.Cancel = ((string)e.FormattedValue == string.Empty || IsSkillLevelInvalid(e.RowIndex, mainClass, byte.Parse((string)e.FormattedValue)));
+        }
+
+        private void dgvSkillsMainClass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < MainSkillLevels.Length && e.ColumnIndex == 1)
+                MainSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+        }
+
+        private void dgvSkillsSubclass_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            DataGridView dgv = (sender as DataGridView);
+            if (e.RowIndex >= 0 && e.RowIndex < SubSkillLevels.Length && e.ColumnIndex == 1)
+                e.Cancel = ((string)e.FormattedValue == string.Empty || IsSkillLevelInvalid(e.RowIndex, subClass, byte.Parse((string)e.FormattedValue)));
+        }
+
+        private void dgvSkillsSubclass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < SubSkillLevels.Length && e.ColumnIndex == 1)
+                SubSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+        }
+
+        private bool IsSkillLevelInvalid(int skillIdx, Class charaClass, byte newLevel)
+        {
+            if (newLevel > skillData[charaClass][skillIdx].Item1)
+            {
+                MessageBox.Show(
+                    string.Format("Invalid skill level specified. The maximum level for {0} is {1}.", skillData[charaClass][skillIdx].Item2, skillData[charaClass][skillIdx].Item1), "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return false;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Close();
+        }
+    }
+}

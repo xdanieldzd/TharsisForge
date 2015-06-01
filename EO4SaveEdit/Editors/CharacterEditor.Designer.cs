@@ -100,17 +100,7 @@
             this.lblEquipArmor2Item = new System.Windows.Forms.Label();
             this.txtEquipArmor2NumForgeSlots = new System.Windows.Forms.TextBox();
             this.tpSkills = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.gbSkillsMainClass = new System.Windows.Forms.GroupBox();
-            this.dgvSkillsMainClass = new System.Windows.Forms.DataGridView();
-            this.SkillColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LevelColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxLevelColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gbSkillsSubclass = new System.Windows.Forms.GroupBox();
-            this.dgvSkillsSubclass = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSkillEditor = new System.Windows.Forms.Button();
             this.tcCharaParts.SuspendLayout();
             this.tpStats.SuspendLayout();
             this.gbBasics.SuspendLayout();
@@ -121,15 +111,6 @@
             this.gbEquipEquip.SuspendLayout();
             this.gbEquipWeapon.SuspendLayout();
             this.gbEquipArmor2.SuspendLayout();
-            this.tpSkills.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.gbSkillsMainClass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSkillsMainClass)).BeginInit();
-            this.gbSkillsSubclass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSkillsSubclass)).BeginInit();
             this.SuspendLayout();
             // 
             // lbCharacters
@@ -157,6 +138,7 @@
             // 
             // tpStats
             // 
+            this.tpStats.Controls.Add(this.btnSkillEditor);
             this.tpStats.Controls.Add(this.gbBasics);
             this.tpStats.Location = new System.Drawing.Point(4, 22);
             this.tpStats.Name = "tpStats";
@@ -860,7 +842,6 @@
             // 
             // tpSkills
             // 
-            this.tpSkills.Controls.Add(this.splitContainer1);
             this.tpSkills.Location = new System.Drawing.Point(4, 22);
             this.tpSkills.Name = "tpSkills";
             this.tpSkills.Padding = new System.Windows.Forms.Padding(6);
@@ -869,149 +850,15 @@
             this.tpSkills.Text = "Skills";
             this.tpSkills.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
+            // btnSkillEditor
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(6, 6);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.gbSkillsMainClass);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.gbSkillsSubclass);
-            this.splitContainer1.Size = new System.Drawing.Size(750, 562);
-            this.splitContainer1.SplitterDistance = 375;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // gbSkillsMainClass
-            // 
-            this.gbSkillsMainClass.Controls.Add(this.dgvSkillsMainClass);
-            this.gbSkillsMainClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbSkillsMainClass.Location = new System.Drawing.Point(0, 0);
-            this.gbSkillsMainClass.Name = "gbSkillsMainClass";
-            this.gbSkillsMainClass.Padding = new System.Windows.Forms.Padding(6);
-            this.gbSkillsMainClass.Size = new System.Drawing.Size(375, 562);
-            this.gbSkillsMainClass.TabIndex = 0;
-            this.gbSkillsMainClass.TabStop = false;
-            this.gbSkillsMainClass.Text = "Main Class";
-            // 
-            // dgvSkillsMainClass
-            // 
-            this.dgvSkillsMainClass.AllowUserToAddRows = false;
-            this.dgvSkillsMainClass.AllowUserToDeleteRows = false;
-            this.dgvSkillsMainClass.AllowUserToResizeColumns = false;
-            this.dgvSkillsMainClass.AllowUserToResizeRows = false;
-            this.dgvSkillsMainClass.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvSkillsMainClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSkillsMainClass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SkillColumn,
-            this.LevelColumn,
-            this.MaxLevelColumn});
-            this.dgvSkillsMainClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSkillsMainClass.Location = new System.Drawing.Point(6, 19);
-            this.dgvSkillsMainClass.MultiSelect = false;
-            this.dgvSkillsMainClass.Name = "dgvSkillsMainClass";
-            this.dgvSkillsMainClass.RowHeadersVisible = false;
-            this.dgvSkillsMainClass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSkillsMainClass.Size = new System.Drawing.Size(363, 537);
-            this.dgvSkillsMainClass.TabIndex = 0;
-            this.dgvSkillsMainClass.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvSkillsMainClass_CellValidating);
-            this.dgvSkillsMainClass.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSkillsMainClass_CellValueChanged);
-            // 
-            // SkillColumn
-            // 
-            this.SkillColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SkillColumn.DataPropertyName = "Skill";
-            this.SkillColumn.HeaderText = "Skill";
-            this.SkillColumn.Name = "SkillColumn";
-            this.SkillColumn.ReadOnly = true;
-            this.SkillColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // LevelColumn
-            // 
-            this.LevelColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.LevelColumn.DataPropertyName = "Level";
-            this.LevelColumn.HeaderText = "Level";
-            this.LevelColumn.Name = "LevelColumn";
-            this.LevelColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.LevelColumn.Width = 40;
-            // 
-            // MaxLevelColumn
-            // 
-            this.MaxLevelColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.MaxLevelColumn.DataPropertyName = "MaxLevel";
-            this.MaxLevelColumn.HeaderText = "Max";
-            this.MaxLevelColumn.Name = "MaxLevelColumn";
-            this.MaxLevelColumn.ReadOnly = true;
-            this.MaxLevelColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.MaxLevelColumn.Width = 40;
-            // 
-            // gbSkillsSubclass
-            // 
-            this.gbSkillsSubclass.Controls.Add(this.dgvSkillsSubclass);
-            this.gbSkillsSubclass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbSkillsSubclass.Location = new System.Drawing.Point(0, 0);
-            this.gbSkillsSubclass.Name = "gbSkillsSubclass";
-            this.gbSkillsSubclass.Padding = new System.Windows.Forms.Padding(6);
-            this.gbSkillsSubclass.Size = new System.Drawing.Size(371, 562);
-            this.gbSkillsSubclass.TabIndex = 1;
-            this.gbSkillsSubclass.TabStop = false;
-            this.gbSkillsSubclass.Text = "Subclass";
-            // 
-            // dgvSkillsSubclass
-            // 
-            this.dgvSkillsSubclass.AllowUserToAddRows = false;
-            this.dgvSkillsSubclass.AllowUserToDeleteRows = false;
-            this.dgvSkillsSubclass.AllowUserToResizeColumns = false;
-            this.dgvSkillsSubclass.AllowUserToResizeRows = false;
-            this.dgvSkillsSubclass.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvSkillsSubclass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSkillsSubclass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dgvSkillsSubclass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSkillsSubclass.Location = new System.Drawing.Point(6, 19);
-            this.dgvSkillsSubclass.MultiSelect = false;
-            this.dgvSkillsSubclass.Name = "dgvSkillsSubclass";
-            this.dgvSkillsSubclass.RowHeadersVisible = false;
-            this.dgvSkillsSubclass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSkillsSubclass.Size = new System.Drawing.Size(359, 537);
-            this.dgvSkillsSubclass.TabIndex = 1;
-            this.dgvSkillsSubclass.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvSkillsSubclass_CellValidating);
-            this.dgvSkillsSubclass.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSkillsSubclass_CellValueChanged);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Skill";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Skill";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Level";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Level";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "MaxLevel";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Max";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn3.Width = 40;
+            this.btnSkillEditor.Location = new System.Drawing.Point(15, 102);
+            this.btnSkillEditor.Name = "btnSkillEditor";
+            this.btnSkillEditor.Size = new System.Drawing.Size(75, 23);
+            this.btnSkillEditor.TabIndex = 7;
+            this.btnSkillEditor.Text = "Edit Skills";
+            this.btnSkillEditor.UseVisualStyleBackColor = true;
+            this.btnSkillEditor.Click += new System.EventHandler(this.btnSkillEditor_Click);
             // 
             // CharacterEditor
             // 
@@ -1034,15 +881,6 @@
             this.gbEquipWeapon.PerformLayout();
             this.gbEquipArmor2.ResumeLayout(false);
             this.gbEquipArmor2.PerformLayout();
-            this.tpSkills.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.gbSkillsMainClass.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSkillsMainClass)).EndInit();
-            this.gbSkillsSubclass.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSkillsSubclass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1121,16 +959,6 @@
         private System.Windows.Forms.GroupBox gbEquipArmor1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown nudLevel;
-        private System.Windows.Forms.GroupBox gbSkillsMainClass;
-        private System.Windows.Forms.GroupBox gbSkillsSubclass;
-        private System.Windows.Forms.DataGridView dgvSkillsMainClass;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SkillColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LevelColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaxLevelColumn;
-        private System.Windows.Forms.DataGridView dgvSkillsSubclass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button btnSkillEditor;
     }
 }

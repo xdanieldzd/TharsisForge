@@ -101,7 +101,7 @@ namespace EO4SaveEdit.Editors
             numericUpDown16.Value = currentGuildCard.Background;
             comboBox6.SelectedIndex = currentGuildCard.TreasureMap;
 
-            checkBox7.Checked = (currentGuildCard.GuildCardCharacter.Level != 0);
+            chkIsCharaRegistered.Checked = (currentGuildCard.GuildCardCharacter.Level != 0);
             InitializeRegisteredCharaControls();
 
             changingGuildCards = false;
@@ -109,7 +109,7 @@ namespace EO4SaveEdit.Editors
 
         private void InitializeRegisteredCharaControls()
         {
-            if (!checkBox7.Checked)
+            if (!chkIsCharaRegistered.Checked)
             {
                 textBox14.Enabled = false;
                 textBox14.Text = string.Empty;
@@ -120,6 +120,7 @@ namespace EO4SaveEdit.Editors
                 comboBox7.DataSource = null;
                 comboBox8.Enabled = false;
                 comboBox8.DataSource = null;
+                btnSkillEditor.Enabled = false;
 
                 //
             }
@@ -136,7 +137,8 @@ namespace EO4SaveEdit.Editors
                 comboBox8.Enabled = true;
                 comboBox8.DataSource = Enum.GetValues(typeof(Class));
                 comboBox8.SelectedItem = currentGuildCard.GuildCardCharacter.Subclass;
-                
+                btnSkillEditor.Enabled = true;
+
                 //
             }
         }
@@ -146,14 +148,15 @@ namespace EO4SaveEdit.Editors
             InitializeControls((sender as ListBox).SelectedItem as GuildCard);
         }
 
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        private void chkIsCharaRegistered_CheckedChanged(object sender, EventArgs e)
         {
             if (changingGuildCards) return;
 
             CheckBox checkBox = (sender as CheckBox);
             if (!checkBox.Checked && currentGuildCard.GuildCardCharacter.IsValid)
             {
-                if (MessageBox.Show("Warning: This will delete the existing Guild Card character. Really continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Warning: This will delete the existing Guild Card character. Really continue?", "Warning",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     currentGuildCard.GuildCardCharacter.IsValid = false;
                     InitializeRegisteredCharaControls();
@@ -166,6 +169,15 @@ namespace EO4SaveEdit.Editors
                 if (!currentGuildCard.GuildCardCharacter.IsValid) currentGuildCard.GuildCardCharacter = new GuildCardCharacter();
                 InitializeRegisteredCharaControls();
             }
+        }
+
+        private void btnSkillEditor_Click(object sender, EventArgs e)
+        {
+            SkillEditorDialog sed = new SkillEditorDialog(
+                currentGuildCard.GuildCardCharacter.Class, currentGuildCard.GuildCardCharacter.MainSkillLevels,
+                currentGuildCard.GuildCardCharacter.Subclass, currentGuildCard.GuildCardCharacter.SubSkillLevels);
+
+            sed.ShowDialog();
         }
     }
 }

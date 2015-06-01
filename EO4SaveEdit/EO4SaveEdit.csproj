@@ -52,6 +52,12 @@
     <Compile Include="Editors\CharacterEditor.Designer.cs">
       <DependentUpon>CharacterEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\SkillEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\SkillEditorDialog.Designer.cs">
+      <DependentUpon>SkillEditorDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="FileHandlers\BaseMori4File.cs" />
     <Compile Include="FileHandlers\Mori4Game.cs" />
@@ -97,6 +103,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Editors\CharacterEditor.resx">
       <DependentUpon>CharacterEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\SkillEditorDialog.resx">
+      <DependentUpon>SkillEditorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileHandlers\Mori4MapEditor.resx">
       <DependentUpon>Mori4MapEditor.cs</DependentUpon>
