@@ -28,10 +28,14 @@ namespace EO4SaveEdit.Editors
             this.mainClass = mainClass;
             this.subClass = subClass;
 
-            gbSkillsMainClass.Text = string.Format("Main Skills ({0})", mainClass);
-            gbSkillsSubclass.Text = string.Format("Sub Skills ({0})", subClass);
+            gbSkillsMainClass.Text = string.Format("Main Class ({0})", mainClass);
             InitializeSkillDataGrid(dgvSkillsMainClass, mainClass, MainSkillLevels);
-            InitializeSkillDataGrid(dgvSkillsSubclass, subClass, SubSkillLevels);
+
+            if (subClass != Class.None)
+            {
+                gbSkillsSubclass.Text = string.Format("Subclass ({0})", subClass);
+                InitializeSkillDataGrid(dgvSkillsSubclass, subClass, SubSkillLevels);
+            }
         }
 
         private void InitializeSkillDataGrid(DataGridView dgv, Class charaClass, byte[] skillLevels)

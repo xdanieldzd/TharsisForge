@@ -51,6 +51,14 @@ namespace EO4SaveEdit.Editors
             foreach (string mapName in XmlHelper.TreasureMapNames.Where(x => x != null))
                 comboBox6.Items.Add(mapName);
 
+            comboBox7.DataSource = Enum.GetValues(typeof(Class));
+            comboBox8.DataSource = Enum.GetValues(typeof(Class));
+
+            comboBox9.DataSource = XmlHelper.ItemNames.ToList();
+            comboBox10.DataSource = XmlHelper.ItemNames.ToList();
+            comboBox11.DataSource = XmlHelper.ItemNames.ToList();
+            comboBox12.DataSource = XmlHelper.ItemNames.ToList();
+
             lbGuildCards.DataSource = this.guildCardData.GuildCards;
             lbGuildCards.DisplayMember = "GuildName";
         }
@@ -107,6 +115,8 @@ namespace EO4SaveEdit.Editors
 
         private void InitializeRegisteredCharaControls()
         {
+            gbRegCharacter.SuspendLayout();
+
             if (!chkIsCharaRegistered.Checked)
             {
                 textBox14.Enabled = false;
@@ -114,13 +124,18 @@ namespace EO4SaveEdit.Editors
                 numericUpDown17.Enabled = false;
                 numericUpDown17.Minimum = 0;
                 numericUpDown17.Value = 0;
-                comboBox7.Enabled = false;
-                comboBox7.DataSource = null;
-                comboBox8.Enabled = false;
-                comboBox8.DataSource = null;
-                btnSkillEditor.Enabled = false;
 
-                //
+                textBox15.Enabled = textBox16.Enabled = false;
+                textBox15.Text = textBox16.Text = string.Empty;
+
+                comboBox7.Enabled = comboBox8.Enabled = false;
+                comboBox7.SelectedIndex = comboBox8.SelectedIndex = -1;
+
+                comboBox9.Enabled = comboBox10.Enabled = comboBox11.Enabled = comboBox12.Enabled = false;
+                comboBox9.SelectedIndex = comboBox10.SelectedIndex = comboBox11.SelectedIndex = comboBox12.SelectedIndex = -1;
+                btnEditWeaponEffect.Enabled = btnEditEquipEffect.Enabled = btnEditArmor1Effect.Enabled = btnEditArmor2Effect.Enabled = false;
+
+                btnSkillEditor.Enabled = btnStatsEditor.Enabled = false;
             }
             else
             {
@@ -129,16 +144,31 @@ namespace EO4SaveEdit.Editors
                 numericUpDown17.Enabled = true;
                 numericUpDown17.Minimum = 1;
                 numericUpDown17.Value = currentGuildCard.GuildCardCharacter.Level;
+
+                textBox15.Enabled = textBox16.Enabled = true;
+                textBox15.Text = currentGuildCard.GuildCardCharacter.CurrentHP.ToString();
+                textBox16.Text = currentGuildCard.GuildCardCharacter.CurrentTP.ToString();
+
                 comboBox7.Enabled = true;
-                comboBox7.DataSource = Enum.GetValues(typeof(Class));
                 comboBox7.SelectedItem = currentGuildCard.GuildCardCharacter.Class;
                 comboBox8.Enabled = true;
-                comboBox8.DataSource = Enum.GetValues(typeof(Class));
                 comboBox8.SelectedItem = currentGuildCard.GuildCardCharacter.Subclass;
-                btnSkillEditor.Enabled = true;
 
-                //
+                comboBox9.Enabled = true;
+                comboBox9.SelectedIndex = currentGuildCard.GuildCardCharacter.WeaponSlot.ItemID;
+                comboBox10.Enabled = true;
+                comboBox10.SelectedIndex = currentGuildCard.GuildCardCharacter.EquipmentSlot.ItemID;
+                comboBox11.Enabled = true;
+                comboBox11.SelectedIndex = currentGuildCard.GuildCardCharacter.ArmorSlot1.ItemID;
+                comboBox12.Enabled = true;
+                comboBox12.SelectedIndex = currentGuildCard.GuildCardCharacter.ArmorSlot2.ItemID;
+
+                btnEditWeaponEffect.Enabled = btnEditEquipEffect.Enabled = btnEditArmor1Effect.Enabled = btnEditArmor2Effect.Enabled = true;
+
+                btnSkillEditor.Enabled = btnStatsEditor.Enabled = true;
             }
+
+            gbRegCharacter.ResumeLayout();
         }
 
         private void lbGuildCards_SelectedIndexChanged(object sender, EventArgs e)
@@ -181,6 +211,24 @@ namespace EO4SaveEdit.Editors
         private void btnEditWeaponEffect_Click(object sender, EventArgs e)
         {
             EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.WeaponSlot);
+            eed.ShowDialog();
+        }
+
+        private void btnEditEquipEffect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.EquipmentSlot);
+            eed.ShowDialog();
+        }
+
+        private void btnEditArmor1Effect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.ArmorSlot1);
+            eed.ShowDialog();
+        }
+
+        private void btnEditArmor2Effect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.ArmorSlot2);
             eed.ShowDialog();
         }
     }
