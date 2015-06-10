@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
+using EO4SaveEdit.Extensions;
 using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
@@ -59,7 +60,7 @@ namespace EO4SaveEdit.Editors
             comboBox11.DataSource = XmlHelper.ItemNames.ToList();
             comboBox12.DataSource = XmlHelper.ItemNames.ToList();
 
-            lbGuildCards.DataSource = this.guildCardData.GuildCards;
+            lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
             lbGuildCards.DisplayMember = "GuildName";
         }
 
@@ -70,45 +71,52 @@ namespace EO4SaveEdit.Editors
 
             for (int i = 0; i < currentGuildCard.CharacterListings.Length; i++)
             {
-                nameTextBoxes[i].Text = currentGuildCard.CharacterListings[i].Name;
-                levelNumericUpDowns[i].Value = currentGuildCard.CharacterListings[i].Level;
-                classComboBoxes[i].SelectedItem = currentGuildCard.CharacterListings[i].Class;
+                nameTextBoxes[i].SetBinding("Text", currentGuildCard.CharacterListings[i], "Name");
+                levelNumericUpDowns[i].SetBinding("Value", currentGuildCard.CharacterListings[i], "Level");
+                classComboBoxes[i].SetBinding("SelectedItem", currentGuildCard.CharacterListings[i], "Class");
             }
 
-            textBox6.Text = currentGuildCard.GuildName;
-            textBox7.Text = currentGuildCard.SkyshipName;
-            textBox8.Text = currentGuildCard.Message;
+            textBox6.SetBinding("Text", currentGuildCard, "GuildName");
+            textBox7.SetBinding("Text", currentGuildCard, "SkyshipName");
+            textBox8.SetBinding("Text", currentGuildCard, "Message");
 
-            numericUpDown6.Value = currentGuildCard.EnemyDiscovery;
-            numericUpDown7.Value = currentGuildCard.ItemDiscovery;
+            numericUpDown6.SetBinding("Value", currentGuildCard, "EnemyDiscovery");
+            numericUpDown7.SetBinding("Value", currentGuildCard, "ItemDiscovery");
 
-            textBox9.Text = currentGuildCard.MaxLevel.ToString();
-            textBox10.Text = currentGuildCard.VenturedDays.ToString();
-            textBox11.Text = currentGuildCard.Walked.ToString();
-            textBox12.Text = currentGuildCard.EnemiesHunted.ToString();
-            textBox13.Text = currentGuildCard.TotalEn.ToString();
+            textBox9.SetBinding("Text", currentGuildCard, "MaxLevel");
+            textBox10.SetBinding("Text", currentGuildCard, "VenturedDays");
+            textBox11.SetBinding("Text", currentGuildCard, "Walked");
+            textBox12.SetBinding("Text", currentGuildCard, "EnemiesHunted");
+            textBox13.SetBinding("Text", currentGuildCard, "TotalEn");
 
-            checkBox1.Checked = currentGuildCard.Achievement.HasVesselsAlly;
-            checkBox2.Checked = currentGuildCard.Achievement.HasSentinelsAlly;
-            checkBox3.Checked = currentGuildCard.Achievement.HasKnightsAlly;
-            checkBox4.Checked = currentGuildCard.Achievement.HasYggdrasilsHope;
-            checkBox5.Checked = currentGuildCard.Achievement.HasInsectSlayer;
-            checkBox6.Checked = currentGuildCard.Achievement.HasExplorersPride;
+            checkBox1.SetBinding("Checked", currentGuildCard.Achievement, "HasVesselsAlly");
+            checkBox2.SetBinding("Checked", currentGuildCard.Achievement, "HasSentinelsAlly");
+            checkBox3.SetBinding("Checked", currentGuildCard.Achievement, "HasKnightsAlly");
+            checkBox4.SetBinding("Checked", currentGuildCard.Achievement, "HasYggdrasilsHope");
+            checkBox5.SetBinding("Checked", currentGuildCard.Achievement, "HasInsectSlayer");
+            checkBox6.SetBinding("Checked", currentGuildCard.Achievement, "HasExplorersPride");
 
-            numericUpDown8.Value = currentGuildCard.Achievement.BurstSkillCompletion;
-            numericUpDown9.Value = currentGuildCard.Achievement.TreasureChestCompletion;
-            numericUpDown10.Value = currentGuildCard.Achievement.QuestCompletion;
-            numericUpDown11.Value = currentGuildCard.Achievement.RareBreedCompletion;
-            numericUpDown12.Value = currentGuildCard.Achievement.FoodCompletion;
-            numericUpDown13.Value = currentGuildCard.Achievement.MonsterCompletion;
-            numericUpDown14.Value = currentGuildCard.Achievement.MaterialCompletion;
-            numericUpDown15.Value = currentGuildCard.Achievement.HiddenTreasureCompletion;
+            numericUpDown8.SetBinding("Value", currentGuildCard.Achievement, "BurstSkillCompletion");
+            numericUpDown9.SetBinding("Value", currentGuildCard.Achievement, "TreasureChestCompletion");
+            numericUpDown10.SetBinding("Value", currentGuildCard.Achievement, "QuestCompletion");
+            numericUpDown11.SetBinding("Value", currentGuildCard.Achievement, "RareBreedCompletion");
+            numericUpDown12.SetBinding("Value", currentGuildCard.Achievement, "FoodCompletion");
+            numericUpDown13.SetBinding("Value", currentGuildCard.Achievement, "MonsterCompletion");
+            numericUpDown14.SetBinding("Value", currentGuildCard.Achievement, "MaterialCompletion");
+            numericUpDown15.SetBinding("Value", currentGuildCard.Achievement, "HiddenTreasureCompletion");
 
-            numericUpDown16.Value = currentGuildCard.Background;
-            comboBox6.SelectedIndex = currentGuildCard.TreasureMap;
+            numericUpDown16.SetBinding("Value", currentGuildCard, "Background");
+            comboBox6.SetBinding("SelectedIndex", currentGuildCard, "TreasureMap");
 
             chkIsCharaRegistered.Checked = (currentGuildCard.GuildCardCharacter.Level != 0);
             InitializeRegisteredCharaControls();
+
+
+            // TEMP
+            gbAchievements.DataBindings.Clear();
+            gbAchievements.DataBindings.Add("Text", currentGuildCard.Achievement, "RawValue", true, DataSourceUpdateMode.OnPropertyChanged, null, "X8");
+
+
 
             changingGuildCards = false;
         }
@@ -173,7 +181,8 @@ namespace EO4SaveEdit.Editors
 
         private void lbGuildCards_SelectedIndexChanged(object sender, EventArgs e)
         {
-            InitializeControls((sender as ListBox).SelectedItem as GuildCard);
+            if ((sender as ListBox).SelectedItem != null)
+                InitializeControls((sender as ListBox).SelectedItem as GuildCard);
         }
 
         private void chkIsCharaRegistered_CheckedChanged(object sender, EventArgs e)

@@ -88,102 +88,109 @@ namespace EO4SaveEdit.FileHandlers
 
     public class Achievements
     {
-        uint rawValue;
+        public uint RawValue { get; private set; }
 
         public bool HasVesselsAlly
         {
             get { return (bool)(GetBits(0, 1) != 0); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(0, 1, Convert.ToInt32(value)); }
         }
 
         public bool HasSentinelsAlly
         {
             get { return (bool)(GetBits(1, 1) != 0); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(1, 1, Convert.ToInt32(value)); }
         }
 
         public bool HasKnightsAlly
         {
             get { return (bool)(GetBits(2, 1) != 0); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(2, 1, Convert.ToInt32(value)); }
         }
 
         public bool HasYggdrasilsHope
         {
             get { return (bool)(GetBits(3, 1) != 0); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(3, 1, Convert.ToInt32(value)); }
         }
 
         public bool HasInsectSlayer
         {
             get { return (bool)(GetBits(4, 1) != 0); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(4, 1, Convert.ToInt32(value)); }
         }
 
         public bool HasExplorersPride
         {
             get { return (bool)(GetBits(5, 1) != 0); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(5, 1, Convert.ToInt32(value)); }
         }
 
         public byte BurstSkillCompletion
         {
             get { return NumBits(GetBits(6, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(6, 3, value); }
         }
 
         public byte TreasureChestCompletion
         {
             get { return NumBits(GetBits(9, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(9, 3, value); }
         }
 
         public byte QuestCompletion
         {
             get { return NumBits(GetBits(12, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(12, 3, value); }
         }
 
         public byte RareBreedCompletion
         {
             get { return NumBits(GetBits(15, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(15, 3, value); }
         }
 
         public byte FoodCompletion
         {
             get { return NumBits(GetBits(18, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(18, 3, value); }
         }
 
         public byte MonsterCompletion
         {
             get { return NumBits(GetBits(21, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(21, 3, value); }
         }
 
         public byte MaterialCompletion
         {
             get { return NumBits(GetBits(24, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(24, 3, value); }
         }
 
         public byte HiddenTreasureCompletion
         {
             get { return NumBits(GetBits(27, 3)); }
-            set { throw new NotImplementedException(); }
+            set { SetBits(27, 3, value); }
         }
 
         public Achievements(BinaryReader reader)
         {
-            rawValue = reader.ReadUInt32();
+            RawValue = reader.ReadUInt32();
+        }
+
+        private void SetBits(int shift, int bitCount, int bitsSet)
+        {
+            int mask = MakeMask(shift, bitCount);
+            int data = MakeMask(shift, bitsSet);
+            RawValue = (uint)((RawValue & (uint)~mask) | (uint)data);
         }
 
         private byte GetBits(int shift, int bitCount)
         {
             int mask = 0;
             for (int i = 0; i < bitCount; i++) mask |= (1 << i);
-            return (byte)((rawValue >> shift) & mask);
+            return (byte)((RawValue >> shift) & mask);
         }
 
         private byte NumBits(byte bits)
@@ -195,6 +202,14 @@ namespace EO4SaveEdit.FileHandlers
                 bits &= (byte)(bits - 1);
             }
             return count;
+        }
+
+        private int MakeMask(int shift, int count)
+        {
+            int mask = 0;
+            for (int i = 0; i < count; i++) mask |= (1 << i);
+            mask <<= shift;
+            return mask;
         }
     }
 
@@ -226,14 +241,14 @@ namespace EO4SaveEdit.FileHandlers
 
         public decimal EnemyDiscovery
         {
-            get { return GetPercentageFromUint(EnemyDiscoveryRaw); }
-            set { throw new NotImplementedException(); }
+            get { return (decimal)(EnemyDiscoveryRaw / 100.0); }
+            set { EnemyDiscoveryRaw = (uint)(value * 100); }
         }
 
         public decimal ItemDiscovery
         {
-            get { return GetPercentageFromUint(ItemDiscoveryRaw); }
-            set { throw new NotImplementedException(); }
+            get { return (decimal)(ItemDiscoveryRaw / 100.0); }
+            set { ItemDiscoveryRaw = (uint)(value * 100); }
         }
 
         public GuildCard(BinaryReader reader)
@@ -262,11 +277,6 @@ namespace EO4SaveEdit.FileHandlers
             Unknown2 = reader.ReadByte();
 
             if (GuildName == string.Empty) GuildName = UnusedName;
-        }
-
-        private decimal GetPercentageFromUint(uint raw)
-        {
-            return (decimal)Math.Round(((raw / 100) % 1000) + (0.01 * (raw % 100)), 2);
         }
     }
 

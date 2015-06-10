@@ -58,8 +58,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tpCharas);
             this.tabControl1.Controls.Add(this.tpGuildCards);
+            this.tabControl1.Controls.Add(this.tpCharas);
             this.tabControl1.Controls.Add(this.tpMaps);
             this.tabControl1.Controls.Add(this.tpOptions);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,7 +75,7 @@
             this.tpCharas.Location = new System.Drawing.Point(4, 22);
             this.tpCharas.Name = "tpCharas";
             this.tpCharas.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCharas.Size = new System.Drawing.Size(826, 540);
+            this.tpCharas.Size = new System.Drawing.Size(816, 540);
             this.tpCharas.TabIndex = 2;
             this.tpCharas.Text = "Characters";
             this.tpCharas.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.characterEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.characterEditor1.Location = new System.Drawing.Point(3, 3);
             this.characterEditor1.Name = "characterEditor1";
-            this.characterEditor1.Size = new System.Drawing.Size(820, 534);
+            this.characterEditor1.Size = new System.Drawing.Size(810, 534);
             this.characterEditor1.TabIndex = 0;
             // 
             // tpGuildCards
@@ -113,7 +113,7 @@
             this.tpMaps.Location = new System.Drawing.Point(4, 22);
             this.tpMaps.Name = "tpMaps";
             this.tpMaps.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMaps.Size = new System.Drawing.Size(826, 540);
+            this.tpMaps.Size = new System.Drawing.Size(816, 540);
             this.tpMaps.TabIndex = 1;
             this.tpMaps.Text = "Maps";
             this.tpMaps.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.m4Map.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m4Map.Location = new System.Drawing.Point(3, 3);
             this.m4Map.Name = "m4Map";
-            this.m4Map.Size = new System.Drawing.Size(820, 534);
+            this.m4Map.Size = new System.Drawing.Size(810, 534);
             this.m4Map.TabIndex = 0;
             // 
             // tpOptions
@@ -132,7 +132,7 @@
             this.tpOptions.Location = new System.Drawing.Point(4, 22);
             this.tpOptions.Name = "tpOptions";
             this.tpOptions.Padding = new System.Windows.Forms.Padding(3);
-            this.tpOptions.Size = new System.Drawing.Size(826, 540);
+            this.tpOptions.Size = new System.Drawing.Size(816, 540);
             this.tpOptions.TabIndex = 0;
             this.tpOptions.Text = "Options";
             this.tpOptions.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 534);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(810, 534);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // m4Options
@@ -158,7 +158,7 @@
             this.m4Options.Dock = System.Windows.Forms.DockStyle.Top;
             this.m4Options.Location = new System.Drawing.Point(3, 3);
             this.m4Options.Name = "m4Options";
-            this.m4Options.Size = new System.Drawing.Size(814, 289);
+            this.m4Options.Size = new System.Drawing.Size(804, 289);
             this.m4Options.TabIndex = 0;
             // 
             // menuStrip1
