@@ -58,6 +58,12 @@
     <Compile Include="Editors\EffectEditorDialog.Designer.cs">
       <DependentUpon>EffectEditorDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\HeaderEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\HeaderEditorDialog.Designer.cs">
+      <DependentUpon>HeaderEditorDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editors\SkillEditorDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,17 +89,14 @@
     <Compile Include="FileHandlers\Mori4OptionEditor.Designer.cs">
       <DependentUpon>Mori4OptionEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileHeaderDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FileHeaderDialog.Designer.cs">
-      <DependentUpon>FileHeaderDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Editors\GuildCardEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Editors\GuildCardEditor.Designer.cs">
       <DependentUpon>GuildCardEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBoxEx.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="PanelEx.cs">
       <SubType>Component</SubType>
@@ -115,6 +118,9 @@
     <EmbeddedResource Include="Editors\EffectEditorDialog.resx">
       <DependentUpon>EffectEditorDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editors\HeaderEditorDialog.resx">
+      <DependentUpon>HeaderEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editors\SkillEditorDialog.resx">
       <DependentUpon>SkillEditorDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,9 +129,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FileHandlers\Mori4OptionEditor.resx">
       <DependentUpon>Mori4OptionEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FileHeaderDialog.resx">
-      <DependentUpon>FileHeaderDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\GuildCardEditor.resx">
       <DependentUpon>GuildCardEditor.cs</DependentUpon>

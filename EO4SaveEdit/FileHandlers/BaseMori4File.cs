@@ -8,7 +8,14 @@ namespace EO4SaveEdit.FileHandlers
 {
     public class FileHeader
     {
-        // "MOR4GAME", "MOR4GILD", "MOR4MAPA" or "MOR4OPTI"
+        public static List<string> ValidSignatures = new List<string>()
+        {
+            "MOR4GAME",
+            "MOR4GILD", 
+            "MOR4MAPA", 
+            "MOR4OPTI"
+        };
+
         public string Signature { get; set; }
         public uint Unknown1 { get; set; }
         public uint ChunkSize { get; set; }
@@ -40,7 +47,19 @@ namespace EO4SaveEdit.FileHandlers
         public byte Unknown3 { get; set; }
         public byte Unknown4 { get; set; }
 
-        public DateTime DateTime { get { return new DateTime(Year, Month, Day, Hour, Minute, Second, DateTimeKind.Local); } }
+        public DateTime DateTime
+        {
+            get { return new DateTime(Year, Month, Day, Hour, Minute, Second, DateTimeKind.Local); }
+            set
+            {
+                Year = (ushort)value.Year;
+                Month = (byte)value.Month;
+                Day = (byte)value.Day;
+                Hour = (byte)value.Hour;
+                Minute = (byte)value.Minute;
+                Second = (byte)value.Second;
+            }
+        }
 
         public Timestamp(BinaryReader reader)
         {

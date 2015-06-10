@@ -125,10 +125,15 @@ namespace EO4SaveEdit.Editors
         {
             gbRegCharacter.SuspendLayout();
 
+            textBox14.DataBindings.Clear();
+            textBox14.DataBindings.Add("Text", currentGuildCard.GuildCardCharacter, "Name");
+
+            //TODO
+
             if (!chkIsCharaRegistered.Checked)
             {
-                textBox14.Enabled = false;
-                textBox14.Text = string.Empty;
+                //textBox14.Enabled = false;
+                //textBox14.Text = string.Empty;
                 numericUpDown17.Enabled = false;
                 numericUpDown17.Minimum = 0;
                 numericUpDown17.Value = 0;
@@ -147,8 +152,8 @@ namespace EO4SaveEdit.Editors
             }
             else
             {
-                textBox14.Enabled = true;
-                textBox14.Text = currentGuildCard.GuildCardCharacter.Name;
+                //textBox14.Enabled = true;
+                //textBox14.Text = currentGuildCard.GuildCardCharacter.Name;
                 numericUpDown17.Enabled = true;
                 numericUpDown17.Minimum = 1;
                 numericUpDown17.Value = currentGuildCard.GuildCardCharacter.Level;

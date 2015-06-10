@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using EO4SaveEdit.Editors;
+
 namespace EO4SaveEdit.FileHandlers
 {
     public partial class Mori4MapEditor : UserControl
@@ -189,11 +191,8 @@ namespace EO4SaveEdit.FileHandlers
         {
             if (mapData == null) return;
 
-            FileHeaderDialog fhd = new FileHeaderDialog(mapData.FileHeader);
-            if (fhd.ShowDialog() == DialogResult.OK)
-            {
-                mapData.FileHeader.Signature = fhd.Header.Signature;
-            }
+            HeaderEditorDialog hed = new HeaderEditorDialog(mapData.FileHeader);
+            hed.ShowDialog();
         }
 
         private void pnlRender_MouseLeave(object sender, EventArgs e)

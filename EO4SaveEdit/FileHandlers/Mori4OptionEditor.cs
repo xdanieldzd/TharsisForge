@@ -48,11 +48,8 @@ namespace EO4SaveEdit.FileHandlers
         {
             if (optionData == null) return;
 
-            FileHeaderDialog fhd = new FileHeaderDialog(optionData.FileHeader);
-            if (fhd.ShowDialog() == DialogResult.OK)
-            {
-                optionData.FileHeader.Signature = fhd.Header.Signature;
-            }
+            Editors.HeaderEditorDialog hed = new Editors.HeaderEditorDialog(optionData.FileHeader);
+            hed.ShowDialog();
         }
     }
 }

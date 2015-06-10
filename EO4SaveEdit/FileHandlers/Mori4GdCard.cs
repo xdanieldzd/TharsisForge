@@ -215,8 +215,6 @@ namespace EO4SaveEdit.FileHandlers
 
     public class GuildCard
     {
-        public const string UnusedName = "---";
-
         public uint UnknownStreetPass1 { get; set; }
         public uint UnknownStreetPass2 { get; set; }
         public uint UnknownStreetPass3 { get; set; }
@@ -275,8 +273,6 @@ namespace EO4SaveEdit.FileHandlers
             TreasureMap = reader.ReadByte();
             Unknown1 = reader.ReadByte();
             Unknown2 = reader.ReadByte();
-
-            if (GuildName == string.Empty) GuildName = UnusedName;
         }
     }
 

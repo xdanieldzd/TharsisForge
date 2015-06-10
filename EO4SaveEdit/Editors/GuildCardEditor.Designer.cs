@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbGuildCards = new System.Windows.Forms.ListBox();
             this.gbCharaList = new System.Windows.Forms.GroupBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
@@ -125,6 +124,7 @@
             this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.gbAchievements = new System.Windows.Forms.GroupBox();
+            this.lbGuildCards = new EO4SaveEdit.ListBoxEx();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -147,17 +147,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
             this.gbAchievements.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbGuildCards
-            // 
-            this.lbGuildCards.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbGuildCards.FormattingEnabled = true;
-            this.lbGuildCards.IntegralHeight = false;
-            this.lbGuildCards.Location = new System.Drawing.Point(0, 0);
-            this.lbGuildCards.Name = "lbGuildCards";
-            this.lbGuildCards.Size = new System.Drawing.Size(130, 500);
-            this.lbGuildCards.TabIndex = 1;
-            this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
             // 
             // gbCharaList
             // 
@@ -857,7 +846,7 @@
             this.gbRegCharacter.Controls.Add(this.textBox14);
             this.gbRegCharacter.Location = new System.Drawing.Point(452, 189);
             this.gbRegCharacter.Name = "gbRegCharacter";
-            this.gbRegCharacter.Size = new System.Drawing.Size(355, 308);
+            this.gbRegCharacter.Size = new System.Drawing.Size(355, 268);
             this.gbRegCharacter.TabIndex = 4;
             this.gbRegCharacter.TabStop = false;
             this.gbRegCharacter.Text = "Registered Character";
@@ -1146,10 +1135,21 @@
             this.gbAchievements.Controls.Add(this.numericUpDown11);
             this.gbAchievements.Location = new System.Drawing.Point(136, 219);
             this.gbAchievements.Name = "gbAchievements";
-            this.gbAchievements.Size = new System.Drawing.Size(310, 278);
+            this.gbAchievements.Size = new System.Drawing.Size(310, 238);
             this.gbAchievements.TabIndex = 28;
             this.gbAchievements.TabStop = false;
             this.gbAchievements.Text = "Achievements";
+            // 
+            // lbGuildCards
+            // 
+            this.lbGuildCards.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbGuildCards.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbGuildCards.IntegralHeight = false;
+            this.lbGuildCards.Location = new System.Drawing.Point(0, 0);
+            this.lbGuildCards.Name = "lbGuildCards";
+            this.lbGuildCards.Size = new System.Drawing.Size(130, 460);
+            this.lbGuildCards.TabIndex = 1;
+            this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
             // 
             // GuildCardEditor
             // 
@@ -1161,7 +1161,7 @@
             this.Controls.Add(this.gbCharaList);
             this.Controls.Add(this.lbGuildCards);
             this.Name = "GuildCardEditor";
-            this.Size = new System.Drawing.Size(810, 500);
+            this.Size = new System.Drawing.Size(810, 460);
             this.gbCharaList.ResumeLayout(false);
             this.gbCharaList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
@@ -1193,7 +1193,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lbGuildCards;
+        private ListBoxEx lbGuildCards;
         private System.Windows.Forms.GroupBox gbCharaList;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
