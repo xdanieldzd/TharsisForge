@@ -98,8 +98,6 @@ namespace EO4SaveEdit.FileHandlers
 
     public class Character
     {
-        public const string UnusedName = "---";
-
         public byte Unknown1 { get; set; }
         public PortraitType Portrait { get; set; }
         public byte ID { get; set; }
@@ -211,8 +209,6 @@ namespace EO4SaveEdit.FileHandlers
             OriginGuildName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
             //...
             reader.BaseStream.Seek(0x30, SeekOrigin.Current);   //temp
-
-            if (Name == string.Empty) Name = UnusedName;
         }
     }
 

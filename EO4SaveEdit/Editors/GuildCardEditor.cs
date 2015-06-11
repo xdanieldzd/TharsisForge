@@ -60,13 +60,14 @@ namespace EO4SaveEdit.Editors
             comboBox11.DataSource = XmlHelper.ItemNames.ToList();
             comboBox12.DataSource = XmlHelper.ItemNames.ToList();
 
-            lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
             lbGuildCards.DisplayMember = "GuildName";
+            lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
         }
 
         private void InitializeControls(GuildCard guildCard)
         {
-            currentGuildCard = guildCard;
+            if (guildCard == null) return;
+
             changingGuildCards = true;
 
             for (int i = 0; i < currentGuildCard.CharacterListings.Length; i++)
@@ -108,8 +109,19 @@ namespace EO4SaveEdit.Editors
             numericUpDown16.SetBinding("Value", currentGuildCard, "Background");
             comboBox6.SetBinding("SelectedIndex", currentGuildCard, "TreasureMap");
 
-            chkIsCharaRegistered.Checked = (currentGuildCard.GuildCardCharacter.Level != 0);
-            InitializeRegisteredCharaControls();
+            textBox14.SetBinding("Text", currentGuildCard.GuildCardCharacter, "Name");
+            numericUpDown17.SetBinding("Value", currentGuildCard.GuildCardCharacter, "Level");
+            textBox15.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentHP");
+            textBox16.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentTP");
+
+            comboBox7.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Class");
+            comboBox8.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Subclass");
+
+            comboBox9.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.WeaponSlot, "ItemID");
+            comboBox10.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.EquipmentSlot, "ItemID");
+            comboBox11.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.ArmorSlot1, "ItemID");
+            comboBox12.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.ArmorSlot2, "ItemID");
+
 
 
             // TEMP
@@ -121,96 +133,11 @@ namespace EO4SaveEdit.Editors
             changingGuildCards = false;
         }
 
-        private void InitializeRegisteredCharaControls()
-        {
-            gbRegCharacter.SuspendLayout();
-
-            textBox14.DataBindings.Clear();
-            textBox14.DataBindings.Add("Text", currentGuildCard.GuildCardCharacter, "Name");
-
-            //TODO
-
-            if (!chkIsCharaRegistered.Checked)
-            {
-                //textBox14.Enabled = false;
-                //textBox14.Text = string.Empty;
-                numericUpDown17.Enabled = false;
-                numericUpDown17.Minimum = 0;
-                numericUpDown17.Value = 0;
-
-                textBox15.Enabled = textBox16.Enabled = false;
-                textBox15.Text = textBox16.Text = string.Empty;
-
-                comboBox7.Enabled = comboBox8.Enabled = false;
-                comboBox7.SelectedIndex = comboBox8.SelectedIndex = -1;
-
-                comboBox9.Enabled = comboBox10.Enabled = comboBox11.Enabled = comboBox12.Enabled = false;
-                comboBox9.SelectedIndex = comboBox10.SelectedIndex = comboBox11.SelectedIndex = comboBox12.SelectedIndex = -1;
-                btnEditWeaponEffect.Enabled = btnEditEquipEffect.Enabled = btnEditArmor1Effect.Enabled = btnEditArmor2Effect.Enabled = false;
-
-                btnSkillEditor.Enabled = btnStatsEditor.Enabled = false;
-            }
-            else
-            {
-                //textBox14.Enabled = true;
-                //textBox14.Text = currentGuildCard.GuildCardCharacter.Name;
-                numericUpDown17.Enabled = true;
-                numericUpDown17.Minimum = 1;
-                numericUpDown17.Value = currentGuildCard.GuildCardCharacter.Level;
-
-                textBox15.Enabled = textBox16.Enabled = true;
-                textBox15.Text = currentGuildCard.GuildCardCharacter.CurrentHP.ToString();
-                textBox16.Text = currentGuildCard.GuildCardCharacter.CurrentTP.ToString();
-
-                comboBox7.Enabled = true;
-                comboBox7.SelectedItem = currentGuildCard.GuildCardCharacter.Class;
-                comboBox8.Enabled = true;
-                comboBox8.SelectedItem = currentGuildCard.GuildCardCharacter.Subclass;
-
-                comboBox9.Enabled = true;
-                comboBox9.SelectedIndex = currentGuildCard.GuildCardCharacter.WeaponSlot.ItemID;
-                comboBox10.Enabled = true;
-                comboBox10.SelectedIndex = currentGuildCard.GuildCardCharacter.EquipmentSlot.ItemID;
-                comboBox11.Enabled = true;
-                comboBox11.SelectedIndex = currentGuildCard.GuildCardCharacter.ArmorSlot1.ItemID;
-                comboBox12.Enabled = true;
-                comboBox12.SelectedIndex = currentGuildCard.GuildCardCharacter.ArmorSlot2.ItemID;
-
-                btnEditWeaponEffect.Enabled = btnEditEquipEffect.Enabled = btnEditArmor1Effect.Enabled = btnEditArmor2Effect.Enabled = true;
-
-                btnSkillEditor.Enabled = btnStatsEditor.Enabled = true;
-            }
-
-            gbRegCharacter.ResumeLayout();
-        }
-
         private void lbGuildCards_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((sender as ListBox).SelectedItem != null)
-                InitializeControls((sender as ListBox).SelectedItem as GuildCard);
-        }
-
-        private void chkIsCharaRegistered_CheckedChanged(object sender, EventArgs e)
-        {
-            if (changingGuildCards) return;
-
-            CheckBox checkBox = (sender as CheckBox);
-            if (!checkBox.Checked && currentGuildCard.GuildCardCharacter.IsValid)
-            {
-                if (MessageBox.Show("Warning: This will delete the existing Guild Card character. Really continue?", "Warning",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                {
-                    currentGuildCard.GuildCardCharacter.IsValid = false;
-                    InitializeRegisteredCharaControls();
-                }
-                else
-                    checkBox.Checked = true;
-            }
-            else
-            {
-                if (!currentGuildCard.GuildCardCharacter.IsValid) currentGuildCard.GuildCardCharacter = new GuildCardCharacter();
-                InitializeRegisteredCharaControls();
-            }
+            GuildCard guildCard = ((sender as ListBox).SelectedItem as GuildCard);
+            if (guildCard != null && currentGuildCard != guildCard)
+                InitializeControls(currentGuildCard = guildCard);
         }
 
         private void btnSkillEditor_Click(object sender, EventArgs e)

@@ -110,7 +110,6 @@
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.btnEditWeaponEffect = new System.Windows.Forms.Button();
             this.btnSkillEditor = new System.Windows.Forms.Button();
-            this.chkIsCharaRegistered = new System.Windows.Forms.CheckBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -831,7 +830,6 @@
             this.gbRegCharacter.Controls.Add(this.comboBox9);
             this.gbRegCharacter.Controls.Add(this.btnEditWeaponEffect);
             this.gbRegCharacter.Controls.Add(this.btnSkillEditor);
-            this.gbRegCharacter.Controls.Add(this.chkIsCharaRegistered);
             this.gbRegCharacter.Controls.Add(this.label33);
             this.gbRegCharacter.Controls.Add(this.label32);
             this.gbRegCharacter.Controls.Add(this.label31);
@@ -846,7 +844,7 @@
             this.gbRegCharacter.Controls.Add(this.textBox14);
             this.gbRegCharacter.Location = new System.Drawing.Point(452, 189);
             this.gbRegCharacter.Name = "gbRegCharacter";
-            this.gbRegCharacter.Size = new System.Drawing.Size(355, 268);
+            this.gbRegCharacter.Size = new System.Drawing.Size(355, 248);
             this.gbRegCharacter.TabIndex = 4;
             this.gbRegCharacter.TabStop = false;
             this.gbRegCharacter.Text = "Registered Character";
@@ -854,7 +852,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(180, 71);
+            this.label34.Location = new System.Drawing.Point(180, 48);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(61, 13);
             this.label34.TabIndex = 32;
@@ -862,7 +860,7 @@
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(249, 68);
+            this.textBox16.Location = new System.Drawing.Point(249, 45);
             this.textBox16.MaxLength = 9;
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(100, 20);
@@ -871,7 +869,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 71);
+            this.label14.Location = new System.Drawing.Point(6, 48);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 13);
             this.label14.TabIndex = 30;
@@ -879,7 +877,7 @@
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(74, 68);
+            this.textBox15.Location = new System.Drawing.Point(74, 45);
             this.textBox15.MaxLength = 9;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(100, 20);
@@ -887,7 +885,7 @@
             // 
             // btnStatsEditor
             // 
-            this.btnStatsEditor.Location = new System.Drawing.Point(200, 237);
+            this.btnStatsEditor.Location = new System.Drawing.Point(200, 214);
             this.btnStatsEditor.Name = "btnStatsEditor";
             this.btnStatsEditor.Size = new System.Drawing.Size(150, 23);
             this.btnStatsEditor.TabIndex = 28;
@@ -896,7 +894,7 @@
             // 
             // btnEditArmor2Effect
             // 
-            this.btnEditArmor2Effect.Location = new System.Drawing.Point(230, 208);
+            this.btnEditArmor2Effect.Location = new System.Drawing.Point(230, 185);
             this.btnEditArmor2Effect.Name = "btnEditArmor2Effect";
             this.btnEditArmor2Effect.Size = new System.Drawing.Size(120, 23);
             this.btnEditArmor2Effect.TabIndex = 27;
@@ -906,7 +904,7 @@
             // 
             // btnEditArmor1Effect
             // 
-            this.btnEditArmor1Effect.Location = new System.Drawing.Point(230, 179);
+            this.btnEditArmor1Effect.Location = new System.Drawing.Point(230, 156);
             this.btnEditArmor1Effect.Name = "btnEditArmor1Effect";
             this.btnEditArmor1Effect.Size = new System.Drawing.Size(120, 23);
             this.btnEditArmor1Effect.TabIndex = 26;
@@ -916,7 +914,7 @@
             // 
             // btnEditEquipEffect
             // 
-            this.btnEditEquipEffect.Location = new System.Drawing.Point(230, 150);
+            this.btnEditEquipEffect.Location = new System.Drawing.Point(230, 127);
             this.btnEditEquipEffect.Name = "btnEditEquipEffect";
             this.btnEditEquipEffect.Size = new System.Drawing.Size(120, 23);
             this.btnEditEquipEffect.TabIndex = 25;
@@ -928,7 +926,7 @@
             // 
             this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(74, 209);
+            this.comboBox12.Location = new System.Drawing.Point(74, 186);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(150, 21);
             this.comboBox12.TabIndex = 24;
@@ -937,7 +935,7 @@
             // 
             this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(74, 180);
+            this.comboBox11.Location = new System.Drawing.Point(74, 157);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(150, 21);
             this.comboBox11.TabIndex = 23;
@@ -946,7 +944,7 @@
             // 
             this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(74, 151);
+            this.comboBox10.Location = new System.Drawing.Point(74, 128);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(150, 21);
             this.comboBox10.TabIndex = 22;
@@ -955,14 +953,14 @@
             // 
             this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(74, 122);
+            this.comboBox9.Location = new System.Drawing.Point(74, 99);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(150, 21);
             this.comboBox9.TabIndex = 21;
             // 
             // btnEditWeaponEffect
             // 
-            this.btnEditWeaponEffect.Location = new System.Drawing.Point(230, 121);
+            this.btnEditWeaponEffect.Location = new System.Drawing.Point(230, 98);
             this.btnEditWeaponEffect.Name = "btnEditWeaponEffect";
             this.btnEditWeaponEffect.Size = new System.Drawing.Size(120, 23);
             this.btnEditWeaponEffect.TabIndex = 20;
@@ -972,7 +970,7 @@
             // 
             // btnSkillEditor
             // 
-            this.btnSkillEditor.Location = new System.Drawing.Point(6, 237);
+            this.btnSkillEditor.Location = new System.Drawing.Point(6, 214);
             this.btnSkillEditor.Name = "btnSkillEditor";
             this.btnSkillEditor.Size = new System.Drawing.Size(150, 23);
             this.btnSkillEditor.TabIndex = 19;
@@ -980,21 +978,10 @@
             this.btnSkillEditor.UseVisualStyleBackColor = true;
             this.btnSkillEditor.Click += new System.EventHandler(this.btnSkillEditor_Click);
             // 
-            // chkIsCharaRegistered
-            // 
-            this.chkIsCharaRegistered.AutoSize = true;
-            this.chkIsCharaRegistered.Location = new System.Drawing.Point(6, 19);
-            this.chkIsCharaRegistered.Name = "chkIsCharaRegistered";
-            this.chkIsCharaRegistered.Size = new System.Drawing.Size(176, 17);
-            this.chkIsCharaRegistered.TabIndex = 18;
-            this.chkIsCharaRegistered.Text = "Has Character been registered?";
-            this.chkIsCharaRegistered.UseVisualStyleBackColor = true;
-            this.chkIsCharaRegistered.CheckedChanged += new System.EventHandler(this.chkIsCharaRegistered_CheckedChanged);
-            // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 212);
+            this.label33.Location = new System.Drawing.Point(6, 189);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(46, 13);
             this.label33.TabIndex = 16;
@@ -1003,7 +990,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 183);
+            this.label32.Location = new System.Drawing.Point(6, 160);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(46, 13);
             this.label32.TabIndex = 15;
@@ -1012,7 +999,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 154);
+            this.label31.Location = new System.Drawing.Point(6, 131);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(60, 13);
             this.label31.TabIndex = 14;
@@ -1021,7 +1008,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 125);
+            this.label30.Location = new System.Drawing.Point(6, 102);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(51, 13);
             this.label30.TabIndex = 13;
@@ -1030,7 +1017,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(180, 97);
+            this.label29.Location = new System.Drawing.Point(180, 74);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(53, 13);
             this.label29.TabIndex = 12;
@@ -1039,7 +1026,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 97);
+            this.label28.Location = new System.Drawing.Point(6, 74);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(35, 13);
             this.label28.TabIndex = 11;
@@ -1048,7 +1035,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(180, 45);
+            this.label27.Location = new System.Drawing.Point(180, 22);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(36, 13);
             this.label27.TabIndex = 10;
@@ -1058,7 +1045,7 @@
             // 
             this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(249, 94);
+            this.comboBox8.Location = new System.Drawing.Point(249, 71);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(100, 21);
             this.comboBox8.TabIndex = 9;
@@ -1066,7 +1053,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 45);
+            this.label26.Location = new System.Drawing.Point(6, 22);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(38, 13);
             this.label26.TabIndex = 8;
@@ -1076,31 +1063,21 @@
             // 
             this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(74, 94);
+            this.comboBox7.Location = new System.Drawing.Point(74, 71);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(100, 21);
             this.comboBox7.TabIndex = 7;
             // 
             // numericUpDown17
             // 
-            this.numericUpDown17.Location = new System.Drawing.Point(249, 42);
-            this.numericUpDown17.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.numericUpDown17.Location = new System.Drawing.Point(249, 19);
             this.numericUpDown17.Name = "numericUpDown17";
             this.numericUpDown17.Size = new System.Drawing.Size(50, 20);
             this.numericUpDown17.TabIndex = 6;
-            this.numericUpDown17.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(74, 42);
+            this.textBox14.Location = new System.Drawing.Point(74, 19);
             this.textBox14.MaxLength = 9;
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(100, 20);
@@ -1135,7 +1112,7 @@
             this.gbAchievements.Controls.Add(this.numericUpDown11);
             this.gbAchievements.Location = new System.Drawing.Point(136, 219);
             this.gbAchievements.Name = "gbAchievements";
-            this.gbAchievements.Size = new System.Drawing.Size(310, 238);
+            this.gbAchievements.Size = new System.Drawing.Size(310, 218);
             this.gbAchievements.TabIndex = 28;
             this.gbAchievements.TabStop = false;
             this.gbAchievements.Text = "Achievements";
@@ -1147,7 +1124,7 @@
             this.lbGuildCards.IntegralHeight = false;
             this.lbGuildCards.Location = new System.Drawing.Point(0, 0);
             this.lbGuildCards.Name = "lbGuildCards";
-            this.lbGuildCards.Size = new System.Drawing.Size(130, 460);
+            this.lbGuildCards.Size = new System.Drawing.Size(130, 440);
             this.lbGuildCards.TabIndex = 1;
             this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
             // 
@@ -1161,7 +1138,7 @@
             this.Controls.Add(this.gbCharaList);
             this.Controls.Add(this.lbGuildCards);
             this.Name = "GuildCardEditor";
-            this.Size = new System.Drawing.Size(810, 460);
+            this.Size = new System.Drawing.Size(810, 440);
             this.gbCharaList.ResumeLayout(false);
             this.gbCharaList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
@@ -1274,7 +1251,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.CheckBox chkIsCharaRegistered;
         private System.Windows.Forms.Button btnSkillEditor;
         private System.Windows.Forms.Button btnEditWeaponEffect;
         private System.Windows.Forms.ComboBox comboBox12;
