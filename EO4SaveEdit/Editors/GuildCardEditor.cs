@@ -22,8 +22,6 @@ namespace EO4SaveEdit.Editors
         NumericUpDown[] levelNumericUpDowns;
         ComboBox[] classComboBoxes;
 
-        bool changingGuildCards;
-
         public GuildCardEditor()
         {
             InitializeComponent();
@@ -60,15 +58,12 @@ namespace EO4SaveEdit.Editors
             comboBox11.DataSource = XmlHelper.ItemNames.ToList();
             comboBox12.DataSource = XmlHelper.ItemNames.ToList();
 
-            lbGuildCards.DisplayMember = "GuildName";
             lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
         }
 
         private void InitializeControls(GuildCard guildCard)
         {
             if (guildCard == null) return;
-
-            changingGuildCards = true;
 
             for (int i = 0; i < currentGuildCard.CharacterListings.Length; i++)
             {
@@ -127,10 +122,6 @@ namespace EO4SaveEdit.Editors
             // TEMP
             gbAchievements.DataBindings.Clear();
             gbAchievements.DataBindings.Add("Text", currentGuildCard.Achievement, "RawValue", true, DataSourceUpdateMode.OnPropertyChanged, null, "X8");
-
-
-
-            changingGuildCards = false;
         }
 
         private void lbGuildCards_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,6 +129,18 @@ namespace EO4SaveEdit.Editors
             GuildCard guildCard = ((sender as ListBox).SelectedItem as GuildCard);
             if (guildCard != null && currentGuildCard != guildCard)
                 InitializeControls(currentGuildCard = guildCard);
+        }
+
+        private void lbGuildCards_Format(object sender, ListControlConvertEventArgs e)
+        {
+            if (e.DesiredType == typeof(string))
+            {
+                GuildCard selectedGuildCard = (e.ListItem as GuildCard);
+                if (selectedGuildCard.GuildName == string.Empty)
+                    e.Value = "(No name)";
+                else
+                    e.Value = selectedGuildCard.GuildName;
+            }
         }
 
         private void btnSkillEditor_Click(object sender, EventArgs e)

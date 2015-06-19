@@ -1119,14 +1119,17 @@
             // 
             // lbGuildCards
             // 
+            this.lbGuildCards.AlternateBackColorOnDraw = true;
             this.lbGuildCards.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbGuildCards.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbGuildCards.FormattingEnabled = true;
             this.lbGuildCards.IntegralHeight = false;
             this.lbGuildCards.Location = new System.Drawing.Point(0, 0);
             this.lbGuildCards.Name = "lbGuildCards";
             this.lbGuildCards.Size = new System.Drawing.Size(130, 440);
             this.lbGuildCards.TabIndex = 1;
             this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
+            this.lbGuildCards.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbGuildCards_Format);
             // 
             // GuildCardEditor
             // 
