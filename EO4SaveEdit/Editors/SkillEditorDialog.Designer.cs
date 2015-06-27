@@ -77,7 +77,6 @@
             this.dgvSkillsMainClass.AllowUserToDeleteRows = false;
             this.dgvSkillsMainClass.AllowUserToResizeColumns = false;
             this.dgvSkillsMainClass.AllowUserToResizeRows = false;
-            this.dgvSkillsMainClass.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSkillsMainClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSkillsMainClass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SkillColumn,
@@ -87,10 +86,12 @@
             this.dgvSkillsMainClass.Location = new System.Drawing.Point(6, 19);
             this.dgvSkillsMainClass.MultiSelect = false;
             this.dgvSkillsMainClass.Name = "dgvSkillsMainClass";
-            this.dgvSkillsMainClass.RowHeadersVisible = false;
+            this.dgvSkillsMainClass.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvSkillsMainClass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSkillsMainClass.ShowCellToolTips = false;
             this.dgvSkillsMainClass.Size = new System.Drawing.Size(268, 394);
             this.dgvSkillsMainClass.TabIndex = 0;
+            this.dgvSkillsMainClass.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSkillsMainClass_CellEndEdit);
             this.dgvSkillsMainClass.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvSkillsMainClass_CellValidating);
             this.dgvSkillsMainClass.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSkillsMainClass_CellValueChanged);
             // 
@@ -142,7 +143,6 @@
             this.dgvSkillsSubclass.AllowUserToDeleteRows = false;
             this.dgvSkillsSubclass.AllowUserToResizeColumns = false;
             this.dgvSkillsSubclass.AllowUserToResizeRows = false;
-            this.dgvSkillsSubclass.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSkillsSubclass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSkillsSubclass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -152,10 +152,12 @@
             this.dgvSkillsSubclass.Location = new System.Drawing.Point(6, 19);
             this.dgvSkillsSubclass.MultiSelect = false;
             this.dgvSkillsSubclass.Name = "dgvSkillsSubclass";
-            this.dgvSkillsSubclass.RowHeadersVisible = false;
+            this.dgvSkillsSubclass.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvSkillsSubclass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSkillsSubclass.ShowCellToolTips = false;
             this.dgvSkillsSubclass.Size = new System.Drawing.Size(268, 394);
             this.dgvSkillsSubclass.TabIndex = 0;
+            this.dgvSkillsSubclass.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSkillsSubclass_CellEndEdit);
             this.dgvSkillsSubclass.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvSkillsSubclass_CellValidating);
             this.dgvSkillsSubclass.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSkillsSubclass_CellValueChanged);
             // 
@@ -191,7 +193,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(594, 472);
             this.Controls.Add(this.gbSkillsSubclass);
             this.Controls.Add(this.gbSkillsMainClass);

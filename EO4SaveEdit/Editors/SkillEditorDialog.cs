@@ -31,10 +31,16 @@ namespace EO4SaveEdit.Editors
             gbSkillsMainClass.Text = string.Format("Main Class ({0})", mainClass);
             InitializeSkillDataGrid(dgvSkillsMainClass, mainClass, MainSkillLevels);
 
+            dgvSkillsMainClass.Columns[0].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
+            dgvSkillsMainClass.Columns[2].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
+
             if (subClass != Class.None)
             {
                 gbSkillsSubclass.Text = string.Format("Subclass ({0})", subClass);
                 InitializeSkillDataGrid(dgvSkillsSubclass, subClass, SubSkillLevels);
+
+                dgvSkillsSubclass.Columns[0].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
+                dgvSkillsSubclass.Columns[2].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
             }
         }
 
@@ -65,9 +71,8 @@ namespace EO4SaveEdit.Editors
 
         private void dgvSkillsMainClass_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            DataGridView dgv = (sender as DataGridView);
-            if (e.RowIndex >= 0 && e.RowIndex < MainSkillLevels.Length && e.ColumnIndex == 1)
-                e.Cancel = ((string)e.FormattedValue == string.Empty || IsSkillLevelInvalid(e.RowIndex, mainClass, byte.Parse((string)e.FormattedValue)));
+            if (e.ColumnIndex == 1)
+                ValidateSkillLevel((sender as DataGridView), e, mainClass);
         }
 
         private void dgvSkillsMainClass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -76,11 +81,15 @@ namespace EO4SaveEdit.Editors
                 MainSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
         }
 
+        private void dgvSkillsMainClass_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            (sender as DataGridView).Rows[e.RowIndex].ErrorText = string.Empty;
+        }
+
         private void dgvSkillsSubclass_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            DataGridView dgv = (sender as DataGridView);
             if (e.RowIndex >= 0 && e.RowIndex < SubSkillLevels.Length && e.ColumnIndex == 1)
-                e.Cancel = ((string)e.FormattedValue == string.Empty || IsSkillLevelInvalid(e.RowIndex, subClass, byte.Parse((string)e.FormattedValue)));
+                ValidateSkillLevel((sender as DataGridView), e, subClass);
         }
 
         private void dgvSkillsSubclass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -89,16 +98,32 @@ namespace EO4SaveEdit.Editors
                 SubSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
         }
 
-        private bool IsSkillLevelInvalid(int skillIdx, Class charaClass, byte newLevel)
+        private void dgvSkillsSubclass_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (newLevel > XmlHelper.SkillData[charaClass][skillIdx].Item1)
+            (sender as DataGridView).Rows[e.RowIndex].ErrorText = string.Empty;
+        }
+
+        private void ValidateSkillLevel(DataGridView dataGridView, DataGridViewCellValidatingEventArgs e, Class charaClass)
+        {
+            bool cancel = false;
+            string errorText = string.Empty;
+
+            if (e.RowIndex < 0 || e.RowIndex >= MainSkillLevels.Length)
             {
-                MessageBox.Show(
-                    string.Format("Invalid skill level specified. The maximum level for {0} is {1}.", XmlHelper.SkillData[charaClass][skillIdx].Item2, XmlHelper.SkillData[charaClass][skillIdx].Item1), "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return true;
+                cancel = true;
+                errorText = "Invalid skill selected.";
             }
-            return false;
+
+            byte newLevel;
+            if ((string)e.FormattedValue == string.Empty || !byte.TryParse((string)e.FormattedValue, out newLevel) || newLevel > XmlHelper.SkillData[charaClass][e.RowIndex].Item1)
+            {
+                cancel = true;
+                errorText = string.Format("Invalid skill level specified. The maximum level for {0} is {1}.",
+                    XmlHelper.SkillData[charaClass][e.RowIndex].Item2, XmlHelper.SkillData[charaClass][e.RowIndex].Item1);
+            }
+
+            e.Cancel = cancel;
+            dataGridView.Rows[e.RowIndex].ErrorText = errorText;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
