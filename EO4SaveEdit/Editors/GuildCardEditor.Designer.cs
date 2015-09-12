@@ -28,122 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbCharaList = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.gbInformation = new System.Windows.Forms.GroupBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.lblCharaListPortrait = new System.Windows.Forms.Label();
+            this.cmbCharaListClass5 = new System.Windows.Forms.ComboBox();
+            this.nudCharaListLevel5 = new System.Windows.Forms.NumericUpDown();
+            this.txtCharaListName5 = new System.Windows.Forms.TextBox();
+            this.cmbCharaListClass4 = new System.Windows.Forms.ComboBox();
+            this.nudCharaListLevel4 = new System.Windows.Forms.NumericUpDown();
+            this.txtCharaListName4 = new System.Windows.Forms.TextBox();
+            this.cmbCharaListClass3 = new System.Windows.Forms.ComboBox();
+            this.nudCharaListLevel3 = new System.Windows.Forms.NumericUpDown();
+            this.txtCharaListName3 = new System.Windows.Forms.TextBox();
+            this.cmbCharaListClass2 = new System.Windows.Forms.ComboBox();
+            this.nudCharaListLevel2 = new System.Windows.Forms.NumericUpDown();
+            this.txtCharaListName2 = new System.Windows.Forms.TextBox();
+            this.lblCharaListClass = new System.Windows.Forms.Label();
+            this.cmbCharaListClass1 = new System.Windows.Forms.ComboBox();
+            this.nudCharaListLevel1 = new System.Windows.Forms.NumericUpDown();
+            this.lblCharaListLevel = new System.Windows.Forms.Label();
+            this.lblCharaListName = new System.Windows.Forms.Label();
+            this.txtCharaListName1 = new System.Windows.Forms.TextBox();
+            this.gbGuildInfo = new System.Windows.Forms.GroupBox();
+            this.lblGuildTreasureMap = new System.Windows.Forms.Label();
+            this.cmbGuildTreasureMap = new System.Windows.Forms.ComboBox();
+            this.lblGuildCardBackground = new System.Windows.Forms.Label();
+            this.nudGuildCardBackground = new System.Windows.Forms.NumericUpDown();
+            this.lblGuildTotalEn = new System.Windows.Forms.Label();
+            this.txtGuildTotalEn = new System.Windows.Forms.TextBox();
+            this.lblGuildEnemiesHunted = new System.Windows.Forms.Label();
+            this.txtGuildEnemiesHunted = new System.Windows.Forms.TextBox();
+            this.lblGuildWalked = new System.Windows.Forms.Label();
+            this.txtGuildWalked = new System.Windows.Forms.TextBox();
+            this.lblGuildVenturedDays = new System.Windows.Forms.Label();
+            this.txtGuildVenturedDays = new System.Windows.Forms.TextBox();
+            this.lblGuildMaxLevel = new System.Windows.Forms.Label();
+            this.txtGuildMaxLevel = new System.Windows.Forms.TextBox();
+            this.lblGuildItemDiscovery = new System.Windows.Forms.Label();
+            this.nudGuildItemDiscovery = new System.Windows.Forms.NumericUpDown();
+            this.lblGuildEnemyDiscovery = new System.Windows.Forms.Label();
+            this.nudGuildEnemyDiscovery = new System.Windows.Forms.NumericUpDown();
+            this.txtGuildMessage = new System.Windows.Forms.TextBox();
+            this.lblGuildMessage = new System.Windows.Forms.Label();
+            this.txtGuildSkyship = new System.Windows.Forms.TextBox();
+            this.lblGuildSkyship = new System.Windows.Forms.Label();
+            this.txtGuildName = new System.Windows.Forms.TextBox();
+            this.lblGuildName = new System.Windows.Forms.Label();
+            this.lblCompletionHiddenTreasures = new System.Windows.Forms.Label();
+            this.nudCompletionHiddenTreasures = new System.Windows.Forms.NumericUpDown();
+            this.lblCompletionMaterials = new System.Windows.Forms.Label();
+            this.nudCompletionMaterials = new System.Windows.Forms.NumericUpDown();
+            this.lblCompletionMonsters = new System.Windows.Forms.Label();
+            this.nudCompletionMonsters = new System.Windows.Forms.NumericUpDown();
+            this.lblCompletionFood = new System.Windows.Forms.Label();
+            this.nudCompletionFood = new System.Windows.Forms.NumericUpDown();
+            this.lblCompletionRareBreeds = new System.Windows.Forms.Label();
+            this.nudCompletionRareBreeds = new System.Windows.Forms.NumericUpDown();
+            this.lblCompletionQuests = new System.Windows.Forms.Label();
+            this.nudCompletionQuests = new System.Windows.Forms.NumericUpDown();
+            this.lblCompletionTreasureBoxes = new System.Windows.Forms.Label();
+            this.nudCompletionTreasureBoxes = new System.Windows.Forms.NumericUpDown();
+            this.lblCompletionBurstSkills = new System.Windows.Forms.Label();
+            this.lblCompletionLevels = new System.Windows.Forms.Label();
+            this.nudCompletionBurstSkills = new System.Windows.Forms.NumericUpDown();
+            this.chkAchievementExplorerPride = new System.Windows.Forms.CheckBox();
+            this.chkAchievementInsectSlayer = new System.Windows.Forms.CheckBox();
+            this.chkAchievementYggdrasilHope = new System.Windows.Forms.CheckBox();
+            this.chkAchievementKnightAlly = new System.Windows.Forms.CheckBox();
+            this.chkAchievementSentinelAlly = new System.Windows.Forms.CheckBox();
+            this.chkAchievementVesselAlly = new System.Windows.Forms.CheckBox();
             this.gbRegCharacter = new System.Windows.Forms.GroupBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.btnStatsEditor = new System.Windows.Forms.Button();
-            this.btnEditArmor2Effect = new System.Windows.Forms.Button();
-            this.btnEditArmor1Effect = new System.Windows.Forms.Button();
-            this.btnEditEquipEffect = new System.Windows.Forms.Button();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.btnEditWeaponEffect = new System.Windows.Forms.Button();
-            this.btnSkillEditor = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.lblRegCharacterCurrentTP = new System.Windows.Forms.Label();
+            this.txtRegCharacterCurrentTP = new System.Windows.Forms.TextBox();
+            this.lblRegCharacterCurrentHP = new System.Windows.Forms.Label();
+            this.txtRegCharacterCurrentHP = new System.Windows.Forms.TextBox();
+            this.btnRegCharacterStatsEditor = new System.Windows.Forms.Button();
+            this.btnRegCharacterEditArmor2Effect = new System.Windows.Forms.Button();
+            this.btnRegCharacterEditArmor1Effect = new System.Windows.Forms.Button();
+            this.btnRegCharacterEditEquipEffect = new System.Windows.Forms.Button();
+            this.cmbRegCharacterArmor2 = new System.Windows.Forms.ComboBox();
+            this.cmbRegCharacterArmor1 = new System.Windows.Forms.ComboBox();
+            this.cmbRegCharacterEquipment = new System.Windows.Forms.ComboBox();
+            this.cmbRegCharacterWeapon = new System.Windows.Forms.ComboBox();
+            this.btnRegCharacterEditWeaponEffect = new System.Windows.Forms.Button();
+            this.btnRegCharacterSkillEditor = new System.Windows.Forms.Button();
+            this.lblRegCharacterArmor2 = new System.Windows.Forms.Label();
+            this.lblRegCharacterArmor1 = new System.Windows.Forms.Label();
+            this.lblRegCharacterEquipment = new System.Windows.Forms.Label();
+            this.lblRegCharacterWeapon = new System.Windows.Forms.Label();
+            this.lblRegCharacterSubclass = new System.Windows.Forms.Label();
+            this.lblRegCharacterClass = new System.Windows.Forms.Label();
+            this.lblRegCharacterLevel = new System.Windows.Forms.Label();
+            this.cmbRegCharacterSubclass = new System.Windows.Forms.ComboBox();
+            this.lblRegCharacterName = new System.Windows.Forms.Label();
+            this.cmbRegCharacterClass = new System.Windows.Forms.ComboBox();
+            this.nudRegCharacterLevel = new System.Windows.Forms.NumericUpDown();
+            this.txtRegCharacterName = new System.Windows.Forms.TextBox();
             this.gbAchievements = new System.Windows.Forms.GroupBox();
+            this.lblRegCharacterPortrait = new System.Windows.Forms.Label();
+            this.icmbRegCharacterPortrait = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait5 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait4 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait3 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait2 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait1 = new EO4SaveEdit.ImageComboBox();
             this.lbGuildCards = new EO4SaveEdit.ListBoxEx();
             this.gbCharaList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.gbInformation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel1)).BeginInit();
+            this.gbGuildInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuildCardBackground)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuildItemDiscovery)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuildEnemyDiscovery)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionHiddenTreasures)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionMaterials)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionMonsters)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionRareBreeds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionQuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionTreasureBoxes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionBurstSkills)).BeginInit();
             this.gbRegCharacter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRegCharacterLevel)).BeginInit();
             this.gbAchievements.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,24 +160,30 @@
             // 
             this.gbCharaList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbCharaList.Controls.Add(this.comboBox5);
-            this.gbCharaList.Controls.Add(this.numericUpDown5);
-            this.gbCharaList.Controls.Add(this.textBox5);
-            this.gbCharaList.Controls.Add(this.comboBox4);
-            this.gbCharaList.Controls.Add(this.numericUpDown4);
-            this.gbCharaList.Controls.Add(this.textBox4);
-            this.gbCharaList.Controls.Add(this.comboBox3);
-            this.gbCharaList.Controls.Add(this.numericUpDown3);
-            this.gbCharaList.Controls.Add(this.textBox3);
-            this.gbCharaList.Controls.Add(this.comboBox2);
-            this.gbCharaList.Controls.Add(this.numericUpDown2);
-            this.gbCharaList.Controls.Add(this.textBox2);
-            this.gbCharaList.Controls.Add(this.label3);
-            this.gbCharaList.Controls.Add(this.comboBox1);
-            this.gbCharaList.Controls.Add(this.numericUpDown1);
-            this.gbCharaList.Controls.Add(this.label2);
-            this.gbCharaList.Controls.Add(this.label1);
-            this.gbCharaList.Controls.Add(this.textBox1);
+            this.gbCharaList.Controls.Add(this.lblCharaListPortrait);
+            this.gbCharaList.Controls.Add(this.icmbCharaListPortrait5);
+            this.gbCharaList.Controls.Add(this.icmbCharaListPortrait4);
+            this.gbCharaList.Controls.Add(this.icmbCharaListPortrait3);
+            this.gbCharaList.Controls.Add(this.icmbCharaListPortrait2);
+            this.gbCharaList.Controls.Add(this.icmbCharaListPortrait1);
+            this.gbCharaList.Controls.Add(this.cmbCharaListClass5);
+            this.gbCharaList.Controls.Add(this.nudCharaListLevel5);
+            this.gbCharaList.Controls.Add(this.txtCharaListName5);
+            this.gbCharaList.Controls.Add(this.cmbCharaListClass4);
+            this.gbCharaList.Controls.Add(this.nudCharaListLevel4);
+            this.gbCharaList.Controls.Add(this.txtCharaListName4);
+            this.gbCharaList.Controls.Add(this.cmbCharaListClass3);
+            this.gbCharaList.Controls.Add(this.nudCharaListLevel3);
+            this.gbCharaList.Controls.Add(this.txtCharaListName3);
+            this.gbCharaList.Controls.Add(this.cmbCharaListClass2);
+            this.gbCharaList.Controls.Add(this.nudCharaListLevel2);
+            this.gbCharaList.Controls.Add(this.txtCharaListName2);
+            this.gbCharaList.Controls.Add(this.lblCharaListClass);
+            this.gbCharaList.Controls.Add(this.cmbCharaListClass1);
+            this.gbCharaList.Controls.Add(this.nudCharaListLevel1);
+            this.gbCharaList.Controls.Add(this.lblCharaListLevel);
+            this.gbCharaList.Controls.Add(this.lblCharaListName);
+            this.gbCharaList.Controls.Add(this.txtCharaListName1);
             this.gbCharaList.Location = new System.Drawing.Point(452, 3);
             this.gbCharaList.Name = "gbCharaList";
             this.gbCharaList.Size = new System.Drawing.Size(355, 180);
@@ -176,946 +191,1027 @@
             this.gbCharaList.TabStop = false;
             this.gbCharaList.Text = "Character List";
             // 
-            // comboBox5
+            // lblCharaListPortrait
             // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(198, 146);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(130, 21);
-            this.comboBox5.TabIndex = 17;
+            this.lblCharaListPortrait.AutoSize = true;
+            this.lblCharaListPortrait.Location = new System.Drawing.Point(246, 16);
+            this.lblCharaListPortrait.Name = "lblCharaListPortrait";
+            this.lblCharaListPortrait.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.lblCharaListPortrait.Size = new System.Drawing.Size(43, 19);
+            this.lblCharaListPortrait.TabIndex = 23;
+            this.lblCharaListPortrait.Text = "Portrait:";
             // 
-            // numericUpDown5
+            // cmbCharaListClass5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(132, 146);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown5.TabIndex = 16;
+            this.cmbCharaListClass5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCharaListClass5.FormattingEnabled = true;
+            this.cmbCharaListClass5.Location = new System.Drawing.Point(153, 146);
+            this.cmbCharaListClass5.Name = "cmbCharaListClass5";
+            this.cmbCharaListClass5.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass5.TabIndex = 17;
             // 
-            // textBox5
+            // nudCharaListLevel5
             // 
-            this.textBox5.Location = new System.Drawing.Point(6, 146);
-            this.textBox5.MaxLength = 9;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(120, 20);
-            this.textBox5.TabIndex = 15;
+            this.nudCharaListLevel5.Location = new System.Drawing.Point(102, 146);
+            this.nudCharaListLevel5.Name = "nudCharaListLevel5";
+            this.nudCharaListLevel5.Size = new System.Drawing.Size(45, 20);
+            this.nudCharaListLevel5.TabIndex = 16;
             // 
-            // comboBox4
+            // txtCharaListName5
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(198, 119);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(130, 21);
-            this.comboBox4.TabIndex = 14;
+            this.txtCharaListName5.Location = new System.Drawing.Point(6, 146);
+            this.txtCharaListName5.MaxLength = 9;
+            this.txtCharaListName5.Name = "txtCharaListName5";
+            this.txtCharaListName5.Size = new System.Drawing.Size(90, 20);
+            this.txtCharaListName5.TabIndex = 15;
             // 
-            // numericUpDown4
+            // cmbCharaListClass4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(132, 119);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown4.TabIndex = 13;
+            this.cmbCharaListClass4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCharaListClass4.FormattingEnabled = true;
+            this.cmbCharaListClass4.Location = new System.Drawing.Point(153, 119);
+            this.cmbCharaListClass4.Name = "cmbCharaListClass4";
+            this.cmbCharaListClass4.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass4.TabIndex = 14;
             // 
-            // textBox4
+            // nudCharaListLevel4
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 119);
-            this.textBox4.MaxLength = 9;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 20);
-            this.textBox4.TabIndex = 12;
+            this.nudCharaListLevel4.Location = new System.Drawing.Point(102, 119);
+            this.nudCharaListLevel4.Name = "nudCharaListLevel4";
+            this.nudCharaListLevel4.Size = new System.Drawing.Size(45, 20);
+            this.nudCharaListLevel4.TabIndex = 13;
             // 
-            // comboBox3
+            // txtCharaListName4
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(198, 92);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(130, 21);
-            this.comboBox3.TabIndex = 11;
+            this.txtCharaListName4.Location = new System.Drawing.Point(6, 119);
+            this.txtCharaListName4.MaxLength = 9;
+            this.txtCharaListName4.Name = "txtCharaListName4";
+            this.txtCharaListName4.Size = new System.Drawing.Size(90, 20);
+            this.txtCharaListName4.TabIndex = 12;
             // 
-            // numericUpDown3
+            // cmbCharaListClass3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(132, 92);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown3.TabIndex = 10;
+            this.cmbCharaListClass3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCharaListClass3.FormattingEnabled = true;
+            this.cmbCharaListClass3.Location = new System.Drawing.Point(153, 92);
+            this.cmbCharaListClass3.Name = "cmbCharaListClass3";
+            this.cmbCharaListClass3.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass3.TabIndex = 11;
             // 
-            // textBox3
+            // nudCharaListLevel3
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 92);
-            this.textBox3.MaxLength = 9;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 20);
-            this.textBox3.TabIndex = 9;
+            this.nudCharaListLevel3.Location = new System.Drawing.Point(102, 92);
+            this.nudCharaListLevel3.Name = "nudCharaListLevel3";
+            this.nudCharaListLevel3.Size = new System.Drawing.Size(45, 20);
+            this.nudCharaListLevel3.TabIndex = 10;
             // 
-            // comboBox2
+            // txtCharaListName3
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(198, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(130, 21);
-            this.comboBox2.TabIndex = 8;
+            this.txtCharaListName3.Location = new System.Drawing.Point(6, 92);
+            this.txtCharaListName3.MaxLength = 9;
+            this.txtCharaListName3.Name = "txtCharaListName3";
+            this.txtCharaListName3.Size = new System.Drawing.Size(90, 20);
+            this.txtCharaListName3.TabIndex = 9;
             // 
-            // numericUpDown2
+            // cmbCharaListClass2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(132, 65);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown2.TabIndex = 7;
+            this.cmbCharaListClass2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCharaListClass2.FormattingEnabled = true;
+            this.cmbCharaListClass2.Location = new System.Drawing.Point(153, 65);
+            this.cmbCharaListClass2.Name = "cmbCharaListClass2";
+            this.cmbCharaListClass2.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass2.TabIndex = 8;
             // 
-            // textBox2
+            // nudCharaListLevel2
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 65);
-            this.textBox2.MaxLength = 9;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 6;
+            this.nudCharaListLevel2.Location = new System.Drawing.Point(102, 65);
+            this.nudCharaListLevel2.Name = "nudCharaListLevel2";
+            this.nudCharaListLevel2.Size = new System.Drawing.Size(45, 20);
+            this.nudCharaListLevel2.TabIndex = 7;
             // 
-            // label3
+            // txtCharaListName2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 16);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.label3.Size = new System.Drawing.Size(35, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Class:";
+            this.txtCharaListName2.Location = new System.Drawing.Point(6, 65);
+            this.txtCharaListName2.MaxLength = 9;
+            this.txtCharaListName2.Name = "txtCharaListName2";
+            this.txtCharaListName2.Size = new System.Drawing.Size(90, 20);
+            this.txtCharaListName2.TabIndex = 6;
             // 
-            // comboBox1
+            // lblCharaListClass
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(198, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 21);
-            this.comboBox1.TabIndex = 4;
+            this.lblCharaListClass.AutoSize = true;
+            this.lblCharaListClass.Location = new System.Drawing.Point(150, 16);
+            this.lblCharaListClass.Name = "lblCharaListClass";
+            this.lblCharaListClass.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.lblCharaListClass.Size = new System.Drawing.Size(35, 19);
+            this.lblCharaListClass.TabIndex = 5;
+            this.lblCharaListClass.Text = "Class:";
             // 
-            // numericUpDown1
+            // cmbCharaListClass1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(132, 38);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.cmbCharaListClass1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCharaListClass1.FormattingEnabled = true;
+            this.cmbCharaListClass1.Location = new System.Drawing.Point(153, 38);
+            this.cmbCharaListClass1.Name = "cmbCharaListClass1";
+            this.cmbCharaListClass1.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass1.TabIndex = 4;
             // 
-            // label2
+            // nudCharaListLevel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 16);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.label2.Size = new System.Drawing.Size(36, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Level:";
+            this.nudCharaListLevel1.Location = new System.Drawing.Point(102, 38);
+            this.nudCharaListLevel1.Name = "nudCharaListLevel1";
+            this.nudCharaListLevel1.Size = new System.Drawing.Size(45, 20);
+            this.nudCharaListLevel1.TabIndex = 3;
             // 
-            // label1
+            // lblCharaListLevel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.label1.Size = new System.Drawing.Size(38, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name:";
+            this.lblCharaListLevel.AutoSize = true;
+            this.lblCharaListLevel.Location = new System.Drawing.Point(99, 16);
+            this.lblCharaListLevel.Name = "lblCharaListLevel";
+            this.lblCharaListLevel.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.lblCharaListLevel.Size = new System.Drawing.Size(36, 19);
+            this.lblCharaListLevel.TabIndex = 2;
+            this.lblCharaListLevel.Text = "Level:";
             // 
-            // textBox1
+            // lblCharaListName
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 38);
-            this.textBox1.MaxLength = 9;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 0;
+            this.lblCharaListName.AutoSize = true;
+            this.lblCharaListName.Location = new System.Drawing.Point(6, 16);
+            this.lblCharaListName.Name = "lblCharaListName";
+            this.lblCharaListName.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.lblCharaListName.Size = new System.Drawing.Size(38, 19);
+            this.lblCharaListName.TabIndex = 1;
+            this.lblCharaListName.Text = "Name:";
             // 
-            // gbInformation
+            // txtCharaListName1
             // 
-            this.gbInformation.Controls.Add(this.label25);
-            this.gbInformation.Controls.Add(this.comboBox6);
-            this.gbInformation.Controls.Add(this.label24);
-            this.gbInformation.Controls.Add(this.numericUpDown16);
-            this.gbInformation.Controls.Add(this.label13);
-            this.gbInformation.Controls.Add(this.textBox13);
-            this.gbInformation.Controls.Add(this.label12);
-            this.gbInformation.Controls.Add(this.textBox12);
-            this.gbInformation.Controls.Add(this.label11);
-            this.gbInformation.Controls.Add(this.textBox11);
-            this.gbInformation.Controls.Add(this.label10);
-            this.gbInformation.Controls.Add(this.textBox10);
-            this.gbInformation.Controls.Add(this.label9);
-            this.gbInformation.Controls.Add(this.textBox9);
-            this.gbInformation.Controls.Add(this.label8);
-            this.gbInformation.Controls.Add(this.numericUpDown7);
-            this.gbInformation.Controls.Add(this.label7);
-            this.gbInformation.Controls.Add(this.numericUpDown6);
-            this.gbInformation.Controls.Add(this.textBox8);
-            this.gbInformation.Controls.Add(this.label6);
-            this.gbInformation.Controls.Add(this.textBox7);
-            this.gbInformation.Controls.Add(this.label5);
-            this.gbInformation.Controls.Add(this.textBox6);
-            this.gbInformation.Controls.Add(this.label4);
-            this.gbInformation.Location = new System.Drawing.Point(136, 3);
-            this.gbInformation.Name = "gbInformation";
-            this.gbInformation.Size = new System.Drawing.Size(310, 210);
-            this.gbInformation.TabIndex = 3;
-            this.gbInformation.TabStop = false;
-            this.gbInformation.Text = "Guild Information";
+            this.txtCharaListName1.Location = new System.Drawing.Point(6, 38);
+            this.txtCharaListName1.MaxLength = 9;
+            this.txtCharaListName1.Name = "txtCharaListName1";
+            this.txtCharaListName1.Size = new System.Drawing.Size(90, 20);
+            this.txtCharaListName1.TabIndex = 0;
             // 
-            // label25
+            // gbGuildInfo
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 178);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 13);
-            this.label25.TabIndex = 49;
-            this.label25.Text = "Treasure Map:";
+            this.gbGuildInfo.Controls.Add(this.lblGuildTreasureMap);
+            this.gbGuildInfo.Controls.Add(this.cmbGuildTreasureMap);
+            this.gbGuildInfo.Controls.Add(this.lblGuildCardBackground);
+            this.gbGuildInfo.Controls.Add(this.nudGuildCardBackground);
+            this.gbGuildInfo.Controls.Add(this.lblGuildTotalEn);
+            this.gbGuildInfo.Controls.Add(this.txtGuildTotalEn);
+            this.gbGuildInfo.Controls.Add(this.lblGuildEnemiesHunted);
+            this.gbGuildInfo.Controls.Add(this.txtGuildEnemiesHunted);
+            this.gbGuildInfo.Controls.Add(this.lblGuildWalked);
+            this.gbGuildInfo.Controls.Add(this.txtGuildWalked);
+            this.gbGuildInfo.Controls.Add(this.lblGuildVenturedDays);
+            this.gbGuildInfo.Controls.Add(this.txtGuildVenturedDays);
+            this.gbGuildInfo.Controls.Add(this.lblGuildMaxLevel);
+            this.gbGuildInfo.Controls.Add(this.txtGuildMaxLevel);
+            this.gbGuildInfo.Controls.Add(this.lblGuildItemDiscovery);
+            this.gbGuildInfo.Controls.Add(this.nudGuildItemDiscovery);
+            this.gbGuildInfo.Controls.Add(this.lblGuildEnemyDiscovery);
+            this.gbGuildInfo.Controls.Add(this.nudGuildEnemyDiscovery);
+            this.gbGuildInfo.Controls.Add(this.txtGuildMessage);
+            this.gbGuildInfo.Controls.Add(this.lblGuildMessage);
+            this.gbGuildInfo.Controls.Add(this.txtGuildSkyship);
+            this.gbGuildInfo.Controls.Add(this.lblGuildSkyship);
+            this.gbGuildInfo.Controls.Add(this.txtGuildName);
+            this.gbGuildInfo.Controls.Add(this.lblGuildName);
+            this.gbGuildInfo.Location = new System.Drawing.Point(136, 3);
+            this.gbGuildInfo.Name = "gbGuildInfo";
+            this.gbGuildInfo.Size = new System.Drawing.Size(310, 210);
+            this.gbGuildInfo.TabIndex = 3;
+            this.gbGuildInfo.TabStop = false;
+            this.gbGuildInfo.Text = "Guild Information";
             // 
-            // comboBox6
+            // lblGuildTreasureMap
             // 
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(88, 175);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(216, 21);
-            this.comboBox6.TabIndex = 48;
+            this.lblGuildTreasureMap.AutoSize = true;
+            this.lblGuildTreasureMap.Location = new System.Drawing.Point(6, 178);
+            this.lblGuildTreasureMap.Name = "lblGuildTreasureMap";
+            this.lblGuildTreasureMap.Size = new System.Drawing.Size(76, 13);
+            this.lblGuildTreasureMap.TabIndex = 49;
+            this.lblGuildTreasureMap.Text = "Treasure Map:";
             // 
-            // label24
+            // cmbGuildTreasureMap
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(145, 152);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(93, 13);
-            this.label24.TabIndex = 47;
-            this.label24.Text = "Card Background:";
+            this.cmbGuildTreasureMap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGuildTreasureMap.FormattingEnabled = true;
+            this.cmbGuildTreasureMap.Location = new System.Drawing.Point(88, 175);
+            this.cmbGuildTreasureMap.Name = "cmbGuildTreasureMap";
+            this.cmbGuildTreasureMap.Size = new System.Drawing.Size(216, 21);
+            this.cmbGuildTreasureMap.TabIndex = 48;
             // 
-            // numericUpDown16
+            // lblGuildCardBackground
             // 
-            this.numericUpDown16.Location = new System.Drawing.Point(244, 149);
-            this.numericUpDown16.Maximum = new decimal(new int[] {
+            this.lblGuildCardBackground.AutoSize = true;
+            this.lblGuildCardBackground.Location = new System.Drawing.Point(145, 152);
+            this.lblGuildCardBackground.Name = "lblGuildCardBackground";
+            this.lblGuildCardBackground.Size = new System.Drawing.Size(93, 13);
+            this.lblGuildCardBackground.TabIndex = 47;
+            this.lblGuildCardBackground.Text = "Card Background:";
+            // 
+            // nudGuildCardBackground
+            // 
+            this.nudGuildCardBackground.Location = new System.Drawing.Point(244, 149);
+            this.nudGuildCardBackground.Maximum = new decimal(new int[] {
             7,
             0,
             0,
             0});
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown16.TabIndex = 46;
+            this.nudGuildCardBackground.Name = "nudGuildCardBackground";
+            this.nudGuildCardBackground.Size = new System.Drawing.Size(60, 20);
+            this.nudGuildCardBackground.TabIndex = 46;
             // 
-            // label13
+            // lblGuildTotalEn
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 152);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 13);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Total en:";
+            this.lblGuildTotalEn.AutoSize = true;
+            this.lblGuildTotalEn.Location = new System.Drawing.Point(6, 152);
+            this.lblGuildTotalEn.Name = "lblGuildTotalEn";
+            this.lblGuildTotalEn.Size = new System.Drawing.Size(49, 13);
+            this.lblGuildTotalEn.TabIndex = 21;
+            this.lblGuildTotalEn.Text = "Total en:";
             // 
-            // textBox13
+            // txtGuildTotalEn
             // 
-            this.textBox13.Location = new System.Drawing.Point(74, 149);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(60, 20);
-            this.textBox13.TabIndex = 20;
+            this.txtGuildTotalEn.Location = new System.Drawing.Point(74, 149);
+            this.txtGuildTotalEn.Name = "txtGuildTotalEn";
+            this.txtGuildTotalEn.Size = new System.Drawing.Size(60, 20);
+            this.txtGuildTotalEn.TabIndex = 20;
             // 
-            // label12
+            // lblGuildEnemiesHunted
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(150, 126);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Enemies Hunted:";
+            this.lblGuildEnemiesHunted.AutoSize = true;
+            this.lblGuildEnemiesHunted.Location = new System.Drawing.Point(150, 126);
+            this.lblGuildEnemiesHunted.Name = "lblGuildEnemiesHunted";
+            this.lblGuildEnemiesHunted.Size = new System.Drawing.Size(88, 13);
+            this.lblGuildEnemiesHunted.TabIndex = 19;
+            this.lblGuildEnemiesHunted.Text = "Enemies Hunted:";
             // 
-            // textBox12
+            // txtGuildEnemiesHunted
             // 
-            this.textBox12.Location = new System.Drawing.Point(244, 123);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(60, 20);
-            this.textBox12.TabIndex = 18;
+            this.txtGuildEnemiesHunted.Location = new System.Drawing.Point(244, 123);
+            this.txtGuildEnemiesHunted.Name = "txtGuildEnemiesHunted";
+            this.txtGuildEnemiesHunted.Size = new System.Drawing.Size(60, 20);
+            this.txtGuildEnemiesHunted.TabIndex = 18;
             // 
-            // label11
+            // lblGuildWalked
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 126);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Walked:";
+            this.lblGuildWalked.AutoSize = true;
+            this.lblGuildWalked.Location = new System.Drawing.Point(6, 126);
+            this.lblGuildWalked.Name = "lblGuildWalked";
+            this.lblGuildWalked.Size = new System.Drawing.Size(47, 13);
+            this.lblGuildWalked.TabIndex = 17;
+            this.lblGuildWalked.Text = "Walked:";
             // 
-            // textBox11
+            // txtGuildWalked
             // 
-            this.textBox11.Location = new System.Drawing.Point(74, 123);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(60, 20);
-            this.textBox11.TabIndex = 16;
+            this.txtGuildWalked.Location = new System.Drawing.Point(74, 123);
+            this.txtGuildWalked.Name = "txtGuildWalked";
+            this.txtGuildWalked.Size = new System.Drawing.Size(60, 20);
+            this.txtGuildWalked.TabIndex = 16;
             // 
-            // label10
+            // lblGuildVenturedDays
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(158, 100);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 13);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Ventured Days:";
+            this.lblGuildVenturedDays.AutoSize = true;
+            this.lblGuildVenturedDays.Location = new System.Drawing.Point(158, 100);
+            this.lblGuildVenturedDays.Name = "lblGuildVenturedDays";
+            this.lblGuildVenturedDays.Size = new System.Drawing.Size(80, 13);
+            this.lblGuildVenturedDays.TabIndex = 15;
+            this.lblGuildVenturedDays.Text = "Ventured Days:";
             // 
-            // textBox10
+            // txtGuildVenturedDays
             // 
-            this.textBox10.Location = new System.Drawing.Point(244, 97);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(60, 20);
-            this.textBox10.TabIndex = 14;
+            this.txtGuildVenturedDays.Location = new System.Drawing.Point(244, 97);
+            this.txtGuildVenturedDays.Name = "txtGuildVenturedDays";
+            this.txtGuildVenturedDays.Size = new System.Drawing.Size(60, 20);
+            this.txtGuildVenturedDays.TabIndex = 14;
             // 
-            // label9
+            // lblGuildMaxLevel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 100);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Max. Level:";
+            this.lblGuildMaxLevel.AutoSize = true;
+            this.lblGuildMaxLevel.Location = new System.Drawing.Point(6, 100);
+            this.lblGuildMaxLevel.Name = "lblGuildMaxLevel";
+            this.lblGuildMaxLevel.Size = new System.Drawing.Size(62, 13);
+            this.lblGuildMaxLevel.TabIndex = 13;
+            this.lblGuildMaxLevel.Text = "Max. Level:";
             // 
-            // textBox9
+            // txtGuildMaxLevel
             // 
-            this.textBox9.Location = new System.Drawing.Point(74, 97);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(60, 20);
-            this.textBox9.TabIndex = 12;
+            this.txtGuildMaxLevel.Location = new System.Drawing.Point(74, 97);
+            this.txtGuildMaxLevel.Name = "txtGuildMaxLevel";
+            this.txtGuildMaxLevel.Size = new System.Drawing.Size(60, 20);
+            this.txtGuildMaxLevel.TabIndex = 12;
             // 
-            // label8
+            // lblGuildItemDiscovery
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(166, 73);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Item Discovery:";
+            this.lblGuildItemDiscovery.AutoSize = true;
+            this.lblGuildItemDiscovery.Location = new System.Drawing.Point(166, 73);
+            this.lblGuildItemDiscovery.Name = "lblGuildItemDiscovery";
+            this.lblGuildItemDiscovery.Size = new System.Drawing.Size(80, 13);
+            this.lblGuildItemDiscovery.TabIndex = 11;
+            this.lblGuildItemDiscovery.Text = "Item Discovery:";
             // 
-            // numericUpDown7
+            // nudGuildItemDiscovery
             // 
-            this.numericUpDown7.DecimalPlaces = 2;
-            this.numericUpDown7.Increment = new decimal(new int[] {
+            this.nudGuildItemDiscovery.DecimalPlaces = 2;
+            this.nudGuildItemDiscovery.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numericUpDown7.Location = new System.Drawing.Point(249, 71);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown7.TabIndex = 10;
+            this.nudGuildItemDiscovery.Location = new System.Drawing.Point(249, 71);
+            this.nudGuildItemDiscovery.Name = "nudGuildItemDiscovery";
+            this.nudGuildItemDiscovery.Size = new System.Drawing.Size(55, 20);
+            this.nudGuildItemDiscovery.TabIndex = 10;
             // 
-            // label7
+            // lblGuildEnemyDiscovery
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Enemy Discovery:";
+            this.lblGuildEnemyDiscovery.AutoSize = true;
+            this.lblGuildEnemyDiscovery.Location = new System.Drawing.Point(6, 73);
+            this.lblGuildEnemyDiscovery.Name = "lblGuildEnemyDiscovery";
+            this.lblGuildEnemyDiscovery.Size = new System.Drawing.Size(92, 13);
+            this.lblGuildEnemyDiscovery.TabIndex = 9;
+            this.lblGuildEnemyDiscovery.Text = "Enemy Discovery:";
             // 
-            // numericUpDown6
+            // nudGuildEnemyDiscovery
             // 
-            this.numericUpDown6.DecimalPlaces = 2;
-            this.numericUpDown6.Increment = new decimal(new int[] {
+            this.nudGuildEnemyDiscovery.DecimalPlaces = 2;
+            this.nudGuildEnemyDiscovery.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numericUpDown6.Location = new System.Drawing.Point(104, 71);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown6.TabIndex = 8;
+            this.nudGuildEnemyDiscovery.Location = new System.Drawing.Point(104, 71);
+            this.nudGuildEnemyDiscovery.Name = "nudGuildEnemyDiscovery";
+            this.nudGuildEnemyDiscovery.Size = new System.Drawing.Size(55, 20);
+            this.nudGuildEnemyDiscovery.TabIndex = 8;
             // 
-            // textBox8
+            // txtGuildMessage
             // 
-            this.textBox8.Location = new System.Drawing.Point(65, 45);
-            this.textBox8.MaxLength = 16;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(239, 20);
-            this.textBox8.TabIndex = 7;
+            this.txtGuildMessage.Location = new System.Drawing.Point(65, 45);
+            this.txtGuildMessage.MaxLength = 16;
+            this.txtGuildMessage.Name = "txtGuildMessage";
+            this.txtGuildMessage.Size = new System.Drawing.Size(239, 20);
+            this.txtGuildMessage.TabIndex = 7;
             // 
-            // label6
+            // lblGuildMessage
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Message:";
+            this.lblGuildMessage.AutoSize = true;
+            this.lblGuildMessage.Location = new System.Drawing.Point(6, 48);
+            this.lblGuildMessage.Name = "lblGuildMessage";
+            this.lblGuildMessage.Size = new System.Drawing.Size(53, 13);
+            this.lblGuildMessage.TabIndex = 6;
+            this.lblGuildMessage.Text = "Message:";
             // 
-            // textBox7
+            // txtGuildSkyship
             // 
-            this.textBox7.Location = new System.Drawing.Point(219, 19);
-            this.textBox7.MaxLength = 8;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(85, 20);
-            this.textBox7.TabIndex = 5;
+            this.txtGuildSkyship.Location = new System.Drawing.Point(219, 19);
+            this.txtGuildSkyship.MaxLength = 8;
+            this.txtGuildSkyship.Name = "txtGuildSkyship";
+            this.txtGuildSkyship.Size = new System.Drawing.Size(85, 20);
+            this.txtGuildSkyship.TabIndex = 5;
             // 
-            // label5
+            // lblGuildSkyship
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(166, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Skyship:";
+            this.lblGuildSkyship.AutoSize = true;
+            this.lblGuildSkyship.Location = new System.Drawing.Point(166, 22);
+            this.lblGuildSkyship.Name = "lblGuildSkyship";
+            this.lblGuildSkyship.Size = new System.Drawing.Size(47, 13);
+            this.lblGuildSkyship.TabIndex = 4;
+            this.lblGuildSkyship.Text = "Skyship:";
             // 
-            // textBox6
+            // txtGuildName
             // 
-            this.textBox6.Location = new System.Drawing.Point(65, 19);
-            this.textBox6.MaxLength = 8;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(85, 20);
-            this.textBox6.TabIndex = 3;
+            this.txtGuildName.Location = new System.Drawing.Point(65, 19);
+            this.txtGuildName.MaxLength = 8;
+            this.txtGuildName.Name = "txtGuildName";
+            this.txtGuildName.Size = new System.Drawing.Size(85, 20);
+            this.txtGuildName.TabIndex = 3;
             // 
-            // label4
+            // lblGuildName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Name:";
+            this.lblGuildName.AutoSize = true;
+            this.lblGuildName.Location = new System.Drawing.Point(6, 22);
+            this.lblGuildName.Name = "lblGuildName";
+            this.lblGuildName.Size = new System.Drawing.Size(38, 13);
+            this.lblGuildName.TabIndex = 2;
+            this.lblGuildName.Text = "Name:";
             // 
-            // label23
+            // lblCompletionHiddenTreasures
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(144, 191);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(94, 13);
-            this.label23.TabIndex = 45;
-            this.label23.Text = "Hidden Treasures:";
+            this.lblCompletionHiddenTreasures.AutoSize = true;
+            this.lblCompletionHiddenTreasures.Location = new System.Drawing.Point(144, 191);
+            this.lblCompletionHiddenTreasures.Name = "lblCompletionHiddenTreasures";
+            this.lblCompletionHiddenTreasures.Size = new System.Drawing.Size(94, 13);
+            this.lblCompletionHiddenTreasures.TabIndex = 45;
+            this.lblCompletionHiddenTreasures.Text = "Hidden Treasures:";
             // 
-            // numericUpDown15
+            // nudCompletionHiddenTreasures
             // 
-            this.numericUpDown15.Location = new System.Drawing.Point(244, 189);
-            this.numericUpDown15.Maximum = new decimal(new int[] {
+            this.nudCompletionHiddenTreasures.Location = new System.Drawing.Point(244, 189);
+            this.nudCompletionHiddenTreasures.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown15.TabIndex = 44;
+            this.nudCompletionHiddenTreasures.Name = "nudCompletionHiddenTreasures";
+            this.nudCompletionHiddenTreasures.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionHiddenTreasures.TabIndex = 44;
             // 
-            // label22
+            // lblCompletionMaterials
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 191);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 13);
-            this.label22.TabIndex = 43;
-            this.label22.Text = "Materials:";
+            this.lblCompletionMaterials.AutoSize = true;
+            this.lblCompletionMaterials.Location = new System.Drawing.Point(6, 191);
+            this.lblCompletionMaterials.Name = "lblCompletionMaterials";
+            this.lblCompletionMaterials.Size = new System.Drawing.Size(52, 13);
+            this.lblCompletionMaterials.TabIndex = 43;
+            this.lblCompletionMaterials.Text = "Materials:";
             // 
-            // numericUpDown14
+            // nudCompletionMaterials
             // 
-            this.numericUpDown14.Location = new System.Drawing.Point(74, 189);
-            this.numericUpDown14.Maximum = new decimal(new int[] {
+            this.nudCompletionMaterials.Location = new System.Drawing.Point(74, 189);
+            this.nudCompletionMaterials.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown14.TabIndex = 42;
+            this.nudCompletionMaterials.Name = "nudCompletionMaterials";
+            this.nudCompletionMaterials.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionMaterials.TabIndex = 42;
             // 
-            // label21
+            // lblCompletionMonsters
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(185, 165);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 13);
-            this.label21.TabIndex = 41;
-            this.label21.Text = "Monsters:";
+            this.lblCompletionMonsters.AutoSize = true;
+            this.lblCompletionMonsters.Location = new System.Drawing.Point(185, 165);
+            this.lblCompletionMonsters.Name = "lblCompletionMonsters";
+            this.lblCompletionMonsters.Size = new System.Drawing.Size(53, 13);
+            this.lblCompletionMonsters.TabIndex = 41;
+            this.lblCompletionMonsters.Text = "Monsters:";
             // 
-            // numericUpDown13
+            // nudCompletionMonsters
             // 
-            this.numericUpDown13.Location = new System.Drawing.Point(244, 163);
-            this.numericUpDown13.Maximum = new decimal(new int[] {
+            this.nudCompletionMonsters.Location = new System.Drawing.Point(244, 163);
+            this.nudCompletionMonsters.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown13.TabIndex = 40;
+            this.nudCompletionMonsters.Name = "nudCompletionMonsters";
+            this.nudCompletionMonsters.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionMonsters.TabIndex = 40;
             // 
-            // label20
+            // lblCompletionFood
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 165);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(34, 13);
-            this.label20.TabIndex = 39;
-            this.label20.Text = "Food:";
+            this.lblCompletionFood.AutoSize = true;
+            this.lblCompletionFood.Location = new System.Drawing.Point(6, 165);
+            this.lblCompletionFood.Name = "lblCompletionFood";
+            this.lblCompletionFood.Size = new System.Drawing.Size(34, 13);
+            this.lblCompletionFood.TabIndex = 39;
+            this.lblCompletionFood.Text = "Food:";
             // 
-            // numericUpDown12
+            // nudCompletionFood
             // 
-            this.numericUpDown12.Location = new System.Drawing.Point(74, 163);
-            this.numericUpDown12.Maximum = new decimal(new int[] {
+            this.nudCompletionFood.Location = new System.Drawing.Point(74, 163);
+            this.nudCompletionFood.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown12.TabIndex = 38;
+            this.nudCompletionFood.Name = "nudCompletionFood";
+            this.nudCompletionFood.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionFood.TabIndex = 38;
             // 
-            // label19
+            // lblCompletionRareBreeds
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(169, 139);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 13);
-            this.label19.TabIndex = 37;
-            this.label19.Text = "Rare Breeds:";
+            this.lblCompletionRareBreeds.AutoSize = true;
+            this.lblCompletionRareBreeds.Location = new System.Drawing.Point(169, 139);
+            this.lblCompletionRareBreeds.Name = "lblCompletionRareBreeds";
+            this.lblCompletionRareBreeds.Size = new System.Drawing.Size(69, 13);
+            this.lblCompletionRareBreeds.TabIndex = 37;
+            this.lblCompletionRareBreeds.Text = "Rare Breeds:";
             // 
-            // numericUpDown11
+            // nudCompletionRareBreeds
             // 
-            this.numericUpDown11.Location = new System.Drawing.Point(244, 137);
-            this.numericUpDown11.Maximum = new decimal(new int[] {
+            this.nudCompletionRareBreeds.Location = new System.Drawing.Point(244, 137);
+            this.nudCompletionRareBreeds.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown11.TabIndex = 36;
+            this.nudCompletionRareBreeds.Name = "nudCompletionRareBreeds";
+            this.nudCompletionRareBreeds.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionRareBreeds.TabIndex = 36;
             // 
-            // label18
+            // lblCompletionQuests
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 139);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 13);
-            this.label18.TabIndex = 35;
-            this.label18.Text = "Quests:";
+            this.lblCompletionQuests.AutoSize = true;
+            this.lblCompletionQuests.Location = new System.Drawing.Point(6, 139);
+            this.lblCompletionQuests.Name = "lblCompletionQuests";
+            this.lblCompletionQuests.Size = new System.Drawing.Size(43, 13);
+            this.lblCompletionQuests.TabIndex = 35;
+            this.lblCompletionQuests.Text = "Quests:";
             // 
-            // numericUpDown10
+            // nudCompletionQuests
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(74, 137);
-            this.numericUpDown10.Maximum = new decimal(new int[] {
+            this.nudCompletionQuests.Location = new System.Drawing.Point(74, 137);
+            this.nudCompletionQuests.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown10.TabIndex = 34;
+            this.nudCompletionQuests.Name = "nudCompletionQuests";
+            this.nudCompletionQuests.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionQuests.TabIndex = 34;
             // 
-            // label17
+            // lblCompletionTreasureBoxes
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(154, 113);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 13);
-            this.label17.TabIndex = 33;
-            this.label17.Text = "Treasure Boxes:";
+            this.lblCompletionTreasureBoxes.AutoSize = true;
+            this.lblCompletionTreasureBoxes.Location = new System.Drawing.Point(154, 113);
+            this.lblCompletionTreasureBoxes.Name = "lblCompletionTreasureBoxes";
+            this.lblCompletionTreasureBoxes.Size = new System.Drawing.Size(84, 13);
+            this.lblCompletionTreasureBoxes.TabIndex = 33;
+            this.lblCompletionTreasureBoxes.Text = "Treasure Boxes:";
             // 
-            // numericUpDown9
+            // nudCompletionTreasureBoxes
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(244, 111);
-            this.numericUpDown9.Maximum = new decimal(new int[] {
+            this.nudCompletionTreasureBoxes.Location = new System.Drawing.Point(244, 111);
+            this.nudCompletionTreasureBoxes.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown9.TabIndex = 32;
+            this.nudCompletionTreasureBoxes.Name = "nudCompletionTreasureBoxes";
+            this.nudCompletionTreasureBoxes.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionTreasureBoxes.TabIndex = 32;
             // 
-            // label16
+            // lblCompletionBurstSkills
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 113);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 13);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Burst Skills:";
+            this.lblCompletionBurstSkills.AutoSize = true;
+            this.lblCompletionBurstSkills.Location = new System.Drawing.Point(6, 113);
+            this.lblCompletionBurstSkills.Name = "lblCompletionBurstSkills";
+            this.lblCompletionBurstSkills.Size = new System.Drawing.Size(61, 13);
+            this.lblCompletionBurstSkills.TabIndex = 31;
+            this.lblCompletionBurstSkills.Text = "Burst Skills:";
             // 
-            // label15
+            // lblCompletionLevels
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 92);
-            this.label15.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 13);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Completion Levels:";
+            this.lblCompletionLevels.AutoSize = true;
+            this.lblCompletionLevels.Location = new System.Drawing.Point(6, 92);
+            this.lblCompletionLevels.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.lblCompletionLevels.Name = "lblCompletionLevels";
+            this.lblCompletionLevels.Size = new System.Drawing.Size(96, 13);
+            this.lblCompletionLevels.TabIndex = 30;
+            this.lblCompletionLevels.Text = "Completion Levels:";
             // 
-            // numericUpDown8
+            // nudCompletionBurstSkills
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(74, 111);
-            this.numericUpDown8.Maximum = new decimal(new int[] {
+            this.nudCompletionBurstSkills.Location = new System.Drawing.Point(74, 111);
+            this.nudCompletionBurstSkills.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown8.TabIndex = 29;
+            this.nudCompletionBurstSkills.Name = "nudCompletionBurstSkills";
+            this.nudCompletionBurstSkills.Size = new System.Drawing.Size(55, 20);
+            this.nudCompletionBurstSkills.TabIndex = 29;
             // 
-            // checkBox6
+            // chkAchievementExplorerPride
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(153, 65);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(98, 17);
-            this.checkBox6.TabIndex = 28;
-            this.checkBox6.Text = "Explorer\'s Pride";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkAchievementExplorerPride.AutoSize = true;
+            this.chkAchievementExplorerPride.Location = new System.Drawing.Point(153, 65);
+            this.chkAchievementExplorerPride.Name = "chkAchievementExplorerPride";
+            this.chkAchievementExplorerPride.Size = new System.Drawing.Size(98, 17);
+            this.chkAchievementExplorerPride.TabIndex = 28;
+            this.chkAchievementExplorerPride.Text = "Explorer\'s Pride";
+            this.chkAchievementExplorerPride.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chkAchievementInsectSlayer
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(153, 42);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(87, 17);
-            this.checkBox5.TabIndex = 27;
-            this.checkBox5.Text = "Insect Slayer";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkAchievementInsectSlayer.AutoSize = true;
+            this.chkAchievementInsectSlayer.Location = new System.Drawing.Point(153, 42);
+            this.chkAchievementInsectSlayer.Name = "chkAchievementInsectSlayer";
+            this.chkAchievementInsectSlayer.Size = new System.Drawing.Size(87, 17);
+            this.chkAchievementInsectSlayer.TabIndex = 27;
+            this.chkAchievementInsectSlayer.Text = "Insect Slayer";
+            this.chkAchievementInsectSlayer.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkAchievementYggdrasilHope
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(153, 19);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(105, 17);
-            this.checkBox4.TabIndex = 26;
-            this.checkBox4.Text = "Yggdrasil\'s Hope";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkAchievementYggdrasilHope.AutoSize = true;
+            this.chkAchievementYggdrasilHope.Location = new System.Drawing.Point(153, 19);
+            this.chkAchievementYggdrasilHope.Name = "chkAchievementYggdrasilHope";
+            this.chkAchievementYggdrasilHope.Size = new System.Drawing.Size(105, 17);
+            this.chkAchievementYggdrasilHope.TabIndex = 26;
+            this.chkAchievementYggdrasilHope.Text = "Yggdrasil\'s Hope";
+            this.chkAchievementYggdrasilHope.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkAchievementKnightAlly
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(9, 65);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(82, 17);
-            this.checkBox3.TabIndex = 25;
-            this.checkBox3.Text = "Knight\'s Ally";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkAchievementKnightAlly.AutoSize = true;
+            this.chkAchievementKnightAlly.Location = new System.Drawing.Point(9, 65);
+            this.chkAchievementKnightAlly.Name = "chkAchievementKnightAlly";
+            this.chkAchievementKnightAlly.Size = new System.Drawing.Size(82, 17);
+            this.chkAchievementKnightAlly.TabIndex = 25;
+            this.chkAchievementKnightAlly.Text = "Knight\'s Ally";
+            this.chkAchievementKnightAlly.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkAchievementSentinelAlly
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(9, 42);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(90, 17);
-            this.checkBox2.TabIndex = 24;
-            this.checkBox2.Text = "Sentinels\' Ally";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkAchievementSentinelAlly.AutoSize = true;
+            this.chkAchievementSentinelAlly.Location = new System.Drawing.Point(9, 42);
+            this.chkAchievementSentinelAlly.Name = "chkAchievementSentinelAlly";
+            this.chkAchievementSentinelAlly.Size = new System.Drawing.Size(90, 17);
+            this.chkAchievementSentinelAlly.TabIndex = 24;
+            this.chkAchievementSentinelAlly.Text = "Sentinels\' Ally";
+            this.chkAchievementSentinelAlly.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkAchievementVesselAlly
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(9, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(83, 17);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "Vessels\' Ally";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkAchievementVesselAlly.AutoSize = true;
+            this.chkAchievementVesselAlly.Location = new System.Drawing.Point(9, 19);
+            this.chkAchievementVesselAlly.Name = "chkAchievementVesselAlly";
+            this.chkAchievementVesselAlly.Size = new System.Drawing.Size(83, 17);
+            this.chkAchievementVesselAlly.TabIndex = 23;
+            this.chkAchievementVesselAlly.Text = "Vessels\' Ally";
+            this.chkAchievementVesselAlly.UseVisualStyleBackColor = true;
             // 
             // gbRegCharacter
             // 
             this.gbRegCharacter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbRegCharacter.Controls.Add(this.label34);
-            this.gbRegCharacter.Controls.Add(this.textBox16);
-            this.gbRegCharacter.Controls.Add(this.label14);
-            this.gbRegCharacter.Controls.Add(this.textBox15);
-            this.gbRegCharacter.Controls.Add(this.btnStatsEditor);
-            this.gbRegCharacter.Controls.Add(this.btnEditArmor2Effect);
-            this.gbRegCharacter.Controls.Add(this.btnEditArmor1Effect);
-            this.gbRegCharacter.Controls.Add(this.btnEditEquipEffect);
-            this.gbRegCharacter.Controls.Add(this.comboBox12);
-            this.gbRegCharacter.Controls.Add(this.comboBox11);
-            this.gbRegCharacter.Controls.Add(this.comboBox10);
-            this.gbRegCharacter.Controls.Add(this.comboBox9);
-            this.gbRegCharacter.Controls.Add(this.btnEditWeaponEffect);
-            this.gbRegCharacter.Controls.Add(this.btnSkillEditor);
-            this.gbRegCharacter.Controls.Add(this.label33);
-            this.gbRegCharacter.Controls.Add(this.label32);
-            this.gbRegCharacter.Controls.Add(this.label31);
-            this.gbRegCharacter.Controls.Add(this.label30);
-            this.gbRegCharacter.Controls.Add(this.label29);
-            this.gbRegCharacter.Controls.Add(this.label28);
-            this.gbRegCharacter.Controls.Add(this.label27);
-            this.gbRegCharacter.Controls.Add(this.comboBox8);
-            this.gbRegCharacter.Controls.Add(this.label26);
-            this.gbRegCharacter.Controls.Add(this.comboBox7);
-            this.gbRegCharacter.Controls.Add(this.numericUpDown17);
-            this.gbRegCharacter.Controls.Add(this.textBox14);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterPortrait);
+            this.gbRegCharacter.Controls.Add(this.icmbRegCharacterPortrait);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterCurrentTP);
+            this.gbRegCharacter.Controls.Add(this.txtRegCharacterCurrentTP);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterCurrentHP);
+            this.gbRegCharacter.Controls.Add(this.txtRegCharacterCurrentHP);
+            this.gbRegCharacter.Controls.Add(this.btnRegCharacterStatsEditor);
+            this.gbRegCharacter.Controls.Add(this.btnRegCharacterEditArmor2Effect);
+            this.gbRegCharacter.Controls.Add(this.btnRegCharacterEditArmor1Effect);
+            this.gbRegCharacter.Controls.Add(this.btnRegCharacterEditEquipEffect);
+            this.gbRegCharacter.Controls.Add(this.cmbRegCharacterArmor2);
+            this.gbRegCharacter.Controls.Add(this.cmbRegCharacterArmor1);
+            this.gbRegCharacter.Controls.Add(this.cmbRegCharacterEquipment);
+            this.gbRegCharacter.Controls.Add(this.cmbRegCharacterWeapon);
+            this.gbRegCharacter.Controls.Add(this.btnRegCharacterEditWeaponEffect);
+            this.gbRegCharacter.Controls.Add(this.btnRegCharacterSkillEditor);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterArmor2);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterArmor1);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterEquipment);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterWeapon);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterSubclass);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterClass);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterLevel);
+            this.gbRegCharacter.Controls.Add(this.cmbRegCharacterSubclass);
+            this.gbRegCharacter.Controls.Add(this.lblRegCharacterName);
+            this.gbRegCharacter.Controls.Add(this.cmbRegCharacterClass);
+            this.gbRegCharacter.Controls.Add(this.nudRegCharacterLevel);
+            this.gbRegCharacter.Controls.Add(this.txtRegCharacterName);
             this.gbRegCharacter.Location = new System.Drawing.Point(452, 189);
             this.gbRegCharacter.Name = "gbRegCharacter";
-            this.gbRegCharacter.Size = new System.Drawing.Size(355, 248);
+            this.gbRegCharacter.Size = new System.Drawing.Size(355, 273);
             this.gbRegCharacter.TabIndex = 4;
             this.gbRegCharacter.TabStop = false;
             this.gbRegCharacter.Text = "Registered Character";
             // 
-            // label34
+            // lblRegCharacterCurrentTP
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(180, 48);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(61, 13);
-            this.label34.TabIndex = 32;
-            this.label34.Text = "Current TP:";
+            this.lblRegCharacterCurrentTP.AutoSize = true;
+            this.lblRegCharacterCurrentTP.Location = new System.Drawing.Point(180, 48);
+            this.lblRegCharacterCurrentTP.Name = "lblRegCharacterCurrentTP";
+            this.lblRegCharacterCurrentTP.Size = new System.Drawing.Size(61, 13);
+            this.lblRegCharacterCurrentTP.TabIndex = 32;
+            this.lblRegCharacterCurrentTP.Text = "Current TP:";
             // 
-            // textBox16
+            // txtRegCharacterCurrentTP
             // 
-            this.textBox16.Location = new System.Drawing.Point(249, 45);
-            this.textBox16.MaxLength = 9;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 31;
+            this.txtRegCharacterCurrentTP.Location = new System.Drawing.Point(249, 45);
+            this.txtRegCharacterCurrentTP.MaxLength = 9;
+            this.txtRegCharacterCurrentTP.Name = "txtRegCharacterCurrentTP";
+            this.txtRegCharacterCurrentTP.Size = new System.Drawing.Size(100, 20);
+            this.txtRegCharacterCurrentTP.TabIndex = 31;
             // 
-            // label14
+            // lblRegCharacterCurrentHP
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 48);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 13);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Current HP:";
+            this.lblRegCharacterCurrentHP.AutoSize = true;
+            this.lblRegCharacterCurrentHP.Location = new System.Drawing.Point(6, 48);
+            this.lblRegCharacterCurrentHP.Name = "lblRegCharacterCurrentHP";
+            this.lblRegCharacterCurrentHP.Size = new System.Drawing.Size(62, 13);
+            this.lblRegCharacterCurrentHP.TabIndex = 30;
+            this.lblRegCharacterCurrentHP.Text = "Current HP:";
             // 
-            // textBox15
+            // txtRegCharacterCurrentHP
             // 
-            this.textBox15.Location = new System.Drawing.Point(74, 45);
-            this.textBox15.MaxLength = 9;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 29;
+            this.txtRegCharacterCurrentHP.Location = new System.Drawing.Point(74, 45);
+            this.txtRegCharacterCurrentHP.MaxLength = 9;
+            this.txtRegCharacterCurrentHP.Name = "txtRegCharacterCurrentHP";
+            this.txtRegCharacterCurrentHP.Size = new System.Drawing.Size(100, 20);
+            this.txtRegCharacterCurrentHP.TabIndex = 29;
             // 
-            // btnStatsEditor
+            // btnRegCharacterStatsEditor
             // 
-            this.btnStatsEditor.Location = new System.Drawing.Point(200, 214);
-            this.btnStatsEditor.Name = "btnStatsEditor";
-            this.btnStatsEditor.Size = new System.Drawing.Size(150, 23);
-            this.btnStatsEditor.TabIndex = 28;
-            this.btnStatsEditor.Text = "Edit Stats";
-            this.btnStatsEditor.UseVisualStyleBackColor = true;
+            this.btnRegCharacterStatsEditor.Location = new System.Drawing.Point(200, 240);
+            this.btnRegCharacterStatsEditor.Name = "btnRegCharacterStatsEditor";
+            this.btnRegCharacterStatsEditor.Size = new System.Drawing.Size(150, 23);
+            this.btnRegCharacterStatsEditor.TabIndex = 28;
+            this.btnRegCharacterStatsEditor.Text = "Edit Stats";
+            this.btnRegCharacterStatsEditor.UseVisualStyleBackColor = true;
             // 
-            // btnEditArmor2Effect
+            // btnRegCharacterEditArmor2Effect
             // 
-            this.btnEditArmor2Effect.Location = new System.Drawing.Point(230, 185);
-            this.btnEditArmor2Effect.Name = "btnEditArmor2Effect";
-            this.btnEditArmor2Effect.Size = new System.Drawing.Size(120, 23);
-            this.btnEditArmor2Effect.TabIndex = 27;
-            this.btnEditArmor2Effect.Text = "Edit Effects";
-            this.btnEditArmor2Effect.UseVisualStyleBackColor = true;
-            this.btnEditArmor2Effect.Click += new System.EventHandler(this.btnEditArmor2Effect_Click);
+            this.btnRegCharacterEditArmor2Effect.Location = new System.Drawing.Point(230, 211);
+            this.btnRegCharacterEditArmor2Effect.Name = "btnRegCharacterEditArmor2Effect";
+            this.btnRegCharacterEditArmor2Effect.Size = new System.Drawing.Size(120, 23);
+            this.btnRegCharacterEditArmor2Effect.TabIndex = 27;
+            this.btnRegCharacterEditArmor2Effect.Text = "Edit Effects";
+            this.btnRegCharacterEditArmor2Effect.UseVisualStyleBackColor = true;
+            this.btnRegCharacterEditArmor2Effect.Click += new System.EventHandler(this.btnRegCharacterEditArmor2Effect_Click);
             // 
-            // btnEditArmor1Effect
+            // btnRegCharacterEditArmor1Effect
             // 
-            this.btnEditArmor1Effect.Location = new System.Drawing.Point(230, 156);
-            this.btnEditArmor1Effect.Name = "btnEditArmor1Effect";
-            this.btnEditArmor1Effect.Size = new System.Drawing.Size(120, 23);
-            this.btnEditArmor1Effect.TabIndex = 26;
-            this.btnEditArmor1Effect.Text = "Edit Effects";
-            this.btnEditArmor1Effect.UseVisualStyleBackColor = true;
-            this.btnEditArmor1Effect.Click += new System.EventHandler(this.btnEditArmor1Effect_Click);
+            this.btnRegCharacterEditArmor1Effect.Location = new System.Drawing.Point(230, 182);
+            this.btnRegCharacterEditArmor1Effect.Name = "btnRegCharacterEditArmor1Effect";
+            this.btnRegCharacterEditArmor1Effect.Size = new System.Drawing.Size(120, 23);
+            this.btnRegCharacterEditArmor1Effect.TabIndex = 26;
+            this.btnRegCharacterEditArmor1Effect.Text = "Edit Effects";
+            this.btnRegCharacterEditArmor1Effect.UseVisualStyleBackColor = true;
+            this.btnRegCharacterEditArmor1Effect.Click += new System.EventHandler(this.btnRegCharacterEditArmor1Effect_Click);
             // 
-            // btnEditEquipEffect
+            // btnRegCharacterEditEquipEffect
             // 
-            this.btnEditEquipEffect.Location = new System.Drawing.Point(230, 127);
-            this.btnEditEquipEffect.Name = "btnEditEquipEffect";
-            this.btnEditEquipEffect.Size = new System.Drawing.Size(120, 23);
-            this.btnEditEquipEffect.TabIndex = 25;
-            this.btnEditEquipEffect.Text = "Edit Effects";
-            this.btnEditEquipEffect.UseVisualStyleBackColor = true;
-            this.btnEditEquipEffect.Click += new System.EventHandler(this.btnEditEquipEffect_Click);
+            this.btnRegCharacterEditEquipEffect.Location = new System.Drawing.Point(230, 153);
+            this.btnRegCharacterEditEquipEffect.Name = "btnRegCharacterEditEquipEffect";
+            this.btnRegCharacterEditEquipEffect.Size = new System.Drawing.Size(120, 23);
+            this.btnRegCharacterEditEquipEffect.TabIndex = 25;
+            this.btnRegCharacterEditEquipEffect.Text = "Edit Effects";
+            this.btnRegCharacterEditEquipEffect.UseVisualStyleBackColor = true;
+            this.btnRegCharacterEditEquipEffect.Click += new System.EventHandler(this.btnRegCharacterEditEquipEffect_Click);
             // 
-            // comboBox12
+            // cmbRegCharacterArmor2
             // 
-            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(74, 186);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(150, 21);
-            this.comboBox12.TabIndex = 24;
+            this.cmbRegCharacterArmor2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRegCharacterArmor2.FormattingEnabled = true;
+            this.cmbRegCharacterArmor2.Location = new System.Drawing.Point(74, 212);
+            this.cmbRegCharacterArmor2.Name = "cmbRegCharacterArmor2";
+            this.cmbRegCharacterArmor2.Size = new System.Drawing.Size(150, 21);
+            this.cmbRegCharacterArmor2.TabIndex = 24;
             // 
-            // comboBox11
+            // cmbRegCharacterArmor1
             // 
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(74, 157);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(150, 21);
-            this.comboBox11.TabIndex = 23;
+            this.cmbRegCharacterArmor1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRegCharacterArmor1.FormattingEnabled = true;
+            this.cmbRegCharacterArmor1.Location = new System.Drawing.Point(74, 183);
+            this.cmbRegCharacterArmor1.Name = "cmbRegCharacterArmor1";
+            this.cmbRegCharacterArmor1.Size = new System.Drawing.Size(150, 21);
+            this.cmbRegCharacterArmor1.TabIndex = 23;
             // 
-            // comboBox10
+            // cmbRegCharacterEquipment
             // 
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(74, 128);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(150, 21);
-            this.comboBox10.TabIndex = 22;
+            this.cmbRegCharacterEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRegCharacterEquipment.FormattingEnabled = true;
+            this.cmbRegCharacterEquipment.Location = new System.Drawing.Point(74, 154);
+            this.cmbRegCharacterEquipment.Name = "cmbRegCharacterEquipment";
+            this.cmbRegCharacterEquipment.Size = new System.Drawing.Size(150, 21);
+            this.cmbRegCharacterEquipment.TabIndex = 22;
             // 
-            // comboBox9
+            // cmbRegCharacterWeapon
             // 
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(74, 99);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(150, 21);
-            this.comboBox9.TabIndex = 21;
+            this.cmbRegCharacterWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRegCharacterWeapon.FormattingEnabled = true;
+            this.cmbRegCharacterWeapon.Location = new System.Drawing.Point(74, 125);
+            this.cmbRegCharacterWeapon.Name = "cmbRegCharacterWeapon";
+            this.cmbRegCharacterWeapon.Size = new System.Drawing.Size(150, 21);
+            this.cmbRegCharacterWeapon.TabIndex = 21;
             // 
-            // btnEditWeaponEffect
+            // btnRegCharacterEditWeaponEffect
             // 
-            this.btnEditWeaponEffect.Location = new System.Drawing.Point(230, 98);
-            this.btnEditWeaponEffect.Name = "btnEditWeaponEffect";
-            this.btnEditWeaponEffect.Size = new System.Drawing.Size(120, 23);
-            this.btnEditWeaponEffect.TabIndex = 20;
-            this.btnEditWeaponEffect.Text = "Edit Effects";
-            this.btnEditWeaponEffect.UseVisualStyleBackColor = true;
-            this.btnEditWeaponEffect.Click += new System.EventHandler(this.btnEditWeaponEffect_Click);
+            this.btnRegCharacterEditWeaponEffect.Location = new System.Drawing.Point(230, 124);
+            this.btnRegCharacterEditWeaponEffect.Name = "btnRegCharacterEditWeaponEffect";
+            this.btnRegCharacterEditWeaponEffect.Size = new System.Drawing.Size(120, 23);
+            this.btnRegCharacterEditWeaponEffect.TabIndex = 20;
+            this.btnRegCharacterEditWeaponEffect.Text = "Edit Effects";
+            this.btnRegCharacterEditWeaponEffect.UseVisualStyleBackColor = true;
+            this.btnRegCharacterEditWeaponEffect.Click += new System.EventHandler(this.btnRegCharacterEditWeaponEffect_Click);
             // 
-            // btnSkillEditor
+            // btnRegCharacterSkillEditor
             // 
-            this.btnSkillEditor.Location = new System.Drawing.Point(6, 214);
-            this.btnSkillEditor.Name = "btnSkillEditor";
-            this.btnSkillEditor.Size = new System.Drawing.Size(150, 23);
-            this.btnSkillEditor.TabIndex = 19;
-            this.btnSkillEditor.Text = "Edit Skills";
-            this.btnSkillEditor.UseVisualStyleBackColor = true;
-            this.btnSkillEditor.Click += new System.EventHandler(this.btnSkillEditor_Click);
+            this.btnRegCharacterSkillEditor.Location = new System.Drawing.Point(6, 240);
+            this.btnRegCharacterSkillEditor.Name = "btnRegCharacterSkillEditor";
+            this.btnRegCharacterSkillEditor.Size = new System.Drawing.Size(150, 23);
+            this.btnRegCharacterSkillEditor.TabIndex = 19;
+            this.btnRegCharacterSkillEditor.Text = "Edit Skills";
+            this.btnRegCharacterSkillEditor.UseVisualStyleBackColor = true;
+            this.btnRegCharacterSkillEditor.Click += new System.EventHandler(this.btnRegCharacterSkillEditor_Click);
             // 
-            // label33
+            // lblRegCharacterArmor2
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 189);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(46, 13);
-            this.label33.TabIndex = 16;
-            this.label33.Text = "Armor 2:";
+            this.lblRegCharacterArmor2.AutoSize = true;
+            this.lblRegCharacterArmor2.Location = new System.Drawing.Point(6, 215);
+            this.lblRegCharacterArmor2.Name = "lblRegCharacterArmor2";
+            this.lblRegCharacterArmor2.Size = new System.Drawing.Size(46, 13);
+            this.lblRegCharacterArmor2.TabIndex = 16;
+            this.lblRegCharacterArmor2.Text = "Armor 2:";
             // 
-            // label32
+            // lblRegCharacterArmor1
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 160);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(46, 13);
-            this.label32.TabIndex = 15;
-            this.label32.Text = "Armor 1:";
+            this.lblRegCharacterArmor1.AutoSize = true;
+            this.lblRegCharacterArmor1.Location = new System.Drawing.Point(6, 186);
+            this.lblRegCharacterArmor1.Name = "lblRegCharacterArmor1";
+            this.lblRegCharacterArmor1.Size = new System.Drawing.Size(46, 13);
+            this.lblRegCharacterArmor1.TabIndex = 15;
+            this.lblRegCharacterArmor1.Text = "Armor 1:";
             // 
-            // label31
+            // lblRegCharacterEquipment
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 131);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(60, 13);
-            this.label31.TabIndex = 14;
-            this.label31.Text = "Equipment:";
+            this.lblRegCharacterEquipment.AutoSize = true;
+            this.lblRegCharacterEquipment.Location = new System.Drawing.Point(6, 157);
+            this.lblRegCharacterEquipment.Name = "lblRegCharacterEquipment";
+            this.lblRegCharacterEquipment.Size = new System.Drawing.Size(60, 13);
+            this.lblRegCharacterEquipment.TabIndex = 14;
+            this.lblRegCharacterEquipment.Text = "Equipment:";
             // 
-            // label30
+            // lblRegCharacterWeapon
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 102);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(51, 13);
-            this.label30.TabIndex = 13;
-            this.label30.Text = "Weapon:";
+            this.lblRegCharacterWeapon.AutoSize = true;
+            this.lblRegCharacterWeapon.Location = new System.Drawing.Point(6, 128);
+            this.lblRegCharacterWeapon.Name = "lblRegCharacterWeapon";
+            this.lblRegCharacterWeapon.Size = new System.Drawing.Size(51, 13);
+            this.lblRegCharacterWeapon.TabIndex = 13;
+            this.lblRegCharacterWeapon.Text = "Weapon:";
             // 
-            // label29
+            // lblRegCharacterSubclass
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(180, 74);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(53, 13);
-            this.label29.TabIndex = 12;
-            this.label29.Text = "Subclass:";
+            this.lblRegCharacterSubclass.AutoSize = true;
+            this.lblRegCharacterSubclass.Location = new System.Drawing.Point(180, 74);
+            this.lblRegCharacterSubclass.Name = "lblRegCharacterSubclass";
+            this.lblRegCharacterSubclass.Size = new System.Drawing.Size(53, 13);
+            this.lblRegCharacterSubclass.TabIndex = 12;
+            this.lblRegCharacterSubclass.Text = "Subclass:";
             // 
-            // label28
+            // lblRegCharacterClass
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 74);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(35, 13);
-            this.label28.TabIndex = 11;
-            this.label28.Text = "Class:";
+            this.lblRegCharacterClass.AutoSize = true;
+            this.lblRegCharacterClass.Location = new System.Drawing.Point(6, 74);
+            this.lblRegCharacterClass.Name = "lblRegCharacterClass";
+            this.lblRegCharacterClass.Size = new System.Drawing.Size(35, 13);
+            this.lblRegCharacterClass.TabIndex = 11;
+            this.lblRegCharacterClass.Text = "Class:";
             // 
-            // label27
+            // lblRegCharacterLevel
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(180, 22);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 13);
-            this.label27.TabIndex = 10;
-            this.label27.Text = "Level:";
+            this.lblRegCharacterLevel.AutoSize = true;
+            this.lblRegCharacterLevel.Location = new System.Drawing.Point(180, 22);
+            this.lblRegCharacterLevel.Name = "lblRegCharacterLevel";
+            this.lblRegCharacterLevel.Size = new System.Drawing.Size(36, 13);
+            this.lblRegCharacterLevel.TabIndex = 10;
+            this.lblRegCharacterLevel.Text = "Level:";
             // 
-            // comboBox8
+            // cmbRegCharacterSubclass
             // 
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(249, 71);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(100, 21);
-            this.comboBox8.TabIndex = 9;
+            this.cmbRegCharacterSubclass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRegCharacterSubclass.FormattingEnabled = true;
+            this.cmbRegCharacterSubclass.Location = new System.Drawing.Point(249, 71);
+            this.cmbRegCharacterSubclass.Name = "cmbRegCharacterSubclass";
+            this.cmbRegCharacterSubclass.Size = new System.Drawing.Size(100, 21);
+            this.cmbRegCharacterSubclass.TabIndex = 9;
             // 
-            // label26
+            // lblRegCharacterName
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 22);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 13);
-            this.label26.TabIndex = 8;
-            this.label26.Text = "Name:";
+            this.lblRegCharacterName.AutoSize = true;
+            this.lblRegCharacterName.Location = new System.Drawing.Point(6, 22);
+            this.lblRegCharacterName.Name = "lblRegCharacterName";
+            this.lblRegCharacterName.Size = new System.Drawing.Size(38, 13);
+            this.lblRegCharacterName.TabIndex = 8;
+            this.lblRegCharacterName.Text = "Name:";
             // 
-            // comboBox7
+            // cmbRegCharacterClass
             // 
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(74, 71);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(100, 21);
-            this.comboBox7.TabIndex = 7;
+            this.cmbRegCharacterClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRegCharacterClass.FormattingEnabled = true;
+            this.cmbRegCharacterClass.Location = new System.Drawing.Point(74, 71);
+            this.cmbRegCharacterClass.Name = "cmbRegCharacterClass";
+            this.cmbRegCharacterClass.Size = new System.Drawing.Size(100, 21);
+            this.cmbRegCharacterClass.TabIndex = 7;
             // 
-            // numericUpDown17
+            // nudRegCharacterLevel
             // 
-            this.numericUpDown17.Location = new System.Drawing.Point(249, 19);
-            this.numericUpDown17.Name = "numericUpDown17";
-            this.numericUpDown17.Size = new System.Drawing.Size(50, 20);
-            this.numericUpDown17.TabIndex = 6;
+            this.nudRegCharacterLevel.Location = new System.Drawing.Point(249, 19);
+            this.nudRegCharacterLevel.Name = "nudRegCharacterLevel";
+            this.nudRegCharacterLevel.Size = new System.Drawing.Size(50, 20);
+            this.nudRegCharacterLevel.TabIndex = 6;
             // 
-            // textBox14
+            // txtRegCharacterName
             // 
-            this.textBox14.Location = new System.Drawing.Point(74, 19);
-            this.textBox14.MaxLength = 9;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 5;
+            this.txtRegCharacterName.Location = new System.Drawing.Point(74, 19);
+            this.txtRegCharacterName.MaxLength = 9;
+            this.txtRegCharacterName.Name = "txtRegCharacterName";
+            this.txtRegCharacterName.Size = new System.Drawing.Size(100, 20);
+            this.txtRegCharacterName.TabIndex = 5;
             // 
             // gbAchievements
             // 
             this.gbAchievements.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gbAchievements.Controls.Add(this.checkBox1);
-            this.gbAchievements.Controls.Add(this.checkBox2);
-            this.gbAchievements.Controls.Add(this.checkBox3);
-            this.gbAchievements.Controls.Add(this.checkBox4);
-            this.gbAchievements.Controls.Add(this.label23);
-            this.gbAchievements.Controls.Add(this.checkBox5);
-            this.gbAchievements.Controls.Add(this.numericUpDown15);
-            this.gbAchievements.Controls.Add(this.checkBox6);
-            this.gbAchievements.Controls.Add(this.label22);
-            this.gbAchievements.Controls.Add(this.numericUpDown8);
-            this.gbAchievements.Controls.Add(this.numericUpDown14);
-            this.gbAchievements.Controls.Add(this.label15);
-            this.gbAchievements.Controls.Add(this.label21);
-            this.gbAchievements.Controls.Add(this.label16);
-            this.gbAchievements.Controls.Add(this.numericUpDown13);
-            this.gbAchievements.Controls.Add(this.numericUpDown9);
-            this.gbAchievements.Controls.Add(this.label20);
-            this.gbAchievements.Controls.Add(this.label17);
-            this.gbAchievements.Controls.Add(this.numericUpDown12);
-            this.gbAchievements.Controls.Add(this.numericUpDown10);
-            this.gbAchievements.Controls.Add(this.label19);
-            this.gbAchievements.Controls.Add(this.label18);
-            this.gbAchievements.Controls.Add(this.numericUpDown11);
+            this.gbAchievements.Controls.Add(this.chkAchievementVesselAlly);
+            this.gbAchievements.Controls.Add(this.chkAchievementSentinelAlly);
+            this.gbAchievements.Controls.Add(this.chkAchievementKnightAlly);
+            this.gbAchievements.Controls.Add(this.chkAchievementYggdrasilHope);
+            this.gbAchievements.Controls.Add(this.lblCompletionHiddenTreasures);
+            this.gbAchievements.Controls.Add(this.chkAchievementInsectSlayer);
+            this.gbAchievements.Controls.Add(this.nudCompletionHiddenTreasures);
+            this.gbAchievements.Controls.Add(this.chkAchievementExplorerPride);
+            this.gbAchievements.Controls.Add(this.lblCompletionMaterials);
+            this.gbAchievements.Controls.Add(this.nudCompletionBurstSkills);
+            this.gbAchievements.Controls.Add(this.nudCompletionMaterials);
+            this.gbAchievements.Controls.Add(this.lblCompletionLevels);
+            this.gbAchievements.Controls.Add(this.lblCompletionMonsters);
+            this.gbAchievements.Controls.Add(this.lblCompletionBurstSkills);
+            this.gbAchievements.Controls.Add(this.nudCompletionMonsters);
+            this.gbAchievements.Controls.Add(this.nudCompletionTreasureBoxes);
+            this.gbAchievements.Controls.Add(this.lblCompletionFood);
+            this.gbAchievements.Controls.Add(this.lblCompletionTreasureBoxes);
+            this.gbAchievements.Controls.Add(this.nudCompletionFood);
+            this.gbAchievements.Controls.Add(this.nudCompletionQuests);
+            this.gbAchievements.Controls.Add(this.lblCompletionRareBreeds);
+            this.gbAchievements.Controls.Add(this.lblCompletionQuests);
+            this.gbAchievements.Controls.Add(this.nudCompletionRareBreeds);
             this.gbAchievements.Location = new System.Drawing.Point(136, 219);
             this.gbAchievements.Name = "gbAchievements";
-            this.gbAchievements.Size = new System.Drawing.Size(310, 218);
+            this.gbAchievements.Size = new System.Drawing.Size(310, 243);
             this.gbAchievements.TabIndex = 28;
             this.gbAchievements.TabStop = false;
             this.gbAchievements.Text = "Achievements";
+            // 
+            // lblRegCharacterPortrait
+            // 
+            this.lblRegCharacterPortrait.AutoSize = true;
+            this.lblRegCharacterPortrait.Location = new System.Drawing.Point(6, 101);
+            this.lblRegCharacterPortrait.Name = "lblRegCharacterPortrait";
+            this.lblRegCharacterPortrait.Size = new System.Drawing.Size(43, 13);
+            this.lblRegCharacterPortrait.TabIndex = 34;
+            this.lblRegCharacterPortrait.Text = "Portrait:";
+            // 
+            // icmbRegCharacterPortrait
+            // 
+            this.icmbRegCharacterPortrait.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbRegCharacterPortrait.DropDownItemHeight = 18;
+            this.icmbRegCharacterPortrait.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbRegCharacterPortrait.Location = new System.Drawing.Point(74, 98);
+            this.icmbRegCharacterPortrait.Name = "icmbRegCharacterPortrait";
+            this.icmbRegCharacterPortrait.Size = new System.Drawing.Size(100, 21);
+            this.icmbRegCharacterPortrait.TabIndex = 33;
+            // 
+            // icmbCharaListPortrait5
+            // 
+            this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait5.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(249, 146);
+            this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
+            this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait5.TabIndex = 22;
+            // 
+            // icmbCharaListPortrait4
+            // 
+            this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait4.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(249, 119);
+            this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
+            this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait4.TabIndex = 21;
+            // 
+            // icmbCharaListPortrait3
+            // 
+            this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait3.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(249, 92);
+            this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
+            this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait3.TabIndex = 20;
+            // 
+            // icmbCharaListPortrait2
+            // 
+            this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait2.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(249, 65);
+            this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
+            this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait2.TabIndex = 19;
+            // 
+            // icmbCharaListPortrait1
+            // 
+            this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait1.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(249, 38);
+            this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
+            this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait1.TabIndex = 18;
             // 
             // lbGuildCards
             // 
@@ -1126,7 +1222,7 @@
             this.lbGuildCards.IntegralHeight = false;
             this.lbGuildCards.Location = new System.Drawing.Point(0, 0);
             this.lbGuildCards.Name = "lbGuildCards";
-            this.lbGuildCards.Size = new System.Drawing.Size(130, 440);
+            this.lbGuildCards.Size = new System.Drawing.Size(130, 465);
             this.lbGuildCards.TabIndex = 1;
             this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
             this.lbGuildCards.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbGuildCards_Format);
@@ -1137,34 +1233,34 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbAchievements);
             this.Controls.Add(this.gbRegCharacter);
-            this.Controls.Add(this.gbInformation);
+            this.Controls.Add(this.gbGuildInfo);
             this.Controls.Add(this.gbCharaList);
             this.Controls.Add(this.lbGuildCards);
             this.Name = "GuildCardEditor";
-            this.Size = new System.Drawing.Size(810, 440);
+            this.Size = new System.Drawing.Size(810, 465);
             this.gbCharaList.ResumeLayout(false);
             this.gbCharaList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.gbInformation.ResumeLayout(false);
-            this.gbInformation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel1)).EndInit();
+            this.gbGuildInfo.ResumeLayout(false);
+            this.gbGuildInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuildCardBackground)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuildItemDiscovery)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuildEnemyDiscovery)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionHiddenTreasures)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionMaterials)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionMonsters)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionRareBreeds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionQuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionTreasureBoxes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCompletionBurstSkills)).EndInit();
             this.gbRegCharacter.ResumeLayout(false);
             this.gbRegCharacter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRegCharacterLevel)).EndInit();
             this.gbAchievements.ResumeLayout(false);
             this.gbAchievements.PerformLayout();
             this.ResumeLayout(false);
@@ -1175,99 +1271,107 @@
 
         private ListBoxEx lbGuildCards;
         private System.Windows.Forms.GroupBox gbCharaList;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.GroupBox gbInformation;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.NumericUpDown numericUpDown15;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.NumericUpDown numericUpDown16;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtCharaListName1;
+        private System.Windows.Forms.Label lblCharaListName;
+        private System.Windows.Forms.Label lblCharaListLevel;
+        private System.Windows.Forms.NumericUpDown nudCharaListLevel1;
+        private System.Windows.Forms.ComboBox cmbCharaListClass1;
+        private System.Windows.Forms.Label lblCharaListClass;
+        private System.Windows.Forms.ComboBox cmbCharaListClass5;
+        private System.Windows.Forms.NumericUpDown nudCharaListLevel5;
+        private System.Windows.Forms.TextBox txtCharaListName5;
+        private System.Windows.Forms.ComboBox cmbCharaListClass4;
+        private System.Windows.Forms.NumericUpDown nudCharaListLevel4;
+        private System.Windows.Forms.TextBox txtCharaListName4;
+        private System.Windows.Forms.ComboBox cmbCharaListClass3;
+        private System.Windows.Forms.NumericUpDown nudCharaListLevel3;
+        private System.Windows.Forms.TextBox txtCharaListName3;
+        private System.Windows.Forms.ComboBox cmbCharaListClass2;
+        private System.Windows.Forms.NumericUpDown nudCharaListLevel2;
+        private System.Windows.Forms.TextBox txtCharaListName2;
+        private System.Windows.Forms.GroupBox gbGuildInfo;
+        private System.Windows.Forms.TextBox txtGuildName;
+        private System.Windows.Forms.Label lblGuildName;
+        private System.Windows.Forms.TextBox txtGuildSkyship;
+        private System.Windows.Forms.Label lblGuildSkyship;
+        private System.Windows.Forms.TextBox txtGuildMessage;
+        private System.Windows.Forms.Label lblGuildMessage;
+        private System.Windows.Forms.NumericUpDown nudGuildEnemyDiscovery;
+        private System.Windows.Forms.Label lblGuildEnemyDiscovery;
+        private System.Windows.Forms.Label lblGuildItemDiscovery;
+        private System.Windows.Forms.NumericUpDown nudGuildItemDiscovery;
+        private System.Windows.Forms.TextBox txtGuildMaxLevel;
+        private System.Windows.Forms.Label lblGuildMaxLevel;
+        private System.Windows.Forms.Label lblGuildVenturedDays;
+        private System.Windows.Forms.TextBox txtGuildVenturedDays;
+        private System.Windows.Forms.Label lblGuildWalked;
+        private System.Windows.Forms.TextBox txtGuildWalked;
+        private System.Windows.Forms.Label lblGuildEnemiesHunted;
+        private System.Windows.Forms.TextBox txtGuildEnemiesHunted;
+        private System.Windows.Forms.Label lblGuildTotalEn;
+        private System.Windows.Forms.TextBox txtGuildTotalEn;
+        private System.Windows.Forms.CheckBox chkAchievementVesselAlly;
+        private System.Windows.Forms.CheckBox chkAchievementSentinelAlly;
+        private System.Windows.Forms.CheckBox chkAchievementKnightAlly;
+        private System.Windows.Forms.CheckBox chkAchievementInsectSlayer;
+        private System.Windows.Forms.CheckBox chkAchievementYggdrasilHope;
+        private System.Windows.Forms.CheckBox chkAchievementExplorerPride;
+        private System.Windows.Forms.Label lblCompletionLevels;
+        private System.Windows.Forms.NumericUpDown nudCompletionBurstSkills;
+        private System.Windows.Forms.Label lblCompletionBurstSkills;
+        private System.Windows.Forms.Label lblCompletionTreasureBoxes;
+        private System.Windows.Forms.NumericUpDown nudCompletionTreasureBoxes;
+        private System.Windows.Forms.Label lblCompletionQuests;
+        private System.Windows.Forms.NumericUpDown nudCompletionQuests;
+        private System.Windows.Forms.Label lblCompletionRareBreeds;
+        private System.Windows.Forms.NumericUpDown nudCompletionRareBreeds;
+        private System.Windows.Forms.Label lblCompletionFood;
+        private System.Windows.Forms.NumericUpDown nudCompletionFood;
+        private System.Windows.Forms.Label lblCompletionMonsters;
+        private System.Windows.Forms.NumericUpDown nudCompletionMonsters;
+        private System.Windows.Forms.Label lblCompletionMaterials;
+        private System.Windows.Forms.NumericUpDown nudCompletionMaterials;
+        private System.Windows.Forms.Label lblCompletionHiddenTreasures;
+        private System.Windows.Forms.NumericUpDown nudCompletionHiddenTreasures;
+        private System.Windows.Forms.Label lblGuildCardBackground;
+        private System.Windows.Forms.NumericUpDown nudGuildCardBackground;
+        private System.Windows.Forms.ComboBox cmbGuildTreasureMap;
+        private System.Windows.Forms.Label lblGuildTreasureMap;
         private System.Windows.Forms.GroupBox gbRegCharacter;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.NumericUpDown numericUpDown17;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button btnSkillEditor;
-        private System.Windows.Forms.Button btnEditWeaponEffect;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Button btnEditArmor2Effect;
-        private System.Windows.Forms.Button btnEditArmor1Effect;
-        private System.Windows.Forms.Button btnEditEquipEffect;
+        private System.Windows.Forms.ComboBox cmbRegCharacterClass;
+        private System.Windows.Forms.NumericUpDown nudRegCharacterLevel;
+        private System.Windows.Forms.TextBox txtRegCharacterName;
+        private System.Windows.Forms.Label lblRegCharacterLevel;
+        private System.Windows.Forms.ComboBox cmbRegCharacterSubclass;
+        private System.Windows.Forms.Label lblRegCharacterName;
+        private System.Windows.Forms.Label lblRegCharacterSubclass;
+        private System.Windows.Forms.Label lblRegCharacterClass;
+        private System.Windows.Forms.Label lblRegCharacterArmor2;
+        private System.Windows.Forms.Label lblRegCharacterArmor1;
+        private System.Windows.Forms.Label lblRegCharacterEquipment;
+        private System.Windows.Forms.Label lblRegCharacterWeapon;
+        private System.Windows.Forms.Button btnRegCharacterSkillEditor;
+        private System.Windows.Forms.Button btnRegCharacterEditWeaponEffect;
+        private System.Windows.Forms.ComboBox cmbRegCharacterArmor2;
+        private System.Windows.Forms.ComboBox cmbRegCharacterArmor1;
+        private System.Windows.Forms.ComboBox cmbRegCharacterEquipment;
+        private System.Windows.Forms.ComboBox cmbRegCharacterWeapon;
+        private System.Windows.Forms.Button btnRegCharacterEditArmor2Effect;
+        private System.Windows.Forms.Button btnRegCharacterEditArmor1Effect;
+        private System.Windows.Forms.Button btnRegCharacterEditEquipEffect;
         private System.Windows.Forms.GroupBox gbAchievements;
-        private System.Windows.Forms.Button btnStatsEditor;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Button btnRegCharacterStatsEditor;
+        private System.Windows.Forms.Label lblRegCharacterCurrentTP;
+        private System.Windows.Forms.TextBox txtRegCharacterCurrentTP;
+        private System.Windows.Forms.Label lblRegCharacterCurrentHP;
+        private System.Windows.Forms.TextBox txtRegCharacterCurrentHP;
+        private ImageComboBox icmbCharaListPortrait1;
+        private ImageComboBox icmbCharaListPortrait5;
+        private ImageComboBox icmbCharaListPortrait4;
+        private ImageComboBox icmbCharaListPortrait3;
+        private ImageComboBox icmbCharaListPortrait2;
+        private System.Windows.Forms.Label lblCharaListPortrait;
+        private System.Windows.Forms.Label lblRegCharacterPortrait;
+        private ImageComboBox icmbRegCharacterPortrait;
     }
 }

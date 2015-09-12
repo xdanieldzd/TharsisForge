@@ -14,7 +14,7 @@ namespace EO4SaveEdit.FileHandlers
         public byte Unknown1 { get; set; }
         public string Name { get; set; }
         public byte Level { get; set; }
-        public PortraitType Portrait { get; set; }
+        public byte Portrait { get; set; }
 
         public CharacterListing(BinaryReader reader)
         {
@@ -22,13 +22,13 @@ namespace EO4SaveEdit.FileHandlers
             Unknown1 = reader.ReadByte();
             Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(20)).SjisToAscii().TrimEnd('\0');
             Level = reader.ReadByte();
-            Portrait = (PortraitType)reader.ReadByte();
+            Portrait = reader.ReadByte();
         }
     }
 
     public class GuildCardCharacter
     {
-        public PortraitType Portrait { get; set; }
+        public byte Portrait { get; set; }
         public byte Level { get; set; }
         public Class Class { get; set; }
         public Class Subclass { get; set; }
@@ -45,7 +45,7 @@ namespace EO4SaveEdit.FileHandlers
 
         public GuildCardCharacter(BinaryReader reader)
         {
-            Portrait = (PortraitType)reader.ReadByte();
+            Portrait = reader.ReadByte();
             Level = reader.ReadByte();
             Class = (Class)reader.ReadByte();
             Subclass = (Class)reader.ReadByte();

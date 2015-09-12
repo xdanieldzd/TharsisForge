@@ -8,17 +8,6 @@ using EO4SaveEdit.Extensions;
 
 namespace EO4SaveEdit.FileHandlers
 {
-    [Flags]
-    public enum PortraitType : byte
-    {
-        // Gender incorrect for some classes & story charas (ex. Kibagami)
-        Male = 0x00,
-        Female = 0x01,
-        AltDesign = 0x02,
-        AltColor = 0x04,
-        Special = 0x08
-    }
-
     public enum Class : byte
     {
         Landsknecht = 0x00,
@@ -99,7 +88,7 @@ namespace EO4SaveEdit.FileHandlers
     public class Character
     {
         public byte Unknown1 { get; set; }
-        public PortraitType Portrait { get; set; }
+        public byte Portrait { get; set; }
         public byte ID { get; set; }
         public byte Level { get; set; }
         public Class Class { get; set; }
@@ -156,7 +145,7 @@ namespace EO4SaveEdit.FileHandlers
         public Character(BinaryReader reader)
         {
             Unknown1 = reader.ReadByte();
-            Portrait = (PortraitType)reader.ReadByte();
+            Portrait = reader.ReadByte();
             ID = reader.ReadByte();
             Level = reader.ReadByte();
             Class = (Class)reader.ReadByte();

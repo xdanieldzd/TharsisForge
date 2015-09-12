@@ -22,7 +22,8 @@ namespace EO4SaveEdit
             InitializeComponent();
 
             //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150529080428\00000ea6");
-            LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150610102324\00000ea6");
+            //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150610102324\00000ea6");
+            LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150830021743\00000ea6");
 
             /*RomFSDataDumper.DumpItemData(
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\equipitemnametable.tbl",

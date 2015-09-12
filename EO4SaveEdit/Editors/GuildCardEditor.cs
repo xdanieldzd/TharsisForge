@@ -21,6 +21,7 @@ namespace EO4SaveEdit.Editors
         TextBox[] nameTextBoxes;
         NumericUpDown[] levelNumericUpDowns;
         ComboBox[] classComboBoxes;
+        ImageComboBox[] portraitComboBoxes;
 
         public GuildCardEditor()
         {
@@ -41,22 +42,23 @@ namespace EO4SaveEdit.Editors
 
             this.Enabled = true;
 
-            nameTextBoxes = new TextBox[] { textBox1, textBox2, textBox3, textBox4, textBox5 };
-            levelNumericUpDowns = new NumericUpDown[] { numericUpDown1, numericUpDown2, numericUpDown3, numericUpDown4, numericUpDown5 };
-            classComboBoxes = new ComboBox[] { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5 };
+            nameTextBoxes = new TextBox[] { txtCharaListName1, txtCharaListName2, txtCharaListName3, txtCharaListName4, txtCharaListName5 };
+            levelNumericUpDowns = new NumericUpDown[] { nudCharaListLevel1, nudCharaListLevel2, nudCharaListLevel3, nudCharaListLevel4, nudCharaListLevel5 };
+            classComboBoxes = new ComboBox[] { cmbCharaListClass1, cmbCharaListClass2, cmbCharaListClass3, cmbCharaListClass4, cmbCharaListClass5 };
+            portraitComboBoxes = new ImageComboBox[] { icmbCharaListPortrait1, icmbCharaListPortrait2, icmbCharaListPortrait3, icmbCharaListPortrait4, icmbCharaListPortrait5 };
 
             foreach (ComboBox comboBox in classComboBoxes) comboBox.DataSource = Enum.GetValues(typeof(Class));
 
             foreach (string mapName in XmlHelper.TreasureMapNames.Where(x => x != null))
-                comboBox6.Items.Add(mapName);
+                cmbGuildTreasureMap.Items.Add(mapName);
 
-            comboBox7.DataSource = Enum.GetValues(typeof(Class));
-            comboBox8.DataSource = Enum.GetValues(typeof(Class));
+            cmbRegCharacterClass.DataSource = Enum.GetValues(typeof(Class));
+            cmbRegCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
 
-            comboBox9.DataSource = XmlHelper.ItemNames.ToList();
-            comboBox10.DataSource = XmlHelper.ItemNames.ToList();
-            comboBox11.DataSource = XmlHelper.ItemNames.ToList();
-            comboBox12.DataSource = XmlHelper.ItemNames.ToList();
+            cmbRegCharacterWeapon.DataSource = XmlHelper.ItemNames.ToList();
+            cmbRegCharacterEquipment.DataSource = XmlHelper.ItemNames.ToList();
+            cmbRegCharacterArmor1.DataSource = XmlHelper.ItemNames.ToList();
+            cmbRegCharacterArmor2.DataSource = XmlHelper.ItemNames.ToList();
 
             lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
         }
@@ -70,58 +72,95 @@ namespace EO4SaveEdit.Editors
                 nameTextBoxes[i].SetBinding("Text", currentGuildCard.CharacterListings[i], "Name");
                 levelNumericUpDowns[i].SetBinding("Value", currentGuildCard.CharacterListings[i], "Level");
                 classComboBoxes[i].SetBinding("SelectedItem", currentGuildCard.CharacterListings[i], "Class");
+
+                InitializePortraitComboBox(portraitComboBoxes[i], classComboBoxes[i], currentGuildCard.CharacterListings[i]);
             }
 
-            textBox6.SetBinding("Text", currentGuildCard, "GuildName");
-            textBox7.SetBinding("Text", currentGuildCard, "SkyshipName");
-            textBox8.SetBinding("Text", currentGuildCard, "Message");
+            txtGuildName.SetBinding("Text", currentGuildCard, "GuildName");
+            txtGuildSkyship.SetBinding("Text", currentGuildCard, "SkyshipName");
+            txtGuildMessage.SetBinding("Text", currentGuildCard, "Message");
 
-            numericUpDown6.SetBinding("Value", currentGuildCard, "EnemyDiscovery");
-            numericUpDown7.SetBinding("Value", currentGuildCard, "ItemDiscovery");
+            nudGuildEnemyDiscovery.SetBinding("Value", currentGuildCard, "EnemyDiscovery");
+            nudGuildItemDiscovery.SetBinding("Value", currentGuildCard, "ItemDiscovery");
 
-            textBox9.SetBinding("Text", currentGuildCard, "MaxLevel");
-            textBox10.SetBinding("Text", currentGuildCard, "VenturedDays");
-            textBox11.SetBinding("Text", currentGuildCard, "Walked");
-            textBox12.SetBinding("Text", currentGuildCard, "EnemiesHunted");
-            textBox13.SetBinding("Text", currentGuildCard, "TotalEn");
+            txtGuildMaxLevel.SetBinding("Text", currentGuildCard, "MaxLevel");
+            txtGuildVenturedDays.SetBinding("Text", currentGuildCard, "VenturedDays");
+            txtGuildWalked.SetBinding("Text", currentGuildCard, "Walked");
+            txtGuildEnemiesHunted.SetBinding("Text", currentGuildCard, "EnemiesHunted");
+            txtGuildTotalEn.SetBinding("Text", currentGuildCard, "TotalEn");
 
-            checkBox1.SetBinding("Checked", currentGuildCard.Achievement, "HasVesselsAlly");
-            checkBox2.SetBinding("Checked", currentGuildCard.Achievement, "HasSentinelsAlly");
-            checkBox3.SetBinding("Checked", currentGuildCard.Achievement, "HasKnightsAlly");
-            checkBox4.SetBinding("Checked", currentGuildCard.Achievement, "HasYggdrasilsHope");
-            checkBox5.SetBinding("Checked", currentGuildCard.Achievement, "HasInsectSlayer");
-            checkBox6.SetBinding("Checked", currentGuildCard.Achievement, "HasExplorersPride");
+            chkAchievementVesselAlly.SetBinding("Checked", currentGuildCard.Achievement, "HasVesselsAlly");
+            chkAchievementSentinelAlly.SetBinding("Checked", currentGuildCard.Achievement, "HasSentinelsAlly");
+            chkAchievementKnightAlly.SetBinding("Checked", currentGuildCard.Achievement, "HasKnightsAlly");
+            chkAchievementYggdrasilHope.SetBinding("Checked", currentGuildCard.Achievement, "HasYggdrasilsHope");
+            chkAchievementInsectSlayer.SetBinding("Checked", currentGuildCard.Achievement, "HasInsectSlayer");
+            chkAchievementExplorerPride.SetBinding("Checked", currentGuildCard.Achievement, "HasExplorersPride");
 
-            numericUpDown8.SetBinding("Value", currentGuildCard.Achievement, "BurstSkillCompletion");
-            numericUpDown9.SetBinding("Value", currentGuildCard.Achievement, "TreasureChestCompletion");
-            numericUpDown10.SetBinding("Value", currentGuildCard.Achievement, "QuestCompletion");
-            numericUpDown11.SetBinding("Value", currentGuildCard.Achievement, "RareBreedCompletion");
-            numericUpDown12.SetBinding("Value", currentGuildCard.Achievement, "FoodCompletion");
-            numericUpDown13.SetBinding("Value", currentGuildCard.Achievement, "MonsterCompletion");
-            numericUpDown14.SetBinding("Value", currentGuildCard.Achievement, "MaterialCompletion");
-            numericUpDown15.SetBinding("Value", currentGuildCard.Achievement, "HiddenTreasureCompletion");
+            nudCompletionBurstSkills.SetBinding("Value", currentGuildCard.Achievement, "BurstSkillCompletion");
+            nudCompletionTreasureBoxes.SetBinding("Value", currentGuildCard.Achievement, "TreasureChestCompletion");
+            nudCompletionQuests.SetBinding("Value", currentGuildCard.Achievement, "QuestCompletion");
+            nudCompletionRareBreeds.SetBinding("Value", currentGuildCard.Achievement, "RareBreedCompletion");
+            nudCompletionFood.SetBinding("Value", currentGuildCard.Achievement, "FoodCompletion");
+            nudCompletionMonsters.SetBinding("Value", currentGuildCard.Achievement, "MonsterCompletion");
+            nudCompletionMaterials.SetBinding("Value", currentGuildCard.Achievement, "MaterialCompletion");
+            nudCompletionHiddenTreasures.SetBinding("Value", currentGuildCard.Achievement, "HiddenTreasureCompletion");
 
-            numericUpDown16.SetBinding("Value", currentGuildCard, "Background");
-            comboBox6.SetBinding("SelectedIndex", currentGuildCard, "TreasureMap");
+            nudGuildCardBackground.SetBinding("Value", currentGuildCard, "Background");
+            cmbGuildTreasureMap.SetBinding("SelectedIndex", currentGuildCard, "TreasureMap");
 
-            textBox14.SetBinding("Text", currentGuildCard.GuildCardCharacter, "Name");
-            numericUpDown17.SetBinding("Value", currentGuildCard.GuildCardCharacter, "Level");
-            textBox15.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentHP");
-            textBox16.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentTP");
+            txtRegCharacterName.SetBinding("Text", currentGuildCard.GuildCardCharacter, "Name");
+            nudRegCharacterLevel.SetBinding("Value", currentGuildCard.GuildCardCharacter, "Level");
+            txtRegCharacterCurrentHP.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentHP");
+            txtRegCharacterCurrentTP.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentTP");
 
-            comboBox7.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Class");
-            comboBox8.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Subclass");
+            cmbRegCharacterClass.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Class");
+            cmbRegCharacterSubclass.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Subclass");
 
-            comboBox9.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.WeaponSlot, "ItemID");
-            comboBox10.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.EquipmentSlot, "ItemID");
-            comboBox11.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.ArmorSlot1, "ItemID");
-            comboBox12.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.ArmorSlot2, "ItemID");
+            InitializePortraitComboBox(icmbRegCharacterPortrait, cmbRegCharacterClass, currentGuildCard.GuildCardCharacter);
+
+            cmbRegCharacterWeapon.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.WeaponSlot, "ItemID");
+            cmbRegCharacterEquipment.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.EquipmentSlot, "ItemID");
+            cmbRegCharacterArmor1.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.ArmorSlot1, "ItemID");
+            cmbRegCharacterArmor2.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.ArmorSlot2, "ItemID");
 
 
 
             // TEMP
             gbAchievements.DataBindings.Clear();
             gbAchievements.DataBindings.Add("Text", currentGuildCard.Achievement, "RawValue", true, DataSourceUpdateMode.OnPropertyChanged, null, "X8");
+        }
+
+        private void InitializePortraitComboBox(ImageComboBox portraitComboBox, ComboBox classComboBox, object binding)
+        {
+            classComboBox.Tag = portraitComboBox;
+            classComboBox.SelectedValueChanged += ((s, e) =>
+            {
+                ComboBox ccb = (s as ComboBox);
+                ImageComboBox pcb = (ccb.Tag as ImageComboBox);
+                RefreshPortraitComboBox(pcb, (Class)ccb.SelectedItem);
+            });
+
+            portraitComboBox.Items.Clear();
+            for (int j = 0; j < 16; j++) portraitComboBox.Items.Add(new ImageComboItem(string.Empty, j));
+            portraitComboBox.SetBinding("SelectedIndex", binding, "Portrait");
+
+            RefreshPortraitComboBox(portraitComboBox, (Class)classComboBox.SelectedItem);
+        }
+
+        private void RefreshPortraitComboBox(ImageComboBox portraitComboBox, Class charaClass)
+        {
+            if (ImageHelper.CharacterIcons.ContainsKey(charaClass))
+            {
+                portraitComboBox.Enabled = true;
+                portraitComboBox.ImageList = ImageHelper.CharacterIcons[charaClass];
+            }
+            else
+            {
+                portraitComboBox.Enabled = false;
+                portraitComboBox.ImageList = null;
+            }
+
+            portraitComboBox.Invalidate();
         }
 
         private void lbGuildCards_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,7 +182,7 @@ namespace EO4SaveEdit.Editors
             }
         }
 
-        private void btnSkillEditor_Click(object sender, EventArgs e)
+        private void btnRegCharacterSkillEditor_Click(object sender, EventArgs e)
         {
             SkillEditorDialog sed = new SkillEditorDialog(
                 currentGuildCard.GuildCardCharacter.Class, currentGuildCard.GuildCardCharacter.MainSkillLevels,
@@ -152,25 +191,25 @@ namespace EO4SaveEdit.Editors
             sed.ShowDialog();
         }
 
-        private void btnEditWeaponEffect_Click(object sender, EventArgs e)
+        private void btnRegCharacterEditWeaponEffect_Click(object sender, EventArgs e)
         {
             EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.WeaponSlot);
             eed.ShowDialog();
         }
 
-        private void btnEditEquipEffect_Click(object sender, EventArgs e)
+        private void btnRegCharacterEditEquipEffect_Click(object sender, EventArgs e)
         {
             EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.EquipmentSlot);
             eed.ShowDialog();
         }
 
-        private void btnEditArmor1Effect_Click(object sender, EventArgs e)
+        private void btnRegCharacterEditArmor1Effect_Click(object sender, EventArgs e)
         {
             EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.ArmorSlot1);
             eed.ShowDialog();
         }
 
-        private void btnEditArmor2Effect_Click(object sender, EventArgs e)
+        private void btnRegCharacterEditArmor2Effect_Click(object sender, EventArgs e)
         {
             EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.ArmorSlot2);
             eed.ShowDialog();
