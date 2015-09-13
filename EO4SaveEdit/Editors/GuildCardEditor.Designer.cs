@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.gbCharaList = new System.Windows.Forms.GroupBox();
             this.lblCharaListPortrait = new System.Windows.Forms.Label();
+            this.icmbCharaListPortrait5 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait4 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait3 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait2 = new EO4SaveEdit.ImageComboBox();
+            this.icmbCharaListPortrait1 = new EO4SaveEdit.ImageComboBox();
             this.cmbCharaListClass5 = new System.Windows.Forms.ComboBox();
             this.nudCharaListLevel5 = new System.Windows.Forms.NumericUpDown();
             this.txtCharaListName5 = new System.Windows.Forms.TextBox();
@@ -98,6 +103,8 @@
             this.chkAchievementSentinelAlly = new System.Windows.Forms.CheckBox();
             this.chkAchievementVesselAlly = new System.Windows.Forms.CheckBox();
             this.gbRegCharacter = new System.Windows.Forms.GroupBox();
+            this.lblRegCharacterPortrait = new System.Windows.Forms.Label();
+            this.icmbRegCharacterPortrait = new EO4SaveEdit.ImageComboBox();
             this.lblRegCharacterCurrentTP = new System.Windows.Forms.Label();
             this.txtRegCharacterCurrentTP = new System.Windows.Forms.TextBox();
             this.lblRegCharacterCurrentHP = new System.Windows.Forms.Label();
@@ -125,13 +132,6 @@
             this.nudRegCharacterLevel = new System.Windows.Forms.NumericUpDown();
             this.txtRegCharacterName = new System.Windows.Forms.TextBox();
             this.gbAchievements = new System.Windows.Forms.GroupBox();
-            this.lblRegCharacterPortrait = new System.Windows.Forms.Label();
-            this.icmbRegCharacterPortrait = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait5 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait4 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait3 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait2 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait1 = new EO4SaveEdit.ImageComboBox();
             this.lbGuildCards = new EO4SaveEdit.ListBoxEx();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).BeginInit();
@@ -198,8 +198,58 @@
             this.lblCharaListPortrait.Name = "lblCharaListPortrait";
             this.lblCharaListPortrait.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.lblCharaListPortrait.Size = new System.Drawing.Size(43, 19);
-            this.lblCharaListPortrait.TabIndex = 23;
+            this.lblCharaListPortrait.TabIndex = 3;
             this.lblCharaListPortrait.Text = "Portrait:";
+            // 
+            // icmbCharaListPortrait5
+            // 
+            this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait5.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(249, 146);
+            this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
+            this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait5.TabIndex = 23;
+            // 
+            // icmbCharaListPortrait4
+            // 
+            this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait4.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(249, 119);
+            this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
+            this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait4.TabIndex = 19;
+            // 
+            // icmbCharaListPortrait3
+            // 
+            this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait3.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(249, 92);
+            this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
+            this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait3.TabIndex = 15;
+            // 
+            // icmbCharaListPortrait2
+            // 
+            this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait2.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(249, 65);
+            this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
+            this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait2.TabIndex = 11;
+            // 
+            // icmbCharaListPortrait1
+            // 
+            this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait1.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(249, 38);
+            this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
+            this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait1.TabIndex = 7;
             // 
             // cmbCharaListClass5
             // 
@@ -208,14 +258,14 @@
             this.cmbCharaListClass5.Location = new System.Drawing.Point(153, 146);
             this.cmbCharaListClass5.Name = "cmbCharaListClass5";
             this.cmbCharaListClass5.Size = new System.Drawing.Size(90, 21);
-            this.cmbCharaListClass5.TabIndex = 17;
+            this.cmbCharaListClass5.TabIndex = 22;
             // 
             // nudCharaListLevel5
             // 
             this.nudCharaListLevel5.Location = new System.Drawing.Point(102, 146);
             this.nudCharaListLevel5.Name = "nudCharaListLevel5";
             this.nudCharaListLevel5.Size = new System.Drawing.Size(45, 20);
-            this.nudCharaListLevel5.TabIndex = 16;
+            this.nudCharaListLevel5.TabIndex = 21;
             // 
             // txtCharaListName5
             // 
@@ -223,7 +273,7 @@
             this.txtCharaListName5.MaxLength = 9;
             this.txtCharaListName5.Name = "txtCharaListName5";
             this.txtCharaListName5.Size = new System.Drawing.Size(90, 20);
-            this.txtCharaListName5.TabIndex = 15;
+            this.txtCharaListName5.TabIndex = 20;
             // 
             // cmbCharaListClass4
             // 
@@ -232,14 +282,14 @@
             this.cmbCharaListClass4.Location = new System.Drawing.Point(153, 119);
             this.cmbCharaListClass4.Name = "cmbCharaListClass4";
             this.cmbCharaListClass4.Size = new System.Drawing.Size(90, 21);
-            this.cmbCharaListClass4.TabIndex = 14;
+            this.cmbCharaListClass4.TabIndex = 18;
             // 
             // nudCharaListLevel4
             // 
             this.nudCharaListLevel4.Location = new System.Drawing.Point(102, 119);
             this.nudCharaListLevel4.Name = "nudCharaListLevel4";
             this.nudCharaListLevel4.Size = new System.Drawing.Size(45, 20);
-            this.nudCharaListLevel4.TabIndex = 13;
+            this.nudCharaListLevel4.TabIndex = 17;
             // 
             // txtCharaListName4
             // 
@@ -247,7 +297,7 @@
             this.txtCharaListName4.MaxLength = 9;
             this.txtCharaListName4.Name = "txtCharaListName4";
             this.txtCharaListName4.Size = new System.Drawing.Size(90, 20);
-            this.txtCharaListName4.TabIndex = 12;
+            this.txtCharaListName4.TabIndex = 16;
             // 
             // cmbCharaListClass3
             // 
@@ -256,14 +306,14 @@
             this.cmbCharaListClass3.Location = new System.Drawing.Point(153, 92);
             this.cmbCharaListClass3.Name = "cmbCharaListClass3";
             this.cmbCharaListClass3.Size = new System.Drawing.Size(90, 21);
-            this.cmbCharaListClass3.TabIndex = 11;
+            this.cmbCharaListClass3.TabIndex = 14;
             // 
             // nudCharaListLevel3
             // 
             this.nudCharaListLevel3.Location = new System.Drawing.Point(102, 92);
             this.nudCharaListLevel3.Name = "nudCharaListLevel3";
             this.nudCharaListLevel3.Size = new System.Drawing.Size(45, 20);
-            this.nudCharaListLevel3.TabIndex = 10;
+            this.nudCharaListLevel3.TabIndex = 13;
             // 
             // txtCharaListName3
             // 
@@ -271,7 +321,7 @@
             this.txtCharaListName3.MaxLength = 9;
             this.txtCharaListName3.Name = "txtCharaListName3";
             this.txtCharaListName3.Size = new System.Drawing.Size(90, 20);
-            this.txtCharaListName3.TabIndex = 9;
+            this.txtCharaListName3.TabIndex = 12;
             // 
             // cmbCharaListClass2
             // 
@@ -280,14 +330,14 @@
             this.cmbCharaListClass2.Location = new System.Drawing.Point(153, 65);
             this.cmbCharaListClass2.Name = "cmbCharaListClass2";
             this.cmbCharaListClass2.Size = new System.Drawing.Size(90, 21);
-            this.cmbCharaListClass2.TabIndex = 8;
+            this.cmbCharaListClass2.TabIndex = 10;
             // 
             // nudCharaListLevel2
             // 
             this.nudCharaListLevel2.Location = new System.Drawing.Point(102, 65);
             this.nudCharaListLevel2.Name = "nudCharaListLevel2";
             this.nudCharaListLevel2.Size = new System.Drawing.Size(45, 20);
-            this.nudCharaListLevel2.TabIndex = 7;
+            this.nudCharaListLevel2.TabIndex = 9;
             // 
             // txtCharaListName2
             // 
@@ -295,7 +345,7 @@
             this.txtCharaListName2.MaxLength = 9;
             this.txtCharaListName2.Name = "txtCharaListName2";
             this.txtCharaListName2.Size = new System.Drawing.Size(90, 20);
-            this.txtCharaListName2.TabIndex = 6;
+            this.txtCharaListName2.TabIndex = 8;
             // 
             // lblCharaListClass
             // 
@@ -304,7 +354,7 @@
             this.lblCharaListClass.Name = "lblCharaListClass";
             this.lblCharaListClass.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.lblCharaListClass.Size = new System.Drawing.Size(35, 19);
-            this.lblCharaListClass.TabIndex = 5;
+            this.lblCharaListClass.TabIndex = 2;
             this.lblCharaListClass.Text = "Class:";
             // 
             // cmbCharaListClass1
@@ -314,14 +364,14 @@
             this.cmbCharaListClass1.Location = new System.Drawing.Point(153, 38);
             this.cmbCharaListClass1.Name = "cmbCharaListClass1";
             this.cmbCharaListClass1.Size = new System.Drawing.Size(90, 21);
-            this.cmbCharaListClass1.TabIndex = 4;
+            this.cmbCharaListClass1.TabIndex = 6;
             // 
             // nudCharaListLevel1
             // 
             this.nudCharaListLevel1.Location = new System.Drawing.Point(102, 38);
             this.nudCharaListLevel1.Name = "nudCharaListLevel1";
             this.nudCharaListLevel1.Size = new System.Drawing.Size(45, 20);
-            this.nudCharaListLevel1.TabIndex = 3;
+            this.nudCharaListLevel1.TabIndex = 5;
             // 
             // lblCharaListLevel
             // 
@@ -330,7 +380,7 @@
             this.lblCharaListLevel.Name = "lblCharaListLevel";
             this.lblCharaListLevel.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.lblCharaListLevel.Size = new System.Drawing.Size(36, 19);
-            this.lblCharaListLevel.TabIndex = 2;
+            this.lblCharaListLevel.TabIndex = 1;
             this.lblCharaListLevel.Text = "Level:";
             // 
             // lblCharaListName
@@ -340,7 +390,7 @@
             this.lblCharaListName.Name = "lblCharaListName";
             this.lblCharaListName.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.lblCharaListName.Size = new System.Drawing.Size(38, 19);
-            this.lblCharaListName.TabIndex = 1;
+            this.lblCharaListName.TabIndex = 0;
             this.lblCharaListName.Text = "Name:";
             // 
             // txtCharaListName1
@@ -349,7 +399,7 @@
             this.txtCharaListName1.MaxLength = 9;
             this.txtCharaListName1.Name = "txtCharaListName1";
             this.txtCharaListName1.Size = new System.Drawing.Size(90, 20);
-            this.txtCharaListName1.TabIndex = 0;
+            this.txtCharaListName1.TabIndex = 4;
             // 
             // gbGuildInfo
             // 
@@ -380,7 +430,7 @@
             this.gbGuildInfo.Location = new System.Drawing.Point(136, 3);
             this.gbGuildInfo.Name = "gbGuildInfo";
             this.gbGuildInfo.Size = new System.Drawing.Size(310, 210);
-            this.gbGuildInfo.TabIndex = 3;
+            this.gbGuildInfo.TabIndex = 1;
             this.gbGuildInfo.TabStop = false;
             this.gbGuildInfo.Text = "Guild Information";
             // 
@@ -390,7 +440,7 @@
             this.lblGuildTreasureMap.Location = new System.Drawing.Point(6, 178);
             this.lblGuildTreasureMap.Name = "lblGuildTreasureMap";
             this.lblGuildTreasureMap.Size = new System.Drawing.Size(76, 13);
-            this.lblGuildTreasureMap.TabIndex = 49;
+            this.lblGuildTreasureMap.TabIndex = 22;
             this.lblGuildTreasureMap.Text = "Treasure Map:";
             // 
             // cmbGuildTreasureMap
@@ -400,7 +450,7 @@
             this.cmbGuildTreasureMap.Location = new System.Drawing.Point(88, 175);
             this.cmbGuildTreasureMap.Name = "cmbGuildTreasureMap";
             this.cmbGuildTreasureMap.Size = new System.Drawing.Size(216, 21);
-            this.cmbGuildTreasureMap.TabIndex = 48;
+            this.cmbGuildTreasureMap.TabIndex = 23;
             // 
             // lblGuildCardBackground
             // 
@@ -408,7 +458,7 @@
             this.lblGuildCardBackground.Location = new System.Drawing.Point(145, 152);
             this.lblGuildCardBackground.Name = "lblGuildCardBackground";
             this.lblGuildCardBackground.Size = new System.Drawing.Size(93, 13);
-            this.lblGuildCardBackground.TabIndex = 47;
+            this.lblGuildCardBackground.TabIndex = 20;
             this.lblGuildCardBackground.Text = "Card Background:";
             // 
             // nudGuildCardBackground
@@ -421,7 +471,7 @@
             0});
             this.nudGuildCardBackground.Name = "nudGuildCardBackground";
             this.nudGuildCardBackground.Size = new System.Drawing.Size(60, 20);
-            this.nudGuildCardBackground.TabIndex = 46;
+            this.nudGuildCardBackground.TabIndex = 21;
             // 
             // lblGuildTotalEn
             // 
@@ -429,7 +479,7 @@
             this.lblGuildTotalEn.Location = new System.Drawing.Point(6, 152);
             this.lblGuildTotalEn.Name = "lblGuildTotalEn";
             this.lblGuildTotalEn.Size = new System.Drawing.Size(49, 13);
-            this.lblGuildTotalEn.TabIndex = 21;
+            this.lblGuildTotalEn.TabIndex = 18;
             this.lblGuildTotalEn.Text = "Total en:";
             // 
             // txtGuildTotalEn
@@ -437,7 +487,7 @@
             this.txtGuildTotalEn.Location = new System.Drawing.Point(74, 149);
             this.txtGuildTotalEn.Name = "txtGuildTotalEn";
             this.txtGuildTotalEn.Size = new System.Drawing.Size(60, 20);
-            this.txtGuildTotalEn.TabIndex = 20;
+            this.txtGuildTotalEn.TabIndex = 19;
             // 
             // lblGuildEnemiesHunted
             // 
@@ -445,7 +495,7 @@
             this.lblGuildEnemiesHunted.Location = new System.Drawing.Point(150, 126);
             this.lblGuildEnemiesHunted.Name = "lblGuildEnemiesHunted";
             this.lblGuildEnemiesHunted.Size = new System.Drawing.Size(88, 13);
-            this.lblGuildEnemiesHunted.TabIndex = 19;
+            this.lblGuildEnemiesHunted.TabIndex = 16;
             this.lblGuildEnemiesHunted.Text = "Enemies Hunted:";
             // 
             // txtGuildEnemiesHunted
@@ -453,7 +503,7 @@
             this.txtGuildEnemiesHunted.Location = new System.Drawing.Point(244, 123);
             this.txtGuildEnemiesHunted.Name = "txtGuildEnemiesHunted";
             this.txtGuildEnemiesHunted.Size = new System.Drawing.Size(60, 20);
-            this.txtGuildEnemiesHunted.TabIndex = 18;
+            this.txtGuildEnemiesHunted.TabIndex = 17;
             // 
             // lblGuildWalked
             // 
@@ -461,7 +511,7 @@
             this.lblGuildWalked.Location = new System.Drawing.Point(6, 126);
             this.lblGuildWalked.Name = "lblGuildWalked";
             this.lblGuildWalked.Size = new System.Drawing.Size(47, 13);
-            this.lblGuildWalked.TabIndex = 17;
+            this.lblGuildWalked.TabIndex = 14;
             this.lblGuildWalked.Text = "Walked:";
             // 
             // txtGuildWalked
@@ -469,7 +519,7 @@
             this.txtGuildWalked.Location = new System.Drawing.Point(74, 123);
             this.txtGuildWalked.Name = "txtGuildWalked";
             this.txtGuildWalked.Size = new System.Drawing.Size(60, 20);
-            this.txtGuildWalked.TabIndex = 16;
+            this.txtGuildWalked.TabIndex = 15;
             // 
             // lblGuildVenturedDays
             // 
@@ -477,7 +527,7 @@
             this.lblGuildVenturedDays.Location = new System.Drawing.Point(158, 100);
             this.lblGuildVenturedDays.Name = "lblGuildVenturedDays";
             this.lblGuildVenturedDays.Size = new System.Drawing.Size(80, 13);
-            this.lblGuildVenturedDays.TabIndex = 15;
+            this.lblGuildVenturedDays.TabIndex = 12;
             this.lblGuildVenturedDays.Text = "Ventured Days:";
             // 
             // txtGuildVenturedDays
@@ -485,7 +535,7 @@
             this.txtGuildVenturedDays.Location = new System.Drawing.Point(244, 97);
             this.txtGuildVenturedDays.Name = "txtGuildVenturedDays";
             this.txtGuildVenturedDays.Size = new System.Drawing.Size(60, 20);
-            this.txtGuildVenturedDays.TabIndex = 14;
+            this.txtGuildVenturedDays.TabIndex = 13;
             // 
             // lblGuildMaxLevel
             // 
@@ -493,7 +543,7 @@
             this.lblGuildMaxLevel.Location = new System.Drawing.Point(6, 100);
             this.lblGuildMaxLevel.Name = "lblGuildMaxLevel";
             this.lblGuildMaxLevel.Size = new System.Drawing.Size(62, 13);
-            this.lblGuildMaxLevel.TabIndex = 13;
+            this.lblGuildMaxLevel.TabIndex = 10;
             this.lblGuildMaxLevel.Text = "Max. Level:";
             // 
             // txtGuildMaxLevel
@@ -501,7 +551,7 @@
             this.txtGuildMaxLevel.Location = new System.Drawing.Point(74, 97);
             this.txtGuildMaxLevel.Name = "txtGuildMaxLevel";
             this.txtGuildMaxLevel.Size = new System.Drawing.Size(60, 20);
-            this.txtGuildMaxLevel.TabIndex = 12;
+            this.txtGuildMaxLevel.TabIndex = 11;
             // 
             // lblGuildItemDiscovery
             // 
@@ -509,7 +559,7 @@
             this.lblGuildItemDiscovery.Location = new System.Drawing.Point(166, 73);
             this.lblGuildItemDiscovery.Name = "lblGuildItemDiscovery";
             this.lblGuildItemDiscovery.Size = new System.Drawing.Size(80, 13);
-            this.lblGuildItemDiscovery.TabIndex = 11;
+            this.lblGuildItemDiscovery.TabIndex = 8;
             this.lblGuildItemDiscovery.Text = "Item Discovery:";
             // 
             // nudGuildItemDiscovery
@@ -523,7 +573,7 @@
             this.nudGuildItemDiscovery.Location = new System.Drawing.Point(249, 71);
             this.nudGuildItemDiscovery.Name = "nudGuildItemDiscovery";
             this.nudGuildItemDiscovery.Size = new System.Drawing.Size(55, 20);
-            this.nudGuildItemDiscovery.TabIndex = 10;
+            this.nudGuildItemDiscovery.TabIndex = 9;
             // 
             // lblGuildEnemyDiscovery
             // 
@@ -531,7 +581,7 @@
             this.lblGuildEnemyDiscovery.Location = new System.Drawing.Point(6, 73);
             this.lblGuildEnemyDiscovery.Name = "lblGuildEnemyDiscovery";
             this.lblGuildEnemyDiscovery.Size = new System.Drawing.Size(92, 13);
-            this.lblGuildEnemyDiscovery.TabIndex = 9;
+            this.lblGuildEnemyDiscovery.TabIndex = 6;
             this.lblGuildEnemyDiscovery.Text = "Enemy Discovery:";
             // 
             // nudGuildEnemyDiscovery
@@ -545,7 +595,7 @@
             this.nudGuildEnemyDiscovery.Location = new System.Drawing.Point(104, 71);
             this.nudGuildEnemyDiscovery.Name = "nudGuildEnemyDiscovery";
             this.nudGuildEnemyDiscovery.Size = new System.Drawing.Size(55, 20);
-            this.nudGuildEnemyDiscovery.TabIndex = 8;
+            this.nudGuildEnemyDiscovery.TabIndex = 7;
             // 
             // txtGuildMessage
             // 
@@ -553,7 +603,7 @@
             this.txtGuildMessage.MaxLength = 16;
             this.txtGuildMessage.Name = "txtGuildMessage";
             this.txtGuildMessage.Size = new System.Drawing.Size(239, 20);
-            this.txtGuildMessage.TabIndex = 7;
+            this.txtGuildMessage.TabIndex = 5;
             // 
             // lblGuildMessage
             // 
@@ -561,7 +611,7 @@
             this.lblGuildMessage.Location = new System.Drawing.Point(6, 48);
             this.lblGuildMessage.Name = "lblGuildMessage";
             this.lblGuildMessage.Size = new System.Drawing.Size(53, 13);
-            this.lblGuildMessage.TabIndex = 6;
+            this.lblGuildMessage.TabIndex = 4;
             this.lblGuildMessage.Text = "Message:";
             // 
             // txtGuildSkyship
@@ -570,7 +620,7 @@
             this.txtGuildSkyship.MaxLength = 8;
             this.txtGuildSkyship.Name = "txtGuildSkyship";
             this.txtGuildSkyship.Size = new System.Drawing.Size(85, 20);
-            this.txtGuildSkyship.TabIndex = 5;
+            this.txtGuildSkyship.TabIndex = 3;
             // 
             // lblGuildSkyship
             // 
@@ -578,7 +628,7 @@
             this.lblGuildSkyship.Location = new System.Drawing.Point(166, 22);
             this.lblGuildSkyship.Name = "lblGuildSkyship";
             this.lblGuildSkyship.Size = new System.Drawing.Size(47, 13);
-            this.lblGuildSkyship.TabIndex = 4;
+            this.lblGuildSkyship.TabIndex = 2;
             this.lblGuildSkyship.Text = "Skyship:";
             // 
             // txtGuildName
@@ -587,7 +637,7 @@
             this.txtGuildName.MaxLength = 8;
             this.txtGuildName.Name = "txtGuildName";
             this.txtGuildName.Size = new System.Drawing.Size(85, 20);
-            this.txtGuildName.TabIndex = 3;
+            this.txtGuildName.TabIndex = 1;
             // 
             // lblGuildName
             // 
@@ -595,7 +645,7 @@
             this.lblGuildName.Location = new System.Drawing.Point(6, 22);
             this.lblGuildName.Name = "lblGuildName";
             this.lblGuildName.Size = new System.Drawing.Size(38, 13);
-            this.lblGuildName.TabIndex = 2;
+            this.lblGuildName.TabIndex = 0;
             this.lblGuildName.Text = "Name:";
             // 
             // lblCompletionHiddenTreasures
@@ -604,7 +654,7 @@
             this.lblCompletionHiddenTreasures.Location = new System.Drawing.Point(144, 191);
             this.lblCompletionHiddenTreasures.Name = "lblCompletionHiddenTreasures";
             this.lblCompletionHiddenTreasures.Size = new System.Drawing.Size(94, 13);
-            this.lblCompletionHiddenTreasures.TabIndex = 45;
+            this.lblCompletionHiddenTreasures.TabIndex = 21;
             this.lblCompletionHiddenTreasures.Text = "Hidden Treasures:";
             // 
             // nudCompletionHiddenTreasures
@@ -617,7 +667,7 @@
             0});
             this.nudCompletionHiddenTreasures.Name = "nudCompletionHiddenTreasures";
             this.nudCompletionHiddenTreasures.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionHiddenTreasures.TabIndex = 44;
+            this.nudCompletionHiddenTreasures.TabIndex = 22;
             // 
             // lblCompletionMaterials
             // 
@@ -625,7 +675,7 @@
             this.lblCompletionMaterials.Location = new System.Drawing.Point(6, 191);
             this.lblCompletionMaterials.Name = "lblCompletionMaterials";
             this.lblCompletionMaterials.Size = new System.Drawing.Size(52, 13);
-            this.lblCompletionMaterials.TabIndex = 43;
+            this.lblCompletionMaterials.TabIndex = 13;
             this.lblCompletionMaterials.Text = "Materials:";
             // 
             // nudCompletionMaterials
@@ -638,7 +688,7 @@
             0});
             this.nudCompletionMaterials.Name = "nudCompletionMaterials";
             this.nudCompletionMaterials.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionMaterials.TabIndex = 42;
+            this.nudCompletionMaterials.TabIndex = 14;
             // 
             // lblCompletionMonsters
             // 
@@ -646,7 +696,7 @@
             this.lblCompletionMonsters.Location = new System.Drawing.Point(185, 165);
             this.lblCompletionMonsters.Name = "lblCompletionMonsters";
             this.lblCompletionMonsters.Size = new System.Drawing.Size(53, 13);
-            this.lblCompletionMonsters.TabIndex = 41;
+            this.lblCompletionMonsters.TabIndex = 19;
             this.lblCompletionMonsters.Text = "Monsters:";
             // 
             // nudCompletionMonsters
@@ -659,7 +709,7 @@
             0});
             this.nudCompletionMonsters.Name = "nudCompletionMonsters";
             this.nudCompletionMonsters.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionMonsters.TabIndex = 40;
+            this.nudCompletionMonsters.TabIndex = 20;
             // 
             // lblCompletionFood
             // 
@@ -667,7 +717,7 @@
             this.lblCompletionFood.Location = new System.Drawing.Point(6, 165);
             this.lblCompletionFood.Name = "lblCompletionFood";
             this.lblCompletionFood.Size = new System.Drawing.Size(34, 13);
-            this.lblCompletionFood.TabIndex = 39;
+            this.lblCompletionFood.TabIndex = 11;
             this.lblCompletionFood.Text = "Food:";
             // 
             // nudCompletionFood
@@ -680,7 +730,7 @@
             0});
             this.nudCompletionFood.Name = "nudCompletionFood";
             this.nudCompletionFood.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionFood.TabIndex = 38;
+            this.nudCompletionFood.TabIndex = 12;
             // 
             // lblCompletionRareBreeds
             // 
@@ -688,7 +738,7 @@
             this.lblCompletionRareBreeds.Location = new System.Drawing.Point(169, 139);
             this.lblCompletionRareBreeds.Name = "lblCompletionRareBreeds";
             this.lblCompletionRareBreeds.Size = new System.Drawing.Size(69, 13);
-            this.lblCompletionRareBreeds.TabIndex = 37;
+            this.lblCompletionRareBreeds.TabIndex = 17;
             this.lblCompletionRareBreeds.Text = "Rare Breeds:";
             // 
             // nudCompletionRareBreeds
@@ -701,7 +751,7 @@
             0});
             this.nudCompletionRareBreeds.Name = "nudCompletionRareBreeds";
             this.nudCompletionRareBreeds.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionRareBreeds.TabIndex = 36;
+            this.nudCompletionRareBreeds.TabIndex = 18;
             // 
             // lblCompletionQuests
             // 
@@ -709,7 +759,7 @@
             this.lblCompletionQuests.Location = new System.Drawing.Point(6, 139);
             this.lblCompletionQuests.Name = "lblCompletionQuests";
             this.lblCompletionQuests.Size = new System.Drawing.Size(43, 13);
-            this.lblCompletionQuests.TabIndex = 35;
+            this.lblCompletionQuests.TabIndex = 9;
             this.lblCompletionQuests.Text = "Quests:";
             // 
             // nudCompletionQuests
@@ -722,7 +772,7 @@
             0});
             this.nudCompletionQuests.Name = "nudCompletionQuests";
             this.nudCompletionQuests.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionQuests.TabIndex = 34;
+            this.nudCompletionQuests.TabIndex = 10;
             // 
             // lblCompletionTreasureBoxes
             // 
@@ -730,7 +780,7 @@
             this.lblCompletionTreasureBoxes.Location = new System.Drawing.Point(154, 113);
             this.lblCompletionTreasureBoxes.Name = "lblCompletionTreasureBoxes";
             this.lblCompletionTreasureBoxes.Size = new System.Drawing.Size(84, 13);
-            this.lblCompletionTreasureBoxes.TabIndex = 33;
+            this.lblCompletionTreasureBoxes.TabIndex = 15;
             this.lblCompletionTreasureBoxes.Text = "Treasure Boxes:";
             // 
             // nudCompletionTreasureBoxes
@@ -743,7 +793,7 @@
             0});
             this.nudCompletionTreasureBoxes.Name = "nudCompletionTreasureBoxes";
             this.nudCompletionTreasureBoxes.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionTreasureBoxes.TabIndex = 32;
+            this.nudCompletionTreasureBoxes.TabIndex = 16;
             // 
             // lblCompletionBurstSkills
             // 
@@ -751,7 +801,7 @@
             this.lblCompletionBurstSkills.Location = new System.Drawing.Point(6, 113);
             this.lblCompletionBurstSkills.Name = "lblCompletionBurstSkills";
             this.lblCompletionBurstSkills.Size = new System.Drawing.Size(61, 13);
-            this.lblCompletionBurstSkills.TabIndex = 31;
+            this.lblCompletionBurstSkills.TabIndex = 7;
             this.lblCompletionBurstSkills.Text = "Burst Skills:";
             // 
             // lblCompletionLevels
@@ -761,7 +811,7 @@
             this.lblCompletionLevels.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.lblCompletionLevels.Name = "lblCompletionLevels";
             this.lblCompletionLevels.Size = new System.Drawing.Size(96, 13);
-            this.lblCompletionLevels.TabIndex = 30;
+            this.lblCompletionLevels.TabIndex = 6;
             this.lblCompletionLevels.Text = "Completion Levels:";
             // 
             // nudCompletionBurstSkills
@@ -774,7 +824,7 @@
             0});
             this.nudCompletionBurstSkills.Name = "nudCompletionBurstSkills";
             this.nudCompletionBurstSkills.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionBurstSkills.TabIndex = 29;
+            this.nudCompletionBurstSkills.TabIndex = 8;
             // 
             // chkAchievementExplorerPride
             // 
@@ -782,7 +832,7 @@
             this.chkAchievementExplorerPride.Location = new System.Drawing.Point(153, 65);
             this.chkAchievementExplorerPride.Name = "chkAchievementExplorerPride";
             this.chkAchievementExplorerPride.Size = new System.Drawing.Size(98, 17);
-            this.chkAchievementExplorerPride.TabIndex = 28;
+            this.chkAchievementExplorerPride.TabIndex = 5;
             this.chkAchievementExplorerPride.Text = "Explorer\'s Pride";
             this.chkAchievementExplorerPride.UseVisualStyleBackColor = true;
             // 
@@ -792,7 +842,7 @@
             this.chkAchievementInsectSlayer.Location = new System.Drawing.Point(153, 42);
             this.chkAchievementInsectSlayer.Name = "chkAchievementInsectSlayer";
             this.chkAchievementInsectSlayer.Size = new System.Drawing.Size(87, 17);
-            this.chkAchievementInsectSlayer.TabIndex = 27;
+            this.chkAchievementInsectSlayer.TabIndex = 4;
             this.chkAchievementInsectSlayer.Text = "Insect Slayer";
             this.chkAchievementInsectSlayer.UseVisualStyleBackColor = true;
             // 
@@ -802,7 +852,7 @@
             this.chkAchievementYggdrasilHope.Location = new System.Drawing.Point(153, 19);
             this.chkAchievementYggdrasilHope.Name = "chkAchievementYggdrasilHope";
             this.chkAchievementYggdrasilHope.Size = new System.Drawing.Size(105, 17);
-            this.chkAchievementYggdrasilHope.TabIndex = 26;
+            this.chkAchievementYggdrasilHope.TabIndex = 3;
             this.chkAchievementYggdrasilHope.Text = "Yggdrasil\'s Hope";
             this.chkAchievementYggdrasilHope.UseVisualStyleBackColor = true;
             // 
@@ -812,7 +862,7 @@
             this.chkAchievementKnightAlly.Location = new System.Drawing.Point(9, 65);
             this.chkAchievementKnightAlly.Name = "chkAchievementKnightAlly";
             this.chkAchievementKnightAlly.Size = new System.Drawing.Size(82, 17);
-            this.chkAchievementKnightAlly.TabIndex = 25;
+            this.chkAchievementKnightAlly.TabIndex = 2;
             this.chkAchievementKnightAlly.Text = "Knight\'s Ally";
             this.chkAchievementKnightAlly.UseVisualStyleBackColor = true;
             // 
@@ -822,7 +872,7 @@
             this.chkAchievementSentinelAlly.Location = new System.Drawing.Point(9, 42);
             this.chkAchievementSentinelAlly.Name = "chkAchievementSentinelAlly";
             this.chkAchievementSentinelAlly.Size = new System.Drawing.Size(90, 17);
-            this.chkAchievementSentinelAlly.TabIndex = 24;
+            this.chkAchievementSentinelAlly.TabIndex = 1;
             this.chkAchievementSentinelAlly.Text = "Sentinels\' Ally";
             this.chkAchievementSentinelAlly.UseVisualStyleBackColor = true;
             // 
@@ -832,7 +882,7 @@
             this.chkAchievementVesselAlly.Location = new System.Drawing.Point(9, 19);
             this.chkAchievementVesselAlly.Name = "chkAchievementVesselAlly";
             this.chkAchievementVesselAlly.Size = new System.Drawing.Size(83, 17);
-            this.chkAchievementVesselAlly.TabIndex = 23;
+            this.chkAchievementVesselAlly.TabIndex = 0;
             this.chkAchievementVesselAlly.Text = "Vessels\' Ally";
             this.chkAchievementVesselAlly.UseVisualStyleBackColor = true;
             // 
@@ -876,13 +926,32 @@
             this.gbRegCharacter.TabStop = false;
             this.gbRegCharacter.Text = "Registered Character";
             // 
+            // lblRegCharacterPortrait
+            // 
+            this.lblRegCharacterPortrait.AutoSize = true;
+            this.lblRegCharacterPortrait.Location = new System.Drawing.Point(6, 101);
+            this.lblRegCharacterPortrait.Name = "lblRegCharacterPortrait";
+            this.lblRegCharacterPortrait.Size = new System.Drawing.Size(43, 13);
+            this.lblRegCharacterPortrait.TabIndex = 12;
+            this.lblRegCharacterPortrait.Text = "Portrait:";
+            // 
+            // icmbRegCharacterPortrait
+            // 
+            this.icmbRegCharacterPortrait.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbRegCharacterPortrait.DropDownItemHeight = 18;
+            this.icmbRegCharacterPortrait.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbRegCharacterPortrait.Location = new System.Drawing.Point(74, 98);
+            this.icmbRegCharacterPortrait.Name = "icmbRegCharacterPortrait";
+            this.icmbRegCharacterPortrait.Size = new System.Drawing.Size(100, 21);
+            this.icmbRegCharacterPortrait.TabIndex = 13;
+            // 
             // lblRegCharacterCurrentTP
             // 
             this.lblRegCharacterCurrentTP.AutoSize = true;
             this.lblRegCharacterCurrentTP.Location = new System.Drawing.Point(180, 48);
             this.lblRegCharacterCurrentTP.Name = "lblRegCharacterCurrentTP";
             this.lblRegCharacterCurrentTP.Size = new System.Drawing.Size(61, 13);
-            this.lblRegCharacterCurrentTP.TabIndex = 32;
+            this.lblRegCharacterCurrentTP.TabIndex = 6;
             this.lblRegCharacterCurrentTP.Text = "Current TP:";
             // 
             // txtRegCharacterCurrentTP
@@ -891,7 +960,7 @@
             this.txtRegCharacterCurrentTP.MaxLength = 9;
             this.txtRegCharacterCurrentTP.Name = "txtRegCharacterCurrentTP";
             this.txtRegCharacterCurrentTP.Size = new System.Drawing.Size(100, 20);
-            this.txtRegCharacterCurrentTP.TabIndex = 31;
+            this.txtRegCharacterCurrentTP.TabIndex = 7;
             // 
             // lblRegCharacterCurrentHP
             // 
@@ -899,7 +968,7 @@
             this.lblRegCharacterCurrentHP.Location = new System.Drawing.Point(6, 48);
             this.lblRegCharacterCurrentHP.Name = "lblRegCharacterCurrentHP";
             this.lblRegCharacterCurrentHP.Size = new System.Drawing.Size(62, 13);
-            this.lblRegCharacterCurrentHP.TabIndex = 30;
+            this.lblRegCharacterCurrentHP.TabIndex = 4;
             this.lblRegCharacterCurrentHP.Text = "Current HP:";
             // 
             // txtRegCharacterCurrentHP
@@ -908,14 +977,14 @@
             this.txtRegCharacterCurrentHP.MaxLength = 9;
             this.txtRegCharacterCurrentHP.Name = "txtRegCharacterCurrentHP";
             this.txtRegCharacterCurrentHP.Size = new System.Drawing.Size(100, 20);
-            this.txtRegCharacterCurrentHP.TabIndex = 29;
+            this.txtRegCharacterCurrentHP.TabIndex = 5;
             // 
             // btnRegCharacterStatsEditor
             // 
             this.btnRegCharacterStatsEditor.Location = new System.Drawing.Point(200, 240);
             this.btnRegCharacterStatsEditor.Name = "btnRegCharacterStatsEditor";
             this.btnRegCharacterStatsEditor.Size = new System.Drawing.Size(150, 23);
-            this.btnRegCharacterStatsEditor.TabIndex = 28;
+            this.btnRegCharacterStatsEditor.TabIndex = 27;
             this.btnRegCharacterStatsEditor.Text = "Edit Stats";
             this.btnRegCharacterStatsEditor.UseVisualStyleBackColor = true;
             // 
@@ -924,7 +993,7 @@
             this.btnRegCharacterEditArmor2Effect.Location = new System.Drawing.Point(230, 211);
             this.btnRegCharacterEditArmor2Effect.Name = "btnRegCharacterEditArmor2Effect";
             this.btnRegCharacterEditArmor2Effect.Size = new System.Drawing.Size(120, 23);
-            this.btnRegCharacterEditArmor2Effect.TabIndex = 27;
+            this.btnRegCharacterEditArmor2Effect.TabIndex = 25;
             this.btnRegCharacterEditArmor2Effect.Text = "Edit Effects";
             this.btnRegCharacterEditArmor2Effect.UseVisualStyleBackColor = true;
             this.btnRegCharacterEditArmor2Effect.Click += new System.EventHandler(this.btnRegCharacterEditArmor2Effect_Click);
@@ -934,7 +1003,7 @@
             this.btnRegCharacterEditArmor1Effect.Location = new System.Drawing.Point(230, 182);
             this.btnRegCharacterEditArmor1Effect.Name = "btnRegCharacterEditArmor1Effect";
             this.btnRegCharacterEditArmor1Effect.Size = new System.Drawing.Size(120, 23);
-            this.btnRegCharacterEditArmor1Effect.TabIndex = 26;
+            this.btnRegCharacterEditArmor1Effect.TabIndex = 22;
             this.btnRegCharacterEditArmor1Effect.Text = "Edit Effects";
             this.btnRegCharacterEditArmor1Effect.UseVisualStyleBackColor = true;
             this.btnRegCharacterEditArmor1Effect.Click += new System.EventHandler(this.btnRegCharacterEditArmor1Effect_Click);
@@ -944,7 +1013,7 @@
             this.btnRegCharacterEditEquipEffect.Location = new System.Drawing.Point(230, 153);
             this.btnRegCharacterEditEquipEffect.Name = "btnRegCharacterEditEquipEffect";
             this.btnRegCharacterEditEquipEffect.Size = new System.Drawing.Size(120, 23);
-            this.btnRegCharacterEditEquipEffect.TabIndex = 25;
+            this.btnRegCharacterEditEquipEffect.TabIndex = 19;
             this.btnRegCharacterEditEquipEffect.Text = "Edit Effects";
             this.btnRegCharacterEditEquipEffect.UseVisualStyleBackColor = true;
             this.btnRegCharacterEditEquipEffect.Click += new System.EventHandler(this.btnRegCharacterEditEquipEffect_Click);
@@ -965,7 +1034,7 @@
             this.cmbRegCharacterArmor1.Location = new System.Drawing.Point(74, 183);
             this.cmbRegCharacterArmor1.Name = "cmbRegCharacterArmor1";
             this.cmbRegCharacterArmor1.Size = new System.Drawing.Size(150, 21);
-            this.cmbRegCharacterArmor1.TabIndex = 23;
+            this.cmbRegCharacterArmor1.TabIndex = 21;
             // 
             // cmbRegCharacterEquipment
             // 
@@ -974,7 +1043,7 @@
             this.cmbRegCharacterEquipment.Location = new System.Drawing.Point(74, 154);
             this.cmbRegCharacterEquipment.Name = "cmbRegCharacterEquipment";
             this.cmbRegCharacterEquipment.Size = new System.Drawing.Size(150, 21);
-            this.cmbRegCharacterEquipment.TabIndex = 22;
+            this.cmbRegCharacterEquipment.TabIndex = 18;
             // 
             // cmbRegCharacterWeapon
             // 
@@ -983,14 +1052,14 @@
             this.cmbRegCharacterWeapon.Location = new System.Drawing.Point(74, 125);
             this.cmbRegCharacterWeapon.Name = "cmbRegCharacterWeapon";
             this.cmbRegCharacterWeapon.Size = new System.Drawing.Size(150, 21);
-            this.cmbRegCharacterWeapon.TabIndex = 21;
+            this.cmbRegCharacterWeapon.TabIndex = 15;
             // 
             // btnRegCharacterEditWeaponEffect
             // 
             this.btnRegCharacterEditWeaponEffect.Location = new System.Drawing.Point(230, 124);
             this.btnRegCharacterEditWeaponEffect.Name = "btnRegCharacterEditWeaponEffect";
             this.btnRegCharacterEditWeaponEffect.Size = new System.Drawing.Size(120, 23);
-            this.btnRegCharacterEditWeaponEffect.TabIndex = 20;
+            this.btnRegCharacterEditWeaponEffect.TabIndex = 16;
             this.btnRegCharacterEditWeaponEffect.Text = "Edit Effects";
             this.btnRegCharacterEditWeaponEffect.UseVisualStyleBackColor = true;
             this.btnRegCharacterEditWeaponEffect.Click += new System.EventHandler(this.btnRegCharacterEditWeaponEffect_Click);
@@ -1000,7 +1069,7 @@
             this.btnRegCharacterSkillEditor.Location = new System.Drawing.Point(6, 240);
             this.btnRegCharacterSkillEditor.Name = "btnRegCharacterSkillEditor";
             this.btnRegCharacterSkillEditor.Size = new System.Drawing.Size(150, 23);
-            this.btnRegCharacterSkillEditor.TabIndex = 19;
+            this.btnRegCharacterSkillEditor.TabIndex = 26;
             this.btnRegCharacterSkillEditor.Text = "Edit Skills";
             this.btnRegCharacterSkillEditor.UseVisualStyleBackColor = true;
             this.btnRegCharacterSkillEditor.Click += new System.EventHandler(this.btnRegCharacterSkillEditor_Click);
@@ -1011,7 +1080,7 @@
             this.lblRegCharacterArmor2.Location = new System.Drawing.Point(6, 215);
             this.lblRegCharacterArmor2.Name = "lblRegCharacterArmor2";
             this.lblRegCharacterArmor2.Size = new System.Drawing.Size(46, 13);
-            this.lblRegCharacterArmor2.TabIndex = 16;
+            this.lblRegCharacterArmor2.TabIndex = 23;
             this.lblRegCharacterArmor2.Text = "Armor 2:";
             // 
             // lblRegCharacterArmor1
@@ -1020,7 +1089,7 @@
             this.lblRegCharacterArmor1.Location = new System.Drawing.Point(6, 186);
             this.lblRegCharacterArmor1.Name = "lblRegCharacterArmor1";
             this.lblRegCharacterArmor1.Size = new System.Drawing.Size(46, 13);
-            this.lblRegCharacterArmor1.TabIndex = 15;
+            this.lblRegCharacterArmor1.TabIndex = 20;
             this.lblRegCharacterArmor1.Text = "Armor 1:";
             // 
             // lblRegCharacterEquipment
@@ -1029,7 +1098,7 @@
             this.lblRegCharacterEquipment.Location = new System.Drawing.Point(6, 157);
             this.lblRegCharacterEquipment.Name = "lblRegCharacterEquipment";
             this.lblRegCharacterEquipment.Size = new System.Drawing.Size(60, 13);
-            this.lblRegCharacterEquipment.TabIndex = 14;
+            this.lblRegCharacterEquipment.TabIndex = 17;
             this.lblRegCharacterEquipment.Text = "Equipment:";
             // 
             // lblRegCharacterWeapon
@@ -1038,7 +1107,7 @@
             this.lblRegCharacterWeapon.Location = new System.Drawing.Point(6, 128);
             this.lblRegCharacterWeapon.Name = "lblRegCharacterWeapon";
             this.lblRegCharacterWeapon.Size = new System.Drawing.Size(51, 13);
-            this.lblRegCharacterWeapon.TabIndex = 13;
+            this.lblRegCharacterWeapon.TabIndex = 14;
             this.lblRegCharacterWeapon.Text = "Weapon:";
             // 
             // lblRegCharacterSubclass
@@ -1047,7 +1116,7 @@
             this.lblRegCharacterSubclass.Location = new System.Drawing.Point(180, 74);
             this.lblRegCharacterSubclass.Name = "lblRegCharacterSubclass";
             this.lblRegCharacterSubclass.Size = new System.Drawing.Size(53, 13);
-            this.lblRegCharacterSubclass.TabIndex = 12;
+            this.lblRegCharacterSubclass.TabIndex = 10;
             this.lblRegCharacterSubclass.Text = "Subclass:";
             // 
             // lblRegCharacterClass
@@ -1056,7 +1125,7 @@
             this.lblRegCharacterClass.Location = new System.Drawing.Point(6, 74);
             this.lblRegCharacterClass.Name = "lblRegCharacterClass";
             this.lblRegCharacterClass.Size = new System.Drawing.Size(35, 13);
-            this.lblRegCharacterClass.TabIndex = 11;
+            this.lblRegCharacterClass.TabIndex = 8;
             this.lblRegCharacterClass.Text = "Class:";
             // 
             // lblRegCharacterLevel
@@ -1065,7 +1134,7 @@
             this.lblRegCharacterLevel.Location = new System.Drawing.Point(180, 22);
             this.lblRegCharacterLevel.Name = "lblRegCharacterLevel";
             this.lblRegCharacterLevel.Size = new System.Drawing.Size(36, 13);
-            this.lblRegCharacterLevel.TabIndex = 10;
+            this.lblRegCharacterLevel.TabIndex = 2;
             this.lblRegCharacterLevel.Text = "Level:";
             // 
             // cmbRegCharacterSubclass
@@ -1075,7 +1144,7 @@
             this.cmbRegCharacterSubclass.Location = new System.Drawing.Point(249, 71);
             this.cmbRegCharacterSubclass.Name = "cmbRegCharacterSubclass";
             this.cmbRegCharacterSubclass.Size = new System.Drawing.Size(100, 21);
-            this.cmbRegCharacterSubclass.TabIndex = 9;
+            this.cmbRegCharacterSubclass.TabIndex = 11;
             // 
             // lblRegCharacterName
             // 
@@ -1083,7 +1152,7 @@
             this.lblRegCharacterName.Location = new System.Drawing.Point(6, 22);
             this.lblRegCharacterName.Name = "lblRegCharacterName";
             this.lblRegCharacterName.Size = new System.Drawing.Size(38, 13);
-            this.lblRegCharacterName.TabIndex = 8;
+            this.lblRegCharacterName.TabIndex = 0;
             this.lblRegCharacterName.Text = "Name:";
             // 
             // cmbRegCharacterClass
@@ -1093,14 +1162,14 @@
             this.cmbRegCharacterClass.Location = new System.Drawing.Point(74, 71);
             this.cmbRegCharacterClass.Name = "cmbRegCharacterClass";
             this.cmbRegCharacterClass.Size = new System.Drawing.Size(100, 21);
-            this.cmbRegCharacterClass.TabIndex = 7;
+            this.cmbRegCharacterClass.TabIndex = 9;
             // 
             // nudRegCharacterLevel
             // 
             this.nudRegCharacterLevel.Location = new System.Drawing.Point(249, 19);
             this.nudRegCharacterLevel.Name = "nudRegCharacterLevel";
             this.nudRegCharacterLevel.Size = new System.Drawing.Size(50, 20);
-            this.nudRegCharacterLevel.TabIndex = 6;
+            this.nudRegCharacterLevel.TabIndex = 3;
             // 
             // txtRegCharacterName
             // 
@@ -1108,7 +1177,7 @@
             this.txtRegCharacterName.MaxLength = 9;
             this.txtRegCharacterName.Name = "txtRegCharacterName";
             this.txtRegCharacterName.Size = new System.Drawing.Size(100, 20);
-            this.txtRegCharacterName.TabIndex = 5;
+            this.txtRegCharacterName.TabIndex = 1;
             // 
             // gbAchievements
             // 
@@ -1140,78 +1209,9 @@
             this.gbAchievements.Location = new System.Drawing.Point(136, 219);
             this.gbAchievements.Name = "gbAchievements";
             this.gbAchievements.Size = new System.Drawing.Size(310, 243);
-            this.gbAchievements.TabIndex = 28;
+            this.gbAchievements.TabIndex = 3;
             this.gbAchievements.TabStop = false;
             this.gbAchievements.Text = "Achievements";
-            // 
-            // lblRegCharacterPortrait
-            // 
-            this.lblRegCharacterPortrait.AutoSize = true;
-            this.lblRegCharacterPortrait.Location = new System.Drawing.Point(6, 101);
-            this.lblRegCharacterPortrait.Name = "lblRegCharacterPortrait";
-            this.lblRegCharacterPortrait.Size = new System.Drawing.Size(43, 13);
-            this.lblRegCharacterPortrait.TabIndex = 34;
-            this.lblRegCharacterPortrait.Text = "Portrait:";
-            // 
-            // icmbRegCharacterPortrait
-            // 
-            this.icmbRegCharacterPortrait.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbRegCharacterPortrait.DropDownItemHeight = 18;
-            this.icmbRegCharacterPortrait.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbRegCharacterPortrait.Location = new System.Drawing.Point(74, 98);
-            this.icmbRegCharacterPortrait.Name = "icmbRegCharacterPortrait";
-            this.icmbRegCharacterPortrait.Size = new System.Drawing.Size(100, 21);
-            this.icmbRegCharacterPortrait.TabIndex = 33;
-            // 
-            // icmbCharaListPortrait5
-            // 
-            this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait5.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(249, 146);
-            this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
-            this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait5.TabIndex = 22;
-            // 
-            // icmbCharaListPortrait4
-            // 
-            this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait4.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(249, 119);
-            this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
-            this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait4.TabIndex = 21;
-            // 
-            // icmbCharaListPortrait3
-            // 
-            this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait3.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(249, 92);
-            this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
-            this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait3.TabIndex = 20;
-            // 
-            // icmbCharaListPortrait2
-            // 
-            this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait2.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(249, 65);
-            this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
-            this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait2.TabIndex = 19;
-            // 
-            // icmbCharaListPortrait1
-            // 
-            this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait1.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(249, 38);
-            this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
-            this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait1.TabIndex = 18;
             // 
             // lbGuildCards
             // 
@@ -1223,7 +1223,7 @@
             this.lbGuildCards.Location = new System.Drawing.Point(0, 0);
             this.lbGuildCards.Name = "lbGuildCards";
             this.lbGuildCards.Size = new System.Drawing.Size(130, 465);
-            this.lbGuildCards.TabIndex = 1;
+            this.lbGuildCards.TabIndex = 0;
             this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
             this.lbGuildCards.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbGuildCards_Format);
             // 

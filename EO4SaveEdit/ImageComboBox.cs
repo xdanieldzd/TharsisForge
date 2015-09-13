@@ -42,11 +42,12 @@ namespace EO4SaveEdit
 
             e.DrawBackground();
 
-            using (SolidBrush brush = new SolidBrush(e.ForeColor))
+            if (e.Index >= 0 && e.Index < Items.Count)
             {
-                if (e.Index >= 0 && e.Index < Items.Count)
+                using (SolidBrush brush = new SolidBrush(e.ForeColor))
                 {
                     int imageWidth = (this.ImageList != null ? this.ImageList.ImageSize.Width : 0);
+
                     if (this.Items[e.Index] is ImageComboItem && this.ImageList != null)
                     {
                         ImageComboItem currentItem = (ImageComboItem)this.Items[e.Index];
@@ -63,6 +64,8 @@ namespace EO4SaveEdit
                             new RectangleF(e.Bounds.Left + imageWidth, e.Bounds.Top, e.Bounds.Width - imageWidth, e.Bounds.Height), stringFormat);
                 }
             }
+
+            e.DrawFocusRectangle();
         }
     }
 
