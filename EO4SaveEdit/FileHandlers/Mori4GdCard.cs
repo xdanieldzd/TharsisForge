@@ -8,7 +8,7 @@ using EO4SaveEdit.Extensions;
 
 namespace EO4SaveEdit.FileHandlers
 {
-    public class CharacterListing
+    public class CharacterListing : DataChunk
     {
         public Class Class { get; set; }
         public byte Unknown1 { get; set; }
@@ -16,17 +16,32 @@ namespace EO4SaveEdit.FileHandlers
         public byte Level { get; set; }
         public byte Portrait { get; set; }
 
-        public CharacterListing(BinaryReader reader)
+        public CharacterListing(Stream stream) { this.ReadFromStream(stream); }
+
+        public override void ReadFromStream(Stream stream)
         {
+            BinaryReader reader = new BinaryReader(stream);
+
             Class = (Class)reader.ReadByte();
             Unknown1 = reader.ReadByte();
             Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(20)).SjisToAscii().TrimEnd('\0');
             Level = reader.ReadByte();
             Portrait = reader.ReadByte();
         }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write((byte)Class);
+            writer.Write(Unknown1);
+            writer.Write(Name.GetSjisBytes(20));
+            writer.Write(Level);
+            writer.Write(Portrait);
+        }
     }
 
-    public class GuildCardCharacter
+    public class GuildCardCharacter : DataChunk
     {
         public byte Portrait { get; set; }
         public byte Level { get; set; }
@@ -43,26 +58,50 @@ namespace EO4SaveEdit.FileHandlers
         public byte[] MainSkillLevels { get; set; }
         public byte[] SubSkillLevels { get; set; }
 
-        public GuildCardCharacter(BinaryReader reader)
+        public GuildCardCharacter(Stream stream) { this.ReadFromStream(stream); }
+
+        public override void ReadFromStream(Stream stream)
         {
+            BinaryReader reader = new BinaryReader(stream);
+
             Portrait = reader.ReadByte();
             Level = reader.ReadByte();
             Class = (Class)reader.ReadByte();
             Subclass = (Class)reader.ReadByte();
-            WeaponSlot = new EquipmentSlot(reader);
-            EquipmentSlot = new EquipmentSlot(reader);
-            ArmorSlot1 = new EquipmentSlot(reader);
-            ArmorSlot2 = new EquipmentSlot(reader);
-            CumulativeStats = new Stats(reader);
+            WeaponSlot = new EquipmentSlot(stream);
+            EquipmentSlot = new EquipmentSlot(stream);
+            ArmorSlot1 = new EquipmentSlot(stream);
+            ArmorSlot2 = new EquipmentSlot(stream);
+            CumulativeStats = new Stats(stream);
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
             Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
             MainSkillLevels = reader.ReadBytes(25);
             SubSkillLevels = reader.ReadBytes(25);
         }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(Portrait);
+            writer.Write(Level);
+            writer.Write((byte)Class);
+            writer.Write((byte)Subclass);
+            WeaponSlot.WriteToStream(stream);
+            EquipmentSlot.WriteToStream(stream);
+            ArmorSlot1.WriteToStream(stream);
+            ArmorSlot2.WriteToStream(stream);
+            CumulativeStats.WriteToStream(stream);
+            writer.Write(CurrentHP);
+            writer.Write(CurrentTP);
+            writer.Write(Name.GetSjisBytes(18));
+            writer.Write(MainSkillLevels);
+            writer.Write(SubSkillLevels);
+        }
     }
 
-    public class Achievements
+    public class Achievements : DataChunk
     {
         public uint RawValue { get; private set; }
 
@@ -150,9 +189,18 @@ namespace EO4SaveEdit.FileHandlers
             set { SetBits(27, 3, value); }
         }
 
-        public Achievements(BinaryReader reader)
+        public Achievements(Stream stream) { this.ReadFromStream(stream); }
+
+        public override void ReadFromStream(Stream stream)
         {
+            BinaryReader reader = new BinaryReader(stream);
             RawValue = reader.ReadUInt32();
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+            writer.Write(RawValue);
         }
 
         private void SetBits(int shift, int bitCount, int bitsSet)
@@ -184,7 +232,7 @@ namespace EO4SaveEdit.FileHandlers
         }
     }
 
-    public class GuildCard
+    public class GuildCard : DataChunk
     {
         public uint UnknownStreetPass1 { get; set; }
         public uint UnknownStreetPass2 { get; set; }
@@ -220,15 +268,19 @@ namespace EO4SaveEdit.FileHandlers
             set { ItemDiscoveryRaw = (uint)(value * 100); }
         }
 
-        public GuildCard(BinaryReader reader)
+        public GuildCard(Stream stream) { this.ReadFromStream(stream); }
+
+        public override void ReadFromStream(Stream stream)
         {
+            BinaryReader reader = new BinaryReader(stream);
+
             UnknownStreetPass1 = reader.ReadUInt32();
             UnknownStreetPass2 = reader.ReadUInt32();
             UnknownStreetPass3 = reader.ReadUInt32();
             CharacterListings = new CharacterListing[5];
-            for (int i = 0; i < CharacterListings.Length; i++) CharacterListings[i] = new CharacterListing(reader);
-            UnknownUnusedCharacterListing = new CharacterListing(reader);
-            GuildCardCharacter = new GuildCardCharacter(reader);
+            for (int i = 0; i < CharacterListings.Length; i++) CharacterListings[i] = new CharacterListing(stream);
+            UnknownUnusedCharacterListing = new CharacterListing(stream);
+            GuildCardCharacter = new GuildCardCharacter(stream);
             GuildName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(16)).TrimEnd('\0').SjisToAscii();
             SkyshipName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(16)).TrimEnd('\0').SjisToAscii();
             Message = Encoding.GetEncoding(932).GetString(reader.ReadBytes(32)).TrimEnd('\0').SjisToAscii();
@@ -239,11 +291,38 @@ namespace EO4SaveEdit.FileHandlers
             Walked = reader.ReadUInt32();
             EnemiesHunted = reader.ReadUInt32();
             TotalEn = reader.ReadUInt32();
-            Achievement = new Achievements(reader);
+            Achievement = new Achievements(stream);
             Background = reader.ReadByte();
             TreasureMap = reader.ReadByte();
             Unknown1 = reader.ReadByte();
             Unknown2 = reader.ReadByte();
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(UnknownStreetPass1);
+            writer.Write(UnknownStreetPass2);
+            writer.Write(UnknownStreetPass3);
+            foreach (CharacterListing charaListing in CharacterListings) charaListing.WriteToStream(stream);
+            UnknownUnusedCharacterListing.WriteToStream(stream);
+            GuildCardCharacter.WriteToStream(stream);
+            writer.Write(GuildName.GetSjisBytes(16));
+            writer.Write(SkyshipName.GetSjisBytes(16));
+            writer.Write(Message.GetSjisBytes(32));
+            writer.Write(EnemyDiscoveryRaw);
+            writer.Write(ItemDiscoveryRaw);
+            writer.Write(MaxLevel);
+            writer.Write(VenturedDays);
+            writer.Write(Walked);
+            writer.Write(EnemiesHunted);
+            writer.Write(TotalEn);
+            Achievement.WriteToStream(stream);
+            writer.Write(Background);
+            writer.Write(TreasureMap);
+            writer.Write(Unknown1);
+            writer.Write(Unknown2);
         }
     }
 
@@ -253,11 +332,21 @@ namespace EO4SaveEdit.FileHandlers
 
         public GuildCard[] GuildCards { get; set; }
 
-        public Mori4GdCard(BinaryReader reader)
-            : base(reader)
+        public Mori4GdCard(Stream stream) : base(stream) { }
+
+        public override void ReadFromStream(Stream stream)
         {
+            base.ReadFromStream(stream);
+
             GuildCards = new GuildCard[40];
-            for (int i = 0; i < GuildCards.Length; i++) GuildCards[i] = new GuildCard(reader);
+            for (int i = 0; i < GuildCards.Length; i++) GuildCards[i] = new GuildCard(stream);
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            base.WriteToStream(stream);
+
+            foreach (GuildCard guildCard in GuildCards) guildCard.WriteToStream(stream);
         }
     }
 }

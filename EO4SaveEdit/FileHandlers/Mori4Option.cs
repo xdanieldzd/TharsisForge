@@ -22,9 +22,14 @@ namespace EO4SaveEdit.FileHandlers
         public byte Unknown1 { get; set; }
         public byte Unknown2 { get; set; }
 
-        public Mori4Option(BinaryReader reader)
-            : base(reader)
+        public Mori4Option(Stream stream) : base(stream) { }
+
+        public override void ReadFromStream(Stream stream)
         {
+            base.ReadFromStream(stream);
+
+            BinaryReader reader = new BinaryReader(stream);
+
             Signature = Encoding.ASCII.GetString(reader.ReadBytes(4));
             Option1 = reader.ReadByte();
             Option2 = reader.ReadByte();

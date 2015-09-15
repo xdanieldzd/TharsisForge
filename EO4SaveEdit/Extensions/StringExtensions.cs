@@ -48,5 +48,13 @@ namespace EO4SaveEdit.Extensions
             foreach (char ch in inputString) builder.Append(TryFetchCharacter(sjisTranslator, ch));
             return builder.ToString();
         }
+
+        public static byte[] GetSjisBytes(this string inputString, int length)
+        {
+            List<byte> stringBytes = new List<byte>();
+            stringBytes.AddRange(Encoding.GetEncoding(932).GetBytes(inputString.AsciiToSjis()));
+            while (stringBytes.Count < length) stringBytes.Add(0);
+            return stringBytes.Take(length).ToArray();
+        }
     }
 }

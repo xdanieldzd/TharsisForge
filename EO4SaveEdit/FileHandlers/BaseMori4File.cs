@@ -6,7 +6,7 @@ using System.IO;
 
 namespace EO4SaveEdit.FileHandlers
 {
-    public class FileHeader
+    public class FileHeader : DataChunk
     {
         public static List<string> ValidSignatures = new List<string>()
         {
@@ -23,18 +23,37 @@ namespace EO4SaveEdit.FileHandlers
         public ushort Unknown2 { get; set; }
         public byte[] UnknownData { get; set; }
 
-        public FileHeader(BinaryReader reader)
+        public FileHeader(Stream stream)
         {
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
             Signature = Encoding.ASCII.GetString(reader.ReadBytes(8));
             Unknown1 = reader.ReadUInt32();
             ChunkSize = reader.ReadUInt32();
-            LastSavedTime = new Timestamp(reader);
+            LastSavedTime = new Timestamp(stream);
             Unknown2 = reader.ReadUInt16();
             UnknownData = reader.ReadBytes(98);
         }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(Encoding.ASCII.GetBytes(Signature));
+            writer.Write(Unknown1);
+            writer.Write(ChunkSize);
+            LastSavedTime.WriteToStream(stream);
+            writer.Write(Unknown2);
+            writer.Write(UnknownData);
+        }
     }
 
-    public class Timestamp
+    public class Timestamp : DataChunk
     {
         public ushort Year { get; set; }
         public ushort Unknown1 { get; set; }
@@ -61,8 +80,15 @@ namespace EO4SaveEdit.FileHandlers
             }
         }
 
-        public Timestamp(BinaryReader reader)
+        public Timestamp(Stream stream)
         {
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
             Year = reader.ReadUInt16();
             Unknown1 = reader.ReadUInt16();
             Month = reader.ReadByte();
@@ -74,18 +100,45 @@ namespace EO4SaveEdit.FileHandlers
             Unknown3 = reader.ReadByte();
             Unknown4 = reader.ReadByte();
         }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(Year);
+            writer.Write(Unknown1);
+            writer.Write(Month);
+            writer.Write(Day);
+            writer.Write(Unknown2);
+            writer.Write(Hour);
+            writer.Write(Minute);
+            writer.Write(Second);
+            writer.Write(Unknown3);
+            writer.Write(Unknown4);
+        }
     }
 
-    public class BaseMori4File
+    public class BaseMori4File : DataChunk
     {
         public string Filename { get; private set; }
 
         public FileHeader FileHeader { get; set; }
 
-        public BaseMori4File(BinaryReader reader)
+        public BaseMori4File(Stream stream)
+            : base()
         {
-            Filename = (reader.BaseStream is FileStream ? (reader.BaseStream as FileStream).Name : "Unknown");
-            FileHeader = new FileHeader(reader);
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            Filename = (stream is FileStream ? (stream as FileStream).Name : "Unknown");
+            FileHeader = new FileHeader(stream);
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            FileHeader.WriteToStream(stream);
         }
     }
 }

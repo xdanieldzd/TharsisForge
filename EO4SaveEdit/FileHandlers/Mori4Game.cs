@@ -24,32 +24,38 @@ namespace EO4SaveEdit.FileHandlers
         None = 0xFF
     }
 
-    public class EquipmentSlot
+    public class EquipmentSlot : DataChunk
     {
         public ushort ItemID { get; set; }
         public byte NumForgeableSlots { get; set; }
         public byte[] EffectSlots { get; set; }
         public byte Unknown { get; set; }
 
-        public EquipmentSlot()
-        {
-            ItemID = 0;
-            NumForgeableSlots = 0;
-            EffectSlots = new byte[8];
-            Unknown = 0;
-        }
+        public EquipmentSlot(Stream stream) { this.ReadFromStream(stream); }
 
-        public EquipmentSlot(BinaryReader reader)
+        public override void ReadFromStream(Stream stream)
         {
+            BinaryReader reader = new BinaryReader(stream);
+
             ItemID = reader.ReadUInt16();
             NumForgeableSlots = reader.ReadByte();
             EffectSlots = new byte[8];
             for (int i = 0; i < EffectSlots.Length; i++) EffectSlots[i] = reader.ReadByte();
             Unknown = reader.ReadByte();
         }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(ItemID);
+            writer.Write(NumForgeableSlots);
+            writer.Write(EffectSlots);
+            writer.Write(Unknown);
+        }
     }
 
-    public class Stats
+    public class Stats : DataChunk
     {
         public uint HP { get; set; }
         public uint TP { get; set; }
@@ -60,20 +66,12 @@ namespace EO4SaveEdit.FileHandlers
         public ushort TEC { get; set; }
         public ushort Unknown { get; set; }
 
-        public Stats()
-        {
-            HP = 10;
-            TP = 10;
-            STR = 1;
-            VIT = 1;
-            AGI = 1;
-            LUC = 1;
-            TEC = 1;
-            Unknown = 0;
-        }
+        public Stats(Stream stream) { this.ReadFromStream(stream); }
 
-        public Stats(BinaryReader reader)
+        public override void ReadFromStream(Stream stream)
         {
+            BinaryReader reader = new BinaryReader(stream);
+
             HP = reader.ReadUInt32();
             TP = reader.ReadUInt32();
             STR = reader.ReadUInt16();
@@ -83,9 +81,23 @@ namespace EO4SaveEdit.FileHandlers
             TEC = reader.ReadUInt16();
             Unknown = reader.ReadUInt16();
         }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(HP);
+            writer.Write(TP);
+            writer.Write(STR);
+            writer.Write(VIT);
+            writer.Write(AGI);
+            writer.Write(LUC);
+            writer.Write(TEC);
+            writer.Write(Unknown);
+        }
     }
 
-    public class Character
+    public class Character : DataChunk
     {
         public byte Unknown1 { get; set; }
         public byte Portrait { get; set; }
@@ -142,8 +154,12 @@ namespace EO4SaveEdit.FileHandlers
         // ...
         // ...
 
-        public Character(BinaryReader reader)
+        public Character(Stream stream) { this.ReadFromStream(stream); }
+
+        public override void ReadFromStream(Stream stream)
         {
+            BinaryReader reader = new BinaryReader(stream);
+
             Unknown1 = reader.ReadByte();
             Portrait = reader.ReadByte();
             ID = reader.ReadByte();
@@ -151,21 +167,21 @@ namespace EO4SaveEdit.FileHandlers
             Class = (Class)reader.ReadByte();
             Subclass = (Class)reader.ReadByte();
             Unknown2 = reader.ReadUInt16();
-            WeaponSlot = new EquipmentSlot(reader);
-            EquipmentSlot = new EquipmentSlot(reader);
-            ArmorSlot1 = new EquipmentSlot(reader);
-            ArmorSlot2 = new EquipmentSlot(reader);
+            WeaponSlot = new EquipmentSlot(stream);
+            EquipmentSlot = new EquipmentSlot(stream);
+            ArmorSlot1 = new EquipmentSlot(stream);
+            ArmorSlot2 = new EquipmentSlot(stream);
             Unknown3 = reader.ReadUInt32();
             Unknown4 = reader.ReadUInt32();
             Unknown5 = reader.ReadUInt32();
             Unknown6 = reader.ReadUInt32();
             Unknown7 = reader.ReadUInt32();
-            BaseStats = new Stats(reader);
-            CumulativeStatsAfterSkills = new Stats(reader);
-            CumulativeStatsAfterArmor2 = new Stats(reader);
-            CumulativeStatsAfterArmor1 = new Stats(reader);
-            CumulativeStatsAfterEquipment = new Stats(reader);
-            CumulativeStatsAfterWeapon = new Stats(reader);
+            BaseStats = new Stats(stream);
+            CumulativeStatsAfterSkills = new Stats(stream);
+            CumulativeStatsAfterArmor2 = new Stats(stream);
+            CumulativeStatsAfterArmor1 = new Stats(stream);
+            CumulativeStatsAfterEquipment = new Stats(stream);
+            CumulativeStatsAfterWeapon = new Stats(stream);
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
             CurrentEXP = reader.ReadUInt32();
@@ -212,9 +228,14 @@ namespace EO4SaveEdit.FileHandlers
         public Character[] Characters { get; set; }
         //
 
-        public Mori4Game(BinaryReader reader)
-            : base(reader)
+        public Mori4Game(Stream stream) : base(stream) { }
+
+        public override void ReadFromStream(Stream stream)
         {
+            base.ReadFromStream(stream);
+
+            BinaryReader reader = new BinaryReader(stream);
+
             SignatureGAME = Encoding.ASCII.GetString(reader.ReadBytes(4));
             reader.BaseStream.Seek(0xC, SeekOrigin.Current);    //temp
 
@@ -222,7 +243,7 @@ namespace EO4SaveEdit.FileHandlers
             reader.BaseStream.Seek(0x30, SeekOrigin.Current);   //temp
 
             Characters = new Character[30];
-            for (int i = 0; i < Characters.Length; i++) Characters[i] = new Character(reader);
+            for (int i = 0; i < Characters.Length; i++) Characters[i] = new Character(stream);
         }
     }
 }

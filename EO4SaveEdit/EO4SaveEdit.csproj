@@ -71,8 +71,10 @@
       <DependentUpon>SkillEditorDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Extensions\GeneralExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="FileHandlers\BaseMori4File.cs" />
+    <Compile Include="FileHandlers\DataChunk.cs" />
     <Compile Include="FileHandlers\Mori4Game.cs" />
     <Compile Include="FileHandlers\Mori4GdCard.cs" />
     <Compile Include="FileHandlers\Mori4Map.cs" />

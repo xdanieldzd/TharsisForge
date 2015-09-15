@@ -20,39 +20,60 @@ namespace EO4SaveEdit.FileHandlers
         EastWallMask = 0x10,
     }
 
-    public class MapLayer
+    public class MapLayer : DataChunk
     {
+        int numObjects, numNotes, height, width;
+
         public MapObject[] Objects { get; set; }
         public MapNote[] Notes { get; set; }
         public byte[,] TilesYX { get; set; }
 
-        public MapLayer(BinaryReader reader, int numObjects, int numNotes, int height, int width)
+        public MapLayer(Stream stream, int numObjects, int numNotes, int height, int width)
         {
+            this.numObjects = numObjects;
+            this.numNotes = numNotes;
+            this.height = height;
+            this.width = width;
+
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
             Objects = new MapObject[numObjects];
-            for (int i = 0; i < Objects.Length; i++) Objects[i] = new MapObject(reader);
+            for (int i = 0; i < Objects.Length; i++) Objects[i] = new MapObject(stream);
 
             Notes = new MapNote[numNotes];
-            for (int i = 0; i < Notes.Length; i++) Notes[i] = new MapNote(reader);
+            for (int i = 0; i < Notes.Length; i++) Notes[i] = new MapNote(stream);
 
             TilesYX = new byte[height, width];
             Buffer.BlockCopy(reader.ReadBytes(height * width), 0, TilesYX, 0, height * width);
 
-            reader.BaseStream.Seek((reader.BaseStream.Position % 2), SeekOrigin.Current);
+            stream.Seek((stream.Position % 2), SeekOrigin.Current);
         }
     }
 
-    public class StratumMap
+    public class StratumMap : DataChunk
     {
         public byte[,] BaseTilesYX { get; set; }
         public MapLayer[] HeightLayers { get; set; }
 
-        public StratumMap(BinaryReader reader)
+        public StratumMap(Stream stream)
         {
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
             BaseTilesYX = new byte[20, 25];
             Buffer.BlockCopy(reader.ReadBytes(20 * 25), 0, BaseTilesYX, 0, 20 * 25);
 
             HeightLayers = new MapLayer[3];
-            for (int i = 0; i < HeightLayers.Length; i++) HeightLayers[i] = new MapLayer(reader, 80, 32, 20, 25);
+            for (int i = 0; i < HeightLayers.Length; i++) HeightLayers[i] = new MapLayer(stream, 80, 32, 20, 25);
         }
     }
 
@@ -107,15 +128,22 @@ namespace EO4SaveEdit.FileHandlers
     }
 
     [System.Diagnostics.DebuggerDisplay("Type:{Type},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
-    public class MapObject
+    public class MapObject : DataChunk
     {
         public MapObjectType Type { get; set; }
         public byte XPosition { get; set; }
         public byte YPosition { get; set; }
         public byte Padding { get; set; }
 
-        public MapObject(BinaryReader reader)
+        public MapObject(Stream stream)
         {
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
             Type = (MapObjectType)reader.ReadByte();
             XPosition = reader.ReadByte();
             YPosition = reader.ReadByte();
@@ -124,15 +152,22 @@ namespace EO4SaveEdit.FileHandlers
     }
 
     [System.Diagnostics.DebuggerDisplay("Type:{Description},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
-    public class MapNote
+    public class MapNote : DataChunk
     {
         public string Description { get; set; }
         public byte XPosition { get; set; }
         public byte YPosition { get; set; }
         public uint Padding { get; set; }
 
-        public MapNote(BinaryReader reader)
+        public MapNote(Stream stream)
         {
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
             Description = Encoding.GetEncoding(932).GetString(reader.ReadBytes(34)).TrimEnd('\0');
             XPosition = reader.ReadByte();
             YPosition = reader.ReadByte();
@@ -150,19 +185,24 @@ namespace EO4SaveEdit.FileHandlers
         public MapLayer[] CaveMaps { get; set; }
         public StratumMap[] StratumMaps { get; set; }
 
-        public Mori4Map(BinaryReader reader)
-            : base(reader)
+        public Mori4Map(Stream stream) : base(stream) { }
+
+        public override void ReadFromStream(Stream stream)
         {
+            base.ReadFromStream(stream);
+
+            BinaryReader reader = new BinaryReader(stream);
+
             Signature = Encoding.ASCII.GetString(reader.ReadBytes(4));
 
             MazeMaps = new MapLayer[16];
-            for (int i = 0; i < MazeMaps.Length; i++) MazeMaps[i] = new MapLayer(reader, 160, 32, 30, 35);
+            for (int i = 0; i < MazeMaps.Length; i++) MazeMaps[i] = new MapLayer(stream, 160, 32, 30, 35);
 
             CaveMaps = new MapLayer[13];
-            for (int i = 0; i < CaveMaps.Length; i++) CaveMaps[i] = new MapLayer(reader, 64, 16, 15, 15);
+            for (int i = 0; i < CaveMaps.Length; i++) CaveMaps[i] = new MapLayer(stream, 64, 16, 15, 15);
 
             StratumMaps = new StratumMap[4];
-            for (int i = 0; i < StratumMaps.Length; i++) StratumMaps[i] = new StratumMap(reader);
+            for (int i = 0; i < StratumMaps.Length; i++) StratumMaps[i] = new StratumMap(stream);
         }
     }
 }

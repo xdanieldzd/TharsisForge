@@ -126,8 +126,8 @@ namespace EO4SaveEdit.Editors
 
 
             // TEMP
-            gbAchievements.DataBindings.Clear();
-            gbAchievements.DataBindings.Add("Text", currentGuildCard.Achievement, "RawValue", true, DataSourceUpdateMode.OnPropertyChanged, null, "X8");
+            //gbAchievements.DataBindings.Clear();
+            //gbAchievements.DataBindings.Add("Text", currentGuildCard.Achievement, "RawValue", true, DataSourceUpdateMode.OnPropertyChanged, null, "X8");
         }
 
         private void InitializePortraitComboBox(ImageComboBox portraitComboBox, ComboBox classComboBox, object binding)

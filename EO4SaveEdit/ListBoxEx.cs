@@ -27,9 +27,9 @@ namespace EO4SaveEdit
         {
             if (e.Index > -1 && e.Index < Items.Count)
             {
-                Color backColor = ((e.State & DrawItemState.Selected) == DrawItemState.Selected ? SystemColors.Highlight : (AlternateBackColorOnDraw && e.Index % 2 != 0 ? AltBackColor : BackColor));
+                Color backColor = ((e.State & DrawItemState.Selected) == DrawItemState.Selected && this.Enabled ? SystemColors.Highlight : (AlternateBackColorOnDraw && e.Index % 2 != 0 ? AltBackColor : BackColor));
                 using (SolidBrush backgroundBrush = new SolidBrush(backColor)) e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
-                TextRenderer.DrawText(e.Graphics, GetItemText(Items[e.Index]), e.Font, e.Bounds.Location, e.ForeColor, TextFormatFlags.Left);
+                TextRenderer.DrawText(e.Graphics, GetItemText(Items[e.Index]), e.Font, e.Bounds.Location, (this.Enabled ? e.ForeColor : SystemColors.ControlDark), TextFormatFlags.Left);
             }
             e.DrawFocusRectangle();
         }

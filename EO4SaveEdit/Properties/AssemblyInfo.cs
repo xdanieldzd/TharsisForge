@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("EO4SaveEdit")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Tharsis Forge")]
+[assembly: AssemblyDescription("Etrian Odyssey 4 Save Data Editor")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EO4SaveEdit")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyProduct("Tharsis Forge")]
+[assembly: AssemblyCopyright("Written 2015 by xdaniel")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
