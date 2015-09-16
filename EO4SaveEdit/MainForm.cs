@@ -28,6 +28,7 @@ namespace EO4SaveEdit
             SetFormTitle();
             tsslStatus.Text = "Ready";
 
+#if DEBUG
             //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150529080428\00000ea6");
             //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150610102324\00000ea6");
             //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150830021743\00000ea6");
@@ -47,6 +48,12 @@ namespace EO4SaveEdit
             /*RomFSDataDumper.DumpTreasureMapData(
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Dungeon\HiddenTreasureName.tbl",
                 @"C:\Temp\HiddenTreasureName.xml");*/
+#else
+            // TEMP TEMP
+            tabControl1.TabPages.Remove(tpCharas);
+            tabControl1.TabPages.Remove(tpMaps);
+            tabControl1.TabPages.Remove(tpOptions);
+#endif
         }
 
         private void SetFormTitle()
@@ -109,10 +116,14 @@ namespace EO4SaveEdit
 
         private void LoadSaveData(string path)
         {
-            Properties.Settings.Default.LastFolder = path;
+            m4Map.Initialize(null);
+            m4Options.Initialize(null);
+            characterEditor1.Initialize(null);
+            guildCardEditor1.Initialize(null);
+
             dataFiles = new List<BaseMori4File>();
 
-            foreach (string file in Directory.EnumerateFiles(Properties.Settings.Default.LastFolder))
+            foreach (string file in Directory.EnumerateFiles(path))
             {
                 using (FileStream stream = new FileStream(file, FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite))
                 {
@@ -143,9 +154,9 @@ namespace EO4SaveEdit
                 guildCardEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4GdCard) as Mori4GdCard);
 
                 saveToolStripMenuItem.Enabled = true;
+                Properties.Settings.Default.LastFolder = path;
 
                 SetFormTitle();
-
                 tsslStatus.Text = "Data loaded!";
             }
         }

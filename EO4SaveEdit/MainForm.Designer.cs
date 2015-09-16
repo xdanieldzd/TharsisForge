@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpGuildCards = new System.Windows.Forms.TabPage();
-            this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
             this.tpCharas = new System.Windows.Forms.TabPage();
-            this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
             this.tpMaps = new System.Windows.Forms.TabPage();
-            this.m4Map = new EO4SaveEdit.FileHandlers.Mori4MapEditor();
             this.tpOptions = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.m4Options = new EO4SaveEdit.FileHandlers.Mori4OptionEditor();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +46,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
+            this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
+            this.m4Map = new EO4SaveEdit.FileHandlers.Mori4MapEditor();
+            this.m4Options = new EO4SaveEdit.FileHandlers.Mori4OptionEditor();
             this.tabControl1.SuspendLayout();
             this.tpGuildCards.SuspendLayout();
             this.tpCharas.SuspendLayout();
@@ -83,15 +84,6 @@
             this.tpGuildCards.Text = "Guild Cards";
             this.tpGuildCards.UseVisualStyleBackColor = true;
             // 
-            // guildCardEditor1
-            // 
-            this.guildCardEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guildCardEditor1.Enabled = false;
-            this.guildCardEditor1.Location = new System.Drawing.Point(3, 3);
-            this.guildCardEditor1.Name = "guildCardEditor1";
-            this.guildCardEditor1.Size = new System.Drawing.Size(810, 484);
-            this.guildCardEditor1.TabIndex = 0;
-            // 
             // tpCharas
             // 
             this.tpCharas.Controls.Add(this.characterEditor1);
@@ -103,15 +95,6 @@
             this.tpCharas.Text = "Characters";
             this.tpCharas.UseVisualStyleBackColor = true;
             // 
-            // characterEditor1
-            // 
-            this.characterEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.characterEditor1.Enabled = false;
-            this.characterEditor1.Location = new System.Drawing.Point(3, 3);
-            this.characterEditor1.Name = "characterEditor1";
-            this.characterEditor1.Size = new System.Drawing.Size(810, 484);
-            this.characterEditor1.TabIndex = 0;
-            // 
             // tpMaps
             // 
             this.tpMaps.Controls.Add(this.m4Map);
@@ -122,15 +105,6 @@
             this.tpMaps.TabIndex = 1;
             this.tpMaps.Text = "Maps";
             this.tpMaps.UseVisualStyleBackColor = true;
-            // 
-            // m4Map
-            // 
-            this.m4Map.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m4Map.Enabled = false;
-            this.m4Map.Location = new System.Drawing.Point(3, 3);
-            this.m4Map.Name = "m4Map";
-            this.m4Map.Size = new System.Drawing.Size(810, 484);
-            this.m4Map.TabIndex = 0;
             // 
             // tpOptions
             // 
@@ -156,17 +130,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(810, 484);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // m4Options
-            // 
-            this.m4Options.AutoSize = true;
-            this.m4Options.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.m4Options.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m4Options.Enabled = false;
-            this.m4Options.Location = new System.Drawing.Point(3, 3);
-            this.m4Options.Name = "m4Options";
-            this.m4Options.Size = new System.Drawing.Size(804, 289);
-            this.m4Options.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -250,6 +213,44 @@
             this.tsslStatus.Size = new System.Drawing.Size(22, 17);
             this.tsslStatus.Text = "---";
             // 
+            // guildCardEditor1
+            // 
+            this.guildCardEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guildCardEditor1.Enabled = false;
+            this.guildCardEditor1.Location = new System.Drawing.Point(3, 3);
+            this.guildCardEditor1.Name = "guildCardEditor1";
+            this.guildCardEditor1.Size = new System.Drawing.Size(810, 484);
+            this.guildCardEditor1.TabIndex = 0;
+            // 
+            // characterEditor1
+            // 
+            this.characterEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.characterEditor1.Enabled = false;
+            this.characterEditor1.Location = new System.Drawing.Point(3, 3);
+            this.characterEditor1.Name = "characterEditor1";
+            this.characterEditor1.Size = new System.Drawing.Size(810, 484);
+            this.characterEditor1.TabIndex = 0;
+            // 
+            // m4Map
+            // 
+            this.m4Map.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m4Map.Enabled = false;
+            this.m4Map.Location = new System.Drawing.Point(3, 3);
+            this.m4Map.Name = "m4Map";
+            this.m4Map.Size = new System.Drawing.Size(810, 484);
+            this.m4Map.TabIndex = 0;
+            // 
+            // m4Options
+            // 
+            this.m4Options.AutoSize = true;
+            this.m4Options.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.m4Options.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m4Options.Enabled = false;
+            this.m4Options.Location = new System.Drawing.Point(3, 3);
+            this.m4Options.Name = "m4Options";
+            this.m4Options.Size = new System.Drawing.Size(804, 289);
+            this.m4Options.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +259,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(840, 600);
             this.Name = "MainForm";

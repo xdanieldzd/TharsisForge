@@ -88,6 +88,7 @@
             // cmbSignature
             // 
             this.cmbSignature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSignature.Enabled = false;
             this.cmbSignature.FormattingEnabled = true;
             this.cmbSignature.Location = new System.Drawing.Point(82, 12);
             this.cmbSignature.Name = "cmbSignature";

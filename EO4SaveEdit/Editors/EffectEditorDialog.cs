@@ -63,7 +63,7 @@ namespace EO4SaveEdit.Editors
 
             this.equipmentData = equipment;
 
-            lblItemName.Text = XmlHelper.ItemNames[equipmentData.ItemID];
+            gbItemEffects.Text = XmlHelper.ItemNames[equipmentData.ItemID];
             txtNumForgeSlots.Text = equipmentData.NumForgeableSlots.ToString();
 
             effectComboBoxes = new ComboBox[] { cmbForgeEffect1, cmbForgeEffect2, cmbForgeEffect3, cmbForgeEffect4, cmbForgeEffect5, cmbForgeEffect6, cmbForgeEffect7, cmbForgeEffect8 };
