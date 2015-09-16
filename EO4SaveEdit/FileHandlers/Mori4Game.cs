@@ -124,7 +124,7 @@ namespace EO4SaveEdit.FileHandlers
         public ushort CurrentHP { get; set; }
         public ushort CurrentTP { get; set; }
         public uint CurrentEXP { get; set; }
-        public string Name { get; set; }
+        byte[] name;
         public ushort Unknown8 { get; set; }
         public ushort UnknownTotalSkillPoints { get; set; }
         public byte[] MainSkillLevels { get; set; }
@@ -150,9 +150,21 @@ namespace EO4SaveEdit.FileHandlers
         public byte DuplicateID { get; set; }
         public byte PartySlot { get; set; }
         public byte Unknown27 { get; set; }
-        public string OriginGuildName { get; set; }
+        byte[] originGuildName;
         // ...
         // ...
+
+        public string Name
+        {
+            get { return Encoding.GetEncoding(932).GetString(name).SjisToAscii().TrimEnd('\0'); }
+            set { name = value.GetSjisBytes(18); }
+        }
+
+        public string OriginGuildName
+        {
+            get { return Encoding.GetEncoding(932).GetString(originGuildName).SjisToAscii().TrimEnd('\0'); }
+            set { originGuildName = value.GetSjisBytes(18); }
+        }
 
         public Character(Stream stream) { this.ReadFromStream(stream); }
 
@@ -185,7 +197,7 @@ namespace EO4SaveEdit.FileHandlers
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
             CurrentEXP = reader.ReadUInt32();
-            Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
+            name = reader.ReadBytes(18);
             Unknown8 = reader.ReadUInt16();
             UnknownTotalSkillPoints = reader.ReadUInt16();
             MainSkillLevels = reader.ReadBytes(25);
@@ -211,7 +223,7 @@ namespace EO4SaveEdit.FileHandlers
             DuplicateID = reader.ReadByte();
             PartySlot = reader.ReadByte();
             Unknown27 = reader.ReadByte();
-            OriginGuildName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
+            originGuildName = reader.ReadBytes(18);
             //...
             reader.BaseStream.Seek(0x30, SeekOrigin.Current);   //temp
         }

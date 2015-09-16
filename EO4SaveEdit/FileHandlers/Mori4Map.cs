@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
+using EO4SaveEdit.Extensions;
+
 namespace EO4SaveEdit.FileHandlers
 {
     [Flags]
@@ -154,10 +156,16 @@ namespace EO4SaveEdit.FileHandlers
     [System.Diagnostics.DebuggerDisplay("Type:{Description},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
     public class MapNote : DataChunk
     {
-        public string Description { get; set; }
+        byte[] description;
         public byte XPosition { get; set; }
         public byte YPosition { get; set; }
         public uint Padding { get; set; }
+
+        public string Description
+        {
+            get { return Encoding.GetEncoding(932).GetString(description).SjisToAscii().TrimEnd('\0'); }
+            set { description = value.GetSjisBytes(34); }
+        }
 
         public MapNote(Stream stream)
         {
@@ -168,7 +176,7 @@ namespace EO4SaveEdit.FileHandlers
         {
             BinaryReader reader = new BinaryReader(stream);
 
-            Description = Encoding.GetEncoding(932).GetString(reader.ReadBytes(34)).TrimEnd('\0');
+            description = reader.ReadBytes(34);
             XPosition = reader.ReadByte();
             YPosition = reader.ReadByte();
             Padding = reader.ReadUInt32();

@@ -12,9 +12,15 @@ namespace EO4SaveEdit.FileHandlers
     {
         public Class Class { get; set; }
         public byte Unknown1 { get; set; }
-        public string Name { get; set; }
+        byte[] name;
         public byte Level { get; set; }
         public byte Portrait { get; set; }
+
+        public string Name
+        {
+            get { return Encoding.GetEncoding(932).GetString(name).SjisToAscii().TrimEnd('\0'); }
+            set { name = value.GetSjisBytes(20); }
+        }
 
         public CharacterListing(Stream stream) { this.ReadFromStream(stream); }
 
@@ -24,7 +30,7 @@ namespace EO4SaveEdit.FileHandlers
 
             Class = (Class)reader.ReadByte();
             Unknown1 = reader.ReadByte();
-            Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(20)).SjisToAscii().TrimEnd('\0');
+            name = reader.ReadBytes(20);
             Level = reader.ReadByte();
             Portrait = reader.ReadByte();
         }
@@ -35,7 +41,7 @@ namespace EO4SaveEdit.FileHandlers
 
             writer.Write((byte)Class);
             writer.Write(Unknown1);
-            writer.Write(Name.GetSjisBytes(20));
+            writer.Write(name);
             writer.Write(Level);
             writer.Write(Portrait);
         }
@@ -54,9 +60,15 @@ namespace EO4SaveEdit.FileHandlers
         public Stats CumulativeStats { get; set; }
         public ushort CurrentHP { get; set; }
         public ushort CurrentTP { get; set; }
-        public string Name { get; set; }
+        byte[] name;
         public byte[] MainSkillLevels { get; set; }
         public byte[] SubSkillLevels { get; set; }
+
+        public string Name
+        {
+            get { return Encoding.GetEncoding(932).GetString(name).SjisToAscii().TrimEnd('\0'); }
+            set { name = value.GetSjisBytes(18); }
+        }
 
         public GuildCardCharacter(Stream stream) { this.ReadFromStream(stream); }
 
@@ -75,7 +87,7 @@ namespace EO4SaveEdit.FileHandlers
             CumulativeStats = new Stats(stream);
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
-            Name = Encoding.GetEncoding(932).GetString(reader.ReadBytes(18)).TrimEnd('\0').SjisToAscii();
+            name = reader.ReadBytes(18);
             MainSkillLevels = reader.ReadBytes(25);
             SubSkillLevels = reader.ReadBytes(25);
         }
@@ -95,7 +107,7 @@ namespace EO4SaveEdit.FileHandlers
             CumulativeStats.WriteToStream(stream);
             writer.Write(CurrentHP);
             writer.Write(CurrentTP);
-            writer.Write(Name.GetSjisBytes(18));
+            writer.Write(name);
             writer.Write(MainSkillLevels);
             writer.Write(SubSkillLevels);
         }
@@ -240,9 +252,9 @@ namespace EO4SaveEdit.FileHandlers
         public CharacterListing[] CharacterListings { get; set; }
         public CharacterListing UnknownUnusedCharacterListing { get; set; }
         public GuildCardCharacter GuildCardCharacter { get; set; }
-        public string GuildName { get; set; }
-        public string SkyshipName { get; set; }
-        public string Message { get; set; }
+        byte[] guildName;
+        byte[] skyshipName;
+        byte[] message;
         public uint EnemyDiscoveryRaw { get; set; }
         public uint ItemDiscoveryRaw { get; set; }
         public uint MaxLevel { get; set; }
@@ -255,6 +267,24 @@ namespace EO4SaveEdit.FileHandlers
         public byte TreasureMap { get; set; }
         public byte Unknown1 { get; set; }
         public byte Unknown2 { get; set; }
+
+        public string GuildName
+        {
+            get { return Encoding.GetEncoding(932).GetString(guildName).SjisToAscii().TrimEnd('\0'); }
+            set { guildName = value.GetSjisBytes(16); }
+        }
+
+        public string SkyshipName
+        {
+            get { return Encoding.GetEncoding(932).GetString(skyshipName).SjisToAscii().TrimEnd('\0'); }
+            set { skyshipName = value.GetSjisBytes(16); }
+        }
+
+        public string Message
+        {
+            get { return Encoding.GetEncoding(932).GetString(message).SjisToAscii().TrimEnd('\0'); }
+            set { message = value.GetSjisBytes(32); }
+        }
 
         public decimal EnemyDiscovery
         {
@@ -281,9 +311,9 @@ namespace EO4SaveEdit.FileHandlers
             for (int i = 0; i < CharacterListings.Length; i++) CharacterListings[i] = new CharacterListing(stream);
             UnknownUnusedCharacterListing = new CharacterListing(stream);
             GuildCardCharacter = new GuildCardCharacter(stream);
-            GuildName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(16)).TrimEnd('\0').SjisToAscii();
-            SkyshipName = Encoding.GetEncoding(932).GetString(reader.ReadBytes(16)).TrimEnd('\0').SjisToAscii();
-            Message = Encoding.GetEncoding(932).GetString(reader.ReadBytes(32)).TrimEnd('\0').SjisToAscii();
+            guildName = reader.ReadBytes(16);
+            skyshipName = reader.ReadBytes(16);
+            message = reader.ReadBytes(32);
             EnemyDiscoveryRaw = reader.ReadUInt32();
             ItemDiscoveryRaw = reader.ReadUInt32();
             MaxLevel = reader.ReadUInt32();
@@ -308,9 +338,9 @@ namespace EO4SaveEdit.FileHandlers
             foreach (CharacterListing charaListing in CharacterListings) charaListing.WriteToStream(stream);
             UnknownUnusedCharacterListing.WriteToStream(stream);
             GuildCardCharacter.WriteToStream(stream);
-            writer.Write(GuildName.GetSjisBytes(16));
-            writer.Write(SkyshipName.GetSjisBytes(16));
-            writer.Write(Message.GetSjisBytes(32));
+            writer.Write(guildName);
+            writer.Write(skyshipName);
+            writer.Write(message);
             writer.Write(EnemyDiscoveryRaw);
             writer.Write(ItemDiscoveryRaw);
             writer.Write(MaxLevel);
