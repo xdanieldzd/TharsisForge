@@ -12,7 +12,7 @@ namespace EO4SaveEdit
     {
         public static Dictionary<ushort, int> NumForgeSlots { get; private set; }
         public static Dictionary<ushort, string> ItemNames { get; private set; }
-        public static Dictionary<ushort, string> TreasureMapNames { get; private set; }
+        public static Dictionary<byte, string> TreasureMapNames { get; private set; }
         public static Dictionary<Class, Tuple<byte, string>[]> SkillData { get; private set; }
 
         static XmlHelper()
@@ -35,9 +35,10 @@ namespace EO4SaveEdit
                 ItemNames.Add(j, xmlDoc.DocumentElement.ChildNodes[i].InnerText);
 
             xmlDoc.Load("Data\\TreasureMapData.xml");
-            TreasureMapNames = new Dictionary<ushort, string>();
-            for (ushort i = 1; i < xmlDoc.DocumentElement.ChildNodes.Count; i++)
-                TreasureMapNames.Add(i, xmlDoc.DocumentElement.ChildNodes[i].InnerText);
+            TreasureMapNames = new Dictionary<byte, string>();
+            for (byte i = 1; i < xmlDoc.DocumentElement.ChildNodes.Count; i++)
+                TreasureMapNames.Add((byte)(i - 1), xmlDoc.DocumentElement.ChildNodes[i].InnerText);
+            TreasureMapNames.Add(byte.MaxValue, xmlDoc.DocumentElement.ChildNodes[0].InnerText);
 
             xmlDoc.Load("Data\\SkillData.xml");
             SkillData = new Dictionary<Class, Tuple<byte, string>[]>();

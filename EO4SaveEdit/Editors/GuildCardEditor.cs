@@ -111,7 +111,7 @@ namespace EO4SaveEdit.Editors
             nudCompletionHiddenTreasures.SetBinding("Value", currentGuildCard.Achievement, "HiddenTreasureCompletion");
 
             nudGuildCardBackground.SetBinding("Value", currentGuildCard, "Background");
-            cmbGuildTreasureMap.SetBinding("SelectedIndex", currentGuildCard, "TreasureMap");
+            cmbGuildTreasureMap.SetBinding("SelectedValue", currentGuildCard, "TreasureMap");
 
             txtRegCharacterName.SetBinding("Text", currentGuildCard.GuildCardCharacter, "Name");
             nudRegCharacterLevel.SetBinding("Value", currentGuildCard.GuildCardCharacter, "Level");
@@ -218,6 +218,28 @@ namespace EO4SaveEdit.Editors
         {
             EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.ArmorSlot2);
             eed.ShowDialog();
+        }
+
+        private void btnRegCharacterStatsEditor_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+
+            currentGuildCard.GuildCardCharacter.CumulativeStats.HP = 999;
+            currentGuildCard.GuildCardCharacter.CumulativeStats.TP = 999;
+            currentGuildCard.GuildCardCharacter.CumulativeStats.STR = 999;
+            currentGuildCard.GuildCardCharacter.CumulativeStats.VIT = 999;
+            currentGuildCard.GuildCardCharacter.CumulativeStats.AGI = 999;
+            currentGuildCard.GuildCardCharacter.CumulativeStats.LUC = 999;
+            currentGuildCard.GuildCardCharacter.CumulativeStats.TEC = 999;
+
+            currentGuildCard.GuildCardCharacter.WeaponSlot.NumForgeableSlots = 8;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.WeaponSlot.EffectSlots[i] = 0x1;
+            currentGuildCard.GuildCardCharacter.EquipmentSlot.NumForgeableSlots = 8;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.EquipmentSlot.EffectSlots[i] = 0x1;
+            currentGuildCard.GuildCardCharacter.ArmorSlot1.NumForgeableSlots = 8;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot1.EffectSlots[i] = 0x1;
+            currentGuildCard.GuildCardCharacter.ArmorSlot2.NumForgeableSlots = 8;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot2.EffectSlots[i] = 0x1;
         }
     }
 }

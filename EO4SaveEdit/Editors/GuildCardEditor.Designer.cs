@@ -919,13 +919,13 @@
             // 
             // btnRegCharacterStatsEditor
             // 
-            this.btnRegCharacterStatsEditor.Enabled = false;
             this.btnRegCharacterStatsEditor.Location = new System.Drawing.Point(200, 240);
             this.btnRegCharacterStatsEditor.Name = "btnRegCharacterStatsEditor";
             this.btnRegCharacterStatsEditor.Size = new System.Drawing.Size(150, 23);
             this.btnRegCharacterStatsEditor.TabIndex = 27;
             this.btnRegCharacterStatsEditor.Text = "Edit Stats";
             this.btnRegCharacterStatsEditor.UseVisualStyleBackColor = true;
+            this.btnRegCharacterStatsEditor.Click += new System.EventHandler(this.btnRegCharacterStatsEditor_Click);
             // 
             // btnRegCharacterEditArmor2Effect
             // 

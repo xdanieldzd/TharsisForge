@@ -82,5 +82,29 @@ namespace EO4SaveEdit.Editors
                     dgv.Rows[e.RowIndex].ErrorText = string.Empty;
             }
         }
+
+        private void OpenItemDropDown(DataGridView dgv, int column, int row)
+        {
+            if (column != -1 && (dgv.Columns[column] is DataGridViewComboBoxColumn) && (row != -1))
+            {
+                dgv.BeginEdit(true);
+                ((ComboBox)dgv.EditingControl).DroppedDown = true;
+            }
+        }
+
+        private void dgvInventory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OpenItemDropDown((sender as DataGridView), e.ColumnIndex, e.RowIndex);
+        }
+
+        private void dgvKeyItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OpenItemDropDown((sender as DataGridView), e.ColumnIndex, e.RowIndex);
+        }
+
+        private void dgvStorage_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OpenItemDropDown((sender as DataGridView), e.ColumnIndex, e.RowIndex);
+        }
     }
 }

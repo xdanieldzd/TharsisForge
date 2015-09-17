@@ -10,6 +10,11 @@ namespace EO4SaveEdit.FileHandlers
 {
     public class CharacterListing : DataChunk
     {
+        public const int NameLengthEng = 20;
+        public const int NameLengthJpn = 14;
+
+        int nameLength;
+
         public Class Class { get; set; }
         public byte Unknown1 { get; set; }
         byte[] name;
@@ -19,7 +24,7 @@ namespace EO4SaveEdit.FileHandlers
         public string Name
         {
             get { return Encoding.GetEncoding(932).GetString(name).SjisToAscii().TrimEnd('\0'); }
-            set { name = value.GetSjisBytes(20); }
+            set { name = value.GetSjisBytes(nameLength); }
         }
 
         public CharacterListing(Stream stream) { this.ReadFromStream(stream); }
@@ -28,9 +33,12 @@ namespace EO4SaveEdit.FileHandlers
         {
             BinaryReader reader = new BinaryReader(stream);
 
+            if (stream.Length == 0x3F00) nameLength = NameLengthEng;
+            else if (stream.Length == 0x38C0) nameLength = NameLengthJpn;
+
             Class = (Class)reader.ReadByte();
             Unknown1 = reader.ReadByte();
-            name = reader.ReadBytes(20);
+            name = reader.ReadBytes(nameLength);
             Level = reader.ReadByte();
             Portrait = reader.ReadByte();
         }
@@ -49,6 +57,11 @@ namespace EO4SaveEdit.FileHandlers
 
     public class GuildCardCharacter : DataChunk
     {
+        public const int NameLengthEng = 18;
+        public const int NameLengthJpn = 14;
+
+        int nameLength;
+
         public byte Portrait { get; set; }
         public byte Level { get; set; }
         public Class Class { get; set; }
@@ -67,7 +80,7 @@ namespace EO4SaveEdit.FileHandlers
         public string Name
         {
             get { return Encoding.GetEncoding(932).GetString(name).SjisToAscii().TrimEnd('\0'); }
-            set { name = value.GetSjisBytes(18); }
+            set { name = value.GetSjisBytes(nameLength); }
         }
 
         public GuildCardCharacter(Stream stream) { this.ReadFromStream(stream); }
@@ -75,6 +88,9 @@ namespace EO4SaveEdit.FileHandlers
         public override void ReadFromStream(Stream stream)
         {
             BinaryReader reader = new BinaryReader(stream);
+
+            if (stream.Length == 0x3F00) nameLength = NameLengthEng;
+            else if (stream.Length == 0x38C0) nameLength = NameLengthJpn;
 
             Portrait = reader.ReadByte();
             Level = reader.ReadByte();
@@ -87,7 +103,7 @@ namespace EO4SaveEdit.FileHandlers
             CumulativeStats = new Stats(stream);
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
-            name = reader.ReadBytes(18);
+            name = reader.ReadBytes(nameLength);
             MainSkillLevels = reader.ReadBytes(25);
             SubSkillLevels = reader.ReadBytes(25);
         }
