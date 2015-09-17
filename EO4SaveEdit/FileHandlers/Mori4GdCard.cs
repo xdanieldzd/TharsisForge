@@ -53,10 +53,10 @@ namespace EO4SaveEdit.FileHandlers
         public byte Level { get; set; }
         public Class Class { get; set; }
         public Class Subclass { get; set; }
-        public EquipmentSlot WeaponSlot { get; set; }
-        public EquipmentSlot EquipmentSlot { get; set; }
-        public EquipmentSlot ArmorSlot1 { get; set; }
-        public EquipmentSlot ArmorSlot2 { get; set; }
+        public Item WeaponSlot { get; set; }
+        public Item EquipmentSlot { get; set; }
+        public Item ArmorSlot1 { get; set; }
+        public Item ArmorSlot2 { get; set; }
         public Stats CumulativeStats { get; set; }
         public ushort CurrentHP { get; set; }
         public ushort CurrentTP { get; set; }
@@ -80,10 +80,10 @@ namespace EO4SaveEdit.FileHandlers
             Level = reader.ReadByte();
             Class = (Class)reader.ReadByte();
             Subclass = (Class)reader.ReadByte();
-            WeaponSlot = new EquipmentSlot(stream);
-            EquipmentSlot = new EquipmentSlot(stream);
-            ArmorSlot1 = new EquipmentSlot(stream);
-            ArmorSlot2 = new EquipmentSlot(stream);
+            WeaponSlot = new Item(stream);
+            EquipmentSlot = new Item(stream);
+            ArmorSlot1 = new Item(stream);
+            ArmorSlot2 = new Item(stream);
             CumulativeStats = new Stats(stream);
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();

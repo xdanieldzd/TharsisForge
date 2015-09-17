@@ -31,6 +31,7 @@
             this.lbCharacters = new System.Windows.Forms.ListBox();
             this.tcCharaParts = new System.Windows.Forms.TabControl();
             this.tpStats = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSkillEditor = new System.Windows.Forms.Button();
             this.gbBasics = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.cmbEquipArmor2Item = new System.Windows.Forms.ComboBox();
             this.lblEquipArmor2Item = new System.Windows.Forms.Label();
             this.tpSkills = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
             this.tcCharaParts.SuspendLayout();
             this.tpStats.SuspendLayout();
             this.gbBasics.SuspendLayout();
@@ -109,6 +109,15 @@
             this.tpStats.TabIndex = 0;
             this.tpStats.Text = "Stats";
             this.tpStats.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(248, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(275, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "TODO TODO TODO  Cleanup everything on this control!";
             // 
             // btnSkillEditor
             // 
@@ -420,15 +429,6 @@
             this.tpSkills.TabIndex = 1;
             this.tpSkills.Text = "Skills";
             this.tpSkills.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 276);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "TODO TODO TODO  Cleanup everything on this control!";
             // 
             // CharacterEditor
             // 

@@ -24,14 +24,14 @@ namespace EO4SaveEdit.FileHandlers
         None = 0xFF
     }
 
-    public class EquipmentSlot : DataChunk
+    public class Item : DataChunk
     {
         public ushort ItemID { get; set; }
         public byte NumForgeableSlots { get; set; }
         public byte[] EffectSlots { get; set; }
         public byte Unknown { get; set; }
 
-        public EquipmentSlot(Stream stream) { this.ReadFromStream(stream); }
+        public Item(Stream stream) { this.ReadFromStream(stream); }
 
         public override void ReadFromStream(Stream stream)
         {
@@ -106,10 +106,10 @@ namespace EO4SaveEdit.FileHandlers
         public Class Class { get; set; }
         public Class Subclass { get; set; }
         public ushort Unknown2 { get; set; }
-        public EquipmentSlot WeaponSlot { get; set; }
-        public EquipmentSlot EquipmentSlot { get; set; }
-        public EquipmentSlot ArmorSlot1 { get; set; }
-        public EquipmentSlot ArmorSlot2 { get; set; }
+        public Item WeaponSlot { get; set; }
+        public Item EquipmentSlot { get; set; }
+        public Item ArmorSlot1 { get; set; }
+        public Item ArmorSlot2 { get; set; }
         public uint Unknown3 { get; set; }
         public uint Unknown4 { get; set; }
         public uint Unknown5 { get; set; }
@@ -151,8 +151,7 @@ namespace EO4SaveEdit.FileHandlers
         public byte PartySlot { get; set; }
         public byte Unknown27 { get; set; }
         byte[] originGuildName;
-        // ...
-        // ...
+        public byte[] Unknown28 { get; set; }
 
         public string Name
         {
@@ -179,10 +178,10 @@ namespace EO4SaveEdit.FileHandlers
             Class = (Class)reader.ReadByte();
             Subclass = (Class)reader.ReadByte();
             Unknown2 = reader.ReadUInt16();
-            WeaponSlot = new EquipmentSlot(stream);
-            EquipmentSlot = new EquipmentSlot(stream);
-            ArmorSlot1 = new EquipmentSlot(stream);
-            ArmorSlot2 = new EquipmentSlot(stream);
+            WeaponSlot = new Item(stream);
+            EquipmentSlot = new Item(stream);
+            ArmorSlot1 = new Item(stream);
+            ArmorSlot2 = new Item(stream);
             Unknown3 = reader.ReadUInt32();
             Unknown4 = reader.ReadUInt32();
             Unknown5 = reader.ReadUInt32();
@@ -224,8 +223,7 @@ namespace EO4SaveEdit.FileHandlers
             PartySlot = reader.ReadByte();
             Unknown27 = reader.ReadByte();
             originGuildName = reader.ReadBytes(18);
-            //...
-            reader.BaseStream.Seek(0x30, SeekOrigin.Current);   //temp
+            Unknown28 = reader.ReadBytes(48);
         }
     }
 
@@ -236,9 +234,33 @@ namespace EO4SaveEdit.FileHandlers
         public string SignatureGAME { get; set; }
 
         public string SignaturePRTY { get; set; }
-        //
+        //...
         public Character[] Characters { get; set; }
-        //
+        public Character UnknownUnusedCharacter { get; set; }
+        //...
+        byte[] guildName { get; set; }
+        byte[] skyshipName { get; set; }
+        public byte Unknown1 { get; set; }
+        public byte Unknown2 { get; set; }
+        public byte Unknown3 { get; set; }
+        public byte Unknown4 { get; set; }
+        public Item[] InventoryItems { get; set; }
+        public Item[] KeyItems { get; set; }
+        public Item[] StorageItems { get; set; }
+        public byte[] StorageItemAmounts { get; set; }
+        //...
+
+        public string GuildName
+        {
+            get { return Encoding.GetEncoding(932).GetString(guildName).SjisToAscii().TrimEnd('\0'); }
+            set { guildName = value.GetSjisBytes(18); }
+        }
+
+        public string SkyshipName
+        {
+            get { return Encoding.GetEncoding(932).GetString(skyshipName).SjisToAscii().TrimEnd('\0'); }
+            set { skyshipName = value.GetSjisBytes(18); }
+        }
 
         public Mori4Game(Stream stream) : base(stream) { }
 
@@ -256,6 +278,23 @@ namespace EO4SaveEdit.FileHandlers
 
             Characters = new Character[30];
             for (int i = 0; i < Characters.Length; i++) Characters[i] = new Character(stream);
+            UnknownUnusedCharacter = new Character(stream);
+
+            reader.BaseStream.Seek(0x60, SeekOrigin.Current);
+            guildName = reader.ReadBytes(18);
+            skyshipName = reader.ReadBytes(18);
+            Unknown1 = reader.ReadByte();
+            Unknown2 = reader.ReadByte();
+            Unknown3 = reader.ReadByte();
+            Unknown4 = reader.ReadByte();
+            InventoryItems = new Item[60];
+            for (int i = 0; i < InventoryItems.Length; i++) InventoryItems[i] = new Item(stream);
+            KeyItems = new Item[60];
+            for (int i = 0; i < KeyItems.Length; i++) KeyItems[i] = new Item(stream);
+            StorageItems = new Item[99];
+            for (int i = 0; i < StorageItems.Length; i++) StorageItems[i] = new Item(stream);
+            StorageItemAmounts = new byte[99];
+            for (int i = 0; i < StorageItemAmounts.Length; i++) StorageItemAmounts[i] = reader.ReadByte();
         }
     }
 }

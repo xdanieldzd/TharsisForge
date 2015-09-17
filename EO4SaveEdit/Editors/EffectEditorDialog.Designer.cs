@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
-            this.txtNumForgeSlots = new System.Windows.Forms.TextBox();
+            this.txtNumForgeableSlots = new System.Windows.Forms.TextBox();
             this.lblNumForgeSlots = new System.Windows.Forms.Label();
             this.cmbForgeEffect1 = new System.Windows.Forms.ComboBox();
             this.cmbForgeEffect2 = new System.Windows.Forms.ComboBox();
@@ -55,14 +55,14 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtNumForgeSlots
+            // txtNumForgeableSlots
             // 
-            this.txtNumForgeSlots.Location = new System.Drawing.Point(109, 19);
-            this.txtNumForgeSlots.MaxLength = 9;
-            this.txtNumForgeSlots.Name = "txtNumForgeSlots";
-            this.txtNumForgeSlots.ReadOnly = true;
-            this.txtNumForgeSlots.Size = new System.Drawing.Size(30, 20);
-            this.txtNumForgeSlots.TabIndex = 4;
+            this.txtNumForgeableSlots.Location = new System.Drawing.Point(109, 19);
+            this.txtNumForgeableSlots.MaxLength = 9;
+            this.txtNumForgeableSlots.Name = "txtNumForgeableSlots";
+            this.txtNumForgeableSlots.Size = new System.Drawing.Size(30, 20);
+            this.txtNumForgeableSlots.TabIndex = 4;
+            this.txtNumForgeableSlots.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumForgeableSlots_Validating);
             // 
             // lblNumForgeSlots
             // 
@@ -151,7 +151,7 @@
             this.gbItemEffects.Controls.Add(this.cmbForgeEffect4);
             this.gbItemEffects.Controls.Add(this.cmbForgeEffect5);
             this.gbItemEffects.Controls.Add(this.cmbForgeEffect3);
-            this.gbItemEffects.Controls.Add(this.txtNumForgeSlots);
+            this.gbItemEffects.Controls.Add(this.txtNumForgeableSlots);
             this.gbItemEffects.Controls.Add(this.cmbForgeEffect6);
             this.gbItemEffects.Controls.Add(this.cmbForgeEffect1);
             this.gbItemEffects.Controls.Add(this.cmbForgeEffect2);
@@ -168,6 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(174, 318);
             this.Controls.Add(this.gbItemEffects);
@@ -178,6 +179,7 @@
             this.Name = "EffectEditorDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Effect Editor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EffectEditorDialog_FormClosing);
             this.gbItemEffects.ResumeLayout(false);
             this.gbItemEffects.PerformLayout();
             this.ResumeLayout(false);
@@ -187,7 +189,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox txtNumForgeSlots;
+        private System.Windows.Forms.TextBox txtNumForgeableSlots;
         private System.Windows.Forms.Label lblNumForgeSlots;
         private System.Windows.Forms.ComboBox cmbForgeEffect1;
         private System.Windows.Forms.ComboBox cmbForgeEffect2;

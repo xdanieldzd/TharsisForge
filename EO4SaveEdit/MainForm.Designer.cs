@@ -46,10 +46,12 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.tpItems = new System.Windows.Forms.TabPage();
             this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
             this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
             this.m4Map = new EO4SaveEdit.FileHandlers.Mori4MapEditor();
             this.m4Options = new EO4SaveEdit.FileHandlers.Mori4OptionEditor();
+            this.itemEditor1 = new EO4SaveEdit.Editors.ItemEditor();
             this.tabControl1.SuspendLayout();
             this.tpGuildCards.SuspendLayout();
             this.tpCharas.SuspendLayout();
@@ -58,11 +60,13 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.tpItems.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tpGuildCards);
+            this.tabControl1.Controls.Add(this.tpItems);
             this.tabControl1.Controls.Add(this.tpCharas);
             this.tabControl1.Controls.Add(this.tpMaps);
             this.tabControl1.Controls.Add(this.tpOptions);
@@ -213,6 +217,17 @@
             this.tsslStatus.Size = new System.Drawing.Size(22, 17);
             this.tsslStatus.Text = "---";
             // 
+            // tpItems
+            // 
+            this.tpItems.Controls.Add(this.itemEditor1);
+            this.tpItems.Location = new System.Drawing.Point(4, 22);
+            this.tpItems.Name = "tpItems";
+            this.tpItems.Padding = new System.Windows.Forms.Padding(3);
+            this.tpItems.Size = new System.Drawing.Size(816, 490);
+            this.tpItems.TabIndex = 4;
+            this.tpItems.Text = "Items";
+            this.tpItems.UseVisualStyleBackColor = true;
+            // 
             // guildCardEditor1
             // 
             this.guildCardEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -251,6 +266,14 @@
             this.m4Options.Size = new System.Drawing.Size(804, 289);
             this.m4Options.TabIndex = 0;
             // 
+            // itemEditor1
+            // 
+            this.itemEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemEditor1.Location = new System.Drawing.Point(3, 3);
+            this.itemEditor1.Name = "itemEditor1";
+            this.itemEditor1.Size = new System.Drawing.Size(810, 484);
+            this.itemEditor1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,6 +299,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.tpItems.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,6 +328,8 @@
         private Editors.GuildCardEditor guildCardEditor1;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel tsslStatus;
+        private System.Windows.Forms.TabPage tpItems;
+        private Editors.ItemEditor itemEditor1;
 
     }
 }

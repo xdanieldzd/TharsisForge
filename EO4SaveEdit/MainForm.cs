@@ -48,6 +48,10 @@ namespace EO4SaveEdit
             /*RomFSDataDumper.DumpTreasureMapData(
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Dungeon\HiddenTreasureName.tbl",
                 @"C:\Temp\HiddenTreasureName.xml");*/
+
+            /*RomFSDataDumper.DumpUseItemData(
+                @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\useitemnametable.tbl",
+                @"C:\Temp\useitemnametable.xml");*/
 #else
             // TEMP TEMP
             tabControl1.TabPages.Remove(tpCharas);
@@ -152,6 +156,7 @@ namespace EO4SaveEdit
                 m4Options.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Option) as Mori4Option);
                 characterEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
                 guildCardEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4GdCard) as Mori4GdCard);
+                itemEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
 
                 saveToolStripMenuItem.Enabled = true;
                 Properties.Settings.Default.LastFolder = path;

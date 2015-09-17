@@ -22,6 +22,7 @@ namespace EO4SaveEdit.Editors
         NumericUpDown[] levelNumericUpDowns;
         ComboBox[] classComboBoxes;
         ImageComboBox[] portraitComboBoxes;
+        ComboBox[] regCharaEquipmentComboBoxes;
 
         public GuildCardEditor()
         {
@@ -46,19 +47,23 @@ namespace EO4SaveEdit.Editors
             levelNumericUpDowns = new NumericUpDown[] { nudCharaListLevel1, nudCharaListLevel2, nudCharaListLevel3, nudCharaListLevel4, nudCharaListLevel5 };
             classComboBoxes = new ComboBox[] { cmbCharaListClass1, cmbCharaListClass2, cmbCharaListClass3, cmbCharaListClass4, cmbCharaListClass5 };
             portraitComboBoxes = new ImageComboBox[] { icmbCharaListPortrait1, icmbCharaListPortrait2, icmbCharaListPortrait3, icmbCharaListPortrait4, icmbCharaListPortrait5 };
+            regCharaEquipmentComboBoxes = new ComboBox[] { cmbRegCharacterWeapon, cmbRegCharacterEquipment, cmbRegCharacterArmor1, cmbRegCharacterArmor2 };
 
             foreach (ComboBox comboBox in classComboBoxes) comboBox.DataSource = Enum.GetValues(typeof(Class));
 
-            foreach (string mapName in XmlHelper.TreasureMapNames.Where(x => x != null))
-                cmbGuildTreasureMap.Items.Add(mapName);
+            cmbGuildTreasureMap.DisplayMember = "Value";
+            cmbGuildTreasureMap.ValueMember = "Key";
+            cmbGuildTreasureMap.DataSource = new BindingSource(XmlHelper.TreasureMapNames, null);
 
             cmbRegCharacterClass.DataSource = Enum.GetValues(typeof(Class));
             cmbRegCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
 
-            cmbRegCharacterWeapon.DataSource = XmlHelper.ItemNames.ToList();
-            cmbRegCharacterEquipment.DataSource = XmlHelper.ItemNames.ToList();
-            cmbRegCharacterArmor1.DataSource = XmlHelper.ItemNames.ToList();
-            cmbRegCharacterArmor2.DataSource = XmlHelper.ItemNames.ToList();
+            foreach (ComboBox comboBox in regCharaEquipmentComboBoxes)
+            {
+                comboBox.DisplayMember = "Value";
+                comboBox.ValueMember = "Key";
+                comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+            }
 
             lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
         }

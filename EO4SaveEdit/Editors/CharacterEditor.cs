@@ -6,16 +6,20 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Xml;
 
+using EO4SaveEdit.Extensions;
 using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
 {
     public partial class CharacterEditor : UserControl
     {
+        // TODO: rewrite eventually
+
         Mori4Game gameData;
         Character currentCharacter;
+
+        ComboBox[] equipmentComboBoxes;
 
         public CharacterEditor()
         {
@@ -34,10 +38,14 @@ namespace EO4SaveEdit.Editors
 
             this.Enabled = true;
 
-            cmbEquipWeaponItem.DataSource = XmlHelper.ItemNames.ToList();
-            cmbEquipEquipItem.DataSource = XmlHelper.ItemNames.ToList();
-            cmbEquipArmor1Item.DataSource = XmlHelper.ItemNames.ToList();
-            cmbEquipArmor2Item.DataSource = XmlHelper.ItemNames.ToList();
+            equipmentComboBoxes = new ComboBox[] { cmbEquipWeaponItem, cmbEquipEquipItem, cmbEquipArmor1Item, cmbEquipArmor2Item };
+
+            foreach (ComboBox comboBox in equipmentComboBoxes)
+            {
+                comboBox.DisplayMember = "Value";
+                comboBox.ValueMember = "Key";
+                comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+            }
 
             cmbClass.DataSource = Enum.GetValues(typeof(Class));
             cmbSubclass.DataSource = Enum.GetValues(typeof(Class));
@@ -56,10 +64,10 @@ namespace EO4SaveEdit.Editors
             cmbClass.SelectedItem = currentCharacter.Class;
             cmbSubclass.SelectedItem = currentCharacter.Subclass;
 
-            cmbEquipWeaponItem.SelectedIndex = currentCharacter.WeaponSlot.ItemID;
-            cmbEquipEquipItem.SelectedIndex = currentCharacter.EquipmentSlot.ItemID;
-            cmbEquipArmor1Item.SelectedIndex = currentCharacter.ArmorSlot1.ItemID;
-            cmbEquipArmor2Item.SelectedIndex = currentCharacter.ArmorSlot2.ItemID;
+            cmbEquipWeaponItem.SetBinding("SelectedValue", currentCharacter.WeaponSlot, "ItemID");
+            cmbEquipEquipItem.SetBinding("SelectedValue", currentCharacter.EquipmentSlot, "ItemID");
+            cmbEquipArmor1Item.SetBinding("SelectedValue", currentCharacter.ArmorSlot1, "ItemID");
+            cmbEquipArmor2Item.SetBinding("SelectedValue", currentCharacter.ArmorSlot2, "ItemID");
         }
 
         private void lbCharacters_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,7 +101,7 @@ namespace EO4SaveEdit.Editors
             ShowEffectEditor(currentCharacter.ArmorSlot2);
         }
 
-        private void ShowEffectEditor(EquipmentSlot slot)
+        private void ShowEffectEditor(Item slot)
         {
             EffectEditorDialog eed = new EffectEditorDialog(slot);
             eed.ShowDialog();

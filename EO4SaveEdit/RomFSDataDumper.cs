@@ -160,5 +160,27 @@ namespace EO4SaveEdit
                 writer.WriteEndDocument();
             }
         }
+
+        public static void DumpUseItemData(string inPathNames, string outPath)
+        {
+            List<string> nameTable = ReadNameTable(inPathNames);
+
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+
+            using (XmlWriter writer = XmlWriter.Create(File.CreateText(outPath), settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Table");
+                for (int i = 0; i < nameTable.Count; i++)
+                {
+                    writer.WriteStartElement("Item");
+                    writer.WriteValue(nameTable[i]);
+                    writer.WriteEndElement();
+                }
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
+        }
     }
 }

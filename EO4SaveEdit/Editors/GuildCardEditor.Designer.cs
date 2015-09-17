@@ -897,7 +897,6 @@
             // txtRegCharacterCurrentTP
             // 
             this.txtRegCharacterCurrentTP.Location = new System.Drawing.Point(249, 45);
-            this.txtRegCharacterCurrentTP.MaxLength = 9;
             this.txtRegCharacterCurrentTP.Name = "txtRegCharacterCurrentTP";
             this.txtRegCharacterCurrentTP.Size = new System.Drawing.Size(100, 20);
             this.txtRegCharacterCurrentTP.TabIndex = 7;
@@ -914,7 +913,6 @@
             // txtRegCharacterCurrentHP
             // 
             this.txtRegCharacterCurrentHP.Location = new System.Drawing.Point(74, 45);
-            this.txtRegCharacterCurrentHP.MaxLength = 9;
             this.txtRegCharacterCurrentHP.Name = "txtRegCharacterCurrentHP";
             this.txtRegCharacterCurrentHP.Size = new System.Drawing.Size(100, 20);
             this.txtRegCharacterCurrentHP.TabIndex = 5;

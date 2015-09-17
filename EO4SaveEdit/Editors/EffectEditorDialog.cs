@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
+using EO4SaveEdit.Extensions;
 using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
@@ -53,18 +54,19 @@ namespace EO4SaveEdit.Editors
             { 0x21, "0x21" },
         };
 
-        EquipmentSlot equipmentData;
+        Item equipmentData;
 
         ComboBox[] effectComboBoxes;
+        ErrorProvider numForgeableSlotsErrorProvider;
 
-        public EffectEditorDialog(EquipmentSlot equipment)
+        public EffectEditorDialog(Item equipment)
         {
             InitializeComponent();
 
             this.equipmentData = equipment;
 
             gbItemEffects.Text = XmlHelper.ItemNames[equipmentData.ItemID];
-            txtNumForgeSlots.Text = equipmentData.NumForgeableSlots.ToString();
+            txtNumForgeableSlots.SetBinding("Text", equipmentData, "NumForgeableSlots");
 
             effectComboBoxes = new ComboBox[] { cmbForgeEffect1, cmbForgeEffect2, cmbForgeEffect3, cmbForgeEffect4, cmbForgeEffect5, cmbForgeEffect6, cmbForgeEffect7, cmbForgeEffect8 };
             foreach (ComboBox ctrl in effectComboBoxes)
@@ -73,16 +75,48 @@ namespace EO4SaveEdit.Editors
                 ctrl.Enabled = ctrl.Visible = false;
             }
 
+            numForgeableSlotsErrorProvider = new ErrorProvider();
+            numForgeableSlotsErrorProvider.SetIconAlignment(this.txtNumForgeableSlots, ErrorIconAlignment.MiddleLeft);
+            numForgeableSlotsErrorProvider.SetIconPadding(this.txtNumForgeableSlots, 2);
+            numForgeableSlotsErrorProvider.BlinkRate = 500;
+            numForgeableSlotsErrorProvider.BlinkStyle = ErrorBlinkStyle.AlwaysBlink;
+
+            UpdateForgeableSlots();
+        }
+
+        private void UpdateForgeableSlots()
+        {
             for (int i = XmlHelper.NumForgeSlots[equipmentData.ItemID] - 1, j = equipmentData.NumForgeableSlots - 1; i >= 0; i--, j--)
             {
-                if (j >= 0)
-                    effectComboBoxes[i].Enabled = true;
+                effectComboBoxes[i].Enabled = (j >= 0);
 
                 effectComboBoxes[i].Visible = true;
                 effectComboBoxes[i].ValueMember = "Key";
                 effectComboBoxes[i].DisplayMember = "Value";
-                effectComboBoxes[i].DataSource = effectNames.ToList();
+                effectComboBoxes[i].DataSource = new BindingSource(effectNames, null);
                 effectComboBoxes[i].SelectedValue = equipmentData.EffectSlots[i];
+            }
+        }
+
+        private void EffectEditorDialog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = !ValidateChildren();
+        }
+
+        private void txtNumForgeableSlots_Validating(object sender, CancelEventArgs e)
+        {
+            byte numSlots = equipmentData.NumForgeableSlots;
+            e.Cancel = !byte.TryParse((sender as TextBox).Text, out numSlots);
+
+            if (numSlots < 0 || numSlots > XmlHelper.NumForgeSlots[equipmentData.ItemID])
+            {
+                e.Cancel = true;
+                numForgeableSlotsErrorProvider.SetError((sender as TextBox), "Invalid number of slots.");
+            }
+            else if (!e.Cancel)
+            {
+                numForgeableSlotsErrorProvider.SetError((sender as TextBox), string.Empty);
+                UpdateForgeableSlots();
             }
         }
 

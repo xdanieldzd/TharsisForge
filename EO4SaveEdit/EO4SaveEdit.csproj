@@ -67,6 +67,12 @@
     <Compile Include="Editors\HeaderEditorDialog.Designer.cs">
       <DependentUpon>HeaderEditorDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\ItemEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\ItemEditor.Designer.cs">
+      <DependentUpon>ItemEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editors\SkillEditorDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\HeaderEditorDialog.resx">
       <DependentUpon>HeaderEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ItemEditor.resx">
+      <DependentUpon>ItemEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\SkillEditorDialog.resx">
       <DependentUpon>SkillEditorDialog.cs</DependentUpon>
@@ -433,10 +442,13 @@
     <Content Include="Data\TreasureMapData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\ItemData.xml">
+    <Content Include="Data\EquipmentData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\SkillData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ItemData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="EO4.ico" />
