@@ -345,7 +345,7 @@ namespace EO4SaveEdit.FileHandlers
         public uint CurrentEn { get; set; }
         public uint DayInYear { get; set; }
         public ushort TimeOfDay { get; set; }
-        public ushort Unknown19 { get; set; }
+        public ushort MaybeBurstGauge { get; set; }
         public Character[] Characters { get; set; }
         public Character UnknownUnusedCharacter { get; set; }
         //...
@@ -407,7 +407,7 @@ namespace EO4SaveEdit.FileHandlers
             CurrentEn = reader.ReadUInt32();
             DayInYear = reader.ReadUInt32();    /* http://etrian.wikia.com/wiki/Time */
             TimeOfDay = reader.ReadUInt16();
-            Unknown19 = reader.ReadUInt16();
+            MaybeBurstGauge = reader.ReadUInt16();
             Characters = new Character[30];
             for (int i = 0; i < Characters.Length; i++) Characters[i] = new Character(stream);
             UnknownUnusedCharacter = new Character(stream);
@@ -457,7 +457,7 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(CurrentEn);
             writer.Write(DayInYear);
             writer.Write(TimeOfDay);
-            writer.Write(Unknown19);
+            writer.Write(MaybeBurstGauge);
             foreach (Character character in Characters) character.WriteToStream(stream);
             UnknownUnusedCharacter.WriteToStream(stream);
             //...
