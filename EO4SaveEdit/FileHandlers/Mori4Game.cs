@@ -306,6 +306,24 @@ namespace EO4SaveEdit.FileHandlers
     {
         public const string ExpectedFileSignature = "MOR4GAME";
 
+        public static List<string> MonthNames = new List<string>()
+        {
+            "Emperor",
+            "Dormouse",
+            "Taurus",
+            "Tiger",
+            "Lapin",
+            "Uroboros",
+            "Serpent",
+            "Stallion",
+            "Aries",
+            "Capuchin",
+            "Phoenix",
+            "Demiurge",
+            "Khrysaor",
+            "Summoner"
+        };
+
         public string SignatureGAME { get; set; }
         public uint Unknown1 { get; set; }
         public ushort Unknown2 { get; set; }
@@ -324,9 +342,10 @@ namespace EO4SaveEdit.FileHandlers
         public uint Unknown14 { get; set; }
         public uint Unknown15 { get; set; }
         public uint Unknown16 { get; set; }
-        public uint Unknown17 { get; set; }
-        public uint Unknown18 { get; set; }
-        public uint Unknown19 { get; set; }
+        public uint CurrentEn { get; set; }
+        public uint DayInYear { get; set; }
+        public ushort TimeOfDay { get; set; }
+        public ushort Unknown19 { get; set; }
         public Character[] Characters { get; set; }
         public Character UnknownUnusedCharacter { get; set; }
         //...
@@ -341,6 +360,11 @@ namespace EO4SaveEdit.FileHandlers
         public Item[] StorageItems { get; set; }
         public byte[] StorageItemAmounts { get; set; }
         //...
+
+        public string DayName
+        {
+            get { return string.Format("{0} {1}", MonthNames[(int)(DayInYear / 28)], (DayInYear % 28) + 1); }
+        }
 
         public string GuildName
         {
@@ -380,9 +404,10 @@ namespace EO4SaveEdit.FileHandlers
             Unknown14 = reader.ReadUInt32();
             Unknown15 = reader.ReadUInt32();
             Unknown16 = reader.ReadUInt32();
-            Unknown17 = reader.ReadUInt32();
-            Unknown18 = reader.ReadUInt32();
-            Unknown19 = reader.ReadUInt32();
+            CurrentEn = reader.ReadUInt32();
+            DayInYear = reader.ReadUInt32();    /* http://etrian.wikia.com/wiki/Time */
+            TimeOfDay = reader.ReadUInt16();
+            Unknown19 = reader.ReadUInt16();
             Characters = new Character[30];
             for (int i = 0; i < Characters.Length; i++) Characters[i] = new Character(stream);
             UnknownUnusedCharacter = new Character(stream);
@@ -429,8 +454,9 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(Unknown14);
             writer.Write(Unknown15);
             writer.Write(Unknown16);
-            writer.Write(Unknown17);
-            writer.Write(Unknown18);
+            writer.Write(CurrentEn);
+            writer.Write(DayInYear);
+            writer.Write(TimeOfDay);
             writer.Write(Unknown19);
             foreach (Character character in Characters) character.WriteToStream(stream);
             UnknownUnusedCharacter.WriteToStream(stream);

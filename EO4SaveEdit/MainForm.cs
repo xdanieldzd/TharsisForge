@@ -29,11 +29,9 @@ namespace EO4SaveEdit
             tsslStatus.Text = "Ready";
 
 #if DEBUG
-            //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150529080428\00000ea6");
-            //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150610102324\00000ea6");
-            //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150830021743\00000ea6");
             //LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150830021743_editor-test\00000ea6");
-            LoadSaveData(@"E:\[SSD User Data]\Downloads\EOIV\save-test");
+            //LoadSaveData(@"E:\[SSD User Data]\Downloads\EOIV\save-test");
+            LoadSaveData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150918205127\00000ea6");
 
             /*RomFSDataDumper.DumpItemData(
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\equipitemnametable.tbl",
