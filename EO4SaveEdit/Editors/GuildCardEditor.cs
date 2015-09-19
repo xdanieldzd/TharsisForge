@@ -15,6 +15,8 @@ namespace EO4SaveEdit.Editors
 {
     public partial class GuildCardEditor : UserControl
     {
+        // TODO: Redo layout for better resizability? FlowLayoutPanels?
+
         Mori4GdCard guildCardData;
         GuildCard currentGuildCard;
 
@@ -224,6 +226,8 @@ namespace EO4SaveEdit.Editors
         {
             throw new NotImplementedException();
 
+            // TODO
+
             currentGuildCard.GuildCardCharacter.CumulativeStats.HP = 999;
             currentGuildCard.GuildCardCharacter.CumulativeStats.TP = 999;
             currentGuildCard.GuildCardCharacter.CumulativeStats.STR = 999;
@@ -233,13 +237,13 @@ namespace EO4SaveEdit.Editors
             currentGuildCard.GuildCardCharacter.CumulativeStats.TEC = 999;
 
             currentGuildCard.GuildCardCharacter.WeaponSlot.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.WeaponSlot.EffectSlots[i] = 0x1;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.WeaponSlot.EffectSlots[i] = ForgeEffect.HP;
             currentGuildCard.GuildCardCharacter.EquipmentSlot.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.EquipmentSlot.EffectSlots[i] = 0x1;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.EquipmentSlot.EffectSlots[i] = ForgeEffect.HP;
             currentGuildCard.GuildCardCharacter.ArmorSlot1.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot1.EffectSlots[i] = 0x1;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot1.EffectSlots[i] = ForgeEffect.HP;
             currentGuildCard.GuildCardCharacter.ArmorSlot2.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot2.EffectSlots[i] = 0x1;
+            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot2.EffectSlots[i] = ForgeEffect.HP;
         }
     }
 }

@@ -126,13 +126,15 @@
             this.nudRegCharacterLevel = new System.Windows.Forms.NumericUpDown();
             this.txtRegCharacterName = new System.Windows.Forms.TextBox();
             this.gbAchievements = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbGuildCards = new EO4SaveEdit.ListBoxEx();
             this.icmbRegCharacterPortrait = new EO4SaveEdit.ImageComboBox();
             this.icmbCharaListPortrait5 = new EO4SaveEdit.ImageComboBox();
             this.icmbCharaListPortrait4 = new EO4SaveEdit.ImageComboBox();
             this.icmbCharaListPortrait3 = new EO4SaveEdit.ImageComboBox();
             this.icmbCharaListPortrait2 = new EO4SaveEdit.ImageComboBox();
             this.icmbCharaListPortrait1 = new EO4SaveEdit.ImageComboBox();
-            this.lbGuildCards = new EO4SaveEdit.ListBoxEx();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel4)).BeginInit();
@@ -154,12 +156,12 @@
             this.gbRegCharacter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRegCharacterLevel)).BeginInit();
             this.gbAchievements.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbCharaList
             // 
-            this.gbCharaList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbCharaList.Controls.Add(this.lblCharaListPortrait);
             this.gbCharaList.Controls.Add(this.icmbCharaListPortrait5);
             this.gbCharaList.Controls.Add(this.icmbCharaListPortrait4);
@@ -184,9 +186,10 @@
             this.gbCharaList.Controls.Add(this.lblCharaListLevel);
             this.gbCharaList.Controls.Add(this.lblCharaListName);
             this.gbCharaList.Controls.Add(this.txtCharaListName1);
-            this.gbCharaList.Location = new System.Drawing.Point(452, 3);
+            this.gbCharaList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCharaList.Location = new System.Drawing.Point(488, 3);
             this.gbCharaList.Name = "gbCharaList";
-            this.gbCharaList.Size = new System.Drawing.Size(355, 180);
+            this.gbCharaList.Size = new System.Drawing.Size(359, 210);
             this.gbCharaList.TabIndex = 2;
             this.gbCharaList.TabStop = false;
             this.gbCharaList.Text = "Character List";
@@ -194,7 +197,7 @@
             // lblCharaListPortrait
             // 
             this.lblCharaListPortrait.AutoSize = true;
-            this.lblCharaListPortrait.Location = new System.Drawing.Point(246, 16);
+            this.lblCharaListPortrait.Location = new System.Drawing.Point(250, 16);
             this.lblCharaListPortrait.Name = "lblCharaListPortrait";
             this.lblCharaListPortrait.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.lblCharaListPortrait.Size = new System.Drawing.Size(43, 19);
@@ -207,7 +210,7 @@
             this.cmbCharaListClass5.FormattingEnabled = true;
             this.cmbCharaListClass5.Location = new System.Drawing.Point(153, 146);
             this.cmbCharaListClass5.Name = "cmbCharaListClass5";
-            this.cmbCharaListClass5.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass5.Size = new System.Drawing.Size(94, 21);
             this.cmbCharaListClass5.TabIndex = 22;
             // 
             // nudCharaListLevel5
@@ -231,7 +234,7 @@
             this.cmbCharaListClass4.FormattingEnabled = true;
             this.cmbCharaListClass4.Location = new System.Drawing.Point(153, 119);
             this.cmbCharaListClass4.Name = "cmbCharaListClass4";
-            this.cmbCharaListClass4.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass4.Size = new System.Drawing.Size(94, 21);
             this.cmbCharaListClass4.TabIndex = 18;
             // 
             // nudCharaListLevel4
@@ -255,7 +258,7 @@
             this.cmbCharaListClass3.FormattingEnabled = true;
             this.cmbCharaListClass3.Location = new System.Drawing.Point(153, 92);
             this.cmbCharaListClass3.Name = "cmbCharaListClass3";
-            this.cmbCharaListClass3.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass3.Size = new System.Drawing.Size(94, 21);
             this.cmbCharaListClass3.TabIndex = 14;
             // 
             // nudCharaListLevel3
@@ -279,7 +282,7 @@
             this.cmbCharaListClass2.FormattingEnabled = true;
             this.cmbCharaListClass2.Location = new System.Drawing.Point(153, 65);
             this.cmbCharaListClass2.Name = "cmbCharaListClass2";
-            this.cmbCharaListClass2.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass2.Size = new System.Drawing.Size(94, 21);
             this.cmbCharaListClass2.TabIndex = 10;
             // 
             // nudCharaListLevel2
@@ -313,7 +316,7 @@
             this.cmbCharaListClass1.FormattingEnabled = true;
             this.cmbCharaListClass1.Location = new System.Drawing.Point(153, 38);
             this.cmbCharaListClass1.Name = "cmbCharaListClass1";
-            this.cmbCharaListClass1.Size = new System.Drawing.Size(90, 21);
+            this.cmbCharaListClass1.Size = new System.Drawing.Size(94, 21);
             this.cmbCharaListClass1.TabIndex = 6;
             // 
             // nudCharaListLevel1
@@ -377,9 +380,10 @@
             this.gbGuildInfo.Controls.Add(this.lblGuildSkyship);
             this.gbGuildInfo.Controls.Add(this.txtGuildName);
             this.gbGuildInfo.Controls.Add(this.lblGuildName);
-            this.gbGuildInfo.Location = new System.Drawing.Point(136, 3);
+            this.gbGuildInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbGuildInfo.Location = new System.Drawing.Point(123, 3);
             this.gbGuildInfo.Name = "gbGuildInfo";
-            this.gbGuildInfo.Size = new System.Drawing.Size(310, 210);
+            this.gbGuildInfo.Size = new System.Drawing.Size(359, 210);
             this.gbGuildInfo.TabIndex = 1;
             this.gbGuildInfo.TabStop = false;
             this.gbGuildInfo.Text = "Guild Information";
@@ -395,17 +399,20 @@
             // 
             // cmbGuildTreasureMap
             // 
+            this.cmbGuildTreasureMap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbGuildTreasureMap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGuildTreasureMap.FormattingEnabled = true;
             this.cmbGuildTreasureMap.Location = new System.Drawing.Point(88, 175);
             this.cmbGuildTreasureMap.Name = "cmbGuildTreasureMap";
-            this.cmbGuildTreasureMap.Size = new System.Drawing.Size(216, 21);
+            this.cmbGuildTreasureMap.Size = new System.Drawing.Size(265, 21);
             this.cmbGuildTreasureMap.TabIndex = 23;
             // 
             // lblGuildCardBackground
             // 
+            this.lblGuildCardBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGuildCardBackground.AutoSize = true;
-            this.lblGuildCardBackground.Location = new System.Drawing.Point(145, 152);
+            this.lblGuildCardBackground.Location = new System.Drawing.Point(194, 152);
             this.lblGuildCardBackground.Name = "lblGuildCardBackground";
             this.lblGuildCardBackground.Size = new System.Drawing.Size(93, 13);
             this.lblGuildCardBackground.TabIndex = 20;
@@ -413,7 +420,8 @@
             // 
             // nudGuildCardBackground
             // 
-            this.nudGuildCardBackground.Location = new System.Drawing.Point(244, 149);
+            this.nudGuildCardBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudGuildCardBackground.Location = new System.Drawing.Point(293, 149);
             this.nudGuildCardBackground.Maximum = new decimal(new int[] {
             7,
             0,
@@ -441,8 +449,9 @@
             // 
             // lblGuildEnemiesHunted
             // 
+            this.lblGuildEnemiesHunted.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGuildEnemiesHunted.AutoSize = true;
-            this.lblGuildEnemiesHunted.Location = new System.Drawing.Point(150, 126);
+            this.lblGuildEnemiesHunted.Location = new System.Drawing.Point(199, 126);
             this.lblGuildEnemiesHunted.Name = "lblGuildEnemiesHunted";
             this.lblGuildEnemiesHunted.Size = new System.Drawing.Size(88, 13);
             this.lblGuildEnemiesHunted.TabIndex = 16;
@@ -450,7 +459,8 @@
             // 
             // txtGuildEnemiesHunted
             // 
-            this.txtGuildEnemiesHunted.Location = new System.Drawing.Point(244, 123);
+            this.txtGuildEnemiesHunted.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGuildEnemiesHunted.Location = new System.Drawing.Point(293, 123);
             this.txtGuildEnemiesHunted.Name = "txtGuildEnemiesHunted";
             this.txtGuildEnemiesHunted.Size = new System.Drawing.Size(60, 20);
             this.txtGuildEnemiesHunted.TabIndex = 17;
@@ -473,8 +483,9 @@
             // 
             // lblGuildVenturedDays
             // 
+            this.lblGuildVenturedDays.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGuildVenturedDays.AutoSize = true;
-            this.lblGuildVenturedDays.Location = new System.Drawing.Point(158, 100);
+            this.lblGuildVenturedDays.Location = new System.Drawing.Point(207, 100);
             this.lblGuildVenturedDays.Name = "lblGuildVenturedDays";
             this.lblGuildVenturedDays.Size = new System.Drawing.Size(80, 13);
             this.lblGuildVenturedDays.TabIndex = 12;
@@ -482,7 +493,8 @@
             // 
             // txtGuildVenturedDays
             // 
-            this.txtGuildVenturedDays.Location = new System.Drawing.Point(244, 97);
+            this.txtGuildVenturedDays.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGuildVenturedDays.Location = new System.Drawing.Point(293, 97);
             this.txtGuildVenturedDays.Name = "txtGuildVenturedDays";
             this.txtGuildVenturedDays.Size = new System.Drawing.Size(60, 20);
             this.txtGuildVenturedDays.TabIndex = 13;
@@ -505,8 +517,9 @@
             // 
             // lblGuildItemDiscovery
             // 
+            this.lblGuildItemDiscovery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGuildItemDiscovery.AutoSize = true;
-            this.lblGuildItemDiscovery.Location = new System.Drawing.Point(166, 73);
+            this.lblGuildItemDiscovery.Location = new System.Drawing.Point(212, 73);
             this.lblGuildItemDiscovery.Name = "lblGuildItemDiscovery";
             this.lblGuildItemDiscovery.Size = new System.Drawing.Size(80, 13);
             this.lblGuildItemDiscovery.TabIndex = 8;
@@ -514,13 +527,14 @@
             // 
             // nudGuildItemDiscovery
             // 
+            this.nudGuildItemDiscovery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nudGuildItemDiscovery.DecimalPlaces = 2;
             this.nudGuildItemDiscovery.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.nudGuildItemDiscovery.Location = new System.Drawing.Point(249, 71);
+            this.nudGuildItemDiscovery.Location = new System.Drawing.Point(298, 71);
             this.nudGuildItemDiscovery.Name = "nudGuildItemDiscovery";
             this.nudGuildItemDiscovery.Size = new System.Drawing.Size(55, 20);
             this.nudGuildItemDiscovery.TabIndex = 9;
@@ -549,10 +563,12 @@
             // 
             // txtGuildMessage
             // 
+            this.txtGuildMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGuildMessage.Location = new System.Drawing.Point(65, 45);
             this.txtGuildMessage.MaxLength = 16;
             this.txtGuildMessage.Name = "txtGuildMessage";
-            this.txtGuildMessage.Size = new System.Drawing.Size(239, 20);
+            this.txtGuildMessage.Size = new System.Drawing.Size(288, 20);
             this.txtGuildMessage.TabIndex = 5;
             // 
             // lblGuildMessage
@@ -566,7 +582,8 @@
             // 
             // txtGuildSkyship
             // 
-            this.txtGuildSkyship.Location = new System.Drawing.Point(219, 19);
+            this.txtGuildSkyship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGuildSkyship.Location = new System.Drawing.Point(268, 19);
             this.txtGuildSkyship.MaxLength = 8;
             this.txtGuildSkyship.Name = "txtGuildSkyship";
             this.txtGuildSkyship.Size = new System.Drawing.Size(85, 20);
@@ -574,8 +591,9 @@
             // 
             // lblGuildSkyship
             // 
+            this.lblGuildSkyship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGuildSkyship.AutoSize = true;
-            this.lblGuildSkyship.Location = new System.Drawing.Point(166, 22);
+            this.lblGuildSkyship.Location = new System.Drawing.Point(215, 22);
             this.lblGuildSkyship.Name = "lblGuildSkyship";
             this.lblGuildSkyship.Size = new System.Drawing.Size(47, 13);
             this.lblGuildSkyship.TabIndex = 2;
@@ -600,8 +618,9 @@
             // 
             // lblCompletionHiddenTreasures
             // 
+            this.lblCompletionHiddenTreasures.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCompletionHiddenTreasures.AutoSize = true;
-            this.lblCompletionHiddenTreasures.Location = new System.Drawing.Point(144, 191);
+            this.lblCompletionHiddenTreasures.Location = new System.Drawing.Point(198, 178);
             this.lblCompletionHiddenTreasures.Name = "lblCompletionHiddenTreasures";
             this.lblCompletionHiddenTreasures.Size = new System.Drawing.Size(94, 13);
             this.lblCompletionHiddenTreasures.TabIndex = 21;
@@ -609,7 +628,8 @@
             // 
             // nudCompletionHiddenTreasures
             // 
-            this.nudCompletionHiddenTreasures.Location = new System.Drawing.Point(244, 189);
+            this.nudCompletionHiddenTreasures.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudCompletionHiddenTreasures.Location = new System.Drawing.Point(298, 176);
             this.nudCompletionHiddenTreasures.Maximum = new decimal(new int[] {
             3,
             0,
@@ -622,7 +642,7 @@
             // lblCompletionMaterials
             // 
             this.lblCompletionMaterials.AutoSize = true;
-            this.lblCompletionMaterials.Location = new System.Drawing.Point(6, 191);
+            this.lblCompletionMaterials.Location = new System.Drawing.Point(6, 178);
             this.lblCompletionMaterials.Name = "lblCompletionMaterials";
             this.lblCompletionMaterials.Size = new System.Drawing.Size(52, 13);
             this.lblCompletionMaterials.TabIndex = 13;
@@ -630,7 +650,7 @@
             // 
             // nudCompletionMaterials
             // 
-            this.nudCompletionMaterials.Location = new System.Drawing.Point(74, 189);
+            this.nudCompletionMaterials.Location = new System.Drawing.Point(74, 176);
             this.nudCompletionMaterials.Maximum = new decimal(new int[] {
             3,
             0,
@@ -642,8 +662,9 @@
             // 
             // lblCompletionMonsters
             // 
+            this.lblCompletionMonsters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCompletionMonsters.AutoSize = true;
-            this.lblCompletionMonsters.Location = new System.Drawing.Point(185, 165);
+            this.lblCompletionMonsters.Location = new System.Drawing.Point(239, 152);
             this.lblCompletionMonsters.Name = "lblCompletionMonsters";
             this.lblCompletionMonsters.Size = new System.Drawing.Size(53, 13);
             this.lblCompletionMonsters.TabIndex = 19;
@@ -651,7 +672,8 @@
             // 
             // nudCompletionMonsters
             // 
-            this.nudCompletionMonsters.Location = new System.Drawing.Point(244, 163);
+            this.nudCompletionMonsters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudCompletionMonsters.Location = new System.Drawing.Point(298, 150);
             this.nudCompletionMonsters.Maximum = new decimal(new int[] {
             3,
             0,
@@ -664,7 +686,7 @@
             // lblCompletionFood
             // 
             this.lblCompletionFood.AutoSize = true;
-            this.lblCompletionFood.Location = new System.Drawing.Point(6, 165);
+            this.lblCompletionFood.Location = new System.Drawing.Point(6, 152);
             this.lblCompletionFood.Name = "lblCompletionFood";
             this.lblCompletionFood.Size = new System.Drawing.Size(34, 13);
             this.lblCompletionFood.TabIndex = 11;
@@ -672,7 +694,7 @@
             // 
             // nudCompletionFood
             // 
-            this.nudCompletionFood.Location = new System.Drawing.Point(74, 163);
+            this.nudCompletionFood.Location = new System.Drawing.Point(74, 150);
             this.nudCompletionFood.Maximum = new decimal(new int[] {
             3,
             0,
@@ -684,8 +706,9 @@
             // 
             // lblCompletionRareBreeds
             // 
+            this.lblCompletionRareBreeds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCompletionRareBreeds.AutoSize = true;
-            this.lblCompletionRareBreeds.Location = new System.Drawing.Point(169, 139);
+            this.lblCompletionRareBreeds.Location = new System.Drawing.Point(223, 126);
             this.lblCompletionRareBreeds.Name = "lblCompletionRareBreeds";
             this.lblCompletionRareBreeds.Size = new System.Drawing.Size(69, 13);
             this.lblCompletionRareBreeds.TabIndex = 17;
@@ -693,7 +716,8 @@
             // 
             // nudCompletionRareBreeds
             // 
-            this.nudCompletionRareBreeds.Location = new System.Drawing.Point(244, 137);
+            this.nudCompletionRareBreeds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudCompletionRareBreeds.Location = new System.Drawing.Point(298, 124);
             this.nudCompletionRareBreeds.Maximum = new decimal(new int[] {
             3,
             0,
@@ -706,7 +730,7 @@
             // lblCompletionQuests
             // 
             this.lblCompletionQuests.AutoSize = true;
-            this.lblCompletionQuests.Location = new System.Drawing.Point(6, 139);
+            this.lblCompletionQuests.Location = new System.Drawing.Point(6, 126);
             this.lblCompletionQuests.Name = "lblCompletionQuests";
             this.lblCompletionQuests.Size = new System.Drawing.Size(43, 13);
             this.lblCompletionQuests.TabIndex = 9;
@@ -714,7 +738,7 @@
             // 
             // nudCompletionQuests
             // 
-            this.nudCompletionQuests.Location = new System.Drawing.Point(74, 137);
+            this.nudCompletionQuests.Location = new System.Drawing.Point(74, 124);
             this.nudCompletionQuests.Maximum = new decimal(new int[] {
             3,
             0,
@@ -726,8 +750,9 @@
             // 
             // lblCompletionTreasureBoxes
             // 
+            this.lblCompletionTreasureBoxes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCompletionTreasureBoxes.AutoSize = true;
-            this.lblCompletionTreasureBoxes.Location = new System.Drawing.Point(154, 113);
+            this.lblCompletionTreasureBoxes.Location = new System.Drawing.Point(208, 100);
             this.lblCompletionTreasureBoxes.Name = "lblCompletionTreasureBoxes";
             this.lblCompletionTreasureBoxes.Size = new System.Drawing.Size(84, 13);
             this.lblCompletionTreasureBoxes.TabIndex = 15;
@@ -735,7 +760,8 @@
             // 
             // nudCompletionTreasureBoxes
             // 
-            this.nudCompletionTreasureBoxes.Location = new System.Drawing.Point(244, 111);
+            this.nudCompletionTreasureBoxes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudCompletionTreasureBoxes.Location = new System.Drawing.Point(298, 98);
             this.nudCompletionTreasureBoxes.Maximum = new decimal(new int[] {
             3,
             0,
@@ -748,7 +774,7 @@
             // lblCompletionBurstSkills
             // 
             this.lblCompletionBurstSkills.AutoSize = true;
-            this.lblCompletionBurstSkills.Location = new System.Drawing.Point(6, 113);
+            this.lblCompletionBurstSkills.Location = new System.Drawing.Point(6, 100);
             this.lblCompletionBurstSkills.Name = "lblCompletionBurstSkills";
             this.lblCompletionBurstSkills.Size = new System.Drawing.Size(61, 13);
             this.lblCompletionBurstSkills.TabIndex = 7;
@@ -757,7 +783,7 @@
             // lblCompletionLevels
             // 
             this.lblCompletionLevels.AutoSize = true;
-            this.lblCompletionLevels.Location = new System.Drawing.Point(6, 92);
+            this.lblCompletionLevels.Location = new System.Drawing.Point(6, 79);
             this.lblCompletionLevels.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.lblCompletionLevels.Name = "lblCompletionLevels";
             this.lblCompletionLevels.Size = new System.Drawing.Size(96, 13);
@@ -766,7 +792,7 @@
             // 
             // nudCompletionBurstSkills
             // 
-            this.nudCompletionBurstSkills.Location = new System.Drawing.Point(74, 111);
+            this.nudCompletionBurstSkills.Location = new System.Drawing.Point(74, 98);
             this.nudCompletionBurstSkills.Maximum = new decimal(new int[] {
             3,
             0,
@@ -779,9 +805,10 @@
             // chkAchievementExplorerPride
             // 
             this.chkAchievementExplorerPride.AutoSize = true;
-            this.chkAchievementExplorerPride.Location = new System.Drawing.Point(153, 65);
+            this.chkAchievementExplorerPride.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkAchievementExplorerPride.Location = new System.Drawing.Point(233, 28);
             this.chkAchievementExplorerPride.Name = "chkAchievementExplorerPride";
-            this.chkAchievementExplorerPride.Size = new System.Drawing.Size(98, 17);
+            this.chkAchievementExplorerPride.Size = new System.Drawing.Size(111, 19);
             this.chkAchievementExplorerPride.TabIndex = 5;
             this.chkAchievementExplorerPride.Text = "Explorer\'s Pride";
             this.chkAchievementExplorerPride.UseVisualStyleBackColor = true;
@@ -789,9 +816,10 @@
             // chkAchievementInsectSlayer
             // 
             this.chkAchievementInsectSlayer.AutoSize = true;
-            this.chkAchievementInsectSlayer.Location = new System.Drawing.Point(153, 42);
+            this.chkAchievementInsectSlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkAchievementInsectSlayer.Location = new System.Drawing.Point(118, 28);
             this.chkAchievementInsectSlayer.Name = "chkAchievementInsectSlayer";
-            this.chkAchievementInsectSlayer.Size = new System.Drawing.Size(87, 17);
+            this.chkAchievementInsectSlayer.Size = new System.Drawing.Size(109, 19);
             this.chkAchievementInsectSlayer.TabIndex = 4;
             this.chkAchievementInsectSlayer.Text = "Insect Slayer";
             this.chkAchievementInsectSlayer.UseVisualStyleBackColor = true;
@@ -799,9 +827,10 @@
             // chkAchievementYggdrasilHope
             // 
             this.chkAchievementYggdrasilHope.AutoSize = true;
-            this.chkAchievementYggdrasilHope.Location = new System.Drawing.Point(153, 19);
+            this.chkAchievementYggdrasilHope.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkAchievementYggdrasilHope.Location = new System.Drawing.Point(3, 28);
             this.chkAchievementYggdrasilHope.Name = "chkAchievementYggdrasilHope";
-            this.chkAchievementYggdrasilHope.Size = new System.Drawing.Size(105, 17);
+            this.chkAchievementYggdrasilHope.Size = new System.Drawing.Size(109, 19);
             this.chkAchievementYggdrasilHope.TabIndex = 3;
             this.chkAchievementYggdrasilHope.Text = "Yggdrasil\'s Hope";
             this.chkAchievementYggdrasilHope.UseVisualStyleBackColor = true;
@@ -809,9 +838,10 @@
             // chkAchievementKnightAlly
             // 
             this.chkAchievementKnightAlly.AutoSize = true;
-            this.chkAchievementKnightAlly.Location = new System.Drawing.Point(9, 65);
+            this.chkAchievementKnightAlly.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkAchievementKnightAlly.Location = new System.Drawing.Point(233, 3);
             this.chkAchievementKnightAlly.Name = "chkAchievementKnightAlly";
-            this.chkAchievementKnightAlly.Size = new System.Drawing.Size(82, 17);
+            this.chkAchievementKnightAlly.Size = new System.Drawing.Size(111, 19);
             this.chkAchievementKnightAlly.TabIndex = 2;
             this.chkAchievementKnightAlly.Text = "Knight\'s Ally";
             this.chkAchievementKnightAlly.UseVisualStyleBackColor = true;
@@ -819,9 +849,10 @@
             // chkAchievementSentinelAlly
             // 
             this.chkAchievementSentinelAlly.AutoSize = true;
-            this.chkAchievementSentinelAlly.Location = new System.Drawing.Point(9, 42);
+            this.chkAchievementSentinelAlly.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkAchievementSentinelAlly.Location = new System.Drawing.Point(118, 3);
             this.chkAchievementSentinelAlly.Name = "chkAchievementSentinelAlly";
-            this.chkAchievementSentinelAlly.Size = new System.Drawing.Size(90, 17);
+            this.chkAchievementSentinelAlly.Size = new System.Drawing.Size(109, 19);
             this.chkAchievementSentinelAlly.TabIndex = 1;
             this.chkAchievementSentinelAlly.Text = "Sentinels\' Ally";
             this.chkAchievementSentinelAlly.UseVisualStyleBackColor = true;
@@ -829,18 +860,16 @@
             // chkAchievementVesselAlly
             // 
             this.chkAchievementVesselAlly.AutoSize = true;
-            this.chkAchievementVesselAlly.Location = new System.Drawing.Point(9, 19);
+            this.chkAchievementVesselAlly.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkAchievementVesselAlly.Location = new System.Drawing.Point(3, 3);
             this.chkAchievementVesselAlly.Name = "chkAchievementVesselAlly";
-            this.chkAchievementVesselAlly.Size = new System.Drawing.Size(83, 17);
+            this.chkAchievementVesselAlly.Size = new System.Drawing.Size(109, 19);
             this.chkAchievementVesselAlly.TabIndex = 0;
             this.chkAchievementVesselAlly.Text = "Vessels\' Ally";
             this.chkAchievementVesselAlly.UseVisualStyleBackColor = true;
             // 
             // gbRegCharacter
             // 
-            this.gbRegCharacter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbRegCharacter.Controls.Add(this.lblRegCharacterPortrait);
             this.gbRegCharacter.Controls.Add(this.icmbRegCharacterPortrait);
             this.gbRegCharacter.Controls.Add(this.lblRegCharacterCurrentTP);
@@ -869,9 +898,10 @@
             this.gbRegCharacter.Controls.Add(this.cmbRegCharacterClass);
             this.gbRegCharacter.Controls.Add(this.nudRegCharacterLevel);
             this.gbRegCharacter.Controls.Add(this.txtRegCharacterName);
-            this.gbRegCharacter.Location = new System.Drawing.Point(452, 189);
+            this.gbRegCharacter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbRegCharacter.Location = new System.Drawing.Point(488, 219);
             this.gbRegCharacter.Name = "gbRegCharacter";
-            this.gbRegCharacter.Size = new System.Drawing.Size(355, 273);
+            this.gbRegCharacter.Size = new System.Drawing.Size(359, 278);
             this.gbRegCharacter.TabIndex = 4;
             this.gbRegCharacter.TabStop = false;
             this.gbRegCharacter.Text = "Registered Character";
@@ -1120,16 +1150,9 @@
             // 
             // gbAchievements
             // 
-            this.gbAchievements.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.gbAchievements.Controls.Add(this.chkAchievementVesselAlly);
-            this.gbAchievements.Controls.Add(this.chkAchievementSentinelAlly);
-            this.gbAchievements.Controls.Add(this.chkAchievementKnightAlly);
-            this.gbAchievements.Controls.Add(this.chkAchievementYggdrasilHope);
+            this.gbAchievements.Controls.Add(this.tableLayoutPanel2);
             this.gbAchievements.Controls.Add(this.lblCompletionHiddenTreasures);
-            this.gbAchievements.Controls.Add(this.chkAchievementInsectSlayer);
             this.gbAchievements.Controls.Add(this.nudCompletionHiddenTreasures);
-            this.gbAchievements.Controls.Add(this.chkAchievementExplorerPride);
             this.gbAchievements.Controls.Add(this.lblCompletionMaterials);
             this.gbAchievements.Controls.Add(this.nudCompletionBurstSkills);
             this.gbAchievements.Controls.Add(this.nudCompletionMaterials);
@@ -1145,12 +1168,70 @@
             this.gbAchievements.Controls.Add(this.lblCompletionRareBreeds);
             this.gbAchievements.Controls.Add(this.lblCompletionQuests);
             this.gbAchievements.Controls.Add(this.nudCompletionRareBreeds);
-            this.gbAchievements.Location = new System.Drawing.Point(136, 219);
+            this.gbAchievements.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbAchievements.Location = new System.Drawing.Point(123, 219);
             this.gbAchievements.Name = "gbAchievements";
-            this.gbAchievements.Size = new System.Drawing.Size(310, 243);
+            this.gbAchievements.Size = new System.Drawing.Size(359, 278);
             this.gbAchievements.TabIndex = 3;
             this.gbAchievements.TabStop = false;
             this.gbAchievements.Text = "Achievements";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lbGuildCards, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbAchievements, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gbGuildInfo, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbRegCharacter, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gbCharaList, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 500);
+            this.tableLayoutPanel1.TabIndex = 23;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.Controls.Add(this.chkAchievementVesselAlly, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.chkAchievementInsectSlayer, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.chkAchievementExplorerPride, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.chkAchievementKnightAlly, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.chkAchievementSentinelAlly, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.chkAchievementYggdrasilHope, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 19);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 50);
+            this.tableLayoutPanel2.TabIndex = 23;
+            // 
+            // lbGuildCards
+            // 
+            this.lbGuildCards.AlternateBackColorOnDraw = true;
+            this.lbGuildCards.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbGuildCards.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbGuildCards.FormattingEnabled = true;
+            this.lbGuildCards.IntegralHeight = false;
+            this.lbGuildCards.Location = new System.Drawing.Point(3, 3);
+            this.lbGuildCards.Name = "lbGuildCards";
+            this.tableLayoutPanel1.SetRowSpan(this.lbGuildCards, 2);
+            this.lbGuildCards.Size = new System.Drawing.Size(114, 494);
+            this.lbGuildCards.TabIndex = 0;
+            this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
+            this.lbGuildCards.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbGuildCards_Format);
             // 
             // icmbRegCharacterPortrait
             // 
@@ -1167,7 +1248,7 @@
             this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.icmbCharaListPortrait5.DropDownItemHeight = 18;
             this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(249, 146);
+            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(253, 146);
             this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
             this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
             this.icmbCharaListPortrait5.TabIndex = 23;
@@ -1177,7 +1258,7 @@
             this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.icmbCharaListPortrait4.DropDownItemHeight = 18;
             this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(249, 119);
+            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(253, 119);
             this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
             this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
             this.icmbCharaListPortrait4.TabIndex = 19;
@@ -1187,7 +1268,7 @@
             this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.icmbCharaListPortrait3.DropDownItemHeight = 18;
             this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(249, 92);
+            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(253, 92);
             this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
             this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
             this.icmbCharaListPortrait3.TabIndex = 15;
@@ -1197,7 +1278,7 @@
             this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.icmbCharaListPortrait2.DropDownItemHeight = 18;
             this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(249, 65);
+            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(253, 65);
             this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
             this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
             this.icmbCharaListPortrait2.TabIndex = 11;
@@ -1207,36 +1288,18 @@
             this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.icmbCharaListPortrait1.DropDownItemHeight = 18;
             this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(249, 38);
+            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(253, 38);
             this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
             this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
             this.icmbCharaListPortrait1.TabIndex = 7;
-            // 
-            // lbGuildCards
-            // 
-            this.lbGuildCards.AlternateBackColorOnDraw = true;
-            this.lbGuildCards.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbGuildCards.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.lbGuildCards.FormattingEnabled = true;
-            this.lbGuildCards.IntegralHeight = false;
-            this.lbGuildCards.Location = new System.Drawing.Point(0, 0);
-            this.lbGuildCards.Name = "lbGuildCards";
-            this.lbGuildCards.Size = new System.Drawing.Size(130, 465);
-            this.lbGuildCards.TabIndex = 0;
-            this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
-            this.lbGuildCards.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbGuildCards_Format);
             // 
             // GuildCardEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gbAchievements);
-            this.Controls.Add(this.gbRegCharacter);
-            this.Controls.Add(this.gbGuildInfo);
-            this.Controls.Add(this.gbCharaList);
-            this.Controls.Add(this.lbGuildCards);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "GuildCardEditor";
-            this.Size = new System.Drawing.Size(810, 465);
+            this.Size = new System.Drawing.Size(850, 500);
             this.gbCharaList.ResumeLayout(false);
             this.gbCharaList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).EndInit();
@@ -1262,6 +1325,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudRegCharacterLevel)).EndInit();
             this.gbAchievements.ResumeLayout(false);
             this.gbAchievements.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1372,5 +1438,7 @@
         private System.Windows.Forms.Label lblCharaListPortrait;
         private System.Windows.Forms.Label lblRegCharacterPortrait;
         private ImageComboBox icmbRegCharacterPortrait;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

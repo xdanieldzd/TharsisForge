@@ -24,11 +24,53 @@ namespace EO4SaveEdit.FileHandlers
         None = 0xFF
     }
 
+    public enum ForgeEffect : byte
+    {
+        None = 0x00,
+
+        HP = 0x01,
+        TP = 0x02,
+        STR = 0x03,
+        TEC = 0x04,
+        VIT = 0x05,
+        AGI = 0x06,
+        LUC = 0x07,
+        SPD = 0x08,
+        BRS = 0x09,
+        ATK = 0x0A,
+        ELM = 0x0B,
+        HIT = 0x0C,
+        CRI = 0x0D,
+        Fire = 0x0E,
+        Ice = 0x0F,
+        Volt = 0x10,
+        //0x11
+        //0x12
+        Blind = 0x13,
+        Sleep = 0x14,
+        Poison = 0x15,
+        Panic = 0x16,
+        Paralyze = 0x17,
+        Stun = 0x18,
+        Petrify = 0x19,
+        Death = 0x1A,
+        Curse = 0x1B,
+        HeadBind = 0x1C,
+        ArmBind = 0x1D,
+        LegBind = 0x1E,
+        Slash = 0x1F,
+        Bash = 0x20,
+        Pierce = 0x21
+
+        // TOOD: Check 0x11, 0x12 in-game...
+        // TODO/CONFIRM: Meaning appears to depens on item type, i.e. "Fire" == fire *attack* on weapon (Apollo bow), fire *resist* on armor/accessory (Fire Charm acc)?
+    }
+
     public class Item : DataChunk
     {
         public ushort ItemID { get; set; }
         public byte NumForgeableSlots { get; set; }
-        public byte[] EffectSlots { get; set; }
+        public ForgeEffect[] EffectSlots { get; set; }
         public byte Unknown { get; set; }
 
         public Item(Stream stream) { this.ReadFromStream(stream); }
@@ -39,8 +81,8 @@ namespace EO4SaveEdit.FileHandlers
 
             ItemID = reader.ReadUInt16();
             NumForgeableSlots = reader.ReadByte();
-            EffectSlots = new byte[8];
-            for (int i = 0; i < EffectSlots.Length; i++) EffectSlots[i] = reader.ReadByte();
+            EffectSlots = new ForgeEffect[8];
+            for (int i = 0; i < EffectSlots.Length; i++) EffectSlots[i] = (ForgeEffect)reader.ReadByte();
             Unknown = reader.ReadByte();
         }
 
@@ -50,7 +92,7 @@ namespace EO4SaveEdit.FileHandlers
 
             writer.Write(ItemID);
             writer.Write(NumForgeableSlots);
-            writer.Write(EffectSlots);
+            foreach (ForgeEffect effect in EffectSlots) writer.Write((byte)effect);
             writer.Write(Unknown);
         }
     }
@@ -364,6 +406,16 @@ namespace EO4SaveEdit.FileHandlers
         public string DayName
         {
             get { return string.Format("{0} {1}", MonthNames[(int)(DayInYear / 28)], (DayInYear % 28) + 1); }
+        }
+
+        public int BurstGaugeLevel
+        {
+            get { return (MaybeBurstGauge / 100); }
+        }
+
+        public int BurstGaugeValue
+        {
+            get { return (MaybeBurstGauge % 100); }
         }
 
         public string GuildName

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpGuildCards = new System.Windows.Forms.TabPage();
+            this.tpItems = new System.Windows.Forms.TabPage();
             this.tpCharas = new System.Windows.Forms.TabPage();
             this.tpMaps = new System.Windows.Forms.TabPage();
             this.tpOptions = new System.Windows.Forms.TabPage();
@@ -46,21 +47,20 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.tpItems = new System.Windows.Forms.TabPage();
             this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
+            this.itemEditor1 = new EO4SaveEdit.Editors.ItemEditor();
             this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
             this.m4Map = new EO4SaveEdit.FileHandlers.Mori4MapEditor();
             this.m4Options = new EO4SaveEdit.FileHandlers.Mori4OptionEditor();
-            this.itemEditor1 = new EO4SaveEdit.Editors.ItemEditor();
             this.tabControl1.SuspendLayout();
             this.tpGuildCards.SuspendLayout();
+            this.tpItems.SuspendLayout();
             this.tpCharas.SuspendLayout();
             this.tpMaps.SuspendLayout();
             this.tpOptions.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.tpItems.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -74,7 +74,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(824, 516);
+            this.tabControl1.Size = new System.Drawing.Size(864, 536);
             this.tabControl1.TabIndex = 0;
             // 
             // tpGuildCards
@@ -83,10 +83,21 @@
             this.tpGuildCards.Location = new System.Drawing.Point(4, 22);
             this.tpGuildCards.Name = "tpGuildCards";
             this.tpGuildCards.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGuildCards.Size = new System.Drawing.Size(816, 490);
+            this.tpGuildCards.Size = new System.Drawing.Size(856, 510);
             this.tpGuildCards.TabIndex = 3;
             this.tpGuildCards.Text = "Guild Cards";
             this.tpGuildCards.UseVisualStyleBackColor = true;
+            // 
+            // tpItems
+            // 
+            this.tpItems.Controls.Add(this.itemEditor1);
+            this.tpItems.Location = new System.Drawing.Point(4, 22);
+            this.tpItems.Name = "tpItems";
+            this.tpItems.Padding = new System.Windows.Forms.Padding(3);
+            this.tpItems.Size = new System.Drawing.Size(856, 510);
+            this.tpItems.TabIndex = 4;
+            this.tpItems.Text = "Items";
+            this.tpItems.UseVisualStyleBackColor = true;
             // 
             // tpCharas
             // 
@@ -94,7 +105,7 @@
             this.tpCharas.Location = new System.Drawing.Point(4, 22);
             this.tpCharas.Name = "tpCharas";
             this.tpCharas.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCharas.Size = new System.Drawing.Size(816, 490);
+            this.tpCharas.Size = new System.Drawing.Size(856, 510);
             this.tpCharas.TabIndex = 2;
             this.tpCharas.Text = "Characters";
             this.tpCharas.UseVisualStyleBackColor = true;
@@ -105,7 +116,7 @@
             this.tpMaps.Location = new System.Drawing.Point(4, 22);
             this.tpMaps.Name = "tpMaps";
             this.tpMaps.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMaps.Size = new System.Drawing.Size(816, 490);
+            this.tpMaps.Size = new System.Drawing.Size(856, 510);
             this.tpMaps.TabIndex = 1;
             this.tpMaps.Text = "Maps";
             this.tpMaps.UseVisualStyleBackColor = true;
@@ -116,7 +127,7 @@
             this.tpOptions.Location = new System.Drawing.Point(4, 22);
             this.tpOptions.Name = "tpOptions";
             this.tpOptions.Padding = new System.Windows.Forms.Padding(3);
-            this.tpOptions.Size = new System.Drawing.Size(816, 490);
+            this.tpOptions.Size = new System.Drawing.Size(856, 510);
             this.tpOptions.TabIndex = 0;
             this.tpOptions.Text = "Options";
             this.tpOptions.UseVisualStyleBackColor = true;
@@ -132,7 +143,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(810, 484);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 504);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // menuStrip1
@@ -142,7 +153,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(824, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(864, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -205,9 +216,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 540);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 560);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(824, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(864, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -217,25 +228,23 @@
             this.tsslStatus.Size = new System.Drawing.Size(22, 17);
             this.tsslStatus.Text = "---";
             // 
-            // tpItems
-            // 
-            this.tpItems.Controls.Add(this.itemEditor1);
-            this.tpItems.Location = new System.Drawing.Point(4, 22);
-            this.tpItems.Name = "tpItems";
-            this.tpItems.Padding = new System.Windows.Forms.Padding(3);
-            this.tpItems.Size = new System.Drawing.Size(816, 490);
-            this.tpItems.TabIndex = 4;
-            this.tpItems.Text = "Items";
-            this.tpItems.UseVisualStyleBackColor = true;
-            // 
             // guildCardEditor1
             // 
             this.guildCardEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guildCardEditor1.Enabled = false;
             this.guildCardEditor1.Location = new System.Drawing.Point(3, 3);
+            this.guildCardEditor1.MinimumSize = new System.Drawing.Size(800, 500);
             this.guildCardEditor1.Name = "guildCardEditor1";
-            this.guildCardEditor1.Size = new System.Drawing.Size(810, 484);
+            this.guildCardEditor1.Size = new System.Drawing.Size(850, 504);
             this.guildCardEditor1.TabIndex = 0;
+            // 
+            // itemEditor1
+            // 
+            this.itemEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemEditor1.Location = new System.Drawing.Point(3, 3);
+            this.itemEditor1.Name = "itemEditor1";
+            this.itemEditor1.Size = new System.Drawing.Size(850, 504);
+            this.itemEditor1.TabIndex = 0;
             // 
             // characterEditor1
             // 
@@ -243,7 +252,7 @@
             this.characterEditor1.Enabled = false;
             this.characterEditor1.Location = new System.Drawing.Point(3, 3);
             this.characterEditor1.Name = "characterEditor1";
-            this.characterEditor1.Size = new System.Drawing.Size(810, 484);
+            this.characterEditor1.Size = new System.Drawing.Size(850, 504);
             this.characterEditor1.TabIndex = 0;
             // 
             // m4Map
@@ -252,7 +261,7 @@
             this.m4Map.Enabled = false;
             this.m4Map.Location = new System.Drawing.Point(3, 3);
             this.m4Map.Name = "m4Map";
-            this.m4Map.Size = new System.Drawing.Size(810, 484);
+            this.m4Map.Size = new System.Drawing.Size(850, 504);
             this.m4Map.TabIndex = 0;
             // 
             // m4Options
@@ -263,33 +272,26 @@
             this.m4Options.Enabled = false;
             this.m4Options.Location = new System.Drawing.Point(3, 3);
             this.m4Options.Name = "m4Options";
-            this.m4Options.Size = new System.Drawing.Size(804, 289);
+            this.m4Options.Size = new System.Drawing.Size(844, 289);
             this.m4Options.TabIndex = 0;
-            // 
-            // itemEditor1
-            // 
-            this.itemEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemEditor1.Location = new System.Drawing.Point(3, 3);
-            this.itemEditor1.Name = "itemEditor1";
-            this.itemEditor1.Size = new System.Drawing.Size(810, 484);
-            this.itemEditor1.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 562);
+            this.ClientSize = new System.Drawing.Size(864, 582);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(840, 600);
+            this.MinimumSize = new System.Drawing.Size(880, 620);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tpGuildCards.ResumeLayout(false);
+            this.tpItems.ResumeLayout(false);
             this.tpCharas.ResumeLayout(false);
             this.tpMaps.ResumeLayout(false);
             this.tpOptions.ResumeLayout(false);
@@ -299,7 +301,6 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.tpItems.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

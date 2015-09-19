@@ -47,7 +47,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(87, 283);
+            this.btnClose.Location = new System.Drawing.Point(107, 283);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 0;
@@ -57,7 +57,8 @@
             // 
             // txtNumForgeableSlots
             // 
-            this.txtNumForgeableSlots.Location = new System.Drawing.Point(109, 19);
+            this.txtNumForgeableSlots.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumForgeableSlots.Location = new System.Drawing.Point(129, 19);
             this.txtNumForgeableSlots.MaxLength = 9;
             this.txtNumForgeableSlots.Name = "txtNumForgeableSlots";
             this.txtNumForgeableSlots.Size = new System.Drawing.Size(30, 20);
@@ -75,74 +76,90 @@
             // 
             // cmbForgeEffect1
             // 
+            this.cmbForgeEffect1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect1.DropDownWidth = 100;
             this.cmbForgeEffect1.Location = new System.Drawing.Point(9, 45);
             this.cmbForgeEffect1.Name = "cmbForgeEffect1";
-            this.cmbForgeEffect1.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect1.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect1.TabIndex = 5;
             // 
             // cmbForgeEffect2
             // 
+            this.cmbForgeEffect2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect2.DropDownWidth = 100;
             this.cmbForgeEffect2.Location = new System.Drawing.Point(9, 72);
             this.cmbForgeEffect2.Name = "cmbForgeEffect2";
-            this.cmbForgeEffect2.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect2.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect2.TabIndex = 6;
             // 
             // cmbForgeEffect3
             // 
+            this.cmbForgeEffect3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect3.DropDownWidth = 100;
             this.cmbForgeEffect3.Location = new System.Drawing.Point(9, 99);
             this.cmbForgeEffect3.Name = "cmbForgeEffect3";
-            this.cmbForgeEffect3.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect3.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect3.TabIndex = 7;
             // 
             // cmbForgeEffect4
             // 
+            this.cmbForgeEffect4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect4.DropDownWidth = 100;
             this.cmbForgeEffect4.Location = new System.Drawing.Point(9, 126);
             this.cmbForgeEffect4.Name = "cmbForgeEffect4";
-            this.cmbForgeEffect4.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect4.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect4.TabIndex = 8;
             // 
             // cmbForgeEffect5
             // 
+            this.cmbForgeEffect5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect5.DropDownWidth = 100;
             this.cmbForgeEffect5.Location = new System.Drawing.Point(9, 153);
             this.cmbForgeEffect5.Name = "cmbForgeEffect5";
-            this.cmbForgeEffect5.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect5.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect5.TabIndex = 9;
             // 
             // cmbForgeEffect6
             // 
+            this.cmbForgeEffect6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect6.DropDownWidth = 100;
             this.cmbForgeEffect6.Location = new System.Drawing.Point(9, 180);
             this.cmbForgeEffect6.Name = "cmbForgeEffect6";
-            this.cmbForgeEffect6.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect6.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect6.TabIndex = 10;
             // 
             // cmbForgeEffect7
             // 
+            this.cmbForgeEffect7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect7.DropDownWidth = 100;
             this.cmbForgeEffect7.Location = new System.Drawing.Point(9, 207);
             this.cmbForgeEffect7.Name = "cmbForgeEffect7";
-            this.cmbForgeEffect7.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect7.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect7.TabIndex = 11;
             // 
             // cmbForgeEffect8
             // 
+            this.cmbForgeEffect8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbForgeEffect8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForgeEffect8.DropDownWidth = 100;
             this.cmbForgeEffect8.Location = new System.Drawing.Point(9, 234);
             this.cmbForgeEffect8.Name = "cmbForgeEffect8";
-            this.cmbForgeEffect8.Size = new System.Drawing.Size(130, 21);
+            this.cmbForgeEffect8.Size = new System.Drawing.Size(150, 21);
             this.cmbForgeEffect8.TabIndex = 12;
             // 
             // gbItemEffects
@@ -159,7 +176,7 @@
             this.gbItemEffects.Controls.Add(this.cmbForgeEffect8);
             this.gbItemEffects.Location = new System.Drawing.Point(12, 12);
             this.gbItemEffects.Name = "gbItemEffects";
-            this.gbItemEffects.Size = new System.Drawing.Size(150, 265);
+            this.gbItemEffects.Size = new System.Drawing.Size(170, 265);
             this.gbItemEffects.TabIndex = 13;
             this.gbItemEffects.TabStop = false;
             this.gbItemEffects.Text = "---";
@@ -170,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(174, 318);
+            this.ClientSize = new System.Drawing.Size(194, 318);
             this.Controls.Add(this.gbItemEffects);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
