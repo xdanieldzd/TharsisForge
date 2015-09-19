@@ -385,9 +385,9 @@ namespace EO4SaveEdit.FileHandlers
         public uint Unknown15 { get; set; }
         public uint Unknown16 { get; set; }
         public uint CurrentEn { get; set; }
-        public uint DayInYear { get; set; }
+        public uint TotalDays { get; set; }
         public ushort TimeOfDay { get; set; }
-        public ushort MaybeBurstGauge { get; set; }
+        public ushort BurstGauge { get; set; }
         public Character[] Characters { get; set; }
         public Character UnknownUnusedCharacter { get; set; }
         //...
@@ -403,19 +403,39 @@ namespace EO4SaveEdit.FileHandlers
         public byte[] StorageItemAmounts { get; set; }
         //...
 
+        public int CurrentYear
+        {
+            get { return (int)(TotalDays / 365); }
+            set { TotalDays = (uint)((value * 365) + (TotalDays % 365)); }
+        }
+
+        public int CurrentMonth
+        {
+            get { return (int)((TotalDays % 365) / 28); }
+            set { TotalDays = (uint)((CurrentYear * 365) + (value * 28) + (CurrentDay % 28)); }
+        }
+
+        public int CurrentDay
+        {
+            get { return (int)((TotalDays % 365) % 28); }
+            set { TotalDays = (uint)((CurrentYear * 365) + (CurrentMonth * 28) + (value % 28)); }
+        }
+
         public string DayName
         {
-            get { return string.Format("{0} {1}", MonthNames[(int)(DayInYear / 28)], (DayInYear % 28) + 1); }
+            get { return string.Format("{0} {1}", MonthNames[CurrentMonth], (CurrentDay + 1)); }
         }
 
         public int BurstGaugeLevel
         {
-            get { return (MaybeBurstGauge / 100); }
+            get { return (BurstGauge / 100); }
+            set { BurstGauge = (ushort)((value * 100) + BurstGaugeValue); }
         }
 
         public int BurstGaugeValue
         {
-            get { return (MaybeBurstGauge % 100); }
+            get { return (BurstGauge % 100); }
+            set { BurstGauge = (ushort)((BurstGaugeLevel * 100) + (value % 100)); }
         }
 
         public string GuildName
@@ -457,9 +477,9 @@ namespace EO4SaveEdit.FileHandlers
             Unknown15 = reader.ReadUInt32();
             Unknown16 = reader.ReadUInt32();
             CurrentEn = reader.ReadUInt32();
-            DayInYear = reader.ReadUInt32();    /* http://etrian.wikia.com/wiki/Time */
+            TotalDays = reader.ReadUInt32();    /* http://etrian.wikia.com/wiki/Time */
             TimeOfDay = reader.ReadUInt16();
-            MaybeBurstGauge = reader.ReadUInt16();
+            BurstGauge = reader.ReadUInt16();
             Characters = new Character[30];
             for (int i = 0; i < Characters.Length; i++) Characters[i] = new Character(stream);
             UnknownUnusedCharacter = new Character(stream);
@@ -507,9 +527,9 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(Unknown15);
             writer.Write(Unknown16);
             writer.Write(CurrentEn);
-            writer.Write(DayInYear);
+            writer.Write(TotalDays);
             writer.Write(TimeOfDay);
-            writer.Write(MaybeBurstGauge);
+            writer.Write(BurstGauge);
             foreach (Character character in Characters) character.WriteToStream(stream);
             UnknownUnusedCharacter.WriteToStream(stream);
             //...

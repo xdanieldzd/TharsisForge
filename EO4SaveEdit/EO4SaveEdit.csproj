@@ -64,6 +64,12 @@
     <Compile Include="Editors\EffectEditorDialog.Designer.cs">
       <DependentUpon>EffectEditorDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\GameDataEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\GameDataEditor.Designer.cs">
+      <DependentUpon>GameDataEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editors\HeaderEditorDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\EffectEditorDialog.resx">
       <DependentUpon>EffectEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\GameDataEditor.resx">
+      <DependentUpon>GameDataEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\HeaderEditorDialog.resx">
       <DependentUpon>HeaderEditorDialog.cs</DependentUpon>

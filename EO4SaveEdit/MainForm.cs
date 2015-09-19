@@ -156,6 +156,7 @@ namespace EO4SaveEdit
                 characterEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
                 guildCardEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4GdCard) as Mori4GdCard);
                 itemEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
+                gameDataEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
 
                 saveToolStripMenuItem.Enabled = true;
                 Properties.Settings.Default.LastFolder = path;
