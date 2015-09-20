@@ -5,9 +5,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace EO4SaveEdit
+namespace EO4SaveEdit.Controls
 {
-    class ImageComboBox : ComboBox
+    public class ImageComboBox : ComboBox
     {
         public ImageList ImageList { get; set; }
         public int DropDownItemHeight { get; set; }

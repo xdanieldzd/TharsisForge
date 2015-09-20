@@ -177,7 +177,7 @@ namespace EO4SaveEdit.FileHandlers
                     sb.AppendFormat("Note #{0}: {1}\n", Array.IndexOf(currentMap.Notes, mapNote), mapNote.Description);
                 }
 
-                tip.Show(sb.ToString(), (sender as PanelEx), e.X + 5, e.Y + 5, 2500);
+                tip.Show(sb.ToString(), (sender as EO4SaveEdit.Controls.PanelEx), e.X + 5, e.Y + 5, 2500);
             }
         }
 
@@ -197,7 +197,7 @@ namespace EO4SaveEdit.FileHandlers
 
         private void pnlRender_MouseLeave(object sender, EventArgs e)
         {
-            if (tip != null) tip.Hide((sender as PanelEx));
+            if (tip != null) tip.Hide((sender as EO4SaveEdit.Controls.PanelEx));
         }
     }
 }

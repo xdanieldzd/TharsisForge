@@ -30,7 +30,7 @@
         {
             this.cmbMaps = new System.Windows.Forms.ComboBox();
             this.btnFileHeader = new System.Windows.Forms.Button();
-            this.pnlRender = new EO4SaveEdit.PanelEx();
+            this.pnlRender = new EO4SaveEdit.Controls.PanelEx();
             this.SuspendLayout();
             // 
             // cmbMaps
@@ -81,7 +81,7 @@
 
         #endregion
 
-        private PanelEx pnlRender;
+        private EO4SaveEdit.Controls. PanelEx pnlRender;
         private System.Windows.Forms.ComboBox cmbMaps;
         private System.Windows.Forms.Button btnFileHeader;
     }

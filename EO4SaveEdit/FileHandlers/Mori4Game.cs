@@ -387,7 +387,7 @@ namespace EO4SaveEdit.FileHandlers
         public uint CurrentEn { get; set; }
         public uint TotalDays { get; set; }
         public ushort TimeOfDay { get; set; }
-        public ushort BurstGauge { get; set; }
+        public ushort BurstValue { get; set; }
         public Character[] Characters { get; set; }
         public Character UnknownUnusedCharacter { get; set; }
         //...
@@ -426,16 +426,16 @@ namespace EO4SaveEdit.FileHandlers
             get { return string.Format("{0} {1}", MonthNames[CurrentMonth], (CurrentDay + 1)); }
         }
 
-        public int BurstGaugeLevel
+        public int BurstPoints
         {
-            get { return (BurstGauge / 100); }
-            set { BurstGauge = (ushort)((value * 100) + BurstGaugeValue); }
+            get { return (BurstValue / 100); }
+            set { BurstValue = (ushort)((value * 100) + BurstGauge); }
         }
 
-        public int BurstGaugeValue
+        public int BurstGauge
         {
-            get { return (BurstGauge % 100); }
-            set { BurstGauge = (ushort)((BurstGaugeLevel * 100) + (value % 100)); }
+            get { return (BurstValue % 100); }
+            set { BurstValue = (ushort)((BurstPoints * 100) + (value % 100)); }
         }
 
         public string GuildName
@@ -479,7 +479,7 @@ namespace EO4SaveEdit.FileHandlers
             CurrentEn = reader.ReadUInt32();
             TotalDays = reader.ReadUInt32();    /* http://etrian.wikia.com/wiki/Time */
             TimeOfDay = reader.ReadUInt16();
-            BurstGauge = reader.ReadUInt16();
+            BurstValue = reader.ReadUInt16();
             Characters = new Character[30];
             for (int i = 0; i < Characters.Length; i++) Characters[i] = new Character(stream);
             UnknownUnusedCharacter = new Character(stream);
@@ -529,7 +529,7 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(CurrentEn);
             writer.Write(TotalDays);
             writer.Write(TimeOfDay);
-            writer.Write(BurstGauge);
+            writer.Write(BurstValue);
             foreach (Character character in Characters) character.WriteToStream(stream);
             UnknownUnusedCharacter.WriteToStream(stream);
             //...

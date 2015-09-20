@@ -128,13 +128,13 @@
             this.gbAchievements = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbGuildCards = new EO4SaveEdit.ListBoxEx();
-            this.icmbRegCharacterPortrait = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait5 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait4 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait3 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait2 = new EO4SaveEdit.ImageComboBox();
-            this.icmbCharaListPortrait1 = new EO4SaveEdit.ImageComboBox();
+            this.lbGuildCards = new EO4SaveEdit.Controls.ListBoxEx();
+            this.icmbRegCharacterPortrait = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait5 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait4 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait3 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait2 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait1 = new EO4SaveEdit.Controls.ImageComboBox();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel4)).BeginInit();
@@ -1334,7 +1334,7 @@
 
         #endregion
 
-        private ListBoxEx lbGuildCards;
+        private EO4SaveEdit.Controls.ListBoxEx lbGuildCards;
         private System.Windows.Forms.GroupBox gbCharaList;
         private System.Windows.Forms.TextBox txtCharaListName1;
         private System.Windows.Forms.Label lblCharaListName;
@@ -1430,14 +1430,14 @@
         private System.Windows.Forms.TextBox txtRegCharacterCurrentTP;
         private System.Windows.Forms.Label lblRegCharacterCurrentHP;
         private System.Windows.Forms.TextBox txtRegCharacterCurrentHP;
-        private ImageComboBox icmbCharaListPortrait1;
-        private ImageComboBox icmbCharaListPortrait5;
-        private ImageComboBox icmbCharaListPortrait4;
-        private ImageComboBox icmbCharaListPortrait3;
-        private ImageComboBox icmbCharaListPortrait2;
+        private EO4SaveEdit.Controls.ImageComboBox icmbCharaListPortrait1;
+        private EO4SaveEdit.Controls.ImageComboBox icmbCharaListPortrait5;
+        private EO4SaveEdit.Controls.ImageComboBox icmbCharaListPortrait4;
+        private EO4SaveEdit.Controls.ImageComboBox icmbCharaListPortrait3;
+        private EO4SaveEdit.Controls.ImageComboBox icmbCharaListPortrait2;
         private System.Windows.Forms.Label lblCharaListPortrait;
         private System.Windows.Forms.Label lblRegCharacterPortrait;
-        private ImageComboBox icmbRegCharacterPortrait;
+        private EO4SaveEdit.Controls.ImageComboBox icmbRegCharacterPortrait;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }

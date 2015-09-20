@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace EO4SaveEdit
+namespace EO4SaveEdit.Controls
 {
     public class ListBoxEx : ListBox
     {

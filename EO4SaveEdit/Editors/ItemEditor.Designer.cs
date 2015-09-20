@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvStorage = new EO4SaveEdit.DataGridViewEx();
+            this.dgvStorage = new EO4SaveEdit.Controls.DataGridViewEx();
             this.Item = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvKeyItems = new EO4SaveEdit.DataGridViewEx();
+            this.dgvKeyItems = new EO4SaveEdit.Controls.DataGridViewEx();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgvInventory = new EO4SaveEdit.DataGridViewEx();
+            this.dgvInventory = new EO4SaveEdit.Controls.DataGridViewEx();
             this.ItemColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.gbOnHand = new System.Windows.Forms.GroupBox();
             this.gbKeyItems = new System.Windows.Forms.GroupBox();
@@ -220,11 +220,11 @@
 
         #endregion
 
-        private DataGridViewEx dgvInventory;
+        private EO4SaveEdit.Controls.DataGridViewEx dgvInventory;
         private System.Windows.Forms.DataGridViewComboBoxColumn ItemColumn;
-        private DataGridViewEx dgvKeyItems;
+        private EO4SaveEdit.Controls.DataGridViewEx dgvKeyItems;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private DataGridViewEx dgvStorage;
+        private EO4SaveEdit.Controls.DataGridViewEx dgvStorage;
         private System.Windows.Forms.DataGridViewComboBoxColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.GroupBox gbOnHand;

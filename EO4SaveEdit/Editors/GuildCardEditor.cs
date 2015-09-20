@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using EO4SaveEdit.Controls;
 using EO4SaveEdit.Extensions;
 using EO4SaveEdit.FileHandlers;
 

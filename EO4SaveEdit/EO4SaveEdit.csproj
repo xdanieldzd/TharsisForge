@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataGridViewEx.cs">
+    <Compile Include="Controls\DataGridViewEx.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Editors\CharacterEditor.cs">
@@ -115,15 +115,18 @@
     <Compile Include="Editors\GuildCardEditor.Designer.cs">
       <DependentUpon>GuildCardEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageComboBox.cs">
+    <Compile Include="Controls\ImageComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ImageHelper.cs" />
-    <Compile Include="ListBoxEx.cs">
+    <Compile Include="Controls\ListBoxEx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PanelEx.cs">
+    <Compile Include="Controls\PanelEx.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SimpleProgressBar.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="RomFSDataDumper.cs" />
     <Compile Include="Extensions\TextBoxExtensions.cs" />
@@ -136,6 +139,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlHelper.cs" />
+    <EmbeddedResource Include="Controls\SimpleProgressBar.resx">
+      <DependentUpon>SimpleProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editors\CharacterEditor.resx">
       <DependentUpon>CharacterEditor.cs</DependentUpon>
     </EmbeddedResource>

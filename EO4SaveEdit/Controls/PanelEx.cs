@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EO4SaveEdit
+namespace EO4SaveEdit.Controls
 {
-    class PanelEx : Panel
+    public class PanelEx : Panel
     {
         public PanelEx()
             : base()
