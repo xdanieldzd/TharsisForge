@@ -129,7 +129,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="RomFSDataDumper.cs" />
-    <Compile Include="Extensions\TextBoxExtensions.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
