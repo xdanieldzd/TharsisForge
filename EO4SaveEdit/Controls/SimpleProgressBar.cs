@@ -84,6 +84,11 @@ namespace EO4SaveEdit.Controls
             barRenderer = new VisualStyleRenderer("PROGRESS", 5, 0);
         }
 
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            //
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             if (!ProgressBarRenderer.IsSupported) throw new Exception("ProgressBarRenderer not supported");

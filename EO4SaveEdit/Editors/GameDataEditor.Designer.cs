@@ -28,157 +28,194 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.nudTimeYear = new System.Windows.Forms.NumericUpDown();
+            this.lblTimeYear = new System.Windows.Forms.Label();
+            this.cmbTimeMonth = new System.Windows.Forms.ComboBox();
+            this.lblTimeMonth = new System.Windows.Forms.Label();
+            this.nudTimeDay = new System.Windows.Forms.NumericUpDown();
+            this.lblTimeDay = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.simpleProgressBar1 = new EO4SaveEdit.Controls.SimpleProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.lblBurstBurst = new System.Windows.Forms.Label();
+            this.nudBurstValue = new System.Windows.Forms.NumericUpDown();
+            this.lblBurstPointDisplay = new System.Windows.Forms.Label();
+            this.gbTime = new System.Windows.Forms.GroupBox();
+            this.gbBurst = new System.Windows.Forms.GroupBox();
+            this.spbBurstGauge = new EO4SaveEdit.Controls.SimpleProgressBar();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTimeYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTimeDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBurstValue)).BeginInit();
+            this.gbTime.SuspendLayout();
+            this.gbBurst.SuspendLayout();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // nudTimeYear
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(82, 3);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 1;
+            this.nudTimeYear.Location = new System.Drawing.Point(56, 19);
+            this.nudTimeYear.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.nudTimeYear.Name = "nudTimeYear";
+            this.nudTimeYear.Size = new System.Drawing.Size(60, 20);
+            this.nudTimeYear.TabIndex = 1;
             // 
-            // label2
+            // lblTimeYear
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Year:";
+            this.lblTimeYear.AutoSize = true;
+            this.lblTimeYear.Location = new System.Drawing.Point(6, 21);
+            this.lblTimeYear.Name = "lblTimeYear";
+            this.lblTimeYear.Size = new System.Drawing.Size(32, 13);
+            this.lblTimeYear.TabIndex = 2;
+            this.lblTimeYear.Text = "Year:";
+            this.lblTimeYear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
+            // cmbTimeMonth
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(82, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cmbTimeMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTimeMonth.FormattingEnabled = true;
+            this.cmbTimeMonth.Location = new System.Drawing.Point(182, 19);
+            this.cmbTimeMonth.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.cmbTimeMonth.Name = "cmbTimeMonth";
+            this.cmbTimeMonth.Size = new System.Drawing.Size(74, 21);
+            this.cmbTimeMonth.TabIndex = 3;
             // 
-            // label3
+            // lblTimeMonth
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Month:";
+            this.lblTimeMonth.AutoSize = true;
+            this.lblTimeMonth.Location = new System.Drawing.Point(136, 22);
+            this.lblTimeMonth.Name = "lblTimeMonth";
+            this.lblTimeMonth.Size = new System.Drawing.Size(40, 13);
+            this.lblTimeMonth.TabIndex = 4;
+            this.lblTimeMonth.Text = "Month:";
+            this.lblTimeMonth.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numericUpDown2
+            // nudTimeDay
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(83, 56);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 5;
+            this.nudTimeDay.Location = new System.Drawing.Point(309, 19);
+            this.nudTimeDay.Name = "nudTimeDay";
+            this.nudTimeDay.Size = new System.Drawing.Size(60, 20);
+            this.nudTimeDay.TabIndex = 5;
             // 
-            // label4
+            // lblTimeDay
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Day:";
+            this.lblTimeDay.AutoSize = true;
+            this.lblTimeDay.Location = new System.Drawing.Point(274, 21);
+            this.lblTimeDay.Name = "lblTimeDay";
+            this.lblTimeDay.Size = new System.Drawing.Size(29, 13);
+            this.lblTimeDay.TabIndex = 6;
+            this.lblTimeDay.Text = "Day:";
+            this.lblTimeDay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(450, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(384, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(282, 184);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // label1
+            // lblBurstBurst
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Burst:";
+            this.lblBurstBurst.AutoSize = true;
+            this.lblBurstBurst.Location = new System.Drawing.Point(6, 21);
+            this.lblBurstBurst.Margin = new System.Windows.Forms.Padding(3, 0, 10, 0);
+            this.lblBurstBurst.Name = "lblBurstBurst";
+            this.lblBurstBurst.Size = new System.Drawing.Size(37, 13);
+            this.lblBurstBurst.TabIndex = 8;
+            this.lblBurstBurst.Text = "Value:";
             // 
-            // numericUpDown3
+            // nudBurstValue
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(83, 82);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.nudBurstValue.Location = new System.Drawing.Point(56, 19);
+            this.nudBurstValue.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 9;
+            this.nudBurstValue.Name = "nudBurstValue";
+            this.nudBurstValue.Size = new System.Drawing.Size(80, 20);
+            this.nudBurstValue.TabIndex = 9;
             // 
-            // label5
+            // lblBurstPointDisplay
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(209, 84);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "---";
+            this.lblBurstPointDisplay.AutoSize = true;
+            this.lblBurstPointDisplay.Location = new System.Drawing.Point(197, 21);
+            this.lblBurstPointDisplay.Name = "lblBurstPointDisplay";
+            this.lblBurstPointDisplay.Size = new System.Drawing.Size(16, 13);
+            this.lblBurstPointDisplay.TabIndex = 10;
+            this.lblBurstPointDisplay.Text = "---";
             // 
-            // simpleProgressBar1
+            // gbTime
             // 
-            this.simpleProgressBar1.Location = new System.Drawing.Point(231, 82);
-            this.simpleProgressBar1.Name = "simpleProgressBar1";
-            this.simpleProgressBar1.Size = new System.Drawing.Size(120, 20);
-            this.simpleProgressBar1.TabIndex = 11;
+            this.gbTime.Controls.Add(this.nudTimeYear);
+            this.gbTime.Controls.Add(this.nudTimeDay);
+            this.gbTime.Controls.Add(this.cmbTimeMonth);
+            this.gbTime.Controls.Add(this.lblTimeYear);
+            this.gbTime.Controls.Add(this.lblTimeDay);
+            this.gbTime.Controls.Add(this.lblTimeMonth);
+            this.gbTime.Location = new System.Drawing.Point(3, 3);
+            this.gbTime.Name = "gbTime";
+            this.gbTime.Size = new System.Drawing.Size(375, 50);
+            this.gbTime.TabIndex = 12;
+            this.gbTime.TabStop = false;
+            this.gbTime.Text = "Time";
+            // 
+            // gbBurst
+            // 
+            this.gbBurst.Controls.Add(this.nudBurstValue);
+            this.gbBurst.Controls.Add(this.lblBurstBurst);
+            this.gbBurst.Controls.Add(this.spbBurstGauge);
+            this.gbBurst.Controls.Add(this.lblBurstPointDisplay);
+            this.gbBurst.Location = new System.Drawing.Point(3, 59);
+            this.gbBurst.Name = "gbBurst";
+            this.gbBurst.Size = new System.Drawing.Size(375, 50);
+            this.gbBurst.TabIndex = 13;
+            this.gbBurst.TabStop = false;
+            this.gbBurst.Text = "Burst Gauge";
+            // 
+            // spbBurstGauge
+            // 
+            this.spbBurstGauge.ForeColor = System.Drawing.Color.Red;
+            this.spbBurstGauge.Location = new System.Drawing.Point(219, 19);
+            this.spbBurstGauge.Maximum = 99;
+            this.spbBurstGauge.Name = "spbBurstGauge";
+            this.spbBurstGauge.Size = new System.Drawing.Size(150, 20);
+            this.spbBurstGauge.TabIndex = 11;
             // 
             // GameDataEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.simpleProgressBar1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gbBurst);
+            this.Controls.Add(this.gbTime);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
             this.Name = "GameDataEditor";
             this.Size = new System.Drawing.Size(750, 450);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTimeYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTimeDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBurstValue)).EndInit();
+            this.gbTime.ResumeLayout(false);
+            this.gbTime.PerformLayout();
+            this.gbBurst.ResumeLayout(false);
+            this.gbBurst.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown nudTimeYear;
+        private System.Windows.Forms.Label lblTimeYear;
+        private System.Windows.Forms.ComboBox cmbTimeMonth;
+        private System.Windows.Forms.Label lblTimeMonth;
+        private System.Windows.Forms.NumericUpDown nudTimeDay;
+        private System.Windows.Forms.Label lblTimeDay;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label5;
-        private EO4SaveEdit.Controls.SimpleProgressBar simpleProgressBar1;
+        private System.Windows.Forms.Label lblBurstBurst;
+        private System.Windows.Forms.NumericUpDown nudBurstValue;
+        private System.Windows.Forms.Label lblBurstPointDisplay;
+        private EO4SaveEdit.Controls.SimpleProgressBar spbBurstGauge;
+        private System.Windows.Forms.GroupBox gbTime;
+        private System.Windows.Forms.GroupBox gbBurst;
     }
 }

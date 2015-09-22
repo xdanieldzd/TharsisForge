@@ -33,13 +33,13 @@ namespace EO4SaveEdit.Editors
 
             this.Enabled = true;
 
-            numericUpDown1.SetBinding("Value", gameData, "CurrentYear");
-            comboBox1.DataSource = Mori4Game.MonthNames;
-            comboBox1.SetBinding("SelectedIndex", gameData, "CurrentMonth");
-            numericUpDown2.SetBinding("Value", gameData, "CurrentDay");
-            numericUpDown3.SetBinding("Value", gameData, "BurstValue");
-            label5.SetBinding("Text", gameData, "BurstPoints");
-            simpleProgressBar1.SetBinding("Value", gameData, "BurstGauge");
+            nudTimeYear.SetBinding("Value", gameData, "CurrentYear");
+            cmbTimeMonth.DataSource = Mori4Game.MonthNames;
+            cmbTimeMonth.SetBinding("SelectedIndex", gameData, "CurrentMonth");
+            nudTimeDay.SetBinding("Value", gameData, "CurrentDay");
+            nudBurstValue.SetBinding("Value", gameData, "BurstValue");
+            lblBurstPointDisplay.SetBinding("Text", gameData, "BurstPoints");
+            spbBurstGauge.SetBinding("Value", gameData, "BurstGauge");
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
