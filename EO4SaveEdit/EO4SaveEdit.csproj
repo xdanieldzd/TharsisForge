@@ -82,6 +82,12 @@
     <Compile Include="Editors\ItemEditor.Designer.cs">
       <DependentUpon>ItemEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\OptionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\OptionEditor.Designer.cs">
+      <DependentUpon>OptionEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editors\SkillEditorDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,12 +109,6 @@
       <DependentUpon>Mori4MapEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="FileHandlers\Mori4Option.cs" />
-    <Compile Include="FileHandlers\Mori4OptionEditor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FileHandlers\Mori4OptionEditor.Designer.cs">
-      <DependentUpon>Mori4OptionEditor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Editors\GuildCardEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,14 +157,14 @@
     <EmbeddedResource Include="Editors\ItemEditor.resx">
       <DependentUpon>ItemEditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editors\OptionEditor.resx">
+      <DependentUpon>OptionEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editors\SkillEditorDialog.resx">
       <DependentUpon>SkillEditorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileHandlers\Mori4MapEditor.resx">
       <DependentUpon>Mori4MapEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FileHandlers\Mori4OptionEditor.resx">
-      <DependentUpon>Mori4OptionEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\GuildCardEditor.resx">
       <DependentUpon>GuildCardEditor.cs</DependentUpon>
