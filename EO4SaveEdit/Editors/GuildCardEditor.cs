@@ -68,6 +68,10 @@ namespace EO4SaveEdit.Editors
             }
 
             lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
+
+#if !DEBUG
+            btnRegCharacterStatsEditor.Enabled = false;
+#endif
         }
 
         private void InitializeControls(GuildCard guildCard)
