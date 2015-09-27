@@ -14,4 +14,6 @@ Requirements
 
 Screenshots
 ===========
-![Tharsis Forge](http://i.imgur.com/oD4X3zF.png)
+![Tharsis Forge (Guild Card editor)](http://i.imgur.com/uptnbzF.png)
+![Tharsis Forge (Item editor)](http://i.imgur.com/eYqt1QX.png)
+![Tharsis Forge (Options editor)](http://i.imgur.com/7MhbCBq.png)
