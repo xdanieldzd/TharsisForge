@@ -14,7 +14,34 @@ namespace EO4SaveEdit.Editors
 {
     public partial class ItemEditor : UserControl
     {
+        public class ItemAdapter
+        {
+            Item item;
+            ItemAmount amount;
+
+            public ushort ItemID
+            {
+                get { return item.ItemID; }
+                set { item.ItemID = value; }
+            }
+
+            public byte Amount
+            {
+                get { return (amount != null ? amount.Amount : (byte)0); }
+                set { if (amount != null) amount.Amount = value; }
+            }
+
+            public bool HasAmount { get { return (amount != null); } }
+
+            public ItemAdapter(Item item, ItemAmount amount)
+            {
+                this.item = item;
+                this.amount = amount;
+            }
+        }
+
         Mori4Game gameData;
+        ItemAdapter[] inventoryItemAdapters, keyItemsItemAdapters, storageItemAdapters;
 
         public ItemEditor()
         {
@@ -36,32 +63,47 @@ namespace EO4SaveEdit.Editors
 
             this.Enabled = true;
 
-            InitializeDataGrid(dgvInventory, gameData.InventoryItems, null);
-            InitializeDataGrid(dgvKeyItems, gameData.KeyItems, null);
-            InitializeDataGrid(dgvStorage, gameData.StorageItems, gameData.StorageItemAmounts);
+            inventoryItemAdapters = new ItemAdapter[gameData.InventoryItems.Length];
+            for (int i = 0; i < inventoryItemAdapters.Length; i++) inventoryItemAdapters[i] = new ItemAdapter(gameData.InventoryItems[i], null);
+
+            keyItemsItemAdapters = new ItemAdapter[gameData.KeyItems.Length];
+            for (int i = 0; i < keyItemsItemAdapters.Length; i++) keyItemsItemAdapters[i] = new ItemAdapter(gameData.KeyItems[i], null);
+
+            storageItemAdapters = new ItemAdapter[gameData.StorageItems.Length];
+            for (int i = 0; i < storageItemAdapters.Length; i++) storageItemAdapters[i] = new ItemAdapter(gameData.StorageItems[i], gameData.StorageItemAmounts[i]);
+
+            InitializeDataGrid(dgvInventory, inventoryItemAdapters);
+            InitializeDataGrid(dgvKeyItems, keyItemsItemAdapters);
+            InitializeDataGrid(dgvStorage, storageItemAdapters);
         }
 
-        private void InitializeDataGrid(DataGridView dgv, Item[] items, byte[] amounts)
+        private void InitializeDataGrid(DataGridView dgv, ItemAdapter[] itemAdapters)
         {
             dgv.AutoGenerateColumns = false;
 
-            DataGridViewComboBoxColumn itemColumn = (dgv.Columns[0] as DataGridViewComboBoxColumn);
-            itemColumn.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+            DataGridViewComboBoxColumn itemColumn = new DataGridViewComboBoxColumn();
+            itemColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            itemColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            itemColumn.HeaderText = "Item";
             itemColumn.DisplayMember = "Value";
             itemColumn.ValueMember = "Key";
+            itemColumn.DataPropertyName = "ItemID";
+            itemColumn.DataSource = new BindingSource(XmlHelper.ItemNames, null);
 
-            DataTable table = new DataTable("SkillTable");
-            table.Columns.Add("Item", typeof(ushort));
-            if (amounts != null) table.Columns.Add("Amount", typeof(byte));
-            for (int i = 0; i < items.Length; i++)
-            {
-                DataRow row = table.NewRow();
-                row["Item"] = items[i].ItemID;
-                if (amounts != null) row["Amount"] = amounts[i];
-                table.Rows.Add(row);
-            }
-            table.AcceptChanges();
-            dgv.DataSource = table;
+            DataGridViewTextBoxColumn amountColumn = new DataGridViewTextBoxColumn();
+            amountColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            amountColumn.HeaderText = "Amount";
+            amountColumn.Width = 50;
+            amountColumn.DataPropertyName = "Amount";
+
+            if (!itemAdapters[0].HasAmount) amountColumn.Visible = false;
+
+            dgv.Columns.Clear();
+            dgv.Columns.Add(itemColumn);
+            dgv.Columns.Add(amountColumn);
+
+            BindingSource bindingSource = new BindingSource(itemAdapters, null);
+            dgv.DataSource = bindingSource;
         }
 
         private void dgvStorage_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)

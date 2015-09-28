@@ -64,6 +64,7 @@ namespace EO4SaveEdit
             StringBuilder builder = new StringBuilder();
 
             builder.AppendFormat("{0} v{1}.{2}", Application.ProductName, programVersion.Major, programVersion.Minor);
+            if (programVersion.Build != 0) builder.AppendFormat(".{0}", programVersion.Build);
             if (dataFiles != null && dataFiles.Count != 0) builder.AppendFormat(" - [{0}]", Properties.Settings.Default.LastFolder);
 
             this.Text = builder.ToString();
@@ -109,6 +110,7 @@ namespace EO4SaveEdit
             StringBuilder builder = new StringBuilder();
 
             builder.AppendFormat("{0} v{1}.{2}", Application.ProductName, programVersion.Major, programVersion.Minor);
+            if (programVersion.Build != 0) builder.AppendFormat(".{0}", programVersion.Build);
             builder.Append(" - ");
             builder.AppendLine(Assembly.GetExecutingAssembly().GetAttribute<AssemblyDescriptionAttribute>().Description);
             builder.AppendLine();

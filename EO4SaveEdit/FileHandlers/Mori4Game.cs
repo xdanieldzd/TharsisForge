@@ -97,6 +97,23 @@ namespace EO4SaveEdit.FileHandlers
         }
     }
 
+    public class ItemAmount : DataChunk
+    {
+        public byte Amount { get; set; }
+
+        public ItemAmount(Stream stream) { this.ReadFromStream(stream); }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            Amount = (byte)stream.ReadByte();
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            stream.WriteByte(Amount);
+        }
+    }
+
     public class Stats : DataChunk
     {
         public uint HP { get; set; }
@@ -400,7 +417,7 @@ namespace EO4SaveEdit.FileHandlers
         public Item[] InventoryItems { get; set; }
         public Item[] KeyItems { get; set; }
         public Item[] StorageItems { get; set; }
-        public byte[] StorageItemAmounts { get; set; }
+        public ItemAmount[] StorageItemAmounts { get; set; }
         //...
 
         public int CurrentYear
@@ -497,8 +514,8 @@ namespace EO4SaveEdit.FileHandlers
             for (int i = 0; i < KeyItems.Length; i++) KeyItems[i] = new Item(stream);
             StorageItems = new Item[99];
             for (int i = 0; i < StorageItems.Length; i++) StorageItems[i] = new Item(stream);
-            StorageItemAmounts = new byte[99];
-            for (int i = 0; i < StorageItemAmounts.Length; i++) StorageItemAmounts[i] = reader.ReadByte();
+            StorageItemAmounts = new ItemAmount[99];
+            for (int i = 0; i < StorageItemAmounts.Length; i++) StorageItemAmounts[i] = new ItemAmount(stream);
             //...
         }
 
@@ -543,7 +560,7 @@ namespace EO4SaveEdit.FileHandlers
             foreach (Item inventoryItem in InventoryItems) inventoryItem.WriteToStream(stream);
             foreach (Item keyItem in KeyItems) keyItem.WriteToStream(stream);
             foreach (Item storageItem in StorageItems) storageItem.WriteToStream(stream);
-            writer.Write(StorageItemAmounts);
+            foreach (ItemAmount storageItemAmount in StorageItemAmounts) storageItemAmount.WriteToStream(stream);
             //...
         }
     }

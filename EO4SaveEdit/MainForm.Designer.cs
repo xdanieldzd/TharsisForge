@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tpItems = new System.Windows.Forms.TabPage();
             this.tpGameData = new System.Windows.Forms.TabPage();
             this.tpGuildCards = new System.Windows.Forms.TabPage();
-            this.tpItems = new System.Windows.Forms.TabPage();
             this.tpCharas = new System.Windows.Forms.TabPage();
             this.tpMaps = new System.Windows.Forms.TabPage();
             this.tpOptions = new System.Windows.Forms.TabPage();
@@ -48,16 +48,16 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.itemEditor1 = new EO4SaveEdit.Editors.ItemEditor();
             this.gameDataEditor1 = new EO4SaveEdit.Editors.GameDataEditor();
             this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
-            this.itemEditor1 = new EO4SaveEdit.Editors.ItemEditor();
             this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
             this.m4Map = new EO4SaveEdit.FileHandlers.Mori4MapEditor();
             this.optionEditor1 = new EO4SaveEdit.Editors.OptionEditor();
             this.tabControl1.SuspendLayout();
+            this.tpItems.SuspendLayout();
             this.tpGameData.SuspendLayout();
             this.tpGuildCards.SuspendLayout();
-            this.tpItems.SuspendLayout();
             this.tpCharas.SuspendLayout();
             this.tpMaps.SuspendLayout();
             this.tpOptions.SuspendLayout();
@@ -81,6 +81,17 @@
             this.tabControl1.Size = new System.Drawing.Size(864, 536);
             this.tabControl1.TabIndex = 0;
             // 
+            // tpItems
+            // 
+            this.tpItems.Controls.Add(this.itemEditor1);
+            this.tpItems.Location = new System.Drawing.Point(4, 22);
+            this.tpItems.Name = "tpItems";
+            this.tpItems.Padding = new System.Windows.Forms.Padding(3);
+            this.tpItems.Size = new System.Drawing.Size(856, 510);
+            this.tpItems.TabIndex = 4;
+            this.tpItems.Text = "Items";
+            this.tpItems.UseVisualStyleBackColor = true;
+            // 
             // tpGameData
             // 
             this.tpGameData.Controls.Add(this.gameDataEditor1);
@@ -102,17 +113,6 @@
             this.tpGuildCards.TabIndex = 3;
             this.tpGuildCards.Text = "Guild Cards";
             this.tpGuildCards.UseVisualStyleBackColor = true;
-            // 
-            // tpItems
-            // 
-            this.tpItems.Controls.Add(this.itemEditor1);
-            this.tpItems.Location = new System.Drawing.Point(4, 22);
-            this.tpItems.Name = "tpItems";
-            this.tpItems.Padding = new System.Windows.Forms.Padding(3);
-            this.tpItems.Size = new System.Drawing.Size(856, 510);
-            this.tpItems.TabIndex = 4;
-            this.tpItems.Text = "Items";
-            this.tpItems.UseVisualStyleBackColor = true;
             // 
             // tpCharas
             // 
@@ -243,6 +243,15 @@
             this.tsslStatus.Size = new System.Drawing.Size(22, 17);
             this.tsslStatus.Text = "---";
             // 
+            // itemEditor1
+            // 
+            this.itemEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemEditor1.Enabled = false;
+            this.itemEditor1.Location = new System.Drawing.Point(3, 3);
+            this.itemEditor1.Name = "itemEditor1";
+            this.itemEditor1.Size = new System.Drawing.Size(850, 504);
+            this.itemEditor1.TabIndex = 0;
+            // 
             // gameDataEditor1
             // 
             this.gameDataEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -260,15 +269,6 @@
             this.guildCardEditor1.Name = "guildCardEditor1";
             this.guildCardEditor1.Size = new System.Drawing.Size(850, 504);
             this.guildCardEditor1.TabIndex = 0;
-            // 
-            // itemEditor1
-            // 
-            this.itemEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemEditor1.Enabled = false;
-            this.itemEditor1.Location = new System.Drawing.Point(3, 3);
-            this.itemEditor1.Name = "itemEditor1";
-            this.itemEditor1.Size = new System.Drawing.Size(850, 504);
-            this.itemEditor1.TabIndex = 0;
             // 
             // characterEditor1
             // 
@@ -312,9 +312,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.tabControl1.ResumeLayout(false);
+            this.tpItems.ResumeLayout(false);
             this.tpGameData.ResumeLayout(false);
             this.tpGuildCards.ResumeLayout(false);
-            this.tpItems.ResumeLayout(false);
             this.tpCharas.ResumeLayout(false);
             this.tpMaps.ResumeLayout(false);
             this.tpOptions.ResumeLayout(false);
