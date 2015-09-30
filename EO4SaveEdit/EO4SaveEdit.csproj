@@ -94,6 +94,12 @@
     <Compile Include="Editors\SkillEditorDialog.Designer.cs">
       <DependentUpon>SkillEditorDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\StatsEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\StatsEditorDialog.Designer.cs">
+      <DependentUpon>StatsEditorDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\ControlExtensions.cs" />
     <Compile Include="Extensions\GeneralExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\SkillEditorDialog.resx">
       <DependentUpon>SkillEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\StatsEditorDialog.resx">
+      <DependentUpon>StatsEditorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileHandlers\Mori4MapEditor.resx">
       <DependentUpon>Mori4MapEditor.cs</DependentUpon>

@@ -68,10 +68,6 @@ namespace EO4SaveEdit.Editors
             }
 
             lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
-
-#if !DEBUG
-            btnRegCharacterStatsEditor.Enabled = false;
-#endif
         }
 
         private void InitializeControls(GuildCard guildCard)
@@ -193,15 +189,6 @@ namespace EO4SaveEdit.Editors
             }
         }
 
-        private void btnRegCharacterSkillEditor_Click(object sender, EventArgs e)
-        {
-            SkillEditorDialog sed = new SkillEditorDialog(
-                currentGuildCard.GuildCardCharacter.Class, currentGuildCard.GuildCardCharacter.MainSkillLevels,
-                currentGuildCard.GuildCardCharacter.Subclass, currentGuildCard.GuildCardCharacter.SubSkillLevels);
-
-            sed.ShowDialog();
-        }
-
         private void btnRegCharacterEditWeaponEffect_Click(object sender, EventArgs e)
         {
             EffectEditorDialog eed = new EffectEditorDialog(currentGuildCard.GuildCardCharacter.WeaponSlot);
@@ -226,28 +213,19 @@ namespace EO4SaveEdit.Editors
             eed.ShowDialog();
         }
 
+        private void btnRegCharacterSkillEditor_Click(object sender, EventArgs e)
+        {
+            SkillEditorDialog sed = new SkillEditorDialog(
+                currentGuildCard.GuildCardCharacter.Class, currentGuildCard.GuildCardCharacter.MainSkillLevels,
+                currentGuildCard.GuildCardCharacter.Subclass, currentGuildCard.GuildCardCharacter.SubSkillLevels);
+
+            sed.ShowDialog();
+        }
+
         private void btnRegCharacterStatsEditor_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-
-            // TODO
-
-            currentGuildCard.GuildCardCharacter.CumulativeStats.HP = 999;
-            currentGuildCard.GuildCardCharacter.CumulativeStats.TP = 999;
-            currentGuildCard.GuildCardCharacter.CumulativeStats.STR = 999;
-            currentGuildCard.GuildCardCharacter.CumulativeStats.VIT = 999;
-            currentGuildCard.GuildCardCharacter.CumulativeStats.AGI = 999;
-            currentGuildCard.GuildCardCharacter.CumulativeStats.LUC = 999;
-            currentGuildCard.GuildCardCharacter.CumulativeStats.TEC = 999;
-
-            currentGuildCard.GuildCardCharacter.WeaponSlot.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.WeaponSlot.EffectSlots[i] = ForgeEffect.HP;
-            currentGuildCard.GuildCardCharacter.EquipmentSlot.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.EquipmentSlot.EffectSlots[i] = ForgeEffect.HP;
-            currentGuildCard.GuildCardCharacter.ArmorSlot1.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot1.EffectSlots[i] = ForgeEffect.HP;
-            currentGuildCard.GuildCardCharacter.ArmorSlot2.NumForgeableSlots = 8;
-            for (int i = 0; i < 8; i++) currentGuildCard.GuildCardCharacter.ArmorSlot2.EffectSlots[i] = ForgeEffect.HP;
+            StatsEditorDialog sted = new StatsEditorDialog(currentGuildCard.GuildCardCharacter.CumulativeStats);
+            sted.ShowDialog();
         }
     }
 }

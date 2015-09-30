@@ -13,22 +13,20 @@ namespace EO4SaveEdit.Editors
 {
     public partial class SkillEditorDialog : Form
     {
-        public byte[] MainSkillLevels { get; private set; }
-        public byte[] SubSkillLevels { get; private set; }
-
         Class mainClass, subClass;
+        byte[] mainSkillLevels, subSkillLevels;
 
         public SkillEditorDialog(Class mainClass, byte[] mainSkillLevels, Class subClass, byte[] subSkillLevels)
         {
             InitializeComponent();
 
-            this.MainSkillLevels = mainSkillLevels;
-            this.SubSkillLevels = subSkillLevels;
+            this.mainSkillLevels = mainSkillLevels;
+            this.subSkillLevels = subSkillLevels;
             this.mainClass = mainClass;
             this.subClass = subClass;
 
             gbSkillsMainClass.Text = string.Format("Main Class ({0})", mainClass);
-            InitializeSkillDataGrid(dgvSkillsMainClass, mainClass, MainSkillLevels);
+            InitializeSkillDataGrid(dgvSkillsMainClass, mainClass, mainSkillLevels);
 
             dgvSkillsMainClass.Columns[0].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
             dgvSkillsMainClass.Columns[2].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
@@ -36,7 +34,7 @@ namespace EO4SaveEdit.Editors
             if (subClass != Class.None)
             {
                 gbSkillsSubclass.Text = string.Format("Subclass ({0})", subClass);
-                InitializeSkillDataGrid(dgvSkillsSubclass, subClass, SubSkillLevels);
+                InitializeSkillDataGrid(dgvSkillsSubclass, subClass, subSkillLevels);
 
                 dgvSkillsSubclass.Columns[0].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
                 dgvSkillsSubclass.Columns[2].DefaultCellStyle.ForeColor = SystemColors.ControlDark;
@@ -76,8 +74,8 @@ namespace EO4SaveEdit.Editors
 
         private void dgvSkillsMainClass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < MainSkillLevels.Length && e.ColumnIndex == 1)
-                MainSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+            if (e.RowIndex >= 0 && e.RowIndex < mainSkillLevels.Length && e.ColumnIndex == 1)
+                mainSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
         }
 
         private void dgvSkillsMainClass_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -87,14 +85,14 @@ namespace EO4SaveEdit.Editors
 
         private void dgvSkillsSubclass_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < SubSkillLevels.Length && e.ColumnIndex == 1)
+            if (e.RowIndex >= 0 && e.RowIndex < subSkillLevels.Length && e.ColumnIndex == 1)
                 ValidateSkillLevel((sender as DataGridView), e, subClass);
         }
 
         private void dgvSkillsSubclass_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < SubSkillLevels.Length && e.ColumnIndex == 1)
-                SubSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+            if (e.RowIndex >= 0 && e.RowIndex < subSkillLevels.Length && e.ColumnIndex == 1)
+                subSkillLevels[e.RowIndex] = (byte)(sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
         }
 
         private void dgvSkillsSubclass_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -107,7 +105,7 @@ namespace EO4SaveEdit.Editors
             bool cancel = false;
             string errorText = string.Empty;
 
-            if (e.RowIndex < 0 || e.RowIndex >= MainSkillLevels.Length)
+            if (e.RowIndex < 0 || e.RowIndex >= mainSkillLevels.Length)
             {
                 cancel = true;
                 errorText = "Invalid skill selected.";

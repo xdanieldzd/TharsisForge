@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.gbCharaList = new System.Windows.Forms.GroupBox();
             this.lblCharaListPortrait = new System.Windows.Forms.Label();
+            this.icmbCharaListPortrait5 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait4 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait3 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait2 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait1 = new EO4SaveEdit.Controls.ImageComboBox();
             this.cmbCharaListClass5 = new System.Windows.Forms.ComboBox();
             this.nudCharaListLevel5 = new System.Windows.Forms.NumericUpDown();
             this.txtCharaListName5 = new System.Windows.Forms.TextBox();
@@ -99,6 +104,7 @@
             this.chkAchievementVesselAlly = new System.Windows.Forms.CheckBox();
             this.gbRegCharacter = new System.Windows.Forms.GroupBox();
             this.lblRegCharacterPortrait = new System.Windows.Forms.Label();
+            this.icmbRegCharacterPortrait = new EO4SaveEdit.Controls.ImageComboBox();
             this.lblRegCharacterCurrentTP = new System.Windows.Forms.Label();
             this.txtRegCharacterCurrentTP = new System.Windows.Forms.TextBox();
             this.lblRegCharacterCurrentHP = new System.Windows.Forms.Label();
@@ -126,15 +132,9 @@
             this.nudRegCharacterLevel = new System.Windows.Forms.NumericUpDown();
             this.txtRegCharacterName = new System.Windows.Forms.TextBox();
             this.gbAchievements = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbGuildCards = new EO4SaveEdit.Controls.ListBoxEx();
-            this.icmbRegCharacterPortrait = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait5 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait4 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait3 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait2 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait1 = new EO4SaveEdit.Controls.ImageComboBox();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel4)).BeginInit();
@@ -156,8 +156,8 @@
             this.gbRegCharacter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRegCharacterLevel)).BeginInit();
             this.gbAchievements.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbCharaList
@@ -203,6 +203,56 @@
             this.lblCharaListPortrait.Size = new System.Drawing.Size(43, 19);
             this.lblCharaListPortrait.TabIndex = 3;
             this.lblCharaListPortrait.Text = "Portrait:";
+            // 
+            // icmbCharaListPortrait5
+            // 
+            this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait5.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(253, 146);
+            this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
+            this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait5.TabIndex = 23;
+            // 
+            // icmbCharaListPortrait4
+            // 
+            this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait4.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(253, 119);
+            this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
+            this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait4.TabIndex = 19;
+            // 
+            // icmbCharaListPortrait3
+            // 
+            this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait3.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(253, 92);
+            this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
+            this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait3.TabIndex = 15;
+            // 
+            // icmbCharaListPortrait2
+            // 
+            this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait2.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(253, 65);
+            this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
+            this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait2.TabIndex = 11;
+            // 
+            // icmbCharaListPortrait1
+            // 
+            this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait1.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(253, 38);
+            this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
+            this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait1.TabIndex = 7;
             // 
             // cmbCharaListClass5
             // 
@@ -915,6 +965,16 @@
             this.lblRegCharacterPortrait.TabIndex = 12;
             this.lblRegCharacterPortrait.Text = "Portrait:";
             // 
+            // icmbRegCharacterPortrait
+            // 
+            this.icmbRegCharacterPortrait.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbRegCharacterPortrait.DropDownItemHeight = 18;
+            this.icmbRegCharacterPortrait.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbRegCharacterPortrait.Location = new System.Drawing.Point(74, 98);
+            this.icmbRegCharacterPortrait.Name = "icmbRegCharacterPortrait";
+            this.icmbRegCharacterPortrait.Size = new System.Drawing.Size(100, 21);
+            this.icmbRegCharacterPortrait.TabIndex = 13;
+            // 
             // lblRegCharacterCurrentTP
             // 
             this.lblRegCharacterCurrentTP.AutoSize = true;
@@ -1176,26 +1236,6 @@
             this.gbAchievements.TabStop = false;
             this.gbAchievements.Text = "Achievements";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lbGuildCards, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbAchievements, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.gbGuildInfo, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbRegCharacter, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.gbCharaList, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 500);
-            this.tableLayoutPanel1.TabIndex = 23;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1218,6 +1258,26 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 50);
             this.tableLayoutPanel2.TabIndex = 23;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lbGuildCards, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbAchievements, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gbGuildInfo, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbRegCharacter, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gbCharaList, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 500);
+            this.tableLayoutPanel1.TabIndex = 23;
+            // 
             // lbGuildCards
             // 
             this.lbGuildCards.AlternateBackColorOnDraw = true;
@@ -1232,66 +1292,6 @@
             this.lbGuildCards.TabIndex = 0;
             this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
             this.lbGuildCards.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbGuildCards_Format);
-            // 
-            // icmbRegCharacterPortrait
-            // 
-            this.icmbRegCharacterPortrait.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbRegCharacterPortrait.DropDownItemHeight = 18;
-            this.icmbRegCharacterPortrait.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbRegCharacterPortrait.Location = new System.Drawing.Point(74, 98);
-            this.icmbRegCharacterPortrait.Name = "icmbRegCharacterPortrait";
-            this.icmbRegCharacterPortrait.Size = new System.Drawing.Size(100, 21);
-            this.icmbRegCharacterPortrait.TabIndex = 13;
-            // 
-            // icmbCharaListPortrait5
-            // 
-            this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait5.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(253, 146);
-            this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
-            this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait5.TabIndex = 23;
-            // 
-            // icmbCharaListPortrait4
-            // 
-            this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait4.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(253, 119);
-            this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
-            this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait4.TabIndex = 19;
-            // 
-            // icmbCharaListPortrait3
-            // 
-            this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait3.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(253, 92);
-            this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
-            this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait3.TabIndex = 15;
-            // 
-            // icmbCharaListPortrait2
-            // 
-            this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait2.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(253, 65);
-            this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
-            this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait2.TabIndex = 11;
-            // 
-            // icmbCharaListPortrait1
-            // 
-            this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait1.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(253, 38);
-            this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
-            this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait1.TabIndex = 7;
             // 
             // GuildCardEditor
             // 
@@ -1325,9 +1325,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudRegCharacterLevel)).EndInit();
             this.gbAchievements.ResumeLayout(false);
             this.gbAchievements.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
