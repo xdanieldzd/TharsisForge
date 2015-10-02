@@ -121,7 +121,7 @@ namespace EO4SaveEdit
 
         private void LoadSaveData(string path)
         {
-            m4Map.Initialize(null);
+            mapEditor1.Initialize(null);
             optionEditor1.Initialize(null);
             characterEditor1.Initialize(null);
             guildCardEditor1.Initialize(null);
@@ -153,7 +153,7 @@ namespace EO4SaveEdit
             }
             else
             {
-                m4Map.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Map) as Mori4Map);
+                mapEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Map) as Mori4Map);
                 optionEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Option) as Mori4Option);
                 characterEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4Game) as Mori4Game);
                 guildCardEditor1.Initialize(dataFiles.FirstOrDefault(x => x is Mori4GdCard) as Mori4GdCard);

@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using EO4SaveEdit.Editors;
+using EO4SaveEdit.FileHandlers;
 
-namespace EO4SaveEdit.FileHandlers
+namespace EO4SaveEdit.Editors
 {
-    public partial class Mori4MapEditor : UserControl
+    public partial class MapEditor : UserControl
     {
         static readonly Color floorColorGreen = Color.FromArgb(16, 205, 115);
         static readonly Color floorColorBlue = Color.FromArgb(0, 139, 205);
@@ -25,8 +25,9 @@ namespace EO4SaveEdit.FileHandlers
 
         Dictionary<MapLayer, string> mapNameDict;
         MapLayer currentMap;
+        IMapPlaceable currentPlaceable;
 
-        public Mori4MapEditor()
+        public MapEditor()
         {
             InitializeComponent();
         }
@@ -157,6 +158,15 @@ namespace EO4SaveEdit.FileHandlers
                     ImageHelper.GetMapIconRect(MapObjectType.Note),
                     GraphicsUnit.Pixel);
             }
+
+            if (currentPlaceable != null)
+            {
+                using (Pen p = new Pen(Color.FromArgb(192, Color.Red), 2.0f))
+                {
+                    Point placeablePosition = currentPlaceable.GetPosition();
+                    e.Graphics.DrawRectangle(p, new Rectangle(placeablePosition.X * ImageHelper.MapTileSize, placeablePosition.Y * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize));
+                }
+            }
         }
 
         private void pbRender_MouseMove(object sender, MouseEventArgs e)
@@ -174,12 +184,12 @@ namespace EO4SaveEdit.FileHandlers
 
                 foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != MapObjectType.None && x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
                 {
-                    sb.AppendFormat("Object #{0}: {1}\n", Array.IndexOf(currentMap.Objects, mapObj), mapObj.Type);
+                    sb.AppendFormat("Object #{0}: {1}\n", Array.IndexOf(currentMap.Objects, mapObj) + 1, mapObj.Type);
                 }
 
                 foreach (MapNote mapNote in currentMap.Notes.Where(x => x.Description != string.Empty && x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
                 {
-                    sb.AppendFormat("Note #{0}: {1}\n", Array.IndexOf(currentMap.Notes, mapNote), mapNote.Description);
+                    sb.AppendFormat("Note #{0}: {1}\n", Array.IndexOf(currentMap.Notes, mapNote) + 1, mapNote.Description);
                 }
 
                 tip.Show(sb.ToString(), (sender as Control), e.X + 5, e.Y + 5, 2500);
@@ -195,6 +205,8 @@ namespace EO4SaveEdit.FileHandlers
         {
             currentMap = ((KeyValuePair<MapLayer, string>)(sender as ComboBox).SelectedItem).Key;
 
+            lbMapPlaceables.DataSource = currentMap.Objects.Cast<IMapPlaceable>().Concat(currentMap.Notes).ToList();
+
             pbRender.ClientSize = new System.Drawing.Size(currentMap.TilesYX.GetLength(1) * ImageHelper.MapTileSize, currentMap.TilesYX.GetLength(0) * ImageHelper.MapTileSize);
             pbRender.Invalidate();
         }
@@ -205,6 +217,34 @@ namespace EO4SaveEdit.FileHandlers
 
             HeaderEditorDialog hed = new HeaderEditorDialog(mapData.FileHeader);
             hed.ShowDialog();
+        }
+
+        private void lbMapPlaceables_Format(object sender, ListControlConvertEventArgs e)
+        {
+            if (e.DesiredType == typeof(string))
+            {
+                IMapPlaceable placeable = (e.ListItem as IMapPlaceable);
+                if (placeable is MapObject)
+                {
+                    MapObject mapObject = (placeable as MapObject);
+                    string description = mapObject.Type.ToString();
+                    if (MapObject.ObjectDescriptions.ContainsKey(mapObject.Type))
+                        description = MapObject.ObjectDescriptions[mapObject.Type];
+                    e.Value = string.Format("O #{0} (X:{1} Y:{2}): {3}", (Array.IndexOf(currentMap.Objects, mapObject) + 1), mapObject.XPosition, mapObject.YPosition, description);
+                }
+                else if (placeable is MapNote)
+                {
+                    MapNote mapNote = (placeable as MapNote);
+                    string note = (mapNote.Description == string.Empty ? "None" : mapNote.Description);
+                    e.Value = string.Format("N #{0} (X:{1} Y:{2}): {3}", (Array.IndexOf(currentMap.Notes, mapNote) + 1), mapNote.XPosition, mapNote.YPosition, note);
+                }
+            }
+        }
+
+        private void lbMapPlaceables_SelectedValueChanged(object sender, EventArgs e)
+        {
+            currentPlaceable = ((sender as ListBox).SelectedItem as IMapPlaceable);
+            pbRender.Invalidate();
         }
     }
 }

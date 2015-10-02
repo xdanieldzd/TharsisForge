@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Drawing;
 
 using EO4SaveEdit.Extensions;
 
@@ -129,9 +130,63 @@ namespace EO4SaveEdit.FileHandlers
         AutoArrowEast = 0xB7
     }
 
-    [System.Diagnostics.DebuggerDisplay("Type:{Type},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
-    public class MapObject : DataChunk
+    public interface IMapPlaceable
     {
+        Point GetPosition();
+    }
+
+    [System.Diagnostics.DebuggerDisplay("Type:{Type},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
+    public class MapObject : DataChunk, IMapPlaceable
+    {
+        public static Dictionary<MapObjectType, string> ObjectDescriptions = new Dictionary<MapObjectType, string>()
+        {
+            { MapObjectType.None, "None" },
+            { MapObjectType.OpenDoor, "Door (open)" },
+            { MapObjectType.ClosedDoor, "Door (closed)" },
+            { MapObjectType.StairsUp, "Stairs (up)" },
+            { MapObjectType.StairsDown, "Stairs (down)" },
+            { MapObjectType.Note, "Note" },
+            { MapObjectType.EventTile, "Event (E)" },
+            { MapObjectType.ExclamationTile, "Exclamation mark" },
+            { MapObjectType.QuestionMarkTile, "Question mark" },
+            { MapObjectType.TreasureChest, "Treasure chest" },
+            { MapObjectType.ResourceTake, "Resources (take)" },
+            { MapObjectType.ResourceCut, "Resources (cut)" },
+            { MapObjectType.ResourceMine, "Resources (mine)" },
+            { MapObjectType.Skyship, "Skyship" },
+            { MapObjectType.PassageNorth, "Passage (north)" },
+            { MapObjectType.PassageSouth, "Passage (south)" },
+            { MapObjectType.PassageNorthSouth, "Passage (north/south)" },
+            { MapObjectType.Circle, "Circle" },
+            { MapObjectType.PassageWest, "Passage (west)" },
+            { MapObjectType.PassageEast, "Passage (east)" },
+            { MapObjectType.PassageWestEast, "Passage (west/east)" },
+            { MapObjectType.PersonTile, "Person" },
+            { MapObjectType.BlueCircle, "Blue circle" },
+            { MapObjectType.Sparkle, "Sparkle" },
+            { MapObjectType.Star, "Star" },
+            { MapObjectType.RedDiamondShape, "Diamond (red)" },
+            { MapObjectType.RedCircleMark, "Circle mark (red)" },
+            { MapObjectType.RedFailureMark, "Failure mark (red)" },
+            { MapObjectType.RedCheckmark, "Checkmark (red)" },
+            { MapObjectType.RedExclamationMark, "Exclamation mark (red)" },
+            { MapObjectType.RedQuestionMark, "Question mark (red)" },
+            { MapObjectType.Number1, "Number 1" },
+            { MapObjectType.Number2, "Number 2" },
+            { MapObjectType.Number3, "Number 3" },
+            { MapObjectType.Number4, "Number 4" },
+            { MapObjectType.Number5, "Number 5" },
+            { MapObjectType.Number6, "Number 6" },
+            { MapObjectType.Number7, "Number 7" },
+            { MapObjectType.Number8, "Number 8" },
+            { MapObjectType.Number9, "Number 9" },
+            { MapObjectType.Number0, "Number 0" },
+            { MapObjectType.AutoArrowNorth, "Auto-walk (north)" },
+            { MapObjectType.AutoArrowSouth, "Auto-walk (south)" },
+            { MapObjectType.AutoArrowWest, "Auto-walk (west)" },
+            { MapObjectType.AutoArrowEast, "Auto-walk (east)" }
+        };
+
         public MapObjectType Type { get; set; }
         public byte XPosition { get; set; }
         public byte YPosition { get; set; }
@@ -151,10 +206,15 @@ namespace EO4SaveEdit.FileHandlers
             YPosition = reader.ReadByte();
             Padding = reader.ReadByte();
         }
+
+        public Point GetPosition()
+        {
+            return new Point(XPosition, YPosition);
+        }
     }
 
     [System.Diagnostics.DebuggerDisplay("Description:{Description},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
-    public class MapNote : DataChunk
+    public class MapNote : DataChunk, IMapPlaceable
     {
         byte[] description;
         public byte XPosition { get; set; }
@@ -180,6 +240,11 @@ namespace EO4SaveEdit.FileHandlers
             XPosition = reader.ReadByte();
             YPosition = reader.ReadByte();
             Padding = reader.ReadUInt32();
+        }
+
+        public Point GetPosition()
+        {
+            return new Point(XPosition, YPosition);
         }
     }
 

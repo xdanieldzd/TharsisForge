@@ -108,11 +108,11 @@
     <Compile Include="FileHandlers\Mori4Game.cs" />
     <Compile Include="FileHandlers\Mori4GdCard.cs" />
     <Compile Include="FileHandlers\Mori4Map.cs" />
-    <Compile Include="FileHandlers\Mori4MapEditor.cs">
+    <Compile Include="Editors\MapEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FileHandlers\Mori4MapEditor.Designer.cs">
-      <DependentUpon>Mori4MapEditor.cs</DependentUpon>
+    <Compile Include="Editors\MapEditor.Designer.cs">
+      <DependentUpon>MapEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="FileHandlers\Mori4Option.cs" />
     <Compile Include="Editors\GuildCardEditor.cs">
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="Editors\StatsEditorDialog.resx">
       <DependentUpon>StatsEditorDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FileHandlers\Mori4MapEditor.resx">
-      <DependentUpon>Mori4MapEditor.cs</DependentUpon>
+    <EmbeddedResource Include="Editors\MapEditor.resx">
+      <DependentUpon>MapEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editors\GuildCardEditor.resx">
       <DependentUpon>GuildCardEditor.cs</DependentUpon>
