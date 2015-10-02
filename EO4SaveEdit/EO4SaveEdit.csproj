@@ -465,6 +465,9 @@
     <Content Include="Data\CharaIcon\11_08.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\MapIcons.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\TreasureMapData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

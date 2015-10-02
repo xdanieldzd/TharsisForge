@@ -13,7 +13,11 @@ namespace EO4SaveEdit.FileHandlers
 {
     public partial class Mori4MapEditor : UserControl
     {
-        const int tileSize = 16;
+        static readonly Color floorColorGreen = Color.FromArgb(16, 205, 115);
+        static readonly Color floorColorBlue = Color.FromArgb(0, 139, 205);
+        static readonly Color floorColorYellow = Color.FromArgb(246, 213, 0);
+        static readonly Color floorColorOrange = Color.FromArgb(246, 123, 32);
+        static readonly Color wallColor = Color.FromArgb(0, 74, 65);
 
         Mori4Map mapData;
         Point tileHover;
@@ -21,6 +25,8 @@ namespace EO4SaveEdit.FileHandlers
 
         Dictionary<MapLayer, string> mapNameDict;
         MapLayer currentMap;
+
+        Bitmap iconImage;
 
         public Mori4MapEditor()
         {
@@ -78,6 +84,8 @@ namespace EO4SaveEdit.FileHandlers
             cmbMaps.ValueMember = "Key";
 
             currentMap = this.mapData.MazeMaps[0];
+
+            iconImage = new Bitmap("Data\\MapIcons.png");
         }
 
         private void pnlRender_Paint(object sender, PaintEventArgs e)
@@ -86,7 +94,7 @@ namespace EO4SaveEdit.FileHandlers
 
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
             e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            e.Graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            e.Graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.None;
 
             e.Graphics.Clear(Color.Gray);
 
@@ -95,21 +103,23 @@ namespace EO4SaveEdit.FileHandlers
                 for (int x = 0; x < currentMap.TilesYX.GetLength(1); x++)
                 {
                     MapTile tileData = (MapTile)currentMap.TilesYX[y, x];
-                    Rectangle rect = new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize);
+                    Rectangle rect = new Rectangle(x * ImageHelper.MapTileSize, y * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize);
 
                     if ((tileData & MapTile.FloorTypeMask) != MapTile.None)
                     {
-                        Brush brush = Brushes.DarkSlateGray;
+                        Color floorColor = Color.DarkSlateGray;
                         switch (tileData & MapTile.FloorTypeMask)
                         {
-                            case MapTile.GreenFloor: brush = Brushes.DarkSeaGreen; break;
-                            case MapTile.BlueFloor: brush = Brushes.DeepSkyBlue; break;
-                            case MapTile.YellowFloor: brush = Brushes.Yellow; break;
-                            case MapTile.OrangeFloor: brush = Brushes.Orange; break;
+                            case MapTile.GreenFloor: floorColor = floorColorGreen; break;
+                            case MapTile.BlueFloor: floorColor = floorColorBlue; break;
+                            case MapTile.YellowFloor: floorColor = floorColorYellow; break;
+                            case MapTile.OrangeFloor: floorColor = floorColorOrange; break;
                         }
 
-                        e.Graphics.FillRectangle(brush, rect);
-                        //e.Graphics.DrawString(((int)tileData).ToString("X2"), SystemFonts.MessageBoxFont, Brushes.White, rect.X, rect.Y);
+                        using (SolidBrush brush = new SolidBrush(floorColor))
+                        {
+                            e.Graphics.FillRectangle(brush, rect);
+                        }
                     }
                 }
             }
@@ -119,18 +129,18 @@ namespace EO4SaveEdit.FileHandlers
                 for (int x = 0; x < currentMap.TilesYX.GetLength(1); x++)
                 {
                     MapTile tileData = (MapTile)currentMap.TilesYX[y, x];
-                    Rectangle rect = new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize);
+                    Rectangle rect = new Rectangle(x * ImageHelper.MapTileSize, y * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize);
 
-                    using (Pen p = new Pen(Color.DarkGreen, 4.0f))
+                    using (Pen p = new Pen(wallColor, 4.0f))
                     {
                         if ((tileData & MapTile.SouthWallMask) != MapTile.None)
                         {
-                            e.Graphics.DrawLine(p, rect.X, rect.Y + tileSize, rect.X + tileSize, rect.Y + tileSize);
+                            e.Graphics.DrawLine(p, rect.X - (p.Width / 2.0f), rect.Y + ImageHelper.MapTileSize, rect.X + ImageHelper.MapTileSize + (p.Width / 2.0f), rect.Y + ImageHelper.MapTileSize);
                         }
 
                         if ((tileData & MapTile.EastWallMask) != MapTile.None)
                         {
-                            e.Graphics.DrawLine(p, rect.X + tileSize, rect.Y, rect.X + tileSize, rect.Y + tileSize);
+                            e.Graphics.DrawLine(p, rect.X + ImageHelper.MapTileSize, rect.Y - (p.Width / 2.0f), rect.X + ImageHelper.MapTileSize, rect.Y + ImageHelper.MapTileSize + (p.Width / 2.0f));
                         }
                     }
                 }
@@ -138,25 +148,24 @@ namespace EO4SaveEdit.FileHandlers
 
             foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != 0))
             {
-                using (Pen p = new Pen(Color.FromArgb(192, Color.Green), 3.0f))
-                {
-                    e.Graphics.DrawRectangle(p, new Rectangle(mapObj.XPosition * tileSize, mapObj.YPosition * tileSize, tileSize, tileSize));
-                    e.Graphics.DrawString(((int)mapObj.Type).ToString("X2"), SystemFonts.MessageBoxFont, Brushes.White, mapObj.XPosition * tileSize, mapObj.YPosition * tileSize);
-                }
+                e.Graphics.DrawImage(iconImage,
+                    new Rectangle(mapObj.XPosition * ImageHelper.MapTileSize, mapObj.YPosition * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize),
+                    ImageHelper.GetMapIconRect(mapObj.Type),
+                    GraphicsUnit.Pixel);
             }
 
             foreach (MapNote mapNote in currentMap.Notes.Where(x => x.Description != string.Empty))
             {
-                using (Pen p = new Pen(Color.FromArgb(192, Color.Red), 3.0f))
-                {
-                    e.Graphics.DrawRectangle(p, new Rectangle(mapNote.XPosition * tileSize, mapNote.YPosition * tileSize, tileSize, tileSize));
-                }
+                e.Graphics.DrawImage(iconImage,
+                    new Rectangle(mapNote.XPosition * ImageHelper.MapTileSize, mapNote.YPosition * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize),
+                    ImageHelper.GetMapIconRect(MapObjectType.Note),
+                    GraphicsUnit.Pixel);
             }
         }
 
         private void pnlRender_MouseMove(object sender, MouseEventArgs e)
         {
-            Point newHover = new Point(e.X / tileSize, e.Y / tileSize);
+            Point newHover = new Point(e.X / ImageHelper.MapTileSize, e.Y / ImageHelper.MapTileSize);
 
             if (currentMap != null && tileHover != newHover && newHover.Y < currentMap.TilesYX.GetLength(0) && newHover.X < currentMap.TilesYX.GetLength(1))
             {

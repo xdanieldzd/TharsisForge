@@ -14,6 +14,9 @@ namespace EO4SaveEdit
     {
         public static Dictionary<Class, ImageList> CharacterIcons { get; private set; }
 
+        public static Bitmap MapIcons { get; private set; }
+        public static int MapTileSize { get; private set; }
+
         static ImageHelper()
         {
             CharacterIcons = new Dictionary<Class, ImageList>();
@@ -38,6 +41,15 @@ namespace EO4SaveEdit
 
                 CharacterIcons.Add(charaClass, imageList);
             }
+
+            MapIcons = new Bitmap("Data\\MapIcons.png");
+            if (MapIcons.Width / 16 != MapIcons.Height / 16) throw new Exception("Unexpected map icon image size");
+            MapTileSize = (MapIcons.Width / 16);
+        }
+
+        public static Rectangle GetMapIconRect(MapObjectType objType)
+        {
+            return new Rectangle(((byte)objType % 16) * MapTileSize, ((byte)objType / 16) * MapTileSize, MapTileSize, MapTileSize);
         }
     }
 }
