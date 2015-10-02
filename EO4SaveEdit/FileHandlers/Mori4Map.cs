@@ -153,7 +153,7 @@ namespace EO4SaveEdit.FileHandlers
         }
     }
 
-    [System.Diagnostics.DebuggerDisplay("Type:{Description},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
+    [System.Diagnostics.DebuggerDisplay("Description:{Description},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
     public class MapNote : DataChunk
     {
         byte[] description;

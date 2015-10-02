@@ -31,6 +31,9 @@
             this.cmbMaps = new System.Windows.Forms.ComboBox();
             this.btnFileHeader = new System.Windows.Forms.Button();
             this.pnlRender = new EO4SaveEdit.Controls.PanelEx();
+            this.pbRender = new System.Windows.Forms.PictureBox();
+            this.pnlRender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRender)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMaps
@@ -57,14 +60,24 @@
             // 
             // pnlRender
             // 
+            this.pnlRender.AutoScroll = true;
+            this.pnlRender.Controls.Add(this.pbRender);
             this.pnlRender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRender.Location = new System.Drawing.Point(0, 21);
             this.pnlRender.Name = "pnlRender";
             this.pnlRender.Size = new System.Drawing.Size(600, 456);
             this.pnlRender.TabIndex = 0;
-            this.pnlRender.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRender_Paint);
-            this.pnlRender.MouseLeave += new System.EventHandler(this.pnlRender_MouseLeave);
-            this.pnlRender.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlRender_MouseMove);
+            // 
+            // pbRender
+            // 
+            this.pbRender.Location = new System.Drawing.Point(0, 0);
+            this.pbRender.Name = "pbRender";
+            this.pbRender.Size = new System.Drawing.Size(100, 100);
+            this.pbRender.TabIndex = 0;
+            this.pbRender.TabStop = false;
+            this.pbRender.Paint += new System.Windows.Forms.PaintEventHandler(this.pbRender_Paint);
+            this.pbRender.MouseLeave += new System.EventHandler(this.pbRender_MouseLeave);
+            this.pbRender.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbRender_MouseMove);
             // 
             // Mori4MapEditor
             // 
@@ -75,14 +88,17 @@
             this.Controls.Add(this.cmbMaps);
             this.Name = "Mori4MapEditor";
             this.Size = new System.Drawing.Size(600, 500);
+            this.pnlRender.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbRender)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private EO4SaveEdit.Controls. PanelEx pnlRender;
+        private EO4SaveEdit.Controls.PanelEx pnlRender;
         private System.Windows.Forms.ComboBox cmbMaps;
         private System.Windows.Forms.Button btnFileHeader;
+        private System.Windows.Forms.PictureBox pbRender;
     }
 }

@@ -26,8 +26,6 @@ namespace EO4SaveEdit.FileHandlers
         Dictionary<MapLayer, string> mapNameDict;
         MapLayer currentMap;
 
-        Bitmap iconImage;
-
         public Mori4MapEditor()
         {
             InitializeComponent();
@@ -45,7 +43,7 @@ namespace EO4SaveEdit.FileHandlers
 
             this.Enabled = true;
 
-            tileHover = Point.Empty;
+            tileHover = new Point(-1, -1);
             tip = new ToolTip();
 
             mapNameDict = new Dictionary<MapLayer, string>();
@@ -84,11 +82,9 @@ namespace EO4SaveEdit.FileHandlers
             cmbMaps.ValueMember = "Key";
 
             currentMap = this.mapData.MazeMaps[0];
-
-            iconImage = new Bitmap("Data\\MapIcons.png");
         }
 
-        private void pnlRender_Paint(object sender, PaintEventArgs e)
+        private void pbRender_Paint(object sender, PaintEventArgs e)
         {
             if (this.mapData == null) return;
 
@@ -146,9 +142,9 @@ namespace EO4SaveEdit.FileHandlers
                 }
             }
 
-            foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != 0))
+            foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != MapObjectType.None))
             {
-                e.Graphics.DrawImage(iconImage,
+                e.Graphics.DrawImage(ImageHelper.MapIcons,
                     new Rectangle(mapObj.XPosition * ImageHelper.MapTileSize, mapObj.YPosition * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize),
                     ImageHelper.GetMapIconRect(mapObj.Type),
                     GraphicsUnit.Pixel);
@@ -156,14 +152,14 @@ namespace EO4SaveEdit.FileHandlers
 
             foreach (MapNote mapNote in currentMap.Notes.Where(x => x.Description != string.Empty))
             {
-                e.Graphics.DrawImage(iconImage,
+                e.Graphics.DrawImage(ImageHelper.MapIcons,
                     new Rectangle(mapNote.XPosition * ImageHelper.MapTileSize, mapNote.YPosition * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize),
                     ImageHelper.GetMapIconRect(MapObjectType.Note),
                     GraphicsUnit.Pixel);
             }
         }
 
-        private void pnlRender_MouseMove(object sender, MouseEventArgs e)
+        private void pbRender_MouseMove(object sender, MouseEventArgs e)
         {
             Point newHover = new Point(e.X / ImageHelper.MapTileSize, e.Y / ImageHelper.MapTileSize);
 
@@ -176,24 +172,31 @@ namespace EO4SaveEdit.FileHandlers
                 StringBuilder sb = new StringBuilder();
                 sb.AppendFormat("Map tile: 0x{0:X2}\n", currentMap.TilesYX[tileHover.Y, tileHover.X]);
 
-                foreach (MapObject mapObj in currentMap.Objects.Where(x => x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
+                foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != MapObjectType.None && x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
                 {
                     sb.AppendFormat("Object #{0}: {1}\n", Array.IndexOf(currentMap.Objects, mapObj), mapObj.Type);
                 }
 
-                foreach (MapNote mapNote in currentMap.Notes.Where(x => x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
+                foreach (MapNote mapNote in currentMap.Notes.Where(x => x.Description != string.Empty && x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
                 {
                     sb.AppendFormat("Note #{0}: {1}\n", Array.IndexOf(currentMap.Notes, mapNote), mapNote.Description);
                 }
 
-                tip.Show(sb.ToString(), (sender as EO4SaveEdit.Controls.PanelEx), e.X + 5, e.Y + 5, 2500);
+                tip.Show(sb.ToString(), (sender as Control), e.X + 5, e.Y + 5, 2500);
             }
+        }
+
+        private void pbRender_MouseLeave(object sender, EventArgs e)
+        {
+            if (tip != null) tip.Hide(sender as Control);
         }
 
         private void cmbMaps_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentMap = ((KeyValuePair<MapLayer, string>)(sender as ComboBox).SelectedItem).Key;
-            pnlRender.Invalidate();
+
+            pbRender.ClientSize = new System.Drawing.Size(currentMap.TilesYX.GetLength(1) * ImageHelper.MapTileSize, currentMap.TilesYX.GetLength(0) * ImageHelper.MapTileSize);
+            pbRender.Invalidate();
         }
 
         private void btnFileHeader_Click(object sender, EventArgs e)
@@ -202,11 +205,6 @@ namespace EO4SaveEdit.FileHandlers
 
             HeaderEditorDialog hed = new HeaderEditorDialog(mapData.FileHeader);
             hed.ShowDialog();
-        }
-
-        private void pnlRender_MouseLeave(object sender, EventArgs e)
-        {
-            if (tip != null) tip.Hide((sender as EO4SaveEdit.Controls.PanelEx));
         }
     }
 }
