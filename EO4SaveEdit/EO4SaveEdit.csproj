@@ -58,6 +58,7 @@
     <Compile Include="Editors\CharacterEditor.Designer.cs">
       <DependentUpon>CharacterEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="DescriptionEnumConverter.cs" />
     <Compile Include="Editors\EffectEditorDialog.cs">
       <SubType>Form</SubType>
     </Compile>

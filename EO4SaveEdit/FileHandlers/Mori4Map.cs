@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Drawing;
+using System.ComponentModel;
 
 using EO4SaveEdit.Extensions;
 
@@ -82,51 +83,95 @@ namespace EO4SaveEdit.FileHandlers
 
     public enum MapObjectType : byte
     {
+        [Description("None")]
         None = 0x00,
+        [Description("Door (Open)")]
         OpenDoor = 0x01,
+        [Description("Door (Closed)")]
         ClosedDoor = 0x02,
+        [Description("Stairs (Up)")]
         StairsUp = 0x03,
+        [Description("Stairs (Down)")]
         StairsDown = 0x04,
+        [Description("Note")]
         Note = 0x05,
+        [Description("Event (E)")]
         EventTile = 0x06,
+        [Description("Exclamation Mark")]
         ExclamationTile = 0x07,
+        [Description("Question Mark")]
         QuestionMarkTile = 0x08,
+        [Description("Treasure Chest")]
         TreasureChest = 0x09,
+        [Description("Resources (Take)")]
         ResourceTake = 0x0A,
+        [Description("Resources (Cut)")]
         ResourceCut = 0x0B,
+        [Description("Resources (Mine)")]
         ResourceMine = 0x0C,
+        [Description("Skyship")]
         Skyship = 0x0D,
+        [Description("Passage (North)")]
         PassageNorth = 0x0E,
+        [Description("Passage (South)")]
         PassageSouth = 0x0F,
+        [Description("Passage (North/South)")]
         PassageNorthSouth = 0x10,
+        [Description("Circle")]
         Circle = 0x11,
+        [Description("Passage (West)")]
         PassageWest = 0x12,
+        [Description("Passage (East)")]
         PassageEast = 0x13,
+        [Description("Passage (West/East)")]
         PassageWestEast = 0x14,
+        [Description("Person")]
         PersonTile = 0x15,
+        [Description("Blue Circle")]
         BlueCircle = 0x16,
+        [Description("Sparkle")]
         Sparkle = 0x17,
+        [Description("Star")]
         Star = 0x18,
+        [Description("Diamond (Red)")]
         RedDiamondShape = 0x19,
+        [Description("Circle Mark (Red)")]
         RedCircleMark = 0x1A,
+        [Description("Failure Mark (Red)")]
         RedFailureMark = 0x1B,
+        [Description("Checkmark (Red)")]
         RedCheckmark = 0x1C,
+        [Description("Exclamation Mark (Red)")]
         RedExclamationMark = 0x1D,
+        [Description("Question Mark (Red)")]
         RedQuestionMark = 0x1E,
+        [Description("Number 1")]
         Number1 = 0x1F,
+        [Description("Number 2")]
         Number2 = 0x20,
+        [Description("Number 3")]
         Number3 = 0x21,
+        [Description("Number 4")]
         Number4 = 0x22,
+        [Description("Number 5")]
         Number5 = 0x23,
+        [Description("Number 6")]
         Number6 = 0x24,
+        [Description("Number 7")]
         Number7 = 0x25,
+        [Description("Number 8")]
         Number8 = 0x26,
+        [Description("Number 9")]
         Number9 = 0x27,
+        [Description("Number 0")]
         Number0 = 0x28,
-
+        [Description("Auto-walk (North)")]
         AutoArrowNorth = 0xB4,
+        [Description("Auto-walk (South)")]
         AutoArrowSouth = 0xB5,
+        [Description("Auto-walk (West)")]
         AutoArrowWest = 0xB6,
+        [Description("Auto-walk (East)")]
         AutoArrowEast = 0xB7
     }
 
@@ -138,59 +183,30 @@ namespace EO4SaveEdit.FileHandlers
     [System.Diagnostics.DebuggerDisplay("Type:{Type},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
     public class MapObject : DataChunk, IMapPlaceable
     {
-        public static Dictionary<MapObjectType, string> ObjectDescriptions = new Dictionary<MapObjectType, string>()
-        {
-            { MapObjectType.None, "None" },
-            { MapObjectType.OpenDoor, "Door (open)" },
-            { MapObjectType.ClosedDoor, "Door (closed)" },
-            { MapObjectType.StairsUp, "Stairs (up)" },
-            { MapObjectType.StairsDown, "Stairs (down)" },
-            { MapObjectType.Note, "Note" },
-            { MapObjectType.EventTile, "Event (E)" },
-            { MapObjectType.ExclamationTile, "Exclamation mark" },
-            { MapObjectType.QuestionMarkTile, "Question mark" },
-            { MapObjectType.TreasureChest, "Treasure chest" },
-            { MapObjectType.ResourceTake, "Resources (take)" },
-            { MapObjectType.ResourceCut, "Resources (cut)" },
-            { MapObjectType.ResourceMine, "Resources (mine)" },
-            { MapObjectType.Skyship, "Skyship" },
-            { MapObjectType.PassageNorth, "Passage (north)" },
-            { MapObjectType.PassageSouth, "Passage (south)" },
-            { MapObjectType.PassageNorthSouth, "Passage (north/south)" },
-            { MapObjectType.Circle, "Circle" },
-            { MapObjectType.PassageWest, "Passage (west)" },
-            { MapObjectType.PassageEast, "Passage (east)" },
-            { MapObjectType.PassageWestEast, "Passage (west/east)" },
-            { MapObjectType.PersonTile, "Person" },
-            { MapObjectType.BlueCircle, "Blue circle" },
-            { MapObjectType.Sparkle, "Sparkle" },
-            { MapObjectType.Star, "Star" },
-            { MapObjectType.RedDiamondShape, "Diamond (red)" },
-            { MapObjectType.RedCircleMark, "Circle mark (red)" },
-            { MapObjectType.RedFailureMark, "Failure mark (red)" },
-            { MapObjectType.RedCheckmark, "Checkmark (red)" },
-            { MapObjectType.RedExclamationMark, "Exclamation mark (red)" },
-            { MapObjectType.RedQuestionMark, "Question mark (red)" },
-            { MapObjectType.Number1, "Number 1" },
-            { MapObjectType.Number2, "Number 2" },
-            { MapObjectType.Number3, "Number 3" },
-            { MapObjectType.Number4, "Number 4" },
-            { MapObjectType.Number5, "Number 5" },
-            { MapObjectType.Number6, "Number 6" },
-            { MapObjectType.Number7, "Number 7" },
-            { MapObjectType.Number8, "Number 8" },
-            { MapObjectType.Number9, "Number 9" },
-            { MapObjectType.Number0, "Number 0" },
-            { MapObjectType.AutoArrowNorth, "Auto-walk (north)" },
-            { MapObjectType.AutoArrowSouth, "Auto-walk (south)" },
-            { MapObjectType.AutoArrowWest, "Auto-walk (west)" },
-            { MapObjectType.AutoArrowEast, "Auto-walk (east)" }
-        };
-
+        [DisplayName("Object Type"), Description("Type of this object.")]
+        [Category("Data")]
+        [TypeConverter(typeof(DescriptionEnumConverter))]
         public MapObjectType Type { get; set; }
+        public bool ShouldSerializeType() { return !(this.Type == (dynamic)base.originalValues["Type"]); }
+        public void ResetType() { this.Type = (dynamic)base.originalValues["Type"]; }
+
+        [DisplayName("X Position"), Description("X position on map.")]
+        [Category("Data")]
         public byte XPosition { get; set; }
+        public bool ShouldSerializeXPosition() { return !(this.XPosition == (dynamic)base.originalValues["XPosition"]); }
+        public void ResetXPosition() { this.XPosition = (dynamic)base.originalValues["XPosition"]; }
+
+        [DisplayName("Y Position"), Description("Y position on map.")]
+        [Category("Data")]
         public byte YPosition { get; set; }
+        public bool ShouldSerializeYPosition() { return !(this.YPosition == (dynamic)base.originalValues["YPosition"]); }
+        public void ResetYPosition() { this.YPosition = (dynamic)base.originalValues["YPosition"]; }
+
+        [DisplayName("Padding"), Description("Padding, leave as zero.")]
+        [Category("Misc")]
         public byte Padding { get; set; }
+        public bool ShouldSerializePadding() { return !(this.Padding == (dynamic)base.originalValues["Padding"]); }
+        public void ResetPadding() { this.Padding = (dynamic)base.originalValues["Padding"]; }
 
         public MapObject(Stream stream)
         {
@@ -205,6 +221,8 @@ namespace EO4SaveEdit.FileHandlers
             XPosition = reader.ReadByte();
             YPosition = reader.ReadByte();
             Padding = reader.ReadByte();
+
+            base.GetOriginalValues();
         }
 
         public Point GetPosition()
@@ -217,15 +235,40 @@ namespace EO4SaveEdit.FileHandlers
     public class MapNote : DataChunk, IMapPlaceable
     {
         byte[] description;
-        public byte XPosition { get; set; }
-        public byte YPosition { get; set; }
-        public uint Padding { get; set; }
 
+        [DisplayName("Unknown"), Description("Probably padding, leave as zero.")]
+        [Category("Misc")]
+        public ushort Unknown1 { get; set; }
+        public bool ShouldSerializeUnknown1() { return !(this.Unknown1 == (dynamic)base.originalValues["Unknown1"]); }
+        public void ResetUnknown1() { this.Unknown1 = (dynamic)base.originalValues["Unknown1"]; }
+
+        [DisplayName("X Position"), Description("X position on map.")]
+        [Category("Data")]
+        public byte XPosition { get; set; }
+        public bool ShouldSerializeXPosition() { return !(this.XPosition == (dynamic)base.originalValues["XPosition"]); }
+        public void ResetXPosition() { this.XPosition = (dynamic)base.originalValues["XPosition"]; }
+
+        [DisplayName("Y Position"), Description("Y position on map.")]
+        [Category("Data")]
+        public byte YPosition { get; set; }
+        public bool ShouldSerializeYPosition() { return !(this.YPosition == (dynamic)base.originalValues["YPosition"]); }
+        public void ResetYPosition() { this.YPosition = (dynamic)base.originalValues["YPosition"]; }
+
+        [DisplayName("Padding"), Description("Padding, leave as zero.")]
+        [Category("Misc")]
+        public uint Padding { get; set; }
+        public bool ShouldSerializePadding() { return !(this.Padding == (dynamic)base.originalValues["Padding"]); }
+        public void ResetPadding() { this.Padding = (dynamic)base.originalValues["Padding"]; }
+
+        [DisplayName("Note Text"), Description("Text of this note.")]
+        [Category("Data")]
         public string Description
         {
             get { return Encoding.GetEncoding(932).GetString(description).SjisToAscii().TrimEnd('\0'); }
-            set { description = value.GetSjisBytes(34); }
+            set { description = value.GetSjisBytes(32); }
         }
+        public bool ShouldSerializeDescription() { return !(this.Description == (dynamic)base.originalValues["Description"]); }
+        public void ResetDescription() { this.Description = (dynamic)base.originalValues["Description"]; }
 
         public MapNote(Stream stream)
         {
@@ -236,10 +279,13 @@ namespace EO4SaveEdit.FileHandlers
         {
             BinaryReader reader = new BinaryReader(stream);
 
-            description = reader.ReadBytes(34);
+            description = reader.ReadBytes(32);
+            Unknown1 = reader.ReadUInt16();
             XPosition = reader.ReadByte();
             YPosition = reader.ReadByte();
             Padding = reader.ReadUInt32();
+
+            base.GetOriginalValues();
         }
 
         public Point GetPosition()
@@ -276,6 +322,13 @@ namespace EO4SaveEdit.FileHandlers
 
             StratumMaps = new StratumMap[4];
             for (int i = 0; i < StratumMaps.Length; i++) StratumMaps[i] = new StratumMap(stream);
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            base.WriteToStream(stream);
+
+            // TODO: write rest of map data
         }
     }
 }

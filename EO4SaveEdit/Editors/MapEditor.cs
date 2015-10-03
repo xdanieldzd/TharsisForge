@@ -22,7 +22,7 @@ namespace EO4SaveEdit.Editors
         Mori4Map mapData;
         Point tileHover;
         ToolTip tip;
-        
+
         int tileSize { get { return (Properties.Settings.Default.ZoomedMap ? ImageHelper.MapTileSizeLarge : ImageHelper.MapTileSizeSmall); } }
         Size renderSize { get { return (currentMap != null ? new Size(currentMap.TilesYX.GetLength(1) * tileSize, currentMap.TilesYX.GetLength(0) * tileSize) : Size.Empty); } }
 
@@ -232,16 +232,12 @@ namespace EO4SaveEdit.Editors
                 if (placeable is MapObject)
                 {
                     MapObject mapObject = (placeable as MapObject);
-                    string description = mapObject.Type.ToString();
-                    if (MapObject.ObjectDescriptions.ContainsKey(mapObject.Type))
-                        description = MapObject.ObjectDescriptions[mapObject.Type];
-                    e.Value = string.Format("O #{0} (X:{1} Y:{2}): {3}", (Array.IndexOf(currentMap.Objects, mapObject) + 1), mapObject.XPosition, mapObject.YPosition, description);
+                    e.Value = string.Format("Object #{0} (X:{1} Y:{2})", (Array.IndexOf(currentMap.Objects, mapObject) + 1), mapObject.XPosition, mapObject.YPosition);
                 }
                 else if (placeable is MapNote)
                 {
                     MapNote mapNote = (placeable as MapNote);
-                    string note = (mapNote.Description == string.Empty ? "None" : mapNote.Description);
-                    e.Value = string.Format("N #{0} (X:{1} Y:{2}): {3}", (Array.IndexOf(currentMap.Notes, mapNote) + 1), mapNote.XPosition, mapNote.YPosition, note);
+                    e.Value = string.Format("Note #{0} (X:{1} Y:{2})", (Array.IndexOf(currentMap.Notes, mapNote) + 1), mapNote.XPosition, mapNote.YPosition);
                 }
             }
         }
@@ -249,6 +245,7 @@ namespace EO4SaveEdit.Editors
         private void lbMapPlaceables_SelectedValueChanged(object sender, EventArgs e)
         {
             currentPlaceable = ((sender as ListBox).SelectedItem as IMapPlaceable);
+            pgMapPlaceable.SelectedObject = currentPlaceable;
             pbRender.Invalidate();
         }
 
@@ -258,6 +255,15 @@ namespace EO4SaveEdit.Editors
 
             pbRender.ClientSize = renderSize;
             pbRender.Invalidate();
+        }
+
+        private void pgMapPlaceable_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
+        {
+            if (e.ChangedItem.Label == "Type" || e.ChangedItem.Label == "Description" || e.ChangedItem.Label == "XPosition" || e.ChangedItem.Label == "YPosition")
+            {
+                lbMapPlaceables.Invalidate();
+                pbRender.Invalidate();
+            }
         }
     }
 }
