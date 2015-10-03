@@ -24,63 +24,6 @@ namespace EO4SaveEdit.FileHandlers
         EastWallMask = 0x10,
     }
 
-    public class MapLayer : DataChunk
-    {
-        int numObjects, numNotes, height, width;
-
-        public MapObject[] Objects { get; set; }
-        public MapNote[] Notes { get; set; }
-        public byte[,] TilesYX { get; set; }
-
-        public MapLayer(Stream stream, int numObjects, int numNotes, int height, int width)
-        {
-            this.numObjects = numObjects;
-            this.numNotes = numNotes;
-            this.height = height;
-            this.width = width;
-
-            this.ReadFromStream(stream);
-        }
-
-        public override void ReadFromStream(Stream stream)
-        {
-            BinaryReader reader = new BinaryReader(stream);
-
-            Objects = new MapObject[numObjects];
-            for (int i = 0; i < Objects.Length; i++) Objects[i] = new MapObject(stream);
-
-            Notes = new MapNote[numNotes];
-            for (int i = 0; i < Notes.Length; i++) Notes[i] = new MapNote(stream);
-
-            TilesYX = new byte[height, width];
-            Buffer.BlockCopy(reader.ReadBytes(height * width), 0, TilesYX, 0, height * width);
-
-            stream.Seek((stream.Position % 2), SeekOrigin.Current);
-        }
-    }
-
-    public class StratumMap : DataChunk
-    {
-        public byte[,] BaseTilesYX { get; set; }
-        public MapLayer[] HeightLayers { get; set; }
-
-        public StratumMap(Stream stream)
-        {
-            this.ReadFromStream(stream);
-        }
-
-        public override void ReadFromStream(Stream stream)
-        {
-            BinaryReader reader = new BinaryReader(stream);
-
-            BaseTilesYX = new byte[20, 25];
-            Buffer.BlockCopy(reader.ReadBytes(20 * 25), 0, BaseTilesYX, 0, 20 * 25);
-
-            HeightLayers = new MapLayer[3];
-            for (int i = 0; i < HeightLayers.Length; i++) HeightLayers[i] = new MapLayer(stream, 80, 32, 20, 25);
-        }
-    }
-
     public enum MapObjectType : byte
     {
         [Description("None")]
@@ -175,35 +118,26 @@ namespace EO4SaveEdit.FileHandlers
         AutoArrowEast = 0xB7
     }
 
-    public interface IMapPlaceable
-    {
-        Point GetPosition();
-    }
-
     [System.Diagnostics.DebuggerDisplay("Type:{Type},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
     public class MapObject : DataChunk, IMapPlaceable
     {
-        [DisplayName("Object Type"), Description("Type of this object.")]
-        [Category("Data")]
+        [DisplayName("Object Type"), Description("Type of this object."), Category("Data")]
         [TypeConverter(typeof(DescriptionEnumConverter))]
         public MapObjectType Type { get; set; }
         public bool ShouldSerializeType() { return !(this.Type == (dynamic)base.originalValues["Type"]); }
         public void ResetType() { this.Type = (dynamic)base.originalValues["Type"]; }
 
-        [DisplayName("X Position"), Description("X position on map.")]
-        [Category("Data")]
+        [DisplayName("X Position"), Description("X position on map."), Category("Data")]
         public byte XPosition { get; set; }
         public bool ShouldSerializeXPosition() { return !(this.XPosition == (dynamic)base.originalValues["XPosition"]); }
         public void ResetXPosition() { this.XPosition = (dynamic)base.originalValues["XPosition"]; }
 
-        [DisplayName("Y Position"), Description("Y position on map.")]
-        [Category("Data")]
+        [DisplayName("Y Position"), Description("Y position on map."), Category("Data")]
         public byte YPosition { get; set; }
         public bool ShouldSerializeYPosition() { return !(this.YPosition == (dynamic)base.originalValues["YPosition"]); }
         public void ResetYPosition() { this.YPosition = (dynamic)base.originalValues["YPosition"]; }
 
-        [DisplayName("Padding"), Description("Padding, leave as zero.")]
-        [Category("Misc")]
+        [DisplayName("Padding"), Description("Padding, leave as zero."), Category("Misc")]
         public byte Padding { get; set; }
         public bool ShouldSerializePadding() { return !(this.Padding == (dynamic)base.originalValues["Padding"]); }
         public void ResetPadding() { this.Padding = (dynamic)base.originalValues["Padding"]; }
@@ -225,6 +159,18 @@ namespace EO4SaveEdit.FileHandlers
             base.GetOriginalValues();
         }
 
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write((byte)Type);
+            writer.Write(XPosition);
+            writer.Write(YPosition);
+            writer.Write(Padding);
+
+            base.GetOriginalValues();
+        }
+
         public Point GetPosition()
         {
             return new Point(XPosition, YPosition);
@@ -236,32 +182,27 @@ namespace EO4SaveEdit.FileHandlers
     {
         byte[] description;
 
-        [DisplayName("Unknown"), Description("Probably padding, leave as zero.")]
-        [Category("Misc")]
+        [DisplayName("Unknown"), Description("Probably padding, leave as zero."), Category("Misc")]
         public ushort Unknown1 { get; set; }
         public bool ShouldSerializeUnknown1() { return !(this.Unknown1 == (dynamic)base.originalValues["Unknown1"]); }
         public void ResetUnknown1() { this.Unknown1 = (dynamic)base.originalValues["Unknown1"]; }
 
-        [DisplayName("X Position"), Description("X position on map.")]
-        [Category("Data")]
+        [DisplayName("X Position"), Description("X position on map."), Category("Data")]
         public byte XPosition { get; set; }
         public bool ShouldSerializeXPosition() { return !(this.XPosition == (dynamic)base.originalValues["XPosition"]); }
         public void ResetXPosition() { this.XPosition = (dynamic)base.originalValues["XPosition"]; }
 
-        [DisplayName("Y Position"), Description("Y position on map.")]
-        [Category("Data")]
+        [DisplayName("Y Position"), Description("Y position on map."), Category("Data")]
         public byte YPosition { get; set; }
         public bool ShouldSerializeYPosition() { return !(this.YPosition == (dynamic)base.originalValues["YPosition"]); }
         public void ResetYPosition() { this.YPosition = (dynamic)base.originalValues["YPosition"]; }
 
-        [DisplayName("Padding"), Description("Padding, leave as zero.")]
-        [Category("Misc")]
+        [DisplayName("Padding"), Description("Padding, leave as zero."), Category("Misc")]
         public uint Padding { get; set; }
         public bool ShouldSerializePadding() { return !(this.Padding == (dynamic)base.originalValues["Padding"]); }
         public void ResetPadding() { this.Padding = (dynamic)base.originalValues["Padding"]; }
 
-        [DisplayName("Note Text"), Description("Text of this note.")]
-        [Category("Data")]
+        [DisplayName("Note Text"), Description("Text of this note."), Category("Data")]
         public string Description
         {
             get { return Encoding.GetEncoding(932).GetString(description).SjisToAscii().TrimEnd('\0'); }
@@ -288,9 +229,103 @@ namespace EO4SaveEdit.FileHandlers
             base.GetOriginalValues();
         }
 
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(description);
+            writer.Write(Unknown1);
+            writer.Write(XPosition);
+            writer.Write(YPosition);
+            writer.Write(Padding);
+
+            base.GetOriginalValues();
+        }
+
         public Point GetPosition()
         {
             return new Point(XPosition, YPosition);
+        }
+    }
+
+    public class MapLayer : DataChunk
+    {
+        int numObjects, numNotes, height, width;
+
+        public MapObject[] Objects { get; set; }
+        public MapNote[] Notes { get; set; }
+        public byte[,] TilesYX { get; set; }
+
+        public MapLayer(Stream stream, int numObjects, int numNotes, int height, int width)
+        {
+            this.numObjects = numObjects;
+            this.numNotes = numNotes;
+            this.height = height;
+            this.width = width;
+
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
+            Objects = new MapObject[numObjects];
+            for (int i = 0; i < Objects.Length; i++) Objects[i] = new MapObject(stream);
+
+            Notes = new MapNote[numNotes];
+            for (int i = 0; i < Notes.Length; i++) Notes[i] = new MapNote(stream);
+
+            TilesYX = new byte[height, width];
+            Buffer.BlockCopy(reader.ReadBytes(height * width), 0, TilesYX, 0, height * width);
+
+            stream.Seek((stream.Position % 2), SeekOrigin.Current);
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            foreach (MapObject mapObject in Objects) mapObject.WriteToStream(stream);
+            foreach (MapNote mapNote in Notes) mapNote.WriteToStream(stream);
+            for (int y = 0; y < TilesYX.GetLength(0); y++)
+                for (int x = 0; x < TilesYX.GetLength(1); x++)
+                    writer.Write(TilesYX[y, x]);
+
+            stream.Seek((stream.Position % 2), SeekOrigin.Current);
+        }
+    }
+
+    public class StratumMap : DataChunk
+    {
+        public byte[,] BaseTilesYX { get; set; }
+        public MapLayer[] HeightLayers { get; set; }
+
+        public StratumMap(Stream stream)
+        {
+            this.ReadFromStream(stream);
+        }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
+            BaseTilesYX = new byte[20, 25];
+            Buffer.BlockCopy(reader.ReadBytes(20 * 25), 0, BaseTilesYX, 0, 20 * 25);
+
+            HeightLayers = new MapLayer[3];
+            for (int i = 0; i < HeightLayers.Length; i++) HeightLayers[i] = new MapLayer(stream, 80, 32, 20, 25);
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            for (int y = 0; y < BaseTilesYX.GetLength(0); y++)
+                for (int x = 0; x < BaseTilesYX.GetLength(1); x++)
+                    writer.Write(BaseTilesYX[y, x]);
+
+            foreach (MapLayer heightLayer in HeightLayers) heightLayer.WriteToStream(stream);
         }
     }
 
@@ -328,7 +363,18 @@ namespace EO4SaveEdit.FileHandlers
         {
             base.WriteToStream(stream);
 
-            // TODO: write rest of map data
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write(Encoding.ASCII.GetBytes(Signature));
+
+            foreach (MapLayer mazeMap in MazeMaps) mazeMap.WriteToStream(stream);
+            foreach (MapLayer caveMap in CaveMaps) caveMap.WriteToStream(stream);
+            foreach (StratumMap stratumMap in StratumMaps) stratumMap.WriteToStream(stream);
         }
+    }
+
+    public interface IMapPlaceable
+    {
+        Point GetPosition();
     }
 }

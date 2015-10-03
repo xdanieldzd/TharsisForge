@@ -90,6 +90,11 @@ namespace EO4SaveEdit.Editors
             currentMap = this.mapData.MazeMaps[0];
         }
 
+        public void AfterSaveUpdate()
+        {
+            pgMapPlaceable.Refresh();
+        }
+
         private void pbRender_Paint(object sender, PaintEventArgs e)
         {
             if (this.mapData == null) return;
@@ -259,7 +264,8 @@ namespace EO4SaveEdit.Editors
 
         private void pgMapPlaceable_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
-            if (e.ChangedItem.Label == "Type" || e.ChangedItem.Label == "Description" || e.ChangedItem.Label == "XPosition" || e.ChangedItem.Label == "YPosition")
+            if (e.ChangedItem.PropertyDescriptor.Name == "Type" || e.ChangedItem.PropertyDescriptor.Name == "Description" ||
+                e.ChangedItem.PropertyDescriptor.Name == "XPosition" || e.ChangedItem.PropertyDescriptor.Name == "YPosition")
             {
                 lbMapPlaceables.Invalidate();
                 pbRender.Invalidate();

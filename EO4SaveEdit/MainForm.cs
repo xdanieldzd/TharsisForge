@@ -95,9 +95,13 @@ namespace EO4SaveEdit
                 {
                     file.WriteToStream(stream);
                 }
-
-                tsslStatus.Text = "Data saved!";
             }
+
+            // TODO: make editor interface ("IEditorControl"?) w/ Initialize, AfterSaveUpdate, if possible...?
+            //  also rename "AfterSaveUpdate" to something nicer?
+            mapEditor1.AfterSaveUpdate();
+
+            tsslStatus.Text = "Data saved!";
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
