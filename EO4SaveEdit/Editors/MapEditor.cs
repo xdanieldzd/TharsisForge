@@ -22,6 +22,9 @@ namespace EO4SaveEdit.Editors
         Mori4Map mapData;
         Point tileHover;
         ToolTip tip;
+        
+        int tileSize { get { return (Properties.Settings.Default.ZoomedMap ? ImageHelper.MapTileSizeLarge : ImageHelper.MapTileSizeSmall); } }
+        Size renderSize { get { return (currentMap != null ? new Size(currentMap.TilesYX.GetLength(1) * tileSize, currentMap.TilesYX.GetLength(0) * tileSize) : Size.Empty); } }
 
         Dictionary<MapLayer, string> mapNameDict;
         MapLayer currentMap;
@@ -46,6 +49,8 @@ namespace EO4SaveEdit.Editors
 
             tileHover = new Point(-1, -1);
             tip = new ToolTip();
+
+            chkZoomedMap.Checked = Properties.Settings.Default.ZoomedMap;
 
             mapNameDict = new Dictionary<MapLayer, string>();
             mapNameDict.Add(this.mapData.MazeMaps[0], "Maze: Lush Woodlands B1F");
@@ -100,7 +105,7 @@ namespace EO4SaveEdit.Editors
                 for (int x = 0; x < currentMap.TilesYX.GetLength(1); x++)
                 {
                     MapTile tileData = (MapTile)currentMap.TilesYX[y, x];
-                    Rectangle rect = new Rectangle(x * ImageHelper.MapTileSize, y * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize);
+                    Rectangle rect = new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize);
 
                     if ((tileData & MapTile.FloorTypeMask) != MapTile.None)
                     {
@@ -126,18 +131,18 @@ namespace EO4SaveEdit.Editors
                 for (int x = 0; x < currentMap.TilesYX.GetLength(1); x++)
                 {
                     MapTile tileData = (MapTile)currentMap.TilesYX[y, x];
-                    Rectangle rect = new Rectangle(x * ImageHelper.MapTileSize, y * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize);
+                    Rectangle rect = new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize);
 
                     using (Pen p = new Pen(wallColor, 4.0f))
                     {
                         if ((tileData & MapTile.SouthWallMask) != MapTile.None)
                         {
-                            e.Graphics.DrawLine(p, rect.X - (p.Width / 2.0f), rect.Y + ImageHelper.MapTileSize, rect.X + ImageHelper.MapTileSize + (p.Width / 2.0f), rect.Y + ImageHelper.MapTileSize);
+                            e.Graphics.DrawLine(p, rect.X - (p.Width / 2.0f), rect.Y + tileSize, rect.X + tileSize + (p.Width / 2.0f), rect.Y + tileSize);
                         }
 
                         if ((tileData & MapTile.EastWallMask) != MapTile.None)
                         {
-                            e.Graphics.DrawLine(p, rect.X + ImageHelper.MapTileSize, rect.Y - (p.Width / 2.0f), rect.X + ImageHelper.MapTileSize, rect.Y + ImageHelper.MapTileSize + (p.Width / 2.0f));
+                            e.Graphics.DrawLine(p, rect.X + tileSize, rect.Y - (p.Width / 2.0f), rect.X + tileSize, rect.Y + tileSize + (p.Width / 2.0f));
                         }
                     }
                 }
@@ -145,17 +150,17 @@ namespace EO4SaveEdit.Editors
 
             foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != MapObjectType.None))
             {
-                e.Graphics.DrawImage(ImageHelper.MapIcons,
-                    new Rectangle(mapObj.XPosition * ImageHelper.MapTileSize, mapObj.YPosition * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize),
-                    ImageHelper.GetMapIconRect(mapObj.Type),
+                e.Graphics.DrawImage((Properties.Settings.Default.ZoomedMap ? ImageHelper.MapIconsLarge : ImageHelper.MapIconsSmall),
+                    new Rectangle(mapObj.XPosition * tileSize, mapObj.YPosition * tileSize, tileSize, tileSize),
+                    ImageHelper.GetMapIconRect(mapObj.Type, Properties.Settings.Default.ZoomedMap),
                     GraphicsUnit.Pixel);
             }
 
             foreach (MapNote mapNote in currentMap.Notes.Where(x => x.Description != string.Empty))
             {
-                e.Graphics.DrawImage(ImageHelper.MapIcons,
-                    new Rectangle(mapNote.XPosition * ImageHelper.MapTileSize, mapNote.YPosition * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize),
-                    ImageHelper.GetMapIconRect(MapObjectType.Note),
+                e.Graphics.DrawImage((Properties.Settings.Default.ZoomedMap ? ImageHelper.MapIconsLarge : ImageHelper.MapIconsSmall),
+                    new Rectangle(mapNote.XPosition * tileSize, mapNote.YPosition * tileSize, tileSize, tileSize),
+                    ImageHelper.GetMapIconRect(MapObjectType.Note, Properties.Settings.Default.ZoomedMap),
                     GraphicsUnit.Pixel);
             }
 
@@ -164,14 +169,14 @@ namespace EO4SaveEdit.Editors
                 using (Pen p = new Pen(Color.FromArgb(192, Color.Red), 2.0f))
                 {
                     Point placeablePosition = currentPlaceable.GetPosition();
-                    e.Graphics.DrawRectangle(p, new Rectangle(placeablePosition.X * ImageHelper.MapTileSize, placeablePosition.Y * ImageHelper.MapTileSize, ImageHelper.MapTileSize, ImageHelper.MapTileSize));
+                    e.Graphics.DrawRectangle(p, new Rectangle(placeablePosition.X * tileSize, placeablePosition.Y * tileSize, tileSize, tileSize));
                 }
             }
         }
 
         private void pbRender_MouseMove(object sender, MouseEventArgs e)
         {
-            Point newHover = new Point(e.X / ImageHelper.MapTileSize, e.Y / ImageHelper.MapTileSize);
+            Point newHover = new Point(e.X / tileSize, e.Y / tileSize);
 
             if (currentMap != null && tileHover != newHover && newHover.Y < currentMap.TilesYX.GetLength(0) && newHover.X < currentMap.TilesYX.GetLength(1))
             {
@@ -207,7 +212,7 @@ namespace EO4SaveEdit.Editors
 
             lbMapPlaceables.DataSource = currentMap.Objects.Cast<IMapPlaceable>().Concat(currentMap.Notes).ToList();
 
-            pbRender.ClientSize = new System.Drawing.Size(currentMap.TilesYX.GetLength(1) * ImageHelper.MapTileSize, currentMap.TilesYX.GetLength(0) * ImageHelper.MapTileSize);
+            pbRender.ClientSize = renderSize;
             pbRender.Invalidate();
         }
 
@@ -244,6 +249,14 @@ namespace EO4SaveEdit.Editors
         private void lbMapPlaceables_SelectedValueChanged(object sender, EventArgs e)
         {
             currentPlaceable = ((sender as ListBox).SelectedItem as IMapPlaceable);
+            pbRender.Invalidate();
+        }
+
+        private void chkZoomedMap_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.ZoomedMap = (sender as CheckBox).Checked;
+
+            pbRender.ClientSize = renderSize;
             pbRender.Invalidate();
         }
     }

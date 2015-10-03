@@ -33,6 +33,7 @@
             this.lbMapPlaceables = new EO4SaveEdit.Controls.ListBoxEx();
             this.pnlRender = new EO4SaveEdit.Controls.PanelEx();
             this.pbRender = new System.Windows.Forms.PictureBox();
+            this.chkZoomedMap = new System.Windows.Forms.CheckBox();
             this.pnlRender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRender)).BeginInit();
             this.SuspendLayout();
@@ -97,10 +98,22 @@
             this.pbRender.MouseLeave += new System.EventHandler(this.pbRender_MouseLeave);
             this.pbRender.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbRender_MouseMove);
             // 
+            // chkZoomedMap
+            // 
+            this.chkZoomedMap.AutoSize = true;
+            this.chkZoomedMap.Location = new System.Drawing.Point(260, 7);
+            this.chkZoomedMap.Name = "chkZoomedMap";
+            this.chkZoomedMap.Size = new System.Drawing.Size(95, 17);
+            this.chkZoomedMap.TabIndex = 4;
+            this.chkZoomedMap.Text = "Show Zoomed";
+            this.chkZoomedMap.UseVisualStyleBackColor = true;
+            this.chkZoomedMap.CheckedChanged += new System.EventHandler(this.chkZoomedMap_CheckedChanged);
+            // 
             // MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chkZoomedMap);
             this.Controls.Add(this.lbMapPlaceables);
             this.Controls.Add(this.pnlRender);
             this.Controls.Add(this.btnFileHeader);
@@ -110,6 +123,7 @@
             this.pnlRender.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbRender)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Button btnFileHeader;
         private System.Windows.Forms.PictureBox pbRender;
         private Controls.ListBoxEx lbMapPlaceables;
+        private System.Windows.Forms.CheckBox chkZoomedMap;
     }
 }

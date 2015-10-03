@@ -14,8 +14,10 @@ namespace EO4SaveEdit
     {
         public static Dictionary<Class, ImageList> CharacterIcons { get; private set; }
 
-        public static Bitmap MapIcons { get; private set; }
-        public static int MapTileSize { get; private set; }
+        public static Bitmap MapIconsLarge { get; private set; }
+        public static Bitmap MapIconsSmall { get; private set; }
+        public static int MapTileSizeLarge { get; private set; }
+        public static int MapTileSizeSmall { get; private set; }
 
         static ImageHelper()
         {
@@ -42,14 +44,19 @@ namespace EO4SaveEdit
                 CharacterIcons.Add(charaClass, imageList);
             }
 
-            MapIcons = new Bitmap("Data\\MapIcons.png");
-            if (MapIcons.Width / 16 != MapIcons.Height / 16) throw new Exception("Unexpected map icon image size");
-            MapTileSize = (MapIcons.Width / 16);
+            MapIconsLarge = new Bitmap("Data\\MapIconsLarge.png");
+            if (MapIconsLarge.Width / 16 != MapIconsLarge.Height / 16) throw new Exception("Unexpected map icon (large) image size");
+            MapTileSizeLarge = (MapIconsLarge.Width / 16);
+
+            MapIconsSmall = new Bitmap("Data\\MapIconsSmall.png");
+            if (MapIconsSmall.Width / 16 != MapIconsSmall.Height / 16) throw new Exception("Unexpected map icon (small) image size");
+            MapTileSizeSmall = (MapIconsSmall.Width / 16);
         }
 
-        public static Rectangle GetMapIconRect(MapObjectType objType)
+        public static Rectangle GetMapIconRect(MapObjectType objType, bool zoomedMap)
         {
-            return new Rectangle(((byte)objType % 16) * MapTileSize, ((byte)objType / 16) * MapTileSize, MapTileSize, MapTileSize);
+            int tileSize = (zoomedMap ? MapTileSizeLarge : MapTileSizeSmall);
+            return new Rectangle(((byte)objType % 16) * tileSize, ((byte)objType / 16) * tileSize, tileSize, tileSize);
         }
     }
 }
