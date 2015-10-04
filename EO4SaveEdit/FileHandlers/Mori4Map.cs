@@ -122,7 +122,7 @@ namespace EO4SaveEdit.FileHandlers
     public class MapObject : DataChunk, IMapPlaceable
     {
         [DisplayName("Object Type"), Description("Type of this object."), Category("Data")]
-        [TypeConverter(typeof(DescriptionEnumConverter))]
+        [TypeConverter(typeof(DescriptionEnumConverter)), Editor(typeof(MapIconPropertyGridEditor), typeof(System.Drawing.Design.UITypeEditor))]
         public MapObjectType Type { get; set; }
         public bool ShouldSerializeType() { return !(this.Type == (dynamic)base.originalValues["Type"]); }
         public void ResetType() { this.Type = (dynamic)base.originalValues["Type"]; }

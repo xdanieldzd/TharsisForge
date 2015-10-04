@@ -136,6 +136,7 @@
     <Compile Include="Controls\SimpleProgressBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="MapIconPropertyGridEditor.cs" />
     <Compile Include="RomFSDataDumper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
