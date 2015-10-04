@@ -11,7 +11,7 @@ using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
 {
-    public partial class MapEditor : UserControl
+    public partial class MapEditor : UserControl, IEditorControl
     {
         static readonly Color floorColorGreen = Color.FromArgb(16, 205, 115);
         static readonly Color floorColorBlue = Color.FromArgb(0, 139, 205);
@@ -35,15 +35,16 @@ namespace EO4SaveEdit.Editors
             InitializeComponent();
         }
 
-        public void Initialize(Mori4Map map)
+        public void Initialize(SaveDataHandler handler)
         {
-            this.mapData = map;
-
-            if (this.mapData == null)
+            if (handler == null)
             {
                 this.Enabled = false;
                 return;
             }
+
+            this.mapData = handler.MapDatafile;
+            handler.SaveSucceededEvent += ((s, e) => { pgMapPlaceable.Refresh(); });
 
             this.Enabled = true;
 
@@ -88,11 +89,6 @@ namespace EO4SaveEdit.Editors
             cmbMaps.ValueMember = "Key";
 
             currentMap = this.mapData.MazeMaps[0];
-        }
-
-        public void AfterSaveUpdate()
-        {
-            pgMapPlaceable.Refresh();
         }
 
         private void pbRender_Paint(object sender, PaintEventArgs e)

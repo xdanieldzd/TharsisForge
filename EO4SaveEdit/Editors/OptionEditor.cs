@@ -12,7 +12,7 @@ using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
 {
-    public partial class OptionEditor : UserControl
+    public partial class OptionEditor : UserControl, IEditorControl
     {
         Mori4Option gameOptions;
 
@@ -21,15 +21,15 @@ namespace EO4SaveEdit.Editors
             InitializeComponent();
         }
 
-        public void Initialize(Mori4Option options)
+        public void Initialize(SaveDataHandler handler)
         {
-            this.gameOptions = options;
-
-            if (this.gameOptions == null)
+            if (handler == null)
             {
                 this.Enabled = false;
                 return;
             }
+
+            this.gameOptions = handler.OptionDataFile;
 
             this.Enabled = true;
 

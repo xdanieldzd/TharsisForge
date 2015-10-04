@@ -12,7 +12,7 @@ using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
 {
-    public partial class CharacterEditor : UserControl
+    public partial class CharacterEditor : UserControl, IEditorControl
     {
         // TODO: rewrite eventually
 
@@ -26,15 +26,15 @@ namespace EO4SaveEdit.Editors
             InitializeComponent();
         }
 
-        public void Initialize(Mori4Game game)
+        public void Initialize(SaveDataHandler handler)
         {
-            this.gameData = game;
-
-            if (this.gameData == null)
+            if (handler == null)
             {
                 this.Enabled = false;
                 return;
             }
+
+            this.gameData = handler.GameDataFile;
 
             this.Enabled = true;
 

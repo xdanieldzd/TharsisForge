@@ -13,7 +13,7 @@ using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
 {
-    public partial class GuildCardEditor : UserControl
+    public partial class GuildCardEditor : UserControl, IEditorControl
     {
         // TODO: Redo layout for better resizability? FlowLayoutPanels?
 
@@ -33,15 +33,15 @@ namespace EO4SaveEdit.Editors
             this.DoubleBuffered = true;
         }
 
-        public void Initialize(Mori4GdCard guildCard)
+        public void Initialize(SaveDataHandler handler)
         {
-            this.guildCardData = guildCard;
-
-            if (this.guildCardData == null)
+            if (handler == null)
             {
                 this.Enabled = false;
                 return;
             }
+
+            this.guildCardData = handler.GuildCardDataFile;
 
             this.Enabled = true;
 
