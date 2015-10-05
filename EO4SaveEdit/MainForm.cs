@@ -61,7 +61,6 @@ namespace EO4SaveEdit
 #else
             // TEMP TEMP
             tabControl1.TabPages.Remove(tpCharas);
-            tabControl1.TabPages.Remove(tpMaps);
             tabControl1.TabPages.Remove(tpGameData);
 #endif
         }
@@ -118,8 +117,8 @@ namespace EO4SaveEdit
 
         private void LoadData(string path)
         {
-            foreach (IEditorControl editor in editorControls)
-                editor.Initialize(null);
+            foreach (Control editor in editorControls)
+                editor.Enabled = false;
 
             saveDataHandler = new SaveDataHandler();
             if (!saveDataHandler.LoadDirectory(path))
@@ -129,7 +128,10 @@ namespace EO4SaveEdit
             else
             {
                 foreach (IEditorControl editor in editorControls)
+                {
                     editor.Initialize(saveDataHandler);
+                    (editor as Control).Enabled = true;
+                }
 
                 saveToolStripMenuItem.Enabled = true;
                 Properties.Settings.Default.LastFolder = path;

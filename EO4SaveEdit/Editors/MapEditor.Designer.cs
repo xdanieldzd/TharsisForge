@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapEditor));
             this.cmbMaps = new System.Windows.Forms.ComboBox();
             this.btnFileHeader = new System.Windows.Forms.Button();
             this.chkZoomedMap = new System.Windows.Forms.CheckBox();
             this.pgMapPlaceable = new System.Windows.Forms.PropertyGrid();
+            this.tsPropertyGridExtension = new System.Windows.Forms.ToolStrip();
+            this.tsbResetProperty = new System.Windows.Forms.ToolStripButton();
             this.lbMapPlaceables = new EO4SaveEdit.Controls.ListBoxEx();
             this.pnlRender = new EO4SaveEdit.Controls.PanelEx();
             this.pbRender = new System.Windows.Forms.PictureBox();
+            this.tsPropertyGridExtension.SuspendLayout();
             this.pnlRender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRender)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +84,28 @@
             this.pgMapPlaceable.Size = new System.Drawing.Size(220, 465);
             this.pgMapPlaceable.TabIndex = 1;
             this.pgMapPlaceable.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.pgMapPlaceable_PropertyValueChanged);
+            this.pgMapPlaceable.SelectedGridItemChanged += new System.Windows.Forms.SelectedGridItemChangedEventHandler(this.pgMapPlaceable_SelectedGridItemChanged);
+            // 
+            // tsPropertyGridExtension
+            // 
+            this.tsPropertyGridExtension.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsPropertyGridExtension.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbResetProperty});
+            this.tsPropertyGridExtension.Location = new System.Drawing.Point(677, 3);
+            this.tsPropertyGridExtension.Name = "tsPropertyGridExtension";
+            this.tsPropertyGridExtension.Size = new System.Drawing.Size(66, 25);
+            this.tsPropertyGridExtension.TabIndex = 1;
+            this.tsPropertyGridExtension.Visible = false;
+            // 
+            // tsbResetProperty
+            // 
+            this.tsbResetProperty.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbResetProperty.Image = ((System.Drawing.Image)(resources.GetObject("tsbResetProperty.Image")));
+            this.tsbResetProperty.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbResetProperty.Name = "tsbResetProperty";
+            this.tsbResetProperty.Size = new System.Drawing.Size(23, 22);
+            this.tsbResetProperty.Text = "Reset Property";
+            this.tsbResetProperty.Click += new System.EventHandler(this.tsbResetProperty_Click);
             // 
             // lbMapPlaceables
             // 
@@ -117,13 +143,14 @@
             this.pbRender.TabIndex = 0;
             this.pbRender.TabStop = false;
             this.pbRender.Paint += new System.Windows.Forms.PaintEventHandler(this.pbRender_Paint);
-            this.pbRender.MouseLeave += new System.EventHandler(this.pbRender_MouseLeave);
+            this.pbRender.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbRender_MouseDown);
             this.pbRender.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbRender_MouseMove);
             // 
             // MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tsPropertyGridExtension);
             this.Controls.Add(this.pgMapPlaceable);
             this.Controls.Add(this.chkZoomedMap);
             this.Controls.Add(this.lbMapPlaceables);
@@ -132,6 +159,8 @@
             this.Controls.Add(this.cmbMaps);
             this.Name = "MapEditor";
             this.Size = new System.Drawing.Size(900, 500);
+            this.tsPropertyGridExtension.ResumeLayout(false);
+            this.tsPropertyGridExtension.PerformLayout();
             this.pnlRender.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbRender)).EndInit();
             this.ResumeLayout(false);
@@ -148,5 +177,7 @@
         private Controls.ListBoxEx lbMapPlaceables;
         private System.Windows.Forms.CheckBox chkZoomedMap;
         private System.Windows.Forms.PropertyGrid pgMapPlaceable;
+        private System.Windows.Forms.ToolStrip tsPropertyGridExtension;
+        private System.Windows.Forms.ToolStripButton tsbResetProperty;
     }
 }

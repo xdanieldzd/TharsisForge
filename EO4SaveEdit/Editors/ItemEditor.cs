@@ -53,15 +53,7 @@ namespace EO4SaveEdit.Editors
 
         public void Initialize(SaveDataHandler handler)
         {
-            if (handler == null)
-            {
-                this.Enabled = false;
-                return;
-            }
-
             this.gameData = handler.GameDataFile;
-
-            this.Enabled = true;
 
             inventoryItemAdapters = new ItemAdapter[gameData.InventoryItems.Length];
             for (int i = 0; i < inventoryItemAdapters.Length; i++) inventoryItemAdapters[i] = new ItemAdapter(gameData.InventoryItems[i], null);

@@ -23,15 +23,7 @@ namespace EO4SaveEdit.Editors
 
         public void Initialize(SaveDataHandler handler)
         {
-            if (handler == null)
-            {
-                this.Enabled = false;
-                return;
-            }
-
             this.gameData = handler.GameDataFile;
-
-            this.Enabled = true;
 
             nudTimeYear.SetBinding("Value", gameData, "CurrentYear");
             cmbTimeMonth.DataSource = Mori4Game.MonthNames;

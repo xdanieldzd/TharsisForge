@@ -35,15 +35,7 @@ namespace EO4SaveEdit.Editors
 
         public void Initialize(SaveDataHandler handler)
         {
-            if (handler == null)
-            {
-                this.Enabled = false;
-                return;
-            }
-
             this.guildCardData = handler.GuildCardDataFile;
-
-            this.Enabled = true;
 
             nameTextBoxes = new TextBox[] { txtCharaListName1, txtCharaListName2, txtCharaListName3, txtCharaListName4, txtCharaListName5 };
             levelNumericUpDowns = new NumericUpDown[] { nudCharaListLevel1, nudCharaListLevel2, nudCharaListLevel3, nudCharaListLevel4, nudCharaListLevel5 };

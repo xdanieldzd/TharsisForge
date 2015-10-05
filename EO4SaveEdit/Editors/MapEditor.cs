@@ -20,8 +20,6 @@ namespace EO4SaveEdit.Editors
         static readonly Color wallColor = Color.FromArgb(0, 74, 65);
 
         Mori4Map mapData;
-        Point tileHover;
-        ToolTip tip;
 
         int tileSize { get { return (Properties.Settings.Default.ZoomedMap ? ImageHelper.MapTileSizeLarge : ImageHelper.MapTileSizeSmall); } }
         Size renderSize { get { return (currentMap != null ? new Size(currentMap.TilesYX.GetLength(1) * tileSize, currentMap.TilesYX.GetLength(0) * tileSize) : Size.Empty); } }
@@ -29,27 +27,28 @@ namespace EO4SaveEdit.Editors
         Dictionary<MapLayer, string> mapNameDict;
         MapLayer currentMap;
         IMapPlaceable currentPlaceable;
+        bool nowDraggingPlaceable;
 
         public MapEditor()
         {
             InitializeComponent();
+
+            foreach (Control control in pgMapPlaceable.Controls)
+            {
+                ToolStrip toolStrip = (control as ToolStrip);
+                if (toolStrip != null)
+                {
+                    toolStrip.AllowMerge = true;
+                    toolStrip.Items[toolStrip.Items.Count - 1].Visible = false;
+                    ToolStripManager.Merge(tsPropertyGridExtension, toolStrip);
+                }
+            }
         }
 
         public void Initialize(SaveDataHandler handler)
         {
-            if (handler == null)
-            {
-                this.Enabled = false;
-                return;
-            }
-
             this.mapData = handler.MapDatafile;
             handler.SaveSucceededEvent += ((s, e) => { pgMapPlaceable.Refresh(); });
-
-            this.Enabled = true;
-
-            tileHover = new Point(-1, -1);
-            tip = new ToolTip();
 
             chkZoomedMap.Checked = Properties.Settings.Default.ZoomedMap;
 
@@ -175,36 +174,43 @@ namespace EO4SaveEdit.Editors
             }
         }
 
-        private void pbRender_MouseMove(object sender, MouseEventArgs e)
+        private void pbRender_MouseDown(object sender, MouseEventArgs e)
         {
-            Point newHover = new Point(e.X / tileSize, e.Y / tileSize);
-
-            if (currentMap != null && tileHover != newHover && newHover.Y < currentMap.TilesYX.GetLength(0) && newHover.X < currentMap.TilesYX.GetLength(1))
+            if (currentMap != null && e.Button == System.Windows.Forms.MouseButtons.Left)
             {
-                tileHover = newHover;
+                Point objectPosition = new Point(e.X / tileSize, e.Y / tileSize);
 
-                tip.ToolTipTitle = string.Format("Location X:{0} Y:{1}", tileHover.X, tileHover.Y);
-
-                StringBuilder sb = new StringBuilder();
-                sb.AppendFormat("Map tile: 0x{0:X2}\n", currentMap.TilesYX[tileHover.Y, tileHover.X]);
-
-                foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != MapObjectType.None && x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
+                List<IMapPlaceable> possibleSelections = currentMap.Objects.Cast<IMapPlaceable>().Concat(currentMap.Notes).Where(x => x.GetPosition() == objectPosition).ToList();
+                if (possibleSelections.Count != 0)
                 {
-                    sb.AppendFormat("Object #{0}: {1}\n", Array.IndexOf(currentMap.Objects, mapObj) + 1, mapObj.Type);
-                }
+                    int removeRange = possibleSelections.IndexOf(currentPlaceable) + 1;
+                    if (possibleSelections.Count != removeRange)
+                        possibleSelections.RemoveRange(0, removeRange);
 
-                foreach (MapNote mapNote in currentMap.Notes.Where(x => x.Description != string.Empty && x.XPosition == tileHover.X && x.YPosition == tileHover.Y))
-                {
-                    sb.AppendFormat("Note #{0}: {1}\n", Array.IndexOf(currentMap.Notes, mapNote) + 1, mapNote.Description);
-                }
+                    IMapPlaceable newSelection = possibleSelections.FirstOrDefault(x => x != currentPlaceable);
+                    if (newSelection != null && newSelection.IsValid())
+                        lbMapPlaceables.SelectedItem = currentPlaceable = newSelection;
 
-                tip.Show(sb.ToString(), (sender as Control), e.X + 5, e.Y + 5, 2500);
+                    nowDraggingPlaceable = true;
+                }
+                else
+                    nowDraggingPlaceable = false;
             }
         }
 
-        private void pbRender_MouseLeave(object sender, EventArgs e)
+        private void pbRender_MouseMove(object sender, MouseEventArgs e)
         {
-            if (tip != null) tip.Hide(sender as Control);
+            if (currentMap != null && currentPlaceable != null && e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                Point objectPosition = new Point(e.X / tileSize, e.Y / tileSize);
+                if (nowDraggingPlaceable && currentPlaceable.GetPosition() != objectPosition)
+                {
+                    currentPlaceable.SetPosition(objectPosition);
+                    pgMapPlaceable.Refresh();
+                    lbMapPlaceables.Invalidate();
+                    pbRender.Invalidate();
+                }
+            }
         }
 
         private void cmbMaps_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,14 +264,26 @@ namespace EO4SaveEdit.Editors
             pbRender.Invalidate();
         }
 
+        private void pgMapPlaceable_SelectedGridItemChanged(object sender, SelectedGridItemChangedEventArgs e)
+        {
+            tsbResetProperty.Enabled = (e.NewSelection.PropertyDescriptor != null && currentPlaceable.HasPropertyChanged(e.NewSelection.PropertyDescriptor.Name));
+        }
+
         private void pgMapPlaceable_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
-            if (e.ChangedItem.PropertyDescriptor.Name == "Type" || e.ChangedItem.PropertyDescriptor.Name == "Description" ||
-                e.ChangedItem.PropertyDescriptor.Name == "XPosition" || e.ChangedItem.PropertyDescriptor.Name == "YPosition")
-            {
-                lbMapPlaceables.Invalidate();
-                pbRender.Invalidate();
-            }
+            tsbResetProperty.Enabled = (e.ChangedItem.PropertyDescriptor != null && currentPlaceable.HasPropertyChanged(e.ChangedItem.PropertyDescriptor.Name));
+
+            lbMapPlaceables.Invalidate();
+            pbRender.Invalidate();
+        }
+
+        private void tsbResetProperty_Click(object sender, EventArgs e)
+        {
+            pgMapPlaceable.SelectedGridItem.PropertyDescriptor.ResetValue(pgMapPlaceable.SelectedObject);
+
+            pgMapPlaceable.Refresh();
+            lbMapPlaceables.Invalidate();
+            pbRender.Invalidate();
         }
     }
 }

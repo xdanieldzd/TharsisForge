@@ -28,15 +28,7 @@ namespace EO4SaveEdit.Editors
 
         public void Initialize(SaveDataHandler handler)
         {
-            if (handler == null)
-            {
-                this.Enabled = false;
-                return;
-            }
-
             this.gameData = handler.GameDataFile;
-
-            this.Enabled = true;
 
             equipmentComboBoxes = new ComboBox[] { cmbEquipWeaponItem, cmbEquipEquipItem, cmbEquipArmor1Item, cmbEquipArmor2Item };
 

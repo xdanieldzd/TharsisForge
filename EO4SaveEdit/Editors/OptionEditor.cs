@@ -23,15 +23,7 @@ namespace EO4SaveEdit.Editors
 
         public void Initialize(SaveDataHandler handler)
         {
-            if (handler == null)
-            {
-                this.Enabled = false;
-                return;
-            }
-
             this.gameOptions = handler.OptionDataFile;
-
-            this.Enabled = true;
 
             SetComboBoxBinding(cmbBGMVolume, "BGMVolume", Mori4Option.VolumeLevels);
             SetComboBoxBinding(cmbSEVolume, "SEVolume", Mori4Option.VolumeLevels);

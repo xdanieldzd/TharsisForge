@@ -27,5 +27,11 @@ namespace EO4SaveEdit.FileHandlers
             originalValues = new Dictionary<string, object>();
             foreach (PropertyInfo prop in this.GetType().GetProperties().Where(x => x.CanWrite)) originalValues.Add(prop.Name, prop.GetValue(this, null));
         }
+
+        public bool HasPropertyChanged(string property)
+        {
+            object value = this.GetType().GetProperty(property).GetValue(this, null);
+            return (!value.Equals(originalValues[property]));
+        }
     }
 }

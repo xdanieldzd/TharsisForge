@@ -175,6 +175,18 @@ namespace EO4SaveEdit.FileHandlers
         {
             return new Point(XPosition, YPosition);
         }
+
+        public void SetPosition(Point position)
+        {
+            XPosition = (byte)position.X;
+            YPosition = (byte)position.Y;
+        }
+
+        public bool IsValid()
+        {
+            return (Type != MapObjectType.None);
+        }
+
     }
 
     [System.Diagnostics.DebuggerDisplay("Description:{Description},X:{XPosition},Y:{YPosition},Padding:{Padding}")]
@@ -245,6 +257,17 @@ namespace EO4SaveEdit.FileHandlers
         public Point GetPosition()
         {
             return new Point(XPosition, YPosition);
+        }
+
+        public void SetPosition(Point position)
+        {
+            XPosition = (byte)position.X;
+            YPosition = (byte)position.Y;
+        }
+
+        public bool IsValid()
+        {
+            return (Description != string.Empty);
         }
     }
 
@@ -376,5 +399,8 @@ namespace EO4SaveEdit.FileHandlers
     public interface IMapPlaceable
     {
         Point GetPosition();
+        void SetPosition(Point position);
+        bool IsValid();
+        bool HasPropertyChanged(string property);
     }
 }
