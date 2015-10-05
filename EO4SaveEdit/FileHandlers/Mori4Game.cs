@@ -8,6 +8,19 @@ using EO4SaveEdit.Extensions;
 
 namespace EO4SaveEdit.FileHandlers
 {
+    [Flags]
+    public enum BaseFlags : byte
+    {
+        Bit0 = 0x01,
+        InParty = 0x02,
+        Bit2 = 0x04,
+        Bit3 = 0x08,
+        Bit4 = 0x10,
+        IsGuildCardCharacter = 0x20,
+        Bit6 = 0x40,
+        Bit7 = 0x80
+    }
+
     public enum Class : byte
     {
         Landsknecht = 0x00,
@@ -22,6 +35,29 @@ namespace EO4SaveEdit.FileHandlers
         Imperial = 0x09,
 
         None = 0xFF
+    }
+
+    [Flags]
+    public enum StatusAilments : ushort
+    {
+        None = 0x0000,
+
+        Dead = 0x0001,
+        Petrified = 0x0002,
+        Asleep = 0x0004,
+        Panicked = 0x0008,
+        Bit4 = 0x0010,
+        Poisoned = 0x0020,
+        Blindness = 0x0040,
+        Cursed = 0x0080,
+        Paralyzed = 0x0100,
+        Bit9 = 0x0200,
+        HeadBind = 0x0400,
+        ArmBind = 0x0800,
+        LegBind = 0x1000,
+        Bit13 = 0x2000,
+        Bit14 = 0x4000,
+        Bit15 = 0x8000
     }
 
     public enum ForgeEffect : byte
@@ -163,13 +199,13 @@ namespace EO4SaveEdit.FileHandlers
 
         int nameLength, guildNameLength;
 
-        public byte Unknown1 { get; set; }
+        public BaseFlags BaseFlags { get; set; }
         public byte Portrait { get; set; }
         public byte ID { get; set; }
         public byte Level { get; set; }
         public Class Class { get; set; }
         public Class Subclass { get; set; }
-        public ushort Unknown2 { get; set; }
+        public StatusAilments StatusAilments { get; set; }
         public Item WeaponSlot { get; set; }
         public Item EquipmentSlot { get; set; }
         public Item ArmorSlot1 { get; set; }
@@ -189,8 +225,9 @@ namespace EO4SaveEdit.FileHandlers
         public ushort CurrentTP { get; set; }
         public uint CurrentEXP { get; set; }
         byte[] name;
-        public ushort Unknown8 { get; set; }
-        public ushort UnknownTotalSkillPoints { get; set; }
+        public ushort NamePadding { get; set; }
+        public byte UnknownTotalSkillPoints { get; set; }
+        public byte AvailableSkillPoints { get; set; }
         public byte[] MainSkillLevels { get; set; }
         public byte[] SubSkillLevels { get; set; }
         public ushort Unknown9 { get; set; }
@@ -246,13 +283,13 @@ namespace EO4SaveEdit.FileHandlers
                 guildNameLength = GuildNameLengthJpn;
             }
 
-            Unknown1 = reader.ReadByte();
+            BaseFlags = (BaseFlags)reader.ReadByte();
             Portrait = reader.ReadByte();
             ID = reader.ReadByte();
             Level = reader.ReadByte();
             Class = (Class)reader.ReadByte();
             Subclass = (Class)reader.ReadByte();
-            Unknown2 = reader.ReadUInt16();
+            StatusAilments = (StatusAilments)reader.ReadUInt16();
             WeaponSlot = new Item(stream);
             EquipmentSlot = new Item(stream);
             ArmorSlot1 = new Item(stream);
@@ -272,8 +309,9 @@ namespace EO4SaveEdit.FileHandlers
             CurrentTP = reader.ReadUInt16();
             CurrentEXP = reader.ReadUInt32();
             name = reader.ReadBytes(nameLength);
-            Unknown8 = reader.ReadUInt16();
-            UnknownTotalSkillPoints = reader.ReadUInt16();
+            NamePadding = reader.ReadUInt16();
+            UnknownTotalSkillPoints = reader.ReadByte();
+            AvailableSkillPoints = reader.ReadByte();
             MainSkillLevels = reader.ReadBytes(25);
             SubSkillLevels = reader.ReadBytes(25);
             Unknown9 = reader.ReadUInt16();
@@ -305,13 +343,13 @@ namespace EO4SaveEdit.FileHandlers
         {
             BinaryWriter writer = new BinaryWriter(stream);
 
-            writer.Write(Unknown1);
+            writer.Write((byte)BaseFlags);
             writer.Write(Portrait);
             writer.Write(ID);
             writer.Write(Level);
             writer.Write((byte)Class);
             writer.Write((byte)Subclass);
-            writer.Write(Unknown2);
+            writer.Write((ushort)StatusAilments);
             WeaponSlot.WriteToStream(stream);
             EquipmentSlot.WriteToStream(stream);
             ArmorSlot1.WriteToStream(stream);
@@ -331,8 +369,9 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(CurrentTP);
             writer.Write(CurrentEXP);
             writer.Write(name);
-            writer.Write(Unknown8);
+            writer.Write(NamePadding);
             writer.Write(UnknownTotalSkillPoints);
+            writer.Write(AvailableSkillPoints);
             writer.Write(MainSkillLevels);
             writer.Write(SubSkillLevels);
             writer.Write(Unknown9);
