@@ -14,6 +14,8 @@ Requirements
 
 Screenshots
 ===========
-![Tharsis Forge (Guild Card editor)](http://i.imgur.com/uptnbzF.png)
-![Tharsis Forge (Item editor)](http://i.imgur.com/eYqt1QX.png)
-![Tharsis Forge (Options editor)](http://i.imgur.com/7MhbCBq.png)
+![Tharsis Forge v1.0 (Guild Card editor)](http://i.imgur.com/uptnbzF.png)
+![Tharsis Forge v1.0 (Item editor)](http://i.imgur.com/eYqt1QX.png)
+![Tharsis Forge v1.0 (Options editor)](http://i.imgur.com/7MhbCBq.png)
+![Tharsis Forge v1.1 (Game Data editor)](http://i.imgur.com/s13QUSb.png)
+![Tharsis Forge v1.1 (Map editor)](http://i.imgur.com/BTQKedr.png)
