@@ -69,9 +69,9 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tpGameData);
-            this.tabControl1.Controls.Add(this.tpGuildCards);
-            this.tabControl1.Controls.Add(this.tpItems);
             this.tabControl1.Controls.Add(this.tpCharas);
+            this.tabControl1.Controls.Add(this.tpItems);
+            this.tabControl1.Controls.Add(this.tpGuildCards);
             this.tabControl1.Controls.Add(this.tpMaps);
             this.tabControl1.Controls.Add(this.tpOptions);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;

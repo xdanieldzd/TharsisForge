@@ -25,6 +25,7 @@ namespace EO4SaveEdit
             foreach (Class charaClass in Enum.GetValues(typeof(Class)))
             {
                 ImageList imageList = new ImageList();
+                imageList.ColorDepth = ColorDepth.Depth32Bit;
                 int fileClassId = (int)(charaClass + 1);
 
                 if (charaClass == Class.None) continue;

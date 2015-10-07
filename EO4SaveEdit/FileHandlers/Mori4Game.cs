@@ -80,8 +80,8 @@ namespace EO4SaveEdit.FileHandlers
         Fire = 0x0E,
         Ice = 0x0F,
         Volt = 0x10,
-        //0x11
-        //0x12
+        Piercing = 0x11,
+        Splashing = 0x12,
         Blind = 0x13,
         Sleep = 0x14,
         Poison = 0x15,
@@ -94,12 +94,25 @@ namespace EO4SaveEdit.FileHandlers
         HeadBind = 0x1C,
         ArmBind = 0x1D,
         LegBind = 0x1E,
-        Slash = 0x1F,
-        Bash = 0x20,
-        Pierce = 0x21
+        SlashResist = 0x1F,
+        BashResist = 0x20,
+        PierceResist = 0x21
+    }
 
-        // TOOD: Check 0x11, 0x12 in-game...
-        // TODO/CONFIRM: Meaning appears to depens on item type, i.e. "Fire" == fire *attack* on weapon (Apollo bow), fire *resist* on armor/accessory (Fire Charm acc)?
+    [Flags]
+    public enum UnlockStatus : byte
+    {
+        Locked = 0x00,
+
+        // TODO: not fully understood... Set to 0x41 or 0x45 to unlock any monster, 0x01 or 0x05 for any item, I guess?
+        Unlocked = 0x01,
+        UnknownBit1 = 0x02,
+        NotMarkedNew = 0x04,
+        Bit3 = 0x08,
+        Bit4 = 0x10,
+        Bit5 = 0x20,
+        UnlockedConditionalDrop = 0x40,
+        Bit7 = 0x80
     }
 
     public class Item : DataChunk
@@ -400,6 +413,28 @@ namespace EO4SaveEdit.FileHandlers
         }
     }
 
+    [System.Diagnostics.DebuggerDisplay("{UnlockStatus}")]
+    public class DictionaryUnlocks : DataChunk
+    {
+        public UnlockStatus UnlockStatus { get; set; }
+
+        public DictionaryUnlocks(Stream stream) { this.ReadFromStream(stream); }
+
+        public override void ReadFromStream(Stream stream)
+        {
+            BinaryReader reader = new BinaryReader(stream);
+
+            UnlockStatus = (UnlockStatus)reader.ReadByte();
+        }
+
+        public override void WriteToStream(Stream stream)
+        {
+            BinaryWriter writer = new BinaryWriter(stream);
+
+            writer.Write((byte)UnlockStatus);
+        }
+    }
+
     public class Mori4Game : BaseMori4File
     {
         public const string ExpectedFileSignature = "MOR4GAME";
@@ -457,6 +492,11 @@ namespace EO4SaveEdit.FileHandlers
         public Item[] KeyItems { get; set; }
         public Item[] StorageItems { get; set; }
         public ItemAmount[] StorageItemAmounts { get; set; }
+        //...
+        public ItemAmount[] BerundMaterialAmounts { get; set; }
+        //...
+        public DictionaryUnlocks[] ItemCompendiumUnlocks { get; set; }
+        public DictionaryUnlocks[] MonstrousCodexUnlocks { get; set; }
         //...
 
         public int CurrentYear
@@ -556,6 +596,16 @@ namespace EO4SaveEdit.FileHandlers
             StorageItemAmounts = new ItemAmount[99];
             for (int i = 0; i < StorageItemAmounts.Length; i++) StorageItemAmounts[i] = new ItemAmount(stream);
             //...
+            reader.BaseStream.Seek(0x3519, SeekOrigin.Current);
+            BerundMaterialAmounts = new ItemAmount[400];
+            for (int i = 0; i < BerundMaterialAmounts.Length; i++) BerundMaterialAmounts[i] = new ItemAmount(stream);
+            //...
+            reader.BaseStream.Seek(0xB10, SeekOrigin.Current);
+            ItemCompendiumUnlocks = new DictionaryUnlocks[400];
+            for (int i = 0; i < ItemCompendiumUnlocks.Length; i++) ItemCompendiumUnlocks[i] = new DictionaryUnlocks(stream);
+            MonstrousCodexUnlocks = new DictionaryUnlocks[256];
+            for (int i = 0; i < MonstrousCodexUnlocks.Length; i++) MonstrousCodexUnlocks[i] = new DictionaryUnlocks(stream);
+            //...
         }
 
         public override void WriteToStream(Stream stream)
@@ -600,6 +650,13 @@ namespace EO4SaveEdit.FileHandlers
             foreach (Item keyItem in KeyItems) keyItem.WriteToStream(stream);
             foreach (Item storageItem in StorageItems) storageItem.WriteToStream(stream);
             foreach (ItemAmount storageItemAmount in StorageItemAmounts) storageItemAmount.WriteToStream(stream);
+            //...
+            writer.BaseStream.Seek(0x3519, SeekOrigin.Current);
+            foreach (ItemAmount berundMaterialAmount in BerundMaterialAmounts) berundMaterialAmount.WriteToStream(stream);
+            //...
+            writer.BaseStream.Seek(0xB10, SeekOrigin.Current);
+            foreach (DictionaryUnlocks itemCompendiumUnlock in ItemCompendiumUnlocks) itemCompendiumUnlock.WriteToStream(stream);
+            foreach (DictionaryUnlocks monstrousCodexUnlock in MonstrousCodexUnlocks) monstrousCodexUnlock.WriteToStream(stream);
             //...
         }
     }

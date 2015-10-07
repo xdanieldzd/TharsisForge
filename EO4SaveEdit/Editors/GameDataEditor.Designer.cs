@@ -40,6 +40,10 @@
             this.lblBurstPointDisplay = new System.Windows.Forms.Label();
             this.gbTime = new System.Windows.Forms.GroupBox();
             this.gbBurst = new System.Windows.Forms.GroupBox();
+            this.gbCheatyUnlocks = new System.Windows.Forms.GroupBox();
+            this.btnMaxBerundMaterials = new System.Windows.Forms.Button();
+            this.btnCompleteItemCompendium = new System.Windows.Forms.Button();
+            this.btnCompleteMonstrousCodex = new System.Windows.Forms.Button();
             this.spbBurstGauge = new EO4SaveEdit.Controls.SimpleProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.nudTimeYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTimeDay)).BeginInit();
@@ -47,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudBurstValue)).BeginInit();
             this.gbTime.SuspendLayout();
             this.gbBurst.SuspendLayout();
+            this.gbCheatyUnlocks.SuspendLayout();
             this.SuspendLayout();
             // 
             // nudTimeYear
@@ -106,7 +111,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(384, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 115);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(282, 184);
             this.pictureBox1.TabIndex = 7;
@@ -172,6 +177,48 @@
             this.gbBurst.TabStop = false;
             this.gbBurst.Text = "Burst Gauge";
             // 
+            // gbCheatyUnlocks
+            // 
+            this.gbCheatyUnlocks.Controls.Add(this.btnCompleteMonstrousCodex);
+            this.gbCheatyUnlocks.Controls.Add(this.btnMaxBerundMaterials);
+            this.gbCheatyUnlocks.Controls.Add(this.btnCompleteItemCompendium);
+            this.gbCheatyUnlocks.Location = new System.Drawing.Point(384, 3);
+            this.gbCheatyUnlocks.Name = "gbCheatyUnlocks";
+            this.gbCheatyUnlocks.Size = new System.Drawing.Size(190, 106);
+            this.gbCheatyUnlocks.TabIndex = 14;
+            this.gbCheatyUnlocks.TabStop = false;
+            this.gbCheatyUnlocks.Text = "Misc. Unlocks";
+            // 
+            // btnMaxBerundMaterials
+            // 
+            this.btnMaxBerundMaterials.Location = new System.Drawing.Point(6, 19);
+            this.btnMaxBerundMaterials.Name = "btnMaxBerundMaterials";
+            this.btnMaxBerundMaterials.Size = new System.Drawing.Size(175, 23);
+            this.btnMaxBerundMaterials.TabIndex = 0;
+            this.btnMaxBerundMaterials.Text = "Max. Berund Atelier Materials";
+            this.btnMaxBerundMaterials.UseVisualStyleBackColor = true;
+            this.btnMaxBerundMaterials.Click += new System.EventHandler(this.btnMaxBerundMaterials_Click);
+            // 
+            // btnCompleteItemCompendium
+            // 
+            this.btnCompleteItemCompendium.Location = new System.Drawing.Point(6, 48);
+            this.btnCompleteItemCompendium.Name = "btnCompleteItemCompendium";
+            this.btnCompleteItemCompendium.Size = new System.Drawing.Size(175, 23);
+            this.btnCompleteItemCompendium.TabIndex = 1;
+            this.btnCompleteItemCompendium.Text = "Complete Item Compendium";
+            this.btnCompleteItemCompendium.UseVisualStyleBackColor = true;
+            this.btnCompleteItemCompendium.Click += new System.EventHandler(this.btnCompleteItemCompendium_Click);
+            // 
+            // btnCompleteMonstrousCodex
+            // 
+            this.btnCompleteMonstrousCodex.Location = new System.Drawing.Point(6, 77);
+            this.btnCompleteMonstrousCodex.Name = "btnCompleteMonstrousCodex";
+            this.btnCompleteMonstrousCodex.Size = new System.Drawing.Size(175, 23);
+            this.btnCompleteMonstrousCodex.TabIndex = 2;
+            this.btnCompleteMonstrousCodex.Text = "Complete Monstrous Codex";
+            this.btnCompleteMonstrousCodex.UseVisualStyleBackColor = true;
+            this.btnCompleteMonstrousCodex.Click += new System.EventHandler(this.btnCompleteMonstrousCodex_Click);
+            // 
             // spbBurstGauge
             // 
             this.spbBurstGauge.ForeColor = System.Drawing.Color.Red;
@@ -185,6 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gbCheatyUnlocks);
             this.Controls.Add(this.gbBurst);
             this.Controls.Add(this.gbTime);
             this.Controls.Add(this.pictureBox1);
@@ -198,6 +246,7 @@
             this.gbTime.PerformLayout();
             this.gbBurst.ResumeLayout(false);
             this.gbBurst.PerformLayout();
+            this.gbCheatyUnlocks.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -217,5 +266,9 @@
         private EO4SaveEdit.Controls.SimpleProgressBar spbBurstGauge;
         private System.Windows.Forms.GroupBox gbTime;
         private System.Windows.Forms.GroupBox gbBurst;
+        private System.Windows.Forms.GroupBox gbCheatyUnlocks;
+        private System.Windows.Forms.Button btnMaxBerundMaterials;
+        private System.Windows.Forms.Button btnCompleteItemCompendium;
+        private System.Windows.Forms.Button btnCompleteMonstrousCodex;
     }
 }

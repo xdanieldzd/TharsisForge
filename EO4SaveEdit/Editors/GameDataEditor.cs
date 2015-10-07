@@ -32,6 +32,9 @@ namespace EO4SaveEdit.Editors
             nudBurstValue.SetBinding("Value", gameData, "BurstValue");
             lblBurstPointDisplay.SetBinding("Text", gameData, "BurstPoints");
             spbBurstGauge.SetBinding("Value", gameData, "BurstGauge");
+#if !DEBUG
+            pictureBox1.Visible = false;
+#endif
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -42,6 +45,22 @@ namespace EO4SaveEdit.Editors
                     this.Font, SystemBrushes.WindowText, Point.Empty);
         }
 
-        //
+        private void btnMaxBerundMaterials_Click(object sender, EventArgs e)
+        {
+            foreach (ItemAmount berundMaterialAmount in gameData.BerundMaterialAmounts)
+                berundMaterialAmount.Amount = 99;
+        }
+
+        private void btnCompleteItemCompendium_Click(object sender, EventArgs e)
+        {
+            foreach (DictionaryUnlocks itemCompendiumUnlock in gameData.ItemCompendiumUnlocks)
+                itemCompendiumUnlock.UnlockStatus = UnlockStatus.Unlocked;
+        }
+
+        private void btnCompleteMonstrousCodex_Click(object sender, EventArgs e)
+        {
+            foreach (DictionaryUnlocks monstrousCodexUnlock in gameData.MonstrousCodexUnlocks)
+                monstrousCodexUnlock.UnlockStatus = UnlockStatus.Unlocked | UnlockStatus.UnlockedConditionalDrop;
+        }
     }
 }

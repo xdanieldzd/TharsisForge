@@ -35,8 +35,8 @@ namespace EO4SaveEdit.Editors
             { ForgeEffect.Fire, "Fire Effect/Resist" },
             { ForgeEffect.Ice, "Ice Effect/Resist" },
             { ForgeEffect.Volt, "Volt Effect/Resist" },
-            { (ForgeEffect)0x11, "? 0x11" },
-            { (ForgeEffect)0x12, "? 0x12" },
+            { ForgeEffect.Piercing, "Piercing Effect" },
+            { ForgeEffect.Splashing, "Splashing Effect" },
             { ForgeEffect.Blind, "Blind Effect/Resist" },
             { ForgeEffect.Sleep, "Sleep Effect/Resist" },
             { ForgeEffect.Poison, "Poison Effect/Resist" },
@@ -49,9 +49,9 @@ namespace EO4SaveEdit.Editors
             { ForgeEffect.HeadBind, "Head Bind Effect/Resist" },
             { ForgeEffect.ArmBind, "Arm Bind Effect/Resist" },
             { ForgeEffect.LegBind, "Leg Bind Effect/Resist" },
-            { ForgeEffect.Slash, "Slash Effect/Resist" },
-            { ForgeEffect.Bash, "Bash Effect/Resist" },
-            { ForgeEffect.Pierce, "Pierce Effect/Resist" },
+            { ForgeEffect.SlashResist, "Slash Resist" },
+            { ForgeEffect.BashResist, "Bash Resist" },
+            { ForgeEffect.PierceResist, "Pierce Resist" },
         };
 
         Item equipmentData;

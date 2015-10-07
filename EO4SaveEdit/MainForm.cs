@@ -38,7 +38,8 @@ namespace EO4SaveEdit
 #if DEBUG
             //LoadData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150830021743_editor-test\00000ea6");
             //LoadData(@"E:\[SSD User Data]\Downloads\EOIV\save-test");
-            LoadData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150918205127\00000ea6");
+            //LoadData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20150918205127\00000ea6");
+            LoadData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20151006190604_editor-test\00000ea6");
 
             /*RomFSDataDumper.DumpItemData(
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\equipitemnametable.tbl",
@@ -61,7 +62,6 @@ namespace EO4SaveEdit
 #else
             // TEMP TEMP
             tabControl1.TabPages.Remove(tpCharas);
-            tabControl1.TabPages.Remove(tpGameData);
 #endif
         }
 
