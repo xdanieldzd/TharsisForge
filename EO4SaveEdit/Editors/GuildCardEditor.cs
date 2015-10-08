@@ -72,7 +72,7 @@ namespace EO4SaveEdit.Editors
                 levelNumericUpDowns[i].SetBinding("Value", currentGuildCard.CharacterListings[i], "Level");
                 classComboBoxes[i].SetBinding("SelectedItem", currentGuildCard.CharacterListings[i], "Class");
 
-                InitializePortraitComboBox(portraitComboBoxes[i], classComboBoxes[i], currentGuildCard.CharacterListings[i]);
+                ImageHelper.InitializePortraitComboBox(portraitComboBoxes[i], classComboBoxes[i], currentGuildCard.CharacterListings[i]);
             }
 
             txtGuildName.SetBinding("Text", currentGuildCard, "GuildName");
@@ -115,7 +115,7 @@ namespace EO4SaveEdit.Editors
             cmbRegCharacterClass.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Class");
             cmbRegCharacterSubclass.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Subclass");
 
-            InitializePortraitComboBox(icmbRegCharacterPortrait, cmbRegCharacterClass, currentGuildCard.GuildCardCharacter);
+            ImageHelper.InitializePortraitComboBox(icmbRegCharacterPortrait, cmbRegCharacterClass, currentGuildCard.GuildCardCharacter);
 
             cmbRegCharacterWeapon.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.WeaponSlot, "ItemID");
             cmbRegCharacterEquipment.SetBinding("SelectedIndex", currentGuildCard.GuildCardCharacter.EquipmentSlot, "ItemID");
@@ -127,39 +127,6 @@ namespace EO4SaveEdit.Editors
             // TEMP
             //gbAchievements.DataBindings.Clear();
             //gbAchievements.DataBindings.Add("Text", currentGuildCard.Achievement, "RawValue", true, DataSourceUpdateMode.OnPropertyChanged, null, "X8");
-        }
-
-        private void InitializePortraitComboBox(ImageComboBox portraitComboBox, ComboBox classComboBox, object binding)
-        {
-            classComboBox.Tag = portraitComboBox;
-            classComboBox.SelectedValueChanged += ((s, e) =>
-            {
-                ComboBox ccb = (s as ComboBox);
-                ImageComboBox pcb = (ccb.Tag as ImageComboBox);
-                RefreshPortraitComboBox(pcb, (Class)ccb.SelectedItem);
-            });
-
-            portraitComboBox.Items.Clear();
-            for (int j = 0; j < 16; j++) portraitComboBox.Items.Add(new ImageComboItem(string.Empty, j));
-            portraitComboBox.SetBinding("SelectedIndex", binding, "Portrait");
-
-            RefreshPortraitComboBox(portraitComboBox, (Class)classComboBox.SelectedItem);
-        }
-
-        private void RefreshPortraitComboBox(ImageComboBox portraitComboBox, Class charaClass)
-        {
-            if (ImageHelper.CharacterIcons.ContainsKey(charaClass))
-            {
-                portraitComboBox.Enabled = true;
-                portraitComboBox.ImageList = ImageHelper.CharacterIcons[charaClass];
-            }
-            else
-            {
-                portraitComboBox.Enabled = false;
-                portraitComboBox.ImageList = null;
-            }
-
-            portraitComboBox.Invalidate();
         }
 
         private void lbGuildCards_SelectedIndexChanged(object sender, EventArgs e)

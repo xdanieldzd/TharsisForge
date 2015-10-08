@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 
+using EO4SaveEdit.Controls;
+using EO4SaveEdit.Extensions;
 using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit
@@ -58,6 +60,39 @@ namespace EO4SaveEdit
         {
             int tileSize = (zoomedMap ? MapTileSizeLarge : MapTileSizeSmall);
             return new Rectangle(((byte)objType % 16) * tileSize, ((byte)objType / 16) * tileSize, tileSize, tileSize);
+        }
+
+        public static void InitializePortraitComboBox(ImageComboBox portraitComboBox, ComboBox classComboBox, object binding)
+        {
+            classComboBox.Tag = portraitComboBox;
+            classComboBox.SelectedValueChanged += ((s, e) =>
+            {
+                ComboBox ccb = (s as ComboBox);
+                ImageComboBox pcb = (ccb.Tag as ImageComboBox);
+                RefreshPortraitComboBox(pcb, (Class)ccb.SelectedItem);
+            });
+
+            portraitComboBox.Items.Clear();
+            for (int j = 0; j < 16; j++) portraitComboBox.Items.Add(new ImageComboItem(string.Empty, j));
+            portraitComboBox.SetBinding("SelectedIndex", binding, "Portrait");
+
+            RefreshPortraitComboBox(portraitComboBox, (Class)classComboBox.SelectedItem);
+        }
+
+        public static void RefreshPortraitComboBox(ImageComboBox portraitComboBox, Class charaClass)
+        {
+            if (ImageHelper.CharacterIcons.ContainsKey(charaClass))
+            {
+                portraitComboBox.Enabled = true;
+                portraitComboBox.ImageList = ImageHelper.CharacterIcons[charaClass];
+            }
+            else
+            {
+                portraitComboBox.Enabled = false;
+                portraitComboBox.ImageList = null;
+            }
+
+            portraitComboBox.Invalidate();
         }
     }
 }

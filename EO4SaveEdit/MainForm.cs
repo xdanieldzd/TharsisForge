@@ -59,9 +59,6 @@ namespace EO4SaveEdit
             /*RomFSDataDumper.DumpUseItemData(
                 @"E:\[SSD User Data]\Downloads\EOIV\romfs\Item\useitemnametable.tbl",
                 @"C:\Temp\useitemnametable.xml");*/
-#else
-            // TEMP TEMP
-            tabControl1.TabPages.Remove(tpCharas);
 #endif
         }
 

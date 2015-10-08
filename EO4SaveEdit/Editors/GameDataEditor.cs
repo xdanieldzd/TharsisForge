@@ -25,13 +25,19 @@ namespace EO4SaveEdit.Editors
         {
             this.gameData = handler.GameDataFile;
 
+            txtGuildName.SetBinding("Text", gameData, "GuildName");
+            txtSkyshipName.SetBinding("Text", gameData, "SkyshipName");
+
+            txtCurrentEn.SetBinding("Text", gameData, "CurrentEn");
+
+            nudBurstValue.SetBinding("Value", gameData, "BurstValue");
+            lblBurstPointDisplay.SetBinding("Text", gameData, "BurstPoints");
+            spbBurstGauge.SetBinding("Value", gameData, "BurstGauge");
+
             nudTimeYear.SetBinding("Value", gameData, "CurrentYear");
             cmbTimeMonth.DataSource = Mori4Game.MonthNames;
             cmbTimeMonth.SetBinding("SelectedIndex", gameData, "CurrentMonth");
             nudTimeDay.SetBinding("Value", gameData, "CurrentDay");
-            nudBurstValue.SetBinding("Value", gameData, "BurstValue");
-            lblBurstPointDisplay.SetBinding("Text", gameData, "BurstPoints");
-            spbBurstGauge.SetBinding("Value", gameData, "BurstGauge");
 #if !DEBUG
             pictureBox1.Visible = false;
 #endif

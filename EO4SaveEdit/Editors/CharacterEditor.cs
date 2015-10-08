@@ -14,57 +14,82 @@ namespace EO4SaveEdit.Editors
 {
     public partial class CharacterEditor : UserControl, IEditorControl
     {
-        // TODO: rewrite eventually
+        /* TODO:
+         * Name
+         * Level
+         * HP, TP, EXP
+         * Class, Subclass
+         * Portrait
+         * (BaseFlags & IsGuildCardCharacter) + GuildName
+         * Weapon, Equipment, Armor1, Armor2
+         * AvailableSkillPoints
+         * Skill Levels
+         * (Stats...? However they work)
+        */
 
         Mori4Game gameData;
         Character currentCharacter;
 
-        ComboBox[] equipmentComboBoxes;
+        ComboBox[] charaEquipmentComboBoxes;
 
         public CharacterEditor()
         {
             InitializeComponent();
+
+            this.DoubleBuffered = true;
         }
 
         public void Initialize(SaveDataHandler handler)
         {
             this.gameData = handler.GameDataFile;
 
-            equipmentComboBoxes = new ComboBox[] { cmbEquipWeaponItem, cmbEquipEquipItem, cmbEquipArmor1Item, cmbEquipArmor2Item };
+            charaEquipmentComboBoxes = new ComboBox[] { cmbCharacterWeapon, cmbCharacterEquipment, cmbCharacterArmor1, cmbCharacterArmor2 };
 
-            foreach (ComboBox comboBox in equipmentComboBoxes)
+            cmbCharacterClass.DataSource = Enum.GetValues(typeof(Class));
+            cmbCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
+
+            foreach (ComboBox comboBox in charaEquipmentComboBoxes)
             {
                 comboBox.DisplayMember = "Value";
                 comboBox.ValueMember = "Key";
                 comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
             }
 
-            cmbClass.DataSource = Enum.GetValues(typeof(Class));
-            cmbSubclass.DataSource = Enum.GetValues(typeof(Class));
-
             lbCharacters.DataSource = this.gameData.Characters;
-            lbCharacters.DisplayMember = "Name";
+
+            //TEMP
+            btnCharacterStatsEditor.Enabled = false;
         }
 
-        private void InitializePages(Character character)
+        private void InitializeControls(Character character)
         {
             currentCharacter = character;
 
-            nudCharaID.Value = currentCharacter.ID;
-            nudLevel.Value = currentCharacter.Level;
-            txtName.Text = currentCharacter.Name;
-            cmbClass.SelectedItem = currentCharacter.Class;
-            cmbSubclass.SelectedItem = currentCharacter.Subclass;
+            txtCharacterName.SetBinding("Text", currentCharacter, "Name");
+            nudCharacterLevel.SetBinding("Value", currentCharacter, "Level");
+            txtCharacterCurrentHP.SetBinding("Text", currentCharacter, "CurrentHP");
+            txtCharacterCurrentTP.SetBinding("Text", currentCharacter, "CurrentTP");
+            txtCharacterEXP.SetBinding("Text", currentCharacter, "CurrentEXP");
 
-            cmbEquipWeaponItem.SetBinding("SelectedValue", currentCharacter.WeaponSlot, "ItemID");
-            cmbEquipEquipItem.SetBinding("SelectedValue", currentCharacter.EquipmentSlot, "ItemID");
-            cmbEquipArmor1Item.SetBinding("SelectedValue", currentCharacter.ArmorSlot1, "ItemID");
-            cmbEquipArmor2Item.SetBinding("SelectedValue", currentCharacter.ArmorSlot2, "ItemID");
+            cmbCharacterClass.SetBinding("SelectedItem", currentCharacter, "Class");
+            cmbCharacterSubclass.SetBinding("SelectedItem", currentCharacter, "Subclass");
+
+            ImageHelper.InitializePortraitComboBox(icmbCharacterPortrait, cmbCharacterClass, currentCharacter);
+
+            chkCharacterIsGuildCardChara.SetBinding("Checked", currentCharacter, "IsGuildCardCharacter");
+            txtCharacterOriginGuildName.SetBinding("Text", currentCharacter, "OriginGuildName");
+
+            cmbCharacterWeapon.SetBinding("SelectedIndex", currentCharacter.WeaponSlot, "ItemID");
+            cmbCharacterEquipment.SetBinding("SelectedIndex", currentCharacter.EquipmentSlot, "ItemID");
+            cmbCharacterArmor1.SetBinding("SelectedIndex", currentCharacter.ArmorSlot1, "ItemID");
+            cmbCharacterArmor2.SetBinding("SelectedIndex", currentCharacter.ArmorSlot2, "ItemID");
+
+            txtCharacterAvailSkillPoints.SetBinding("Text", currentCharacter, "AvailableSkillPoints");
         }
 
         private void lbCharacters_SelectedIndexChanged(object sender, EventArgs e)
         {
-            InitializePages((sender as ListBox).SelectedItem as Character);
+            InitializeControls((sender as ListBox).SelectedItem as Character);
         }
 
         private void btnSkillEditor_Click(object sender, EventArgs e)
@@ -97,6 +122,57 @@ namespace EO4SaveEdit.Editors
         {
             EffectEditorDialog eed = new EffectEditorDialog(slot);
             eed.ShowDialog();
+        }
+
+        private void lbCharacters_Format(object sender, ListControlConvertEventArgs e)
+        {
+            if (e.DesiredType == typeof(string))
+            {
+                Character selectedCharacter = (e.ListItem as Character);
+                if (selectedCharacter.Name == string.Empty)
+                    e.Value = "(No name)";
+                else
+                    e.Value = selectedCharacter.Name;
+            }
+        }
+
+        private void btnCharacterEditWeaponEffect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentCharacter.WeaponSlot);
+            eed.ShowDialog();
+        }
+
+        private void btnCharacterEditEquipEffect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentCharacter.EquipmentSlot);
+            eed.ShowDialog();
+        }
+
+        private void btnCharacterEditArmor1Effect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentCharacter.ArmorSlot1);
+            eed.ShowDialog();
+        }
+
+        private void btnCharacterEditArmor2Effect_Click(object sender, EventArgs e)
+        {
+            EffectEditorDialog eed = new EffectEditorDialog(currentCharacter.ArmorSlot2);
+            eed.ShowDialog();
+        }
+
+        private void btnCharacterSkillEditor_Click(object sender, EventArgs e)
+        {
+            SkillEditorDialog sed = new SkillEditorDialog(
+                currentCharacter.Class, currentCharacter.MainSkillLevels,
+                currentCharacter.Subclass, currentCharacter.SubSkillLevels);
+
+            sed.ShowDialog();
+
+        }
+
+        private void btnCharacterStatsEditor_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

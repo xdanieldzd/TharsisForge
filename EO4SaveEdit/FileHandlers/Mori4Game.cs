@@ -267,6 +267,16 @@ namespace EO4SaveEdit.FileHandlers
         byte[] originGuildName;
         public byte[] Unknown28 { get; set; }
 
+        public bool IsGuildCardCharacter
+        {
+            get { return ((BaseFlags & FileHandlers.BaseFlags.IsGuildCardCharacter) == FileHandlers.BaseFlags.IsGuildCardCharacter); }
+            set
+            {
+                BaseFlags &= ~BaseFlags.IsGuildCardCharacter;
+                if (value) BaseFlags |= FileHandlers.BaseFlags.IsGuildCardCharacter;
+            }
+        }
+
         public string Name
         {
             get { return Encoding.GetEncoding(932).GetString(name).SjisToAscii().TrimEnd('\0'); }
