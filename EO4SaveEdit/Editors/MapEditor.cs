@@ -48,46 +48,50 @@ namespace EO4SaveEdit.Editors
         public void Initialize(SaveDataHandler handler)
         {
             this.mapData = handler.MapDatafile;
-            handler.SaveSucceededEvent += ((s, e) => { pgMapPlaceable.Refresh(); });
 
-            chkZoomedMap.Checked = Properties.Settings.Default.ZoomedMap;
+            if (this.Enabled = (this.mapData != null))
+            {
+                handler.SaveSucceededEvent += ((s, e) => { pgMapPlaceable.Refresh(); });
 
-            mapNameDict = new Dictionary<MapLayer, string>();
-            mapNameDict.Add(this.mapData.MazeMaps[0], "Maze: Lush Woodlands B1F");
-            mapNameDict.Add(this.mapData.MazeMaps[1], "Maze: Lush Woodlands B2F");
-            mapNameDict.Add(this.mapData.MazeMaps[2], "Maze: Lush Woodlands B3F");
-            mapNameDict.Add(this.mapData.MazeMaps[3], "Maze: Misty Ravine B1F");
-            mapNameDict.Add(this.mapData.MazeMaps[4], "Maze: Misty Ravine B2F");
-            mapNameDict.Add(this.mapData.MazeMaps[5], "Maze: Misty Ravine B3F");
-            mapNameDict.Add(this.mapData.MazeMaps[6], "Maze: Golden Lair B1F");
-            mapNameDict.Add(this.mapData.MazeMaps[7], "Maze: Golden Lair B2F");
-            mapNameDict.Add(this.mapData.MazeMaps[8], "Maze: Golden Lair B3F");
-            mapNameDict.Add(this.mapData.MazeMaps[9], "Maze: Echoing Library B1F");
-            mapNameDict.Add(this.mapData.MazeMaps[10], "Maze: Echoing Library B2F");
-            mapNameDict.Add(this.mapData.MazeMaps[11], "Maze: Echoing Library B3F");
-            mapNameDict.Add(this.mapData.MazeMaps[12], "Maze: Forgotten Capital B1F");
-            mapNameDict.Add(this.mapData.MazeMaps[13], "Maze: Hall of Darkness B1F");
-            mapNameDict.Add(this.mapData.MazeMaps[14], "Maze: Hall of Darkness B2F");
-            mapNameDict.Add(this.mapData.MazeMaps[15], "Maze: Hall of Darkness B3F");
-            mapNameDict.Add(this.mapData.CaveMaps[0], "Cave: Old Forest Mine");
-            mapNameDict.Add(this.mapData.CaveMaps[1], "Cave: Small Orchard");
-            mapNameDict.Add(this.mapData.CaveMaps[2], "Cave: Valley Spring");
-            mapNameDict.Add(this.mapData.CaveMaps[3], "Cave: Dense Bushland");
-            mapNameDict.Add(this.mapData.CaveMaps[5], "Cave: Miasma Forest");   // v-- swapped
-            mapNameDict.Add(this.mapData.CaveMaps[4], "Cave: Moth's Garden");   // ^-- in-game
-            mapNameDict.Add(this.mapData.CaveMaps[6], "Cave: Noisy Marsh");
-            mapNameDict.Add(this.mapData.CaveMaps[7], "Cave: Cramped Nest");
-            mapNameDict.Add(this.mapData.CaveMaps[8], "Cave: Toxic Cave");
-            mapNameDict.Add(this.mapData.CaveMaps[9], "Cave: Underground Lake");
-            mapNameDict.Add(this.mapData.CaveMaps[10], "Cave: South Sanctuary");
-            mapNameDict.Add(this.mapData.CaveMaps[11], "Cave: Windy Archive");
-            mapNameDict.Add(this.mapData.CaveMaps[12], "Cave: Golden Deer Keep");
+                chkZoomedMap.Checked = Properties.Settings.Default.ZoomedMap;
 
-            cmbMaps.DataSource = new BindingSource(mapNameDict, null);
-            cmbMaps.DisplayMember = "Value";
-            cmbMaps.ValueMember = "Key";
+                mapNameDict = new Dictionary<MapLayer, string>();
+                mapNameDict.Add(this.mapData.MazeMaps[0], "Maze: Lush Woodlands B1F");
+                mapNameDict.Add(this.mapData.MazeMaps[1], "Maze: Lush Woodlands B2F");
+                mapNameDict.Add(this.mapData.MazeMaps[2], "Maze: Lush Woodlands B3F");
+                mapNameDict.Add(this.mapData.MazeMaps[3], "Maze: Misty Ravine B1F");
+                mapNameDict.Add(this.mapData.MazeMaps[4], "Maze: Misty Ravine B2F");
+                mapNameDict.Add(this.mapData.MazeMaps[5], "Maze: Misty Ravine B3F");
+                mapNameDict.Add(this.mapData.MazeMaps[6], "Maze: Golden Lair B1F");
+                mapNameDict.Add(this.mapData.MazeMaps[7], "Maze: Golden Lair B2F");
+                mapNameDict.Add(this.mapData.MazeMaps[8], "Maze: Golden Lair B3F");
+                mapNameDict.Add(this.mapData.MazeMaps[9], "Maze: Echoing Library B1F");
+                mapNameDict.Add(this.mapData.MazeMaps[10], "Maze: Echoing Library B2F");
+                mapNameDict.Add(this.mapData.MazeMaps[11], "Maze: Echoing Library B3F");
+                mapNameDict.Add(this.mapData.MazeMaps[12], "Maze: Forgotten Capital B1F");
+                mapNameDict.Add(this.mapData.MazeMaps[13], "Maze: Hall of Darkness B1F");
+                mapNameDict.Add(this.mapData.MazeMaps[14], "Maze: Hall of Darkness B2F");
+                mapNameDict.Add(this.mapData.MazeMaps[15], "Maze: Hall of Darkness B3F");
+                mapNameDict.Add(this.mapData.CaveMaps[0], "Cave: Old Forest Mine");
+                mapNameDict.Add(this.mapData.CaveMaps[1], "Cave: Small Orchard");
+                mapNameDict.Add(this.mapData.CaveMaps[2], "Cave: Valley Spring");
+                mapNameDict.Add(this.mapData.CaveMaps[3], "Cave: Dense Bushland");
+                mapNameDict.Add(this.mapData.CaveMaps[5], "Cave: Miasma Forest");   // v-- swapped
+                mapNameDict.Add(this.mapData.CaveMaps[4], "Cave: Moth's Garden");   // ^-- in-game
+                mapNameDict.Add(this.mapData.CaveMaps[6], "Cave: Noisy Marsh");
+                mapNameDict.Add(this.mapData.CaveMaps[7], "Cave: Cramped Nest");
+                mapNameDict.Add(this.mapData.CaveMaps[8], "Cave: Toxic Cave");
+                mapNameDict.Add(this.mapData.CaveMaps[9], "Cave: Underground Lake");
+                mapNameDict.Add(this.mapData.CaveMaps[10], "Cave: South Sanctuary");
+                mapNameDict.Add(this.mapData.CaveMaps[11], "Cave: Windy Archive");
+                mapNameDict.Add(this.mapData.CaveMaps[12], "Cave: Golden Deer Keep");
 
-            currentMap = this.mapData.MazeMaps[0];
+                cmbMaps.DataSource = new BindingSource(mapNameDict, null);
+                cmbMaps.DisplayMember = "Value";
+                cmbMaps.ValueMember = "Key";
+
+                currentMap = this.mapData.MazeMaps[0];
+            }
         }
 
         private void pbRender_Paint(object sender, PaintEventArgs e)

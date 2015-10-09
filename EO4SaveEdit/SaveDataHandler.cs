@@ -18,7 +18,7 @@ namespace EO4SaveEdit
         public Mori4Option OptionDataFile { get { return (dataFiles.FirstOrDefault(x => x is Mori4Option) as Mori4Option); } }
         public Mori4GdCard GuildCardDataFile { get { return (dataFiles.FirstOrDefault(x => x is Mori4GdCard) as Mori4GdCard); } }
 
-        public bool IsDataLoaded { get { return (dataFiles != null && dataFiles.Count == 5); } }
+        public bool IsDataLoaded { get { return (dataFiles != null && dataFiles.Count != 0); } }
 
         public event EventHandler SaveSucceededEvent;
 

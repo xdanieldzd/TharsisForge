@@ -25,30 +25,22 @@ namespace EO4SaveEdit.Editors
         {
             this.gameData = handler.GameDataFile;
 
-            txtGuildName.SetBinding("Text", gameData, "GuildName");
-            txtSkyshipName.SetBinding("Text", gameData, "SkyshipName");
+            if (this.Enabled = (this.gameData != null))
+            {
+                txtGuildName.SetBinding("Text", gameData, "GuildName");
+                txtSkyshipName.SetBinding("Text", gameData, "SkyshipName");
 
-            txtCurrentEn.SetBinding("Text", gameData, "CurrentEn");
+                txtCurrentEn.SetBinding("Text", gameData, "CurrentEn");
 
-            nudBurstValue.SetBinding("Value", gameData, "BurstValue");
-            lblBurstPointDisplay.SetBinding("Text", gameData, "BurstPoints");
-            spbBurstGauge.SetBinding("Value", gameData, "BurstGauge");
+                nudBurstValue.SetBinding("Value", gameData, "BurstValue");
+                lblBurstPointDisplay.SetBinding("Text", gameData, "BurstPoints");
+                spbBurstGauge.SetBinding("Value", gameData, "BurstGauge");
 
-            nudTimeYear.SetBinding("Value", gameData, "CurrentYear");
-            cmbTimeMonth.DataSource = Mori4Game.MonthNames;
-            cmbTimeMonth.SetBinding("SelectedIndex", gameData, "CurrentMonth");
-            nudTimeDay.SetBinding("Value", gameData, "CurrentDay");
-#if !DEBUG
-            pictureBox1.Visible = false;
-#endif
-        }
-
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
-        {
-            if (gameData != null)
-                e.Graphics.DrawString(string.Format("TEMP TEST:\n\nYear {0}, {1}\nBurst points {2}, gauge {3}\n\nFileheader, last saved: {4}",
-                    gameData.CurrentYear, gameData.DayName, gameData.BurstPoints, gameData.BurstGauge, gameData.FileHeader.LastSavedTime.DateTime),
-                    this.Font, SystemBrushes.WindowText, Point.Empty);
+                nudTimeYear.SetBinding("Value", gameData, "CurrentYear");
+                cmbTimeMonth.DataSource = Mori4Game.MonthNames;
+                cmbTimeMonth.SetBinding("SelectedIndex", gameData, "CurrentMonth");
+                nudTimeDay.SetBinding("Value", gameData, "CurrentDay");
+            }
         }
 
         private void btnMaxBerundMaterials_Click(object sender, EventArgs e)

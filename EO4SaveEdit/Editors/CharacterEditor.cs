@@ -43,22 +43,25 @@ namespace EO4SaveEdit.Editors
         {
             this.gameData = handler.GameDataFile;
 
-            charaEquipmentComboBoxes = new ComboBox[] { cmbCharacterWeapon, cmbCharacterEquipment, cmbCharacterArmor1, cmbCharacterArmor2 };
-
-            cmbCharacterClass.DataSource = Enum.GetValues(typeof(Class));
-            cmbCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
-
-            foreach (ComboBox comboBox in charaEquipmentComboBoxes)
+            if (this.Enabled = (this.gameData != null))
             {
-                comboBox.DisplayMember = "Value";
-                comboBox.ValueMember = "Key";
-                comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+                charaEquipmentComboBoxes = new ComboBox[] { cmbCharacterWeapon, cmbCharacterEquipment, cmbCharacterArmor1, cmbCharacterArmor2 };
+
+                cmbCharacterClass.DataSource = Enum.GetValues(typeof(Class));
+                cmbCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
+
+                foreach (ComboBox comboBox in charaEquipmentComboBoxes)
+                {
+                    comboBox.DisplayMember = "Value";
+                    comboBox.ValueMember = "Key";
+                    comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+                }
+
+                lbCharacters.DataSource = this.gameData.Characters;
+
+                //TEMP
+                btnCharacterStatsEditor.Enabled = false;
             }
-
-            lbCharacters.DataSource = this.gameData.Characters;
-
-            //TEMP
-            btnCharacterStatsEditor.Enabled = false;
         }
 
         private void InitializeControls(Character character)

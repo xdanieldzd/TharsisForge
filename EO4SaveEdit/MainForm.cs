@@ -125,10 +125,7 @@ namespace EO4SaveEdit
             else
             {
                 foreach (IEditorControl editor in editorControls)
-                {
                     editor.Initialize(saveDataHandler);
-                    (editor as Control).Enabled = true;
-                }
 
                 saveToolStripMenuItem.Enabled = true;
                 Properties.Settings.Default.LastFolder = path;

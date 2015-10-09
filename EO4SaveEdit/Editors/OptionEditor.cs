@@ -25,15 +25,18 @@ namespace EO4SaveEdit.Editors
         {
             this.gameOptions = handler.OptionDataFile;
 
-            SetComboBoxBinding(cmbBGMVolume, "BGMVolume", Mori4Option.VolumeLevels);
-            SetComboBoxBinding(cmbSEVolume, "SEVolume", Mori4Option.VolumeLevels);
-            SetComboBoxBinding(cmbMessageSpeed, "MessageSpeed", Mori4Option.MessageSpeeds);
-            SetComboBoxBinding(cmbBattleSpeed, "BattleSpeed", Mori4Option.BattleSpeeds);
-            chkUnlockBGMTest.SetBinding("Checked", gameOptions, "BGMTestUnlocked");
-            SetComboBoxBinding(cmbCameraLR, "CameraLeftRight", Mori4Option.CameraSettings);
-            SetComboBoxBinding(cmbCameraUD, "CameraUpDown", Mori4Option.CameraSettings);
-            chkAutoMapEnable.SetBinding("Checked", gameOptions, "AutoMapEnable");
-            SetComboBoxBinding(cmbDifficulty, "Difficulty", Mori4Option.DifficultyLevels);
+            if (this.Enabled = (this.gameOptions != null))
+            {
+                SetComboBoxBinding(cmbBGMVolume, "BGMVolume", Mori4Option.VolumeLevels);
+                SetComboBoxBinding(cmbSEVolume, "SEVolume", Mori4Option.VolumeLevels);
+                SetComboBoxBinding(cmbMessageSpeed, "MessageSpeed", Mori4Option.MessageSpeeds);
+                SetComboBoxBinding(cmbBattleSpeed, "BattleSpeed", Mori4Option.BattleSpeeds);
+                chkUnlockBGMTest.SetBinding("Checked", gameOptions, "BGMTestUnlocked");
+                SetComboBoxBinding(cmbCameraLR, "CameraLeftRight", Mori4Option.CameraSettings);
+                SetComboBoxBinding(cmbCameraUD, "CameraUpDown", Mori4Option.CameraSettings);
+                chkAutoMapEnable.SetBinding("Checked", gameOptions, "AutoMapEnable");
+                SetComboBoxBinding(cmbDifficulty, "Difficulty", Mori4Option.DifficultyLevels);
+            }
         }
 
         private void SetComboBoxBinding(ComboBox comboBox, string dataMember, Dictionary<byte, string> listDataSource)

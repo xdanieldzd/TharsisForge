@@ -55,18 +55,21 @@ namespace EO4SaveEdit.Editors
         {
             this.gameData = handler.GameDataFile;
 
-            inventoryItemAdapters = new ItemAdapter[gameData.InventoryItems.Length];
-            for (int i = 0; i < inventoryItemAdapters.Length; i++) inventoryItemAdapters[i] = new ItemAdapter(gameData.InventoryItems[i], null);
+            if (this.Enabled = (this.gameData != null))
+            {
+                inventoryItemAdapters = new ItemAdapter[gameData.InventoryItems.Length];
+                for (int i = 0; i < inventoryItemAdapters.Length; i++) inventoryItemAdapters[i] = new ItemAdapter(gameData.InventoryItems[i], null);
 
-            keyItemsItemAdapters = new ItemAdapter[gameData.KeyItems.Length];
-            for (int i = 0; i < keyItemsItemAdapters.Length; i++) keyItemsItemAdapters[i] = new ItemAdapter(gameData.KeyItems[i], null);
+                keyItemsItemAdapters = new ItemAdapter[gameData.KeyItems.Length];
+                for (int i = 0; i < keyItemsItemAdapters.Length; i++) keyItemsItemAdapters[i] = new ItemAdapter(gameData.KeyItems[i], null);
 
-            storageItemAdapters = new ItemAdapter[gameData.StorageItems.Length];
-            for (int i = 0; i < storageItemAdapters.Length; i++) storageItemAdapters[i] = new ItemAdapter(gameData.StorageItems[i], gameData.StorageItemAmounts[i]);
+                storageItemAdapters = new ItemAdapter[gameData.StorageItems.Length];
+                for (int i = 0; i < storageItemAdapters.Length; i++) storageItemAdapters[i] = new ItemAdapter(gameData.StorageItems[i], gameData.StorageItemAmounts[i]);
 
-            InitializeDataGrid(dgvInventory, inventoryItemAdapters);
-            InitializeDataGrid(dgvKeyItems, keyItemsItemAdapters);
-            InitializeDataGrid(dgvStorage, storageItemAdapters);
+                InitializeDataGrid(dgvInventory, inventoryItemAdapters);
+                InitializeDataGrid(dgvKeyItems, keyItemsItemAdapters);
+                InitializeDataGrid(dgvStorage, storageItemAdapters);
+            }
         }
 
         private void InitializeDataGrid(DataGridView dgv, ItemAdapter[] itemAdapters)

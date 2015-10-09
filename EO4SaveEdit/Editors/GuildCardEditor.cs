@@ -37,29 +37,32 @@ namespace EO4SaveEdit.Editors
         {
             this.guildCardData = handler.GuildCardDataFile;
 
-            nameTextBoxes = new TextBox[] { txtCharaListName1, txtCharaListName2, txtCharaListName3, txtCharaListName4, txtCharaListName5 };
-            levelNumericUpDowns = new NumericUpDown[] { nudCharaListLevel1, nudCharaListLevel2, nudCharaListLevel3, nudCharaListLevel4, nudCharaListLevel5 };
-            classComboBoxes = new ComboBox[] { cmbCharaListClass1, cmbCharaListClass2, cmbCharaListClass3, cmbCharaListClass4, cmbCharaListClass5 };
-            portraitComboBoxes = new ImageComboBox[] { icmbCharaListPortrait1, icmbCharaListPortrait2, icmbCharaListPortrait3, icmbCharaListPortrait4, icmbCharaListPortrait5 };
-            regCharaEquipmentComboBoxes = new ComboBox[] { cmbRegCharacterWeapon, cmbRegCharacterEquipment, cmbRegCharacterArmor1, cmbRegCharacterArmor2 };
-
-            foreach (ComboBox comboBox in classComboBoxes) comboBox.DataSource = Enum.GetValues(typeof(Class));
-
-            cmbGuildTreasureMap.DisplayMember = "Value";
-            cmbGuildTreasureMap.ValueMember = "Key";
-            cmbGuildTreasureMap.DataSource = new BindingSource(XmlHelper.TreasureMapNames, null);
-
-            cmbRegCharacterClass.DataSource = Enum.GetValues(typeof(Class));
-            cmbRegCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
-
-            foreach (ComboBox comboBox in regCharaEquipmentComboBoxes)
+            if (this.Enabled = (this.guildCardData != null))
             {
-                comboBox.DisplayMember = "Value";
-                comboBox.ValueMember = "Key";
-                comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
-            }
+                nameTextBoxes = new TextBox[] { txtCharaListName1, txtCharaListName2, txtCharaListName3, txtCharaListName4, txtCharaListName5 };
+                levelNumericUpDowns = new NumericUpDown[] { nudCharaListLevel1, nudCharaListLevel2, nudCharaListLevel3, nudCharaListLevel4, nudCharaListLevel5 };
+                classComboBoxes = new ComboBox[] { cmbCharaListClass1, cmbCharaListClass2, cmbCharaListClass3, cmbCharaListClass4, cmbCharaListClass5 };
+                portraitComboBoxes = new ImageComboBox[] { icmbCharaListPortrait1, icmbCharaListPortrait2, icmbCharaListPortrait3, icmbCharaListPortrait4, icmbCharaListPortrait5 };
+                regCharaEquipmentComboBoxes = new ComboBox[] { cmbRegCharacterWeapon, cmbRegCharacterEquipment, cmbRegCharacterArmor1, cmbRegCharacterArmor2 };
 
-            lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
+                foreach (ComboBox comboBox in classComboBoxes) comboBox.DataSource = Enum.GetValues(typeof(Class));
+
+                cmbGuildTreasureMap.DisplayMember = "Value";
+                cmbGuildTreasureMap.ValueMember = "Key";
+                cmbGuildTreasureMap.DataSource = new BindingSource(XmlHelper.TreasureMapNames, null);
+
+                cmbRegCharacterClass.DataSource = Enum.GetValues(typeof(Class));
+                cmbRegCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
+
+                foreach (ComboBox comboBox in regCharaEquipmentComboBoxes)
+                {
+                    comboBox.DisplayMember = "Value";
+                    comboBox.ValueMember = "Key";
+                    comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+                }
+
+                lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);
+            }
         }
 
         private void InitializeControls(GuildCard guildCard)
