@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gbCharacter = new System.Windows.Forms.GroupBox();
+            this.gbBasicInfo = new System.Windows.Forms.GroupBox();
             this.lblCharacterOriginGuildName = new System.Windows.Forms.Label();
             this.txtCharacterOriginGuildName = new System.Windows.Forms.TextBox();
             this.chkCharacterIsGuildCardChara = new System.Windows.Forms.CheckBox();
@@ -65,72 +65,65 @@
             this.cmbCharacterClass = new System.Windows.Forms.ComboBox();
             this.nudCharacterLevel = new System.Windows.Forms.NumericUpDown();
             this.txtCharacterName = new System.Windows.Forms.TextBox();
+            this.gbEquipment = new System.Windows.Forms.GroupBox();
             this.icmbCharacterPortrait = new EO4SaveEdit.Controls.ImageComboBox();
             this.lbCharacters = new EO4SaveEdit.Controls.ListBoxEx();
             this.tableLayoutPanel1.SuspendLayout();
-            this.gbCharacter.SuspendLayout();
+            this.gbBasicInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharacterLevel)).BeginInit();
+            this.gbEquipment.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.gbCharacter, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.gbBasicInfo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbCharacters, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbEquipment, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 500);
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(900, 500);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
-            // gbCharacter
+            // gbBasicInfo
             // 
-            this.gbCharacter.Controls.Add(this.lblCharacterOriginGuildName);
-            this.gbCharacter.Controls.Add(this.txtCharacterOriginGuildName);
-            this.gbCharacter.Controls.Add(this.chkCharacterIsGuildCardChara);
-            this.gbCharacter.Controls.Add(this.txtCharacterAvailSkillPoints);
-            this.gbCharacter.Controls.Add(this.lblCharacterAvailSkillPoints);
-            this.gbCharacter.Controls.Add(this.lblCharacterEXP);
-            this.gbCharacter.Controls.Add(this.txtCharacterEXP);
-            this.gbCharacter.Controls.Add(this.lblCharacterPortrait);
-            this.gbCharacter.Controls.Add(this.icmbCharacterPortrait);
-            this.gbCharacter.Controls.Add(this.lblCharacterCurrentTP);
-            this.gbCharacter.Controls.Add(this.txtCharacterCurrentTP);
-            this.gbCharacter.Controls.Add(this.lblCharacterCurrentHP);
-            this.gbCharacter.Controls.Add(this.txtCharacterCurrentHP);
-            this.gbCharacter.Controls.Add(this.btnCharacterStatsEditor);
-            this.gbCharacter.Controls.Add(this.btnCharacterEditArmor2Effect);
-            this.gbCharacter.Controls.Add(this.btnCharacterEditArmor1Effect);
-            this.gbCharacter.Controls.Add(this.btnCharacterEditEquipEffect);
-            this.gbCharacter.Controls.Add(this.cmbCharacterArmor2);
-            this.gbCharacter.Controls.Add(this.cmbCharacterArmor1);
-            this.gbCharacter.Controls.Add(this.cmbCharacterEquipment);
-            this.gbCharacter.Controls.Add(this.cmbCharacterWeapon);
-            this.gbCharacter.Controls.Add(this.btnCharacterEditWeaponEffect);
-            this.gbCharacter.Controls.Add(this.btnCharacterSkillEditor);
-            this.gbCharacter.Controls.Add(this.lblCharacterArmor2);
-            this.gbCharacter.Controls.Add(this.lblCharacterArmor1);
-            this.gbCharacter.Controls.Add(this.lblCharacterEquipment);
-            this.gbCharacter.Controls.Add(this.lblCharacterWeapon);
-            this.gbCharacter.Controls.Add(this.lblCharacterSubclass);
-            this.gbCharacter.Controls.Add(this.lblCharacterClass);
-            this.gbCharacter.Controls.Add(this.lblCharacterLevel);
-            this.gbCharacter.Controls.Add(this.cmbCharacterSubclass);
-            this.gbCharacter.Controls.Add(this.lblCharacterName);
-            this.gbCharacter.Controls.Add(this.cmbCharacterClass);
-            this.gbCharacter.Controls.Add(this.nudCharacterLevel);
-            this.gbCharacter.Controls.Add(this.txtCharacterName);
-            this.gbCharacter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbCharacter.Location = new System.Drawing.Point(123, 3);
-            this.gbCharacter.Name = "gbCharacter";
-            this.gbCharacter.Size = new System.Drawing.Size(674, 494);
-            this.gbCharacter.TabIndex = 5;
-            this.gbCharacter.TabStop = false;
-            this.gbCharacter.Text = "Character";
+            this.gbBasicInfo.Controls.Add(this.lblCharacterOriginGuildName);
+            this.gbBasicInfo.Controls.Add(this.txtCharacterOriginGuildName);
+            this.gbBasicInfo.Controls.Add(this.chkCharacterIsGuildCardChara);
+            this.gbBasicInfo.Controls.Add(this.txtCharacterAvailSkillPoints);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterEXP);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterAvailSkillPoints);
+            this.gbBasicInfo.Controls.Add(this.txtCharacterEXP);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterPortrait);
+            this.gbBasicInfo.Controls.Add(this.btnCharacterSkillEditor);
+            this.gbBasicInfo.Controls.Add(this.icmbCharacterPortrait);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterCurrentTP);
+            this.gbBasicInfo.Controls.Add(this.txtCharacterCurrentTP);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterCurrentHP);
+            this.gbBasicInfo.Controls.Add(this.txtCharacterCurrentHP);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterSubclass);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterClass);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterLevel);
+            this.gbBasicInfo.Controls.Add(this.btnCharacterStatsEditor);
+            this.gbBasicInfo.Controls.Add(this.cmbCharacterSubclass);
+            this.gbBasicInfo.Controls.Add(this.lblCharacterName);
+            this.gbBasicInfo.Controls.Add(this.cmbCharacterClass);
+            this.gbBasicInfo.Controls.Add(this.nudCharacterLevel);
+            this.gbBasicInfo.Controls.Add(this.txtCharacterName);
+            this.gbBasicInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbBasicInfo.Location = new System.Drawing.Point(123, 3);
+            this.gbBasicInfo.Name = "gbBasicInfo";
+            this.gbBasicInfo.Size = new System.Drawing.Size(384, 244);
+            this.gbBasicInfo.TabIndex = 1;
+            this.gbBasicInfo.TabStop = false;
+            this.gbBasicInfo.Text = "Basic Information";
             // 
             // lblCharacterOriginGuildName
             // 
@@ -161,7 +154,7 @@
             // 
             // txtCharacterAvailSkillPoints
             // 
-            this.txtCharacterAvailSkillPoints.Location = new System.Drawing.Point(74, 295);
+            this.txtCharacterAvailSkillPoints.Location = new System.Drawing.Point(74, 176);
             this.txtCharacterAvailSkillPoints.Name = "txtCharacterAvailSkillPoints";
             this.txtCharacterAvailSkillPoints.Size = new System.Drawing.Size(100, 20);
             this.txtCharacterAvailSkillPoints.TabIndex = 31;
@@ -169,7 +162,7 @@
             // lblCharacterAvailSkillPoints
             // 
             this.lblCharacterAvailSkillPoints.AutoSize = true;
-            this.lblCharacterAvailSkillPoints.Location = new System.Drawing.Point(6, 298);
+            this.lblCharacterAvailSkillPoints.Location = new System.Drawing.Point(6, 179);
             this.lblCharacterAvailSkillPoints.Name = "lblCharacterAvailSkillPoints";
             this.lblCharacterAvailSkillPoints.Size = new System.Drawing.Size(61, 13);
             this.lblCharacterAvailSkillPoints.TabIndex = 30;
@@ -234,7 +227,7 @@
             // 
             // btnCharacterStatsEditor
             // 
-            this.btnCharacterStatsEditor.Location = new System.Drawing.Point(6, 322);
+            this.btnCharacterStatsEditor.Location = new System.Drawing.Point(6, 203);
             this.btnCharacterStatsEditor.Name = "btnCharacterStatsEditor";
             this.btnCharacterStatsEditor.Size = new System.Drawing.Size(344, 23);
             this.btnCharacterStatsEditor.TabIndex = 27;
@@ -244,7 +237,7 @@
             // 
             // btnCharacterEditArmor2Effect
             // 
-            this.btnCharacterEditArmor2Effect.Location = new System.Drawing.Point(230, 264);
+            this.btnCharacterEditArmor2Effect.Location = new System.Drawing.Point(230, 105);
             this.btnCharacterEditArmor2Effect.Name = "btnCharacterEditArmor2Effect";
             this.btnCharacterEditArmor2Effect.Size = new System.Drawing.Size(120, 23);
             this.btnCharacterEditArmor2Effect.TabIndex = 25;
@@ -254,7 +247,7 @@
             // 
             // btnCharacterEditArmor1Effect
             // 
-            this.btnCharacterEditArmor1Effect.Location = new System.Drawing.Point(230, 235);
+            this.btnCharacterEditArmor1Effect.Location = new System.Drawing.Point(230, 76);
             this.btnCharacterEditArmor1Effect.Name = "btnCharacterEditArmor1Effect";
             this.btnCharacterEditArmor1Effect.Size = new System.Drawing.Size(120, 23);
             this.btnCharacterEditArmor1Effect.TabIndex = 22;
@@ -264,7 +257,7 @@
             // 
             // btnCharacterEditEquipEffect
             // 
-            this.btnCharacterEditEquipEffect.Location = new System.Drawing.Point(230, 206);
+            this.btnCharacterEditEquipEffect.Location = new System.Drawing.Point(230, 47);
             this.btnCharacterEditEquipEffect.Name = "btnCharacterEditEquipEffect";
             this.btnCharacterEditEquipEffect.Size = new System.Drawing.Size(120, 23);
             this.btnCharacterEditEquipEffect.TabIndex = 19;
@@ -276,7 +269,7 @@
             // 
             this.cmbCharacterArmor2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCharacterArmor2.FormattingEnabled = true;
-            this.cmbCharacterArmor2.Location = new System.Drawing.Point(74, 265);
+            this.cmbCharacterArmor2.Location = new System.Drawing.Point(74, 106);
             this.cmbCharacterArmor2.Name = "cmbCharacterArmor2";
             this.cmbCharacterArmor2.Size = new System.Drawing.Size(150, 21);
             this.cmbCharacterArmor2.TabIndex = 24;
@@ -285,7 +278,7 @@
             // 
             this.cmbCharacterArmor1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCharacterArmor1.FormattingEnabled = true;
-            this.cmbCharacterArmor1.Location = new System.Drawing.Point(74, 236);
+            this.cmbCharacterArmor1.Location = new System.Drawing.Point(74, 77);
             this.cmbCharacterArmor1.Name = "cmbCharacterArmor1";
             this.cmbCharacterArmor1.Size = new System.Drawing.Size(150, 21);
             this.cmbCharacterArmor1.TabIndex = 21;
@@ -294,7 +287,7 @@
             // 
             this.cmbCharacterEquipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCharacterEquipment.FormattingEnabled = true;
-            this.cmbCharacterEquipment.Location = new System.Drawing.Point(74, 207);
+            this.cmbCharacterEquipment.Location = new System.Drawing.Point(74, 48);
             this.cmbCharacterEquipment.Name = "cmbCharacterEquipment";
             this.cmbCharacterEquipment.Size = new System.Drawing.Size(150, 21);
             this.cmbCharacterEquipment.TabIndex = 18;
@@ -303,14 +296,14 @@
             // 
             this.cmbCharacterWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCharacterWeapon.FormattingEnabled = true;
-            this.cmbCharacterWeapon.Location = new System.Drawing.Point(74, 178);
+            this.cmbCharacterWeapon.Location = new System.Drawing.Point(74, 19);
             this.cmbCharacterWeapon.Name = "cmbCharacterWeapon";
             this.cmbCharacterWeapon.Size = new System.Drawing.Size(150, 21);
             this.cmbCharacterWeapon.TabIndex = 15;
             // 
             // btnCharacterEditWeaponEffect
             // 
-            this.btnCharacterEditWeaponEffect.Location = new System.Drawing.Point(230, 177);
+            this.btnCharacterEditWeaponEffect.Location = new System.Drawing.Point(230, 18);
             this.btnCharacterEditWeaponEffect.Name = "btnCharacterEditWeaponEffect";
             this.btnCharacterEditWeaponEffect.Size = new System.Drawing.Size(120, 23);
             this.btnCharacterEditWeaponEffect.TabIndex = 16;
@@ -320,7 +313,7 @@
             // 
             // btnCharacterSkillEditor
             // 
-            this.btnCharacterSkillEditor.Location = new System.Drawing.Point(230, 293);
+            this.btnCharacterSkillEditor.Location = new System.Drawing.Point(230, 174);
             this.btnCharacterSkillEditor.Name = "btnCharacterSkillEditor";
             this.btnCharacterSkillEditor.Size = new System.Drawing.Size(120, 23);
             this.btnCharacterSkillEditor.TabIndex = 26;
@@ -331,7 +324,7 @@
             // lblCharacterArmor2
             // 
             this.lblCharacterArmor2.AutoSize = true;
-            this.lblCharacterArmor2.Location = new System.Drawing.Point(6, 268);
+            this.lblCharacterArmor2.Location = new System.Drawing.Point(6, 109);
             this.lblCharacterArmor2.Name = "lblCharacterArmor2";
             this.lblCharacterArmor2.Size = new System.Drawing.Size(46, 13);
             this.lblCharacterArmor2.TabIndex = 23;
@@ -340,7 +333,7 @@
             // lblCharacterArmor1
             // 
             this.lblCharacterArmor1.AutoSize = true;
-            this.lblCharacterArmor1.Location = new System.Drawing.Point(6, 239);
+            this.lblCharacterArmor1.Location = new System.Drawing.Point(6, 80);
             this.lblCharacterArmor1.Name = "lblCharacterArmor1";
             this.lblCharacterArmor1.Size = new System.Drawing.Size(46, 13);
             this.lblCharacterArmor1.TabIndex = 20;
@@ -349,7 +342,7 @@
             // lblCharacterEquipment
             // 
             this.lblCharacterEquipment.AutoSize = true;
-            this.lblCharacterEquipment.Location = new System.Drawing.Point(6, 210);
+            this.lblCharacterEquipment.Location = new System.Drawing.Point(6, 51);
             this.lblCharacterEquipment.Name = "lblCharacterEquipment";
             this.lblCharacterEquipment.Size = new System.Drawing.Size(60, 13);
             this.lblCharacterEquipment.TabIndex = 17;
@@ -358,7 +351,7 @@
             // lblCharacterWeapon
             // 
             this.lblCharacterWeapon.AutoSize = true;
-            this.lblCharacterWeapon.Location = new System.Drawing.Point(6, 181);
+            this.lblCharacterWeapon.Location = new System.Drawing.Point(6, 22);
             this.lblCharacterWeapon.Name = "lblCharacterWeapon";
             this.lblCharacterWeapon.Size = new System.Drawing.Size(51, 13);
             this.lblCharacterWeapon.TabIndex = 14;
@@ -421,6 +414,11 @@
             // nudCharacterLevel
             // 
             this.nudCharacterLevel.Location = new System.Drawing.Point(249, 19);
+            this.nudCharacterLevel.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.nudCharacterLevel.Name = "nudCharacterLevel";
             this.nudCharacterLevel.Size = new System.Drawing.Size(50, 20);
             this.nudCharacterLevel.TabIndex = 3;
@@ -432,6 +430,28 @@
             this.txtCharacterName.Name = "txtCharacterName";
             this.txtCharacterName.Size = new System.Drawing.Size(100, 20);
             this.txtCharacterName.TabIndex = 1;
+            // 
+            // gbEquipment
+            // 
+            this.gbEquipment.Controls.Add(this.cmbCharacterWeapon);
+            this.gbEquipment.Controls.Add(this.lblCharacterWeapon);
+            this.gbEquipment.Controls.Add(this.lblCharacterEquipment);
+            this.gbEquipment.Controls.Add(this.lblCharacterArmor1);
+            this.gbEquipment.Controls.Add(this.lblCharacterArmor2);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditWeaponEffect);
+            this.gbEquipment.Controls.Add(this.cmbCharacterEquipment);
+            this.gbEquipment.Controls.Add(this.cmbCharacterArmor1);
+            this.gbEquipment.Controls.Add(this.cmbCharacterArmor2);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditEquipEffect);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditArmor1Effect);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditArmor2Effect);
+            this.gbEquipment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbEquipment.Location = new System.Drawing.Point(513, 3);
+            this.gbEquipment.Name = "gbEquipment";
+            this.gbEquipment.Size = new System.Drawing.Size(384, 244);
+            this.gbEquipment.TabIndex = 2;
+            this.gbEquipment.TabStop = false;
+            this.gbEquipment.Text = "Equipment";
             // 
             // icmbCharacterPortrait
             // 
@@ -452,6 +472,7 @@
             this.lbCharacters.IntegralHeight = false;
             this.lbCharacters.Location = new System.Drawing.Point(3, 3);
             this.lbCharacters.Name = "lbCharacters";
+            this.tableLayoutPanel1.SetRowSpan(this.lbCharacters, 2);
             this.lbCharacters.Size = new System.Drawing.Size(114, 494);
             this.lbCharacters.TabIndex = 0;
             this.lbCharacters.SelectedIndexChanged += new System.EventHandler(this.lbCharacters_SelectedIndexChanged);
@@ -461,11 +482,13 @@
             // 
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CharacterEditor";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(900, 500);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.gbCharacter.ResumeLayout(false);
-            this.gbCharacter.PerformLayout();
+            this.gbBasicInfo.ResumeLayout(false);
+            this.gbBasicInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharacterLevel)).EndInit();
+            this.gbEquipment.ResumeLayout(false);
+            this.gbEquipment.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -474,7 +497,7 @@
 
         private Controls.ListBoxEx lbCharacters;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.GroupBox gbCharacter;
+        private System.Windows.Forms.GroupBox gbBasicInfo;
         private System.Windows.Forms.Label lblCharacterPortrait;
         private Controls.ImageComboBox icmbCharacterPortrait;
         private System.Windows.Forms.Label lblCharacterCurrentTP;
@@ -510,5 +533,6 @@
         private System.Windows.Forms.CheckBox chkCharacterIsGuildCardChara;
         private System.Windows.Forms.Label lblCharacterOriginGuildName;
         private System.Windows.Forms.TextBox txtCharacterOriginGuildName;
+        private System.Windows.Forms.GroupBox gbEquipment;
     }
 }

@@ -113,6 +113,7 @@
             this.dgvInventory.Size = new System.Drawing.Size(182, 269);
             this.dgvInventory.TabIndex = 1;
             this.dgvInventory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventory_CellClick);
+            this.dgvInventory.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvInventory_CellPainting);
             // 
             // dgvStorage
             // 
@@ -133,6 +134,7 @@
             this.dgvStorage.Size = new System.Drawing.Size(182, 269);
             this.dgvStorage.TabIndex = 3;
             this.dgvStorage.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStorage_CellClick);
+            this.dgvStorage.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvStorage_CellPainting);
             this.dgvStorage.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvStorage_CellValidating);
             // 
             // dgvKeyItems
@@ -154,6 +156,7 @@
             this.dgvKeyItems.Size = new System.Drawing.Size(182, 269);
             this.dgvKeyItems.TabIndex = 2;
             this.dgvKeyItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKeyItems_CellClick);
+            this.dgvKeyItems.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvKeyItems_CellPainting);
             // 
             // ItemEditor
             // 

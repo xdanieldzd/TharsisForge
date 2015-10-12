@@ -10,8 +10,9 @@ namespace EO4SaveEdit
 {
     public static class XmlHelper
     {
+        public static Dictionary<ushort, string> EquipmentNames { get; private set; }
         public static Dictionary<ushort, int> NumForgeSlots { get; private set; }
-        public static Dictionary<ushort, string> ItemNames { get; private set; }
+        public static Dictionary<ushort, string> AllItemNames { get; private set; }
         public static Dictionary<byte, string> TreasureMapNames { get; private set; }
         public static Dictionary<Class, Tuple<byte, string>[]> SkillData { get; private set; }
 
@@ -19,20 +20,21 @@ namespace EO4SaveEdit
         {
             XmlDocument xmlDoc = new XmlDocument();
 
-            ItemNames = new Dictionary<ushort, string>();
-
             xmlDoc.Load("Data\\EquipmentData.xml");
+            EquipmentNames = new Dictionary<ushort, string>();
             NumForgeSlots = new Dictionary<ushort, int>();
             for (ushort i = 0; i < xmlDoc.DocumentElement.ChildNodes.Count; i++)
             {
                 XmlNode node = xmlDoc.DocumentElement.ChildNodes[i];
+                EquipmentNames.Add(i, node.InnerText);
                 NumForgeSlots.Add(i, int.Parse(node.Attributes["NumSlots"].InnerText));
-                ItemNames.Add(i, node.InnerText);
             }
 
             xmlDoc.Load("Data\\ItemData.xml");
+            AllItemNames = new Dictionary<ushort, string>();
+            AllItemNames = AllItemNames.Concat(EquipmentNames).ToDictionary(x => x.Key, y => y.Value);
             for (ushort i = 1, j = 925; i < xmlDoc.DocumentElement.ChildNodes.Count; i++, j++)
-                ItemNames.Add(j, xmlDoc.DocumentElement.ChildNodes[i].InnerText);
+                AllItemNames.Add(j, xmlDoc.DocumentElement.ChildNodes[i].InnerText);
 
             xmlDoc.Load("Data\\TreasureMapData.xml");
             TreasureMapNames = new Dictionary<byte, string>();

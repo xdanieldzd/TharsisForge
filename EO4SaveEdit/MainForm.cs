@@ -121,6 +121,9 @@ namespace EO4SaveEdit
             if (!saveDataHandler.LoadDirectory(path))
             {
                 MessageBox.Show("No compatible 'mori4*.sav' save files found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fileHeadersToolStripMenuItem.DropDownItems.Clear();
+                fileHeadersToolStripMenuItem.DropDownItems.Add(dummyToolStripMenuItem);
+                fileHeadersToolStripMenuItem.Enabled = false;
             }
             else
             {
@@ -129,6 +132,17 @@ namespace EO4SaveEdit
 
                 saveToolStripMenuItem.Enabled = true;
                 Properties.Settings.Default.LastFolder = path;
+
+                fileHeadersToolStripMenuItem.DropDownItems.Clear();
+                foreach (BaseMori4File file in saveDataHandler.DataFiles.OrderBy(x => x.Filename))
+                {
+                    fileHeadersToolStripMenuItem.DropDownItems.Add(new ToolStripMenuItem(Path.GetFileName(file.Filename), null, new EventHandler((s, e) =>
+                    {
+                        HeaderEditorDialog hed = new HeaderEditorDialog((s as ToolStripMenuItem).Tag as FileHeader);
+                        hed.ShowDialog();
+                    })) { Tag = file.FileHeader });
+                }
+                fileHeadersToolStripMenuItem.Enabled = true;
 
                 SetFormTitle();
                 tsslStatus.Text = "Data loaded!";

@@ -31,7 +31,8 @@ namespace EO4SaveEdit.Editors
                 set { if (amount != null) amount.Amount = value; }
             }
 
-            public bool HasAmount { get { return (amount != null); } }
+            public bool IsEquipment { get { return (item.ItemID != 0 && XmlHelper.EquipmentNames.ContainsKey(item.ItemID)); } }
+            public Item ItemInstance { get { return item; } }
 
             public ItemAdapter(Item item, ItemAmount amount)
             {
@@ -77,24 +78,36 @@ namespace EO4SaveEdit.Editors
             dgv.AutoGenerateColumns = false;
 
             DataGridViewComboBoxColumn itemColumn = new DataGridViewComboBoxColumn();
+            itemColumn.Name = "Item";
             itemColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             itemColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
             itemColumn.HeaderText = "Item";
             itemColumn.DisplayMember = "Value";
             itemColumn.ValueMember = "Key";
             itemColumn.DataPropertyName = "ItemID";
-            itemColumn.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+            itemColumn.DataSource = new BindingSource(XmlHelper.AllItemNames, null);
+
+            DataGridViewButtonColumn effectColumn = new DataGridViewButtonColumn();
+            effectColumn.Name = "Effect";
+            effectColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            effectColumn.HeaderText = string.Empty;
+            effectColumn.Width = 30;
+            effectColumn.Text = "...";
+            effectColumn.UseColumnTextForButtonValue = true;
 
             DataGridViewTextBoxColumn amountColumn = new DataGridViewTextBoxColumn();
+            amountColumn.Name = "Amount";
             amountColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
             amountColumn.HeaderText = "Amount";
             amountColumn.Width = 50;
             amountColumn.DataPropertyName = "Amount";
 
-            if (!itemAdapters[0].HasAmount) amountColumn.Visible = false;
+            if (dgv != dgvStorage) amountColumn.Visible = false;
+            if (dgv == dgvKeyItems) effectColumn.Visible = false;
 
             dgv.Columns.Clear();
             dgv.Columns.Add(itemColumn);
+            dgv.Columns.Add(effectColumn);
             dgv.Columns.Add(amountColumn);
 
             BindingSource bindingSource = new BindingSource(itemAdapters, null);
@@ -105,7 +118,7 @@ namespace EO4SaveEdit.Editors
         {
             DataGridView dgv = (sender as DataGridView);
 
-            if (e.ColumnIndex == 1)
+            if (e.ColumnIndex == dgv.Columns["Amount"].Index)
             {
                 byte newValue = (byte)dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                 e.Cancel = !byte.TryParse((string)e.FormattedValue, out newValue);
@@ -120,28 +133,69 @@ namespace EO4SaveEdit.Editors
             }
         }
 
-        private void OpenItemDropDown(DataGridView dgv, int column, int row)
+        private void HandleCellClick(DataGridView dgv, int column, int row)
         {
-            if (column != -1 && (dgv.Columns[column] is DataGridViewComboBoxColumn) && (row != -1))
+            if (column == -1 || row == -1) return;
+
+            if (column == dgv.Columns["Item"].Index)
             {
                 dgv.BeginEdit(true);
                 ((ComboBox)dgv.EditingControl).DroppedDown = true;
+            }
+            else if (column == dgv.Columns["Effect"].Index)
+            {
+                ItemAdapter itemAdapter = ((dgv.DataSource as BindingSource).DataSource as ItemAdapter[])[row];
+                if (itemAdapter.IsEquipment)
+                {
+                    EffectEditorDialog eed = new EffectEditorDialog(itemAdapter.ItemInstance);
+                    eed.ShowDialog();
+                }
+            }
+        }
+
+        private void HandleCellPainting(DataGridView dgv, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex != -1 && e.ColumnIndex == dgv.Columns["Effect"].Index)
+            {
+                ItemAdapter itemAdapter = ((dgv.DataSource as BindingSource).DataSource as ItemAdapter[])[e.RowIndex];
+                if (!itemAdapter.IsEquipment)
+                {
+                    // Text maybe 1px off, but I don't care
+                    e.PaintBackground(e.CellBounds, true);
+                    e.Graphics.DrawString("...", dgv.Font, SystemBrushes.GrayText, e.CellBounds, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                    e.Handled = true;
+                }
             }
         }
 
         private void dgvInventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            OpenItemDropDown((sender as DataGridView), e.ColumnIndex, e.RowIndex);
+            HandleCellClick((sender as DataGridView), e.ColumnIndex, e.RowIndex);
         }
 
         private void dgvKeyItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            OpenItemDropDown((sender as DataGridView), e.ColumnIndex, e.RowIndex);
+            HandleCellClick((sender as DataGridView), e.ColumnIndex, e.RowIndex);
         }
 
         private void dgvStorage_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            OpenItemDropDown((sender as DataGridView), e.ColumnIndex, e.RowIndex);
+            HandleCellClick((sender as DataGridView), e.ColumnIndex, e.RowIndex);
+        }
+
+        private void dgvInventory_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            HandleCellPainting((sender as DataGridView), e);
+        }
+
+        private void dgvKeyItems_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            HandleCellPainting((sender as DataGridView), e);
+        }
+
+        private void dgvStorage_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            HandleCellPainting((sender as DataGridView), e);
         }
     }
 }

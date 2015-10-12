@@ -119,7 +119,14 @@ namespace EO4SaveEdit.FileHandlers
     {
         public ushort ItemID { get; set; }
         public byte NumForgeableSlots { get; set; }
-        public ForgeEffect[] EffectSlots { get; set; }
+        public ForgeEffect EffectSlot1 { get; set; }
+        public ForgeEffect EffectSlot2 { get; set; }
+        public ForgeEffect EffectSlot3 { get; set; }
+        public ForgeEffect EffectSlot4 { get; set; }
+        public ForgeEffect EffectSlot5 { get; set; }
+        public ForgeEffect EffectSlot6 { get; set; }
+        public ForgeEffect EffectSlot7 { get; set; }
+        public ForgeEffect EffectSlot8 { get; set; }
         public byte Unknown { get; set; }
 
         public Item(Stream stream) { this.ReadFromStream(stream); }
@@ -130,8 +137,14 @@ namespace EO4SaveEdit.FileHandlers
 
             ItemID = reader.ReadUInt16();
             NumForgeableSlots = reader.ReadByte();
-            EffectSlots = new ForgeEffect[8];
-            for (int i = 0; i < EffectSlots.Length; i++) EffectSlots[i] = (ForgeEffect)reader.ReadByte();
+            EffectSlot1 = (ForgeEffect)reader.ReadByte();
+            EffectSlot2 = (ForgeEffect)reader.ReadByte();
+            EffectSlot3 = (ForgeEffect)reader.ReadByte();
+            EffectSlot4 = (ForgeEffect)reader.ReadByte();
+            EffectSlot5 = (ForgeEffect)reader.ReadByte();
+            EffectSlot6 = (ForgeEffect)reader.ReadByte();
+            EffectSlot7 = (ForgeEffect)reader.ReadByte();
+            EffectSlot8 = (ForgeEffect)reader.ReadByte();
             Unknown = reader.ReadByte();
         }
 
@@ -141,7 +154,14 @@ namespace EO4SaveEdit.FileHandlers
 
             writer.Write(ItemID);
             writer.Write(NumForgeableSlots);
-            foreach (ForgeEffect effect in EffectSlots) writer.Write((byte)effect);
+            writer.Write((byte)EffectSlot1);
+            writer.Write((byte)EffectSlot2);
+            writer.Write((byte)EffectSlot3);
+            writer.Write((byte)EffectSlot4);
+            writer.Write((byte)EffectSlot5);
+            writer.Write((byte)EffectSlot6);
+            writer.Write((byte)EffectSlot7);
+            writer.Write((byte)EffectSlot8);
             writer.Write(Unknown);
         }
     }

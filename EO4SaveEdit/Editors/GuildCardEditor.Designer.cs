@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.gbCharaList = new System.Windows.Forms.GroupBox();
             this.lblCharaListPortrait = new System.Windows.Forms.Label();
+            this.icmbCharaListPortrait5 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait4 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait3 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait2 = new EO4SaveEdit.Controls.ImageComboBox();
+            this.icmbCharaListPortrait1 = new EO4SaveEdit.Controls.ImageComboBox();
             this.cmbCharaListClass5 = new System.Windows.Forms.ComboBox();
             this.nudCharaListLevel5 = new System.Windows.Forms.NumericUpDown();
             this.txtCharaListName5 = new System.Windows.Forms.TextBox();
@@ -99,6 +104,7 @@
             this.chkAchievementVesselAlly = new System.Windows.Forms.CheckBox();
             this.gbRegCharacter = new System.Windows.Forms.GroupBox();
             this.lblRegCharacterPortrait = new System.Windows.Forms.Label();
+            this.icmbRegCharacterPortrait = new EO4SaveEdit.Controls.ImageComboBox();
             this.lblRegCharacterCurrentTP = new System.Windows.Forms.Label();
             this.txtRegCharacterCurrentTP = new System.Windows.Forms.TextBox();
             this.lblRegCharacterCurrentHP = new System.Windows.Forms.Label();
@@ -129,12 +135,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbGuildCards = new EO4SaveEdit.Controls.ListBoxEx();
-            this.icmbRegCharacterPortrait = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait5 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait4 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait3 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait2 = new EO4SaveEdit.Controls.ImageComboBox();
-            this.icmbCharaListPortrait1 = new EO4SaveEdit.Controls.ImageComboBox();
             this.gbCharaList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharaListLevel4)).BeginInit();
@@ -204,6 +204,56 @@
             this.lblCharaListPortrait.TabIndex = 3;
             this.lblCharaListPortrait.Text = "Portrait:";
             // 
+            // icmbCharaListPortrait5
+            // 
+            this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait5.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(253, 146);
+            this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
+            this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait5.TabIndex = 23;
+            // 
+            // icmbCharaListPortrait4
+            // 
+            this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait4.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(253, 119);
+            this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
+            this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait4.TabIndex = 19;
+            // 
+            // icmbCharaListPortrait3
+            // 
+            this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait3.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(253, 92);
+            this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
+            this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait3.TabIndex = 15;
+            // 
+            // icmbCharaListPortrait2
+            // 
+            this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait2.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(253, 65);
+            this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
+            this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait2.TabIndex = 11;
+            // 
+            // icmbCharaListPortrait1
+            // 
+            this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbCharaListPortrait1.DropDownItemHeight = 18;
+            this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(253, 38);
+            this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
+            this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
+            this.icmbCharaListPortrait1.TabIndex = 7;
+            // 
             // cmbCharaListClass5
             // 
             this.cmbCharaListClass5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -216,6 +266,11 @@
             // nudCharaListLevel5
             // 
             this.nudCharaListLevel5.Location = new System.Drawing.Point(102, 146);
+            this.nudCharaListLevel5.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.nudCharaListLevel5.Name = "nudCharaListLevel5";
             this.nudCharaListLevel5.Size = new System.Drawing.Size(45, 20);
             this.nudCharaListLevel5.TabIndex = 21;
@@ -240,6 +295,11 @@
             // nudCharaListLevel4
             // 
             this.nudCharaListLevel4.Location = new System.Drawing.Point(102, 119);
+            this.nudCharaListLevel4.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.nudCharaListLevel4.Name = "nudCharaListLevel4";
             this.nudCharaListLevel4.Size = new System.Drawing.Size(45, 20);
             this.nudCharaListLevel4.TabIndex = 17;
@@ -264,6 +324,11 @@
             // nudCharaListLevel3
             // 
             this.nudCharaListLevel3.Location = new System.Drawing.Point(102, 92);
+            this.nudCharaListLevel3.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.nudCharaListLevel3.Name = "nudCharaListLevel3";
             this.nudCharaListLevel3.Size = new System.Drawing.Size(45, 20);
             this.nudCharaListLevel3.TabIndex = 13;
@@ -288,6 +353,11 @@
             // nudCharaListLevel2
             // 
             this.nudCharaListLevel2.Location = new System.Drawing.Point(102, 65);
+            this.nudCharaListLevel2.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.nudCharaListLevel2.Name = "nudCharaListLevel2";
             this.nudCharaListLevel2.Size = new System.Drawing.Size(45, 20);
             this.nudCharaListLevel2.TabIndex = 9;
@@ -322,6 +392,11 @@
             // nudCharaListLevel1
             // 
             this.nudCharaListLevel1.Location = new System.Drawing.Point(102, 38);
+            this.nudCharaListLevel1.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.nudCharaListLevel1.Name = "nudCharaListLevel1";
             this.nudCharaListLevel1.Size = new System.Drawing.Size(45, 20);
             this.nudCharaListLevel1.TabIndex = 5;
@@ -915,6 +990,16 @@
             this.lblRegCharacterPortrait.TabIndex = 12;
             this.lblRegCharacterPortrait.Text = "Portrait:";
             // 
+            // icmbRegCharacterPortrait
+            // 
+            this.icmbRegCharacterPortrait.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.icmbRegCharacterPortrait.DropDownItemHeight = 18;
+            this.icmbRegCharacterPortrait.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.icmbRegCharacterPortrait.Location = new System.Drawing.Point(74, 98);
+            this.icmbRegCharacterPortrait.Name = "icmbRegCharacterPortrait";
+            this.icmbRegCharacterPortrait.Size = new System.Drawing.Size(100, 21);
+            this.icmbRegCharacterPortrait.TabIndex = 13;
+            // 
             // lblRegCharacterCurrentTP
             // 
             this.lblRegCharacterCurrentTP.AutoSize = true;
@@ -1136,6 +1221,11 @@
             // nudRegCharacterLevel
             // 
             this.nudRegCharacterLevel.Location = new System.Drawing.Point(249, 19);
+            this.nudRegCharacterLevel.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.nudRegCharacterLevel.Name = "nudRegCharacterLevel";
             this.nudRegCharacterLevel.Size = new System.Drawing.Size(50, 20);
             this.nudRegCharacterLevel.TabIndex = 3;
@@ -1232,66 +1322,6 @@
             this.lbGuildCards.TabIndex = 0;
             this.lbGuildCards.SelectedIndexChanged += new System.EventHandler(this.lbGuildCards_SelectedIndexChanged);
             this.lbGuildCards.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbGuildCards_Format);
-            // 
-            // icmbRegCharacterPortrait
-            // 
-            this.icmbRegCharacterPortrait.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbRegCharacterPortrait.DropDownItemHeight = 18;
-            this.icmbRegCharacterPortrait.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbRegCharacterPortrait.Location = new System.Drawing.Point(74, 98);
-            this.icmbRegCharacterPortrait.Name = "icmbRegCharacterPortrait";
-            this.icmbRegCharacterPortrait.Size = new System.Drawing.Size(100, 21);
-            this.icmbRegCharacterPortrait.TabIndex = 13;
-            // 
-            // icmbCharaListPortrait5
-            // 
-            this.icmbCharaListPortrait5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait5.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait5.Location = new System.Drawing.Point(253, 146);
-            this.icmbCharaListPortrait5.Name = "icmbCharaListPortrait5";
-            this.icmbCharaListPortrait5.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait5.TabIndex = 23;
-            // 
-            // icmbCharaListPortrait4
-            // 
-            this.icmbCharaListPortrait4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait4.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait4.Location = new System.Drawing.Point(253, 119);
-            this.icmbCharaListPortrait4.Name = "icmbCharaListPortrait4";
-            this.icmbCharaListPortrait4.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait4.TabIndex = 19;
-            // 
-            // icmbCharaListPortrait3
-            // 
-            this.icmbCharaListPortrait3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait3.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait3.Location = new System.Drawing.Point(253, 92);
-            this.icmbCharaListPortrait3.Name = "icmbCharaListPortrait3";
-            this.icmbCharaListPortrait3.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait3.TabIndex = 15;
-            // 
-            // icmbCharaListPortrait2
-            // 
-            this.icmbCharaListPortrait2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait2.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait2.Location = new System.Drawing.Point(253, 65);
-            this.icmbCharaListPortrait2.Name = "icmbCharaListPortrait2";
-            this.icmbCharaListPortrait2.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait2.TabIndex = 11;
-            // 
-            // icmbCharaListPortrait1
-            // 
-            this.icmbCharaListPortrait1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.icmbCharaListPortrait1.DropDownItemHeight = 18;
-            this.icmbCharaListPortrait1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.icmbCharaListPortrait1.Location = new System.Drawing.Point(253, 38);
-            this.icmbCharaListPortrait1.Name = "icmbCharaListPortrait1";
-            this.icmbCharaListPortrait1.Size = new System.Drawing.Size(100, 21);
-            this.icmbCharaListPortrait1.TabIndex = 7;
             // 
             // GuildCardEditor
             // 

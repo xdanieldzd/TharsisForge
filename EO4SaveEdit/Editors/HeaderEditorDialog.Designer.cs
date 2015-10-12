@@ -42,7 +42,7 @@
             this.lblLastSaved.Location = new System.Drawing.Point(12, 42);
             this.lblLastSaved.Name = "lblLastSaved";
             this.lblLastSaved.Size = new System.Drawing.Size(64, 13);
-            this.lblLastSaved.TabIndex = 2;
+            this.lblLastSaved.TabIndex = 3;
             this.lblLastSaved.Text = "Last Saved:";
             // 
             // dtpLastSavedDate
@@ -53,7 +53,7 @@
             this.dtpLastSavedDate.Location = new System.Drawing.Point(82, 39);
             this.dtpLastSavedDate.Name = "dtpLastSavedDate";
             this.dtpLastSavedDate.Size = new System.Drawing.Size(100, 20);
-            this.dtpLastSavedDate.TabIndex = 3;
+            this.dtpLastSavedDate.TabIndex = 4;
             // 
             // dtpLastSavedTime
             // 
@@ -63,7 +63,7 @@
             this.dtpLastSavedTime.Name = "dtpLastSavedTime";
             this.dtpLastSavedTime.ShowUpDown = true;
             this.dtpLastSavedTime.Size = new System.Drawing.Size(90, 20);
-            this.dtpLastSavedTime.TabIndex = 4;
+            this.dtpLastSavedTime.TabIndex = 5;
             // 
             // btnClose
             // 
@@ -71,7 +71,7 @@
             this.btnClose.Location = new System.Drawing.Point(207, 67);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 5;
+            this.btnClose.TabIndex = 0;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
@@ -81,7 +81,7 @@
             this.lblSignature.Location = new System.Drawing.Point(12, 15);
             this.lblSignature.Name = "lblSignature";
             this.lblSignature.Size = new System.Drawing.Size(55, 13);
-            this.lblSignature.TabIndex = 0;
+            this.lblSignature.TabIndex = 1;
             this.lblSignature.Text = "Signature:";
             this.lblSignature.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -93,7 +93,7 @@
             this.cmbSignature.Location = new System.Drawing.Point(82, 12);
             this.cmbSignature.Name = "cmbSignature";
             this.cmbSignature.Size = new System.Drawing.Size(200, 21);
-            this.cmbSignature.TabIndex = 1;
+            this.cmbSignature.TabIndex = 2;
             // 
             // HeaderEditorDialog
             // 

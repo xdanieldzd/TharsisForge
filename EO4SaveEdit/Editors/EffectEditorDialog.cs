@@ -65,7 +65,7 @@ namespace EO4SaveEdit.Editors
 
             this.equipmentData = equipment;
 
-            gbItemEffects.Text = XmlHelper.ItemNames[equipmentData.ItemID];
+            gbItemEffects.Text = XmlHelper.AllItemNames[equipmentData.ItemID];
             txtNumForgeableSlots.SetBinding("Text", equipmentData, "NumForgeableSlots");
 
             effectComboBoxes = new ComboBox[] { cmbForgeEffect1, cmbForgeEffect2, cmbForgeEffect3, cmbForgeEffect4, cmbForgeEffect5, cmbForgeEffect6, cmbForgeEffect7, cmbForgeEffect8 };
@@ -89,12 +89,15 @@ namespace EO4SaveEdit.Editors
             for (int i = XmlHelper.NumForgeSlots[equipmentData.ItemID] - 1, j = equipmentData.NumForgeableSlots - 1; i >= 0; i--, j--)
             {
                 effectComboBoxes[i].Enabled = (j >= 0);
-
                 effectComboBoxes[i].Visible = true;
-                effectComboBoxes[i].ValueMember = "Key";
-                effectComboBoxes[i].DisplayMember = "Value";
-                effectComboBoxes[i].DataSource = new BindingSource(effectNames, null);
-                effectComboBoxes[i].SelectedValue = equipmentData.EffectSlots[i];
+
+                if (effectComboBoxes[i].DataSource == null)
+                {
+                    effectComboBoxes[i].ValueMember = "Key";
+                    effectComboBoxes[i].DisplayMember = "Value";
+                    effectComboBoxes[i].DataSource = new BindingSource(effectNames, null);
+                    effectComboBoxes[i].SetBinding("SelectedValue", equipmentData, string.Format("EffectSlot{0}", i + 1));
+                }
             }
         }
 

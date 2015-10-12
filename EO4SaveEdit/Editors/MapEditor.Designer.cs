@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapEditor));
             this.cmbMaps = new System.Windows.Forms.ComboBox();
-            this.btnFileHeader = new System.Windows.Forms.Button();
             this.chkZoomedMap = new System.Windows.Forms.CheckBox();
             this.pgMapPlaceable = new System.Windows.Forms.PropertyGrid();
             this.tsPropertyGridExtension = new System.Windows.Forms.ToolStrip();
@@ -53,21 +52,11 @@
             this.cmbMaps.TabIndex = 1;
             this.cmbMaps.SelectedIndexChanged += new System.EventHandler(this.cmbMaps_SelectedIndexChanged);
             // 
-            // btnFileHeader
-            // 
-            this.btnFileHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFileHeader.Location = new System.Drawing.Point(797, 3);
-            this.btnFileHeader.Name = "btnFileHeader";
-            this.btnFileHeader.Size = new System.Drawing.Size(100, 23);
-            this.btnFileHeader.TabIndex = 2;
-            this.btnFileHeader.Text = "File Header...";
-            this.btnFileHeader.UseVisualStyleBackColor = true;
-            this.btnFileHeader.Click += new System.EventHandler(this.btnFileHeader_Click);
-            // 
             // chkZoomedMap
             // 
+            this.chkZoomedMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkZoomedMap.AutoSize = true;
-            this.chkZoomedMap.Location = new System.Drawing.Point(170, 7);
+            this.chkZoomedMap.Location = new System.Drawing.Point(802, 7);
             this.chkZoomedMap.Name = "chkZoomedMap";
             this.chkZoomedMap.Size = new System.Drawing.Size(95, 17);
             this.chkZoomedMap.TabIndex = 4;
@@ -93,7 +82,7 @@
             this.tsbResetProperty});
             this.tsPropertyGridExtension.Location = new System.Drawing.Point(677, 3);
             this.tsPropertyGridExtension.Name = "tsPropertyGridExtension";
-            this.tsPropertyGridExtension.Size = new System.Drawing.Size(66, 25);
+            this.tsPropertyGridExtension.Size = new System.Drawing.Size(35, 25);
             this.tsPropertyGridExtension.TabIndex = 1;
             this.tsPropertyGridExtension.Visible = false;
             // 
@@ -155,7 +144,6 @@
             this.Controls.Add(this.chkZoomedMap);
             this.Controls.Add(this.lbMapPlaceables);
             this.Controls.Add(this.pnlRender);
-            this.Controls.Add(this.btnFileHeader);
             this.Controls.Add(this.cmbMaps);
             this.Name = "MapEditor";
             this.Size = new System.Drawing.Size(900, 500);
@@ -172,7 +160,6 @@
 
         private EO4SaveEdit.Controls.PanelEx pnlRender;
         private System.Windows.Forms.ComboBox cmbMaps;
-        private System.Windows.Forms.Button btnFileHeader;
         private System.Windows.Forms.PictureBox pbRender;
         private Controls.ListBoxEx lbMapPlaceables;
         private System.Windows.Forms.CheckBox chkZoomedMap;

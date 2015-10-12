@@ -31,29 +31,32 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpGameData = new System.Windows.Forms.TabPage();
+            this.gameDataEditor1 = new EO4SaveEdit.Editors.GameDataEditor();
             this.tpCharas = new System.Windows.Forms.TabPage();
+            this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
             this.tpItems = new System.Windows.Forms.TabPage();
+            this.itemEditor1 = new EO4SaveEdit.Editors.ItemEditor();
             this.tpGuildCards = new System.Windows.Forms.TabPage();
+            this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
             this.tpMaps = new System.Windows.Forms.TabPage();
+            this.mapEditor1 = new EO4SaveEdit.Editors.MapEditor();
             this.tpOptions = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.optionEditor1 = new EO4SaveEdit.Editors.OptionEditor();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileHeadersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.characterEditor1 = new EO4SaveEdit.Editors.CharacterEditor();
-            this.gameDataEditor1 = new EO4SaveEdit.Editors.GameDataEditor();
-            this.itemEditor1 = new EO4SaveEdit.Editors.ItemEditor();
-            this.guildCardEditor1 = new EO4SaveEdit.Editors.GuildCardEditor();
-            this.mapEditor1 = new EO4SaveEdit.Editors.MapEditor();
-            this.optionEditor1 = new EO4SaveEdit.Editors.OptionEditor();
+            this.dummyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tpGameData.SuspendLayout();
             this.tpCharas.SuspendLayout();
@@ -92,6 +95,15 @@
             this.tpGameData.Text = "Game Data";
             this.tpGameData.UseVisualStyleBackColor = true;
             // 
+            // gameDataEditor1
+            // 
+            this.gameDataEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gameDataEditor1.Enabled = false;
+            this.gameDataEditor1.Location = new System.Drawing.Point(3, 3);
+            this.gameDataEditor1.Name = "gameDataEditor1";
+            this.gameDataEditor1.Size = new System.Drawing.Size(850, 504);
+            this.gameDataEditor1.TabIndex = 0;
+            // 
             // tpCharas
             // 
             this.tpCharas.Controls.Add(this.characterEditor1);
@@ -102,6 +114,15 @@
             this.tpCharas.TabIndex = 2;
             this.tpCharas.Text = "Characters";
             this.tpCharas.UseVisualStyleBackColor = true;
+            // 
+            // characterEditor1
+            // 
+            this.characterEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.characterEditor1.Enabled = false;
+            this.characterEditor1.Location = new System.Drawing.Point(3, 3);
+            this.characterEditor1.Name = "characterEditor1";
+            this.characterEditor1.Size = new System.Drawing.Size(850, 504);
+            this.characterEditor1.TabIndex = 0;
             // 
             // tpItems
             // 
@@ -114,6 +135,15 @@
             this.tpItems.Text = "Items";
             this.tpItems.UseVisualStyleBackColor = true;
             // 
+            // itemEditor1
+            // 
+            this.itemEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemEditor1.Enabled = false;
+            this.itemEditor1.Location = new System.Drawing.Point(3, 3);
+            this.itemEditor1.Name = "itemEditor1";
+            this.itemEditor1.Size = new System.Drawing.Size(850, 504);
+            this.itemEditor1.TabIndex = 0;
+            // 
             // tpGuildCards
             // 
             this.tpGuildCards.Controls.Add(this.guildCardEditor1);
@@ -125,6 +155,16 @@
             this.tpGuildCards.Text = "Guild Cards";
             this.tpGuildCards.UseVisualStyleBackColor = true;
             // 
+            // guildCardEditor1
+            // 
+            this.guildCardEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guildCardEditor1.Enabled = false;
+            this.guildCardEditor1.Location = new System.Drawing.Point(3, 3);
+            this.guildCardEditor1.MinimumSize = new System.Drawing.Size(800, 500);
+            this.guildCardEditor1.Name = "guildCardEditor1";
+            this.guildCardEditor1.Size = new System.Drawing.Size(850, 504);
+            this.guildCardEditor1.TabIndex = 0;
+            // 
             // tpMaps
             // 
             this.tpMaps.Controls.Add(this.mapEditor1);
@@ -135,6 +175,15 @@
             this.tpMaps.TabIndex = 1;
             this.tpMaps.Text = "Maps";
             this.tpMaps.UseVisualStyleBackColor = true;
+            // 
+            // mapEditor1
+            // 
+            this.mapEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mapEditor1.Enabled = false;
+            this.mapEditor1.Location = new System.Drawing.Point(3, 3);
+            this.mapEditor1.Name = "mapEditor1";
+            this.mapEditor1.Size = new System.Drawing.Size(850, 504);
+            this.mapEditor1.TabIndex = 0;
             // 
             // tpOptions
             // 
@@ -161,10 +210,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 504);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // optionEditor1
+            // 
+            this.optionEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionEditor1.Enabled = false;
+            this.optionEditor1.Location = new System.Drawing.Point(3, 3);
+            this.optionEditor1.Name = "optionEditor1";
+            this.optionEditor1.Size = new System.Drawing.Size(844, 498);
+            this.optionEditor1.TabIndex = 0;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -212,6 +271,23 @@
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileHeadersToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // fileHeadersToolStripMenuItem
+            // 
+            this.fileHeadersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dummyToolStripMenuItem});
+            this.fileHeadersToolStripMenuItem.Enabled = false;
+            this.fileHeadersToolStripMenuItem.Name = "fileHeadersToolStripMenuItem";
+            this.fileHeadersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fileHeadersToolStripMenuItem.Text = "&File Headers...";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -243,60 +319,11 @@
             this.tsslStatus.Size = new System.Drawing.Size(22, 17);
             this.tsslStatus.Text = "---";
             // 
-            // characterEditor1
+            // dummyToolStripMenuItem
             // 
-            this.characterEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.characterEditor1.Enabled = false;
-            this.characterEditor1.Location = new System.Drawing.Point(3, 3);
-            this.characterEditor1.Name = "characterEditor1";
-            this.characterEditor1.Size = new System.Drawing.Size(850, 504);
-            this.characterEditor1.TabIndex = 0;
-            // 
-            // gameDataEditor1
-            // 
-            this.gameDataEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gameDataEditor1.Enabled = false;
-            this.gameDataEditor1.Location = new System.Drawing.Point(3, 3);
-            this.gameDataEditor1.Name = "gameDataEditor1";
-            this.gameDataEditor1.Size = new System.Drawing.Size(850, 504);
-            this.gameDataEditor1.TabIndex = 0;
-            // 
-            // itemEditor1
-            // 
-            this.itemEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemEditor1.Enabled = false;
-            this.itemEditor1.Location = new System.Drawing.Point(3, 3);
-            this.itemEditor1.Name = "itemEditor1";
-            this.itemEditor1.Size = new System.Drawing.Size(850, 504);
-            this.itemEditor1.TabIndex = 0;
-            // 
-            // guildCardEditor1
-            // 
-            this.guildCardEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guildCardEditor1.Enabled = false;
-            this.guildCardEditor1.Location = new System.Drawing.Point(3, 3);
-            this.guildCardEditor1.MinimumSize = new System.Drawing.Size(800, 500);
-            this.guildCardEditor1.Name = "guildCardEditor1";
-            this.guildCardEditor1.Size = new System.Drawing.Size(850, 504);
-            this.guildCardEditor1.TabIndex = 0;
-            // 
-            // mapEditor1
-            // 
-            this.mapEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mapEditor1.Enabled = false;
-            this.mapEditor1.Location = new System.Drawing.Point(3, 3);
-            this.mapEditor1.Name = "mapEditor1";
-            this.mapEditor1.Size = new System.Drawing.Size(850, 504);
-            this.mapEditor1.TabIndex = 0;
-            // 
-            // optionEditor1
-            // 
-            this.optionEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.optionEditor1.Enabled = false;
-            this.optionEditor1.Location = new System.Drawing.Point(3, 3);
-            this.optionEditor1.Name = "optionEditor1";
-            this.optionEditor1.Size = new System.Drawing.Size(844, 498);
-            this.optionEditor1.TabIndex = 0;
+            this.dummyToolStripMenuItem.Name = "dummyToolStripMenuItem";
+            this.dummyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dummyToolStripMenuItem.Text = "dummy";
             // 
             // MainForm
             // 
@@ -356,6 +383,9 @@
         private System.Windows.Forms.TabPage tpGameData;
         private Editors.GameDataEditor gameDataEditor1;
         private Editors.OptionEditor optionEditor1;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileHeadersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dummyToolStripMenuItem;
 
     }
 }

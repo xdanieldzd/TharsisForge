@@ -54,7 +54,7 @@ namespace EO4SaveEdit.Editors
                 {
                     comboBox.DisplayMember = "Value";
                     comboBox.ValueMember = "Key";
-                    comboBox.DataSource = new BindingSource(XmlHelper.ItemNames, null);
+                    comboBox.DataSource = new BindingSource(XmlHelper.EquipmentNames, null);
                 }
 
                 lbCharacters.DataSource = this.gameData.Characters;

@@ -227,14 +227,6 @@ namespace EO4SaveEdit.Editors
             pbRender.Invalidate();
         }
 
-        private void btnFileHeader_Click(object sender, EventArgs e)
-        {
-            if (mapData == null) return;
-
-            HeaderEditorDialog hed = new HeaderEditorDialog(mapData.FileHeader);
-            hed.ShowDialog();
-        }
-
         private void lbMapPlaceables_Format(object sender, ListControlConvertEventArgs e)
         {
             if (e.DesiredType == typeof(string))
