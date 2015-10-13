@@ -37,6 +37,8 @@
             this.lbMapPlaceables = new EO4SaveEdit.Controls.ListBoxEx();
             this.pnlRender = new EO4SaveEdit.Controls.PanelEx();
             this.pbRender = new System.Windows.Forms.PictureBox();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.sfdExport = new System.Windows.Forms.SaveFileDialog();
             this.tsPropertyGridExtension.SuspendLayout();
             this.pnlRender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRender)).BeginInit();
@@ -56,7 +58,7 @@
             // 
             this.chkZoomedMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkZoomedMap.AutoSize = true;
-            this.chkZoomedMap.Location = new System.Drawing.Point(802, 7);
+            this.chkZoomedMap.Location = new System.Drawing.Point(677, 7);
             this.chkZoomedMap.Name = "chkZoomedMap";
             this.chkZoomedMap.Size = new System.Drawing.Size(95, 17);
             this.chkZoomedMap.TabIndex = 1;
@@ -135,10 +137,22 @@
             this.pbRender.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbRender_MouseDown);
             this.pbRender.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbRender_MouseMove);
             // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.Location = new System.Drawing.Point(797, 3);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(100, 23);
+            this.btnExport.TabIndex = 5;
+            this.btnExport.Text = "Export Image";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.tsPropertyGridExtension);
             this.Controls.Add(this.pgMapPlaceable);
             this.Controls.Add(this.chkZoomedMap);
@@ -166,5 +180,7 @@
         private System.Windows.Forms.PropertyGrid pgMapPlaceable;
         private System.Windows.Forms.ToolStrip tsPropertyGridExtension;
         private System.Windows.Forms.ToolStripButton tsbResetProperty;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.SaveFileDialog sfdExport;
     }
 }

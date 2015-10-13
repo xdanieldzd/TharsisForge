@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using EO4SaveEdit.Extensions;
 using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit.Editors
@@ -43,6 +44,8 @@ namespace EO4SaveEdit.Editors
                     ToolStripManager.Merge(tsPropertyGridExtension, toolStrip);
                 }
             }
+
+            sfdExport.SetCommonImageFilter("png");
         }
 
         public void Initialize(SaveDataHandler handler)
@@ -54,6 +57,12 @@ namespace EO4SaveEdit.Editors
                 handler.SaveSucceededEvent += ((s, e) => { pgMapPlaceable.Refresh(); });
 
                 chkZoomedMap.Checked = Properties.Settings.Default.ZoomedMap;
+
+                if (Properties.Settings.Default.LastMapExportPath != string.Empty)
+                {
+                    sfdExport.InitialDirectory = System.IO.Path.GetDirectoryName(Properties.Settings.Default.LastMapExportPath);
+                    sfdExport.FileName = System.IO.Path.GetFileName(Properties.Settings.Default.LastMapExportPath);
+                }
 
                 mapNameDict = new Dictionary<MapLayer, string>();
                 mapNameDict.Add(this.mapData.MazeMaps[0], "Maze: Lush Woodlands B1F");
@@ -94,15 +103,13 @@ namespace EO4SaveEdit.Editors
             }
         }
 
-        private void pbRender_Paint(object sender, PaintEventArgs e)
+        private void DrawToGraphics(Graphics g, Color backgroundColor, bool drawSelection)
         {
-            if (this.mapData == null) return;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.None;
 
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
-            e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            e.Graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.None;
-
-            e.Graphics.Clear(Color.Gray);
+            g.Clear(backgroundColor);
 
             for (int y = 0; y < currentMap.TilesYX.GetLength(0); y++)
             {
@@ -124,7 +131,7 @@ namespace EO4SaveEdit.Editors
 
                         using (SolidBrush brush = new SolidBrush(floorColor))
                         {
-                            e.Graphics.FillRectangle(brush, rect);
+                            g.FillRectangle(brush, rect);
                         }
                     }
                 }
@@ -141,12 +148,12 @@ namespace EO4SaveEdit.Editors
                     {
                         if ((tileData & MapTile.SouthWallMask) != MapTile.None)
                         {
-                            e.Graphics.DrawLine(p, rect.X - (p.Width / 2.0f), rect.Y + tileSize, rect.X + tileSize + (p.Width / 2.0f), rect.Y + tileSize);
+                            g.DrawLine(p, rect.X - (p.Width / 2.0f), rect.Y + tileSize, rect.X + tileSize + (p.Width / 2.0f), rect.Y + tileSize);
                         }
 
                         if ((tileData & MapTile.EastWallMask) != MapTile.None)
                         {
-                            e.Graphics.DrawLine(p, rect.X + tileSize, rect.Y - (p.Width / 2.0f), rect.X + tileSize, rect.Y + tileSize + (p.Width / 2.0f));
+                            g.DrawLine(p, rect.X + tileSize, rect.Y - (p.Width / 2.0f), rect.X + tileSize, rect.Y + tileSize + (p.Width / 2.0f));
                         }
                     }
                 }
@@ -154,7 +161,7 @@ namespace EO4SaveEdit.Editors
 
             foreach (MapObject mapObj in currentMap.Objects.Where(x => x.Type != MapObjectType.None))
             {
-                e.Graphics.DrawImage((Properties.Settings.Default.ZoomedMap ? ImageHelper.MapIconsLarge : ImageHelper.MapIconsSmall),
+                g.DrawImage((Properties.Settings.Default.ZoomedMap ? ImageHelper.MapIconsLarge : ImageHelper.MapIconsSmall),
                     new Rectangle(mapObj.XPosition * tileSize, mapObj.YPosition * tileSize, tileSize, tileSize),
                     ImageHelper.GetMapIconRect(mapObj.Type, Properties.Settings.Default.ZoomedMap),
                     GraphicsUnit.Pixel);
@@ -162,20 +169,30 @@ namespace EO4SaveEdit.Editors
 
             foreach (MapNote mapNote in currentMap.Notes.Where(x => x.Description != string.Empty))
             {
-                e.Graphics.DrawImage((Properties.Settings.Default.ZoomedMap ? ImageHelper.MapIconsLarge : ImageHelper.MapIconsSmall),
+                g.DrawImage((Properties.Settings.Default.ZoomedMap ? ImageHelper.MapIconsLarge : ImageHelper.MapIconsSmall),
                     new Rectangle(mapNote.XPosition * tileSize, mapNote.YPosition * tileSize, tileSize, tileSize),
                     ImageHelper.GetMapIconRect(MapObjectType.Note, Properties.Settings.Default.ZoomedMap),
                     GraphicsUnit.Pixel);
             }
 
-            if (currentPlaceable != null)
+            if (drawSelection)
             {
-                using (Pen p = new Pen(Color.FromArgb(192, Color.Red), 2.0f))
+                if (currentPlaceable != null)
                 {
-                    Point placeablePosition = currentPlaceable.GetPosition();
-                    e.Graphics.DrawRectangle(p, new Rectangle(placeablePosition.X * tileSize, placeablePosition.Y * tileSize, tileSize, tileSize));
+                    using (Pen p = new Pen(Color.FromArgb(192, Color.Red), 2.0f))
+                    {
+                        Point placeablePosition = currentPlaceable.GetPosition();
+                        g.DrawRectangle(p, new Rectangle(placeablePosition.X * tileSize, placeablePosition.Y * tileSize, tileSize, tileSize));
+                    }
                 }
             }
+        }
+
+        private void pbRender_Paint(object sender, PaintEventArgs e)
+        {
+            if (this.mapData == null) return;
+
+            DrawToGraphics(e.Graphics, Color.Gray, true);
         }
 
         private void pbRender_MouseDown(object sender, MouseEventArgs e)
@@ -280,6 +297,22 @@ namespace EO4SaveEdit.Editors
             pgMapPlaceable.Refresh();
             lbMapPlaceables.Invalidate();
             pbRender.Invalidate();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (sfdExport.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap mapImage = new Bitmap(renderSize.Width, renderSize.Height);
+
+                using (Graphics g = Graphics.FromImage(mapImage))
+                {
+                    //DrawToGraphics(g, Color.Transparent, false);
+                    DrawToGraphics(g, Color.Gray, false);
+                }
+
+                mapImage.Save(Properties.Settings.Default.LastMapExportPath = sfdExport.FileName);
+            }
         }
     }
 }

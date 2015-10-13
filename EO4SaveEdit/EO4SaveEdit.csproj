@@ -103,6 +103,7 @@
       <DependentUpon>StatsEditorDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Extensions\FileDialogExtensions.cs" />
     <Compile Include="Extensions\GeneralExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="FileHandlers\BaseMori4File.cs" />

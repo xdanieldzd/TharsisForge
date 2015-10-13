@@ -46,5 +46,17 @@ namespace EO4SaveEdit.Properties {
                 this["ZoomedMap"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastMapExportPath {
+            get {
+                return ((string)(this["LastMapExportPath"]));
+            }
+            set {
+                this["LastMapExportPath"] = value;
+            }
+        }
     }
 }
