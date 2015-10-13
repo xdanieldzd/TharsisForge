@@ -698,7 +698,7 @@
             this.lblCompletionHiddenTreasures.Location = new System.Drawing.Point(198, 178);
             this.lblCompletionHiddenTreasures.Name = "lblCompletionHiddenTreasures";
             this.lblCompletionHiddenTreasures.Size = new System.Drawing.Size(94, 13);
-            this.lblCompletionHiddenTreasures.TabIndex = 21;
+            this.lblCompletionHiddenTreasures.TabIndex = 15;
             this.lblCompletionHiddenTreasures.Text = "Hidden Treasures:";
             // 
             // nudCompletionHiddenTreasures
@@ -712,7 +712,7 @@
             0});
             this.nudCompletionHiddenTreasures.Name = "nudCompletionHiddenTreasures";
             this.nudCompletionHiddenTreasures.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionHiddenTreasures.TabIndex = 22;
+            this.nudCompletionHiddenTreasures.TabIndex = 16;
             // 
             // lblCompletionMaterials
             // 
@@ -720,7 +720,7 @@
             this.lblCompletionMaterials.Location = new System.Drawing.Point(6, 178);
             this.lblCompletionMaterials.Name = "lblCompletionMaterials";
             this.lblCompletionMaterials.Size = new System.Drawing.Size(52, 13);
-            this.lblCompletionMaterials.TabIndex = 13;
+            this.lblCompletionMaterials.TabIndex = 7;
             this.lblCompletionMaterials.Text = "Materials:";
             // 
             // nudCompletionMaterials
@@ -733,7 +733,7 @@
             0});
             this.nudCompletionMaterials.Name = "nudCompletionMaterials";
             this.nudCompletionMaterials.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionMaterials.TabIndex = 14;
+            this.nudCompletionMaterials.TabIndex = 8;
             // 
             // lblCompletionMonsters
             // 
@@ -742,7 +742,7 @@
             this.lblCompletionMonsters.Location = new System.Drawing.Point(239, 152);
             this.lblCompletionMonsters.Name = "lblCompletionMonsters";
             this.lblCompletionMonsters.Size = new System.Drawing.Size(53, 13);
-            this.lblCompletionMonsters.TabIndex = 19;
+            this.lblCompletionMonsters.TabIndex = 13;
             this.lblCompletionMonsters.Text = "Monsters:";
             // 
             // nudCompletionMonsters
@@ -756,7 +756,7 @@
             0});
             this.nudCompletionMonsters.Name = "nudCompletionMonsters";
             this.nudCompletionMonsters.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionMonsters.TabIndex = 20;
+            this.nudCompletionMonsters.TabIndex = 14;
             // 
             // lblCompletionFood
             // 
@@ -764,7 +764,7 @@
             this.lblCompletionFood.Location = new System.Drawing.Point(6, 152);
             this.lblCompletionFood.Name = "lblCompletionFood";
             this.lblCompletionFood.Size = new System.Drawing.Size(34, 13);
-            this.lblCompletionFood.TabIndex = 11;
+            this.lblCompletionFood.TabIndex = 5;
             this.lblCompletionFood.Text = "Food:";
             // 
             // nudCompletionFood
@@ -777,7 +777,7 @@
             0});
             this.nudCompletionFood.Name = "nudCompletionFood";
             this.nudCompletionFood.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionFood.TabIndex = 12;
+            this.nudCompletionFood.TabIndex = 6;
             // 
             // lblCompletionRareBreeds
             // 
@@ -786,7 +786,7 @@
             this.lblCompletionRareBreeds.Location = new System.Drawing.Point(223, 126);
             this.lblCompletionRareBreeds.Name = "lblCompletionRareBreeds";
             this.lblCompletionRareBreeds.Size = new System.Drawing.Size(69, 13);
-            this.lblCompletionRareBreeds.TabIndex = 17;
+            this.lblCompletionRareBreeds.TabIndex = 11;
             this.lblCompletionRareBreeds.Text = "Rare Breeds:";
             // 
             // nudCompletionRareBreeds
@@ -800,7 +800,7 @@
             0});
             this.nudCompletionRareBreeds.Name = "nudCompletionRareBreeds";
             this.nudCompletionRareBreeds.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionRareBreeds.TabIndex = 18;
+            this.nudCompletionRareBreeds.TabIndex = 12;
             // 
             // lblCompletionQuests
             // 
@@ -808,7 +808,7 @@
             this.lblCompletionQuests.Location = new System.Drawing.Point(6, 126);
             this.lblCompletionQuests.Name = "lblCompletionQuests";
             this.lblCompletionQuests.Size = new System.Drawing.Size(43, 13);
-            this.lblCompletionQuests.TabIndex = 9;
+            this.lblCompletionQuests.TabIndex = 3;
             this.lblCompletionQuests.Text = "Quests:";
             // 
             // nudCompletionQuests
@@ -821,7 +821,7 @@
             0});
             this.nudCompletionQuests.Name = "nudCompletionQuests";
             this.nudCompletionQuests.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionQuests.TabIndex = 10;
+            this.nudCompletionQuests.TabIndex = 4;
             // 
             // lblCompletionTreasureBoxes
             // 
@@ -830,7 +830,7 @@
             this.lblCompletionTreasureBoxes.Location = new System.Drawing.Point(208, 100);
             this.lblCompletionTreasureBoxes.Name = "lblCompletionTreasureBoxes";
             this.lblCompletionTreasureBoxes.Size = new System.Drawing.Size(84, 13);
-            this.lblCompletionTreasureBoxes.TabIndex = 15;
+            this.lblCompletionTreasureBoxes.TabIndex = 9;
             this.lblCompletionTreasureBoxes.Text = "Treasure Boxes:";
             // 
             // nudCompletionTreasureBoxes
@@ -844,7 +844,7 @@
             0});
             this.nudCompletionTreasureBoxes.Name = "nudCompletionTreasureBoxes";
             this.nudCompletionTreasureBoxes.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionTreasureBoxes.TabIndex = 16;
+            this.nudCompletionTreasureBoxes.TabIndex = 10;
             // 
             // lblCompletionBurstSkills
             // 
@@ -852,7 +852,7 @@
             this.lblCompletionBurstSkills.Location = new System.Drawing.Point(6, 100);
             this.lblCompletionBurstSkills.Name = "lblCompletionBurstSkills";
             this.lblCompletionBurstSkills.Size = new System.Drawing.Size(61, 13);
-            this.lblCompletionBurstSkills.TabIndex = 7;
+            this.lblCompletionBurstSkills.TabIndex = 1;
             this.lblCompletionBurstSkills.Text = "Burst Skills:";
             // 
             // lblCompletionLevels
@@ -862,7 +862,7 @@
             this.lblCompletionLevels.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.lblCompletionLevels.Name = "lblCompletionLevels";
             this.lblCompletionLevels.Size = new System.Drawing.Size(96, 13);
-            this.lblCompletionLevels.TabIndex = 6;
+            this.lblCompletionLevels.TabIndex = 0;
             this.lblCompletionLevels.Text = "Completion Levels:";
             // 
             // nudCompletionBurstSkills
@@ -875,7 +875,7 @@
             0});
             this.nudCompletionBurstSkills.Name = "nudCompletionBurstSkills";
             this.nudCompletionBurstSkills.Size = new System.Drawing.Size(55, 20);
-            this.nudCompletionBurstSkills.TabIndex = 8;
+            this.nudCompletionBurstSkills.TabIndex = 2;
             // 
             // chkAchievementExplorerPride
             // 
@@ -1286,7 +1286,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 50);
-            this.tableLayoutPanel2.TabIndex = 23;
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 

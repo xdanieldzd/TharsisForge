@@ -49,7 +49,7 @@
             this.cmbMaps.Location = new System.Drawing.Point(4, 5);
             this.cmbMaps.Name = "cmbMaps";
             this.cmbMaps.Size = new System.Drawing.Size(160, 21);
-            this.cmbMaps.TabIndex = 1;
+            this.cmbMaps.TabIndex = 0;
             this.cmbMaps.SelectedIndexChanged += new System.EventHandler(this.cmbMaps_SelectedIndexChanged);
             // 
             // chkZoomedMap
@@ -59,7 +59,7 @@
             this.chkZoomedMap.Location = new System.Drawing.Point(802, 7);
             this.chkZoomedMap.Name = "chkZoomedMap";
             this.chkZoomedMap.Size = new System.Drawing.Size(95, 17);
-            this.chkZoomedMap.TabIndex = 4;
+            this.chkZoomedMap.TabIndex = 1;
             this.chkZoomedMap.Text = "Show Zoomed";
             this.chkZoomedMap.UseVisualStyleBackColor = true;
             this.chkZoomedMap.CheckedChanged += new System.EventHandler(this.chkZoomedMap_CheckedChanged);
@@ -71,7 +71,7 @@
             this.pgMapPlaceable.Location = new System.Drawing.Point(677, 32);
             this.pgMapPlaceable.Name = "pgMapPlaceable";
             this.pgMapPlaceable.Size = new System.Drawing.Size(220, 465);
-            this.pgMapPlaceable.TabIndex = 1;
+            this.pgMapPlaceable.TabIndex = 4;
             this.pgMapPlaceable.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.pgMapPlaceable_PropertyValueChanged);
             this.pgMapPlaceable.SelectedGridItemChanged += new System.Windows.Forms.SelectedGridItemChangedEventHandler(this.pgMapPlaceable_SelectedGridItemChanged);
             // 
@@ -107,7 +107,7 @@
             this.lbMapPlaceables.Location = new System.Drawing.Point(4, 32);
             this.lbMapPlaceables.Name = "lbMapPlaceables";
             this.lbMapPlaceables.Size = new System.Drawing.Size(160, 465);
-            this.lbMapPlaceables.TabIndex = 3;
+            this.lbMapPlaceables.TabIndex = 2;
             this.lbMapPlaceables.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbMapPlaceables_Format);
             this.lbMapPlaceables.SelectedValueChanged += new System.EventHandler(this.lbMapPlaceables_SelectedValueChanged);
             // 
@@ -122,7 +122,7 @@
             this.pnlRender.Location = new System.Drawing.Point(170, 32);
             this.pnlRender.Name = "pnlRender";
             this.pnlRender.Size = new System.Drawing.Size(501, 465);
-            this.pnlRender.TabIndex = 0;
+            this.pnlRender.TabIndex = 3;
             // 
             // pbRender
             // 

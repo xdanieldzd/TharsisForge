@@ -77,7 +77,7 @@
             this.lblTimeYear.Name = "lblTimeYear";
             this.lblTimeYear.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.lblTimeYear.Size = new System.Drawing.Size(42, 23);
-            this.lblTimeYear.TabIndex = 2;
+            this.lblTimeYear.TabIndex = 0;
             this.lblTimeYear.Text = "Year:";
             this.lblTimeYear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -100,7 +100,7 @@
             this.lblTimeMonth.Name = "lblTimeMonth";
             this.lblTimeMonth.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
             this.lblTimeMonth.Size = new System.Drawing.Size(65, 23);
-            this.lblTimeMonth.TabIndex = 4;
+            this.lblTimeMonth.TabIndex = 2;
             this.lblTimeMonth.Text = "Month:";
             this.lblTimeMonth.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -121,7 +121,7 @@
             this.lblTimeDay.Name = "lblTimeDay";
             this.lblTimeDay.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
             this.lblTimeDay.Size = new System.Drawing.Size(54, 23);
-            this.lblTimeDay.TabIndex = 6;
+            this.lblTimeDay.TabIndex = 4;
             this.lblTimeDay.Text = "Day:";
             this.lblTimeDay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -132,7 +132,7 @@
             this.lblBurstBurst.Margin = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.lblBurstBurst.Name = "lblBurstBurst";
             this.lblBurstBurst.Size = new System.Drawing.Size(69, 13);
-            this.lblBurstBurst.TabIndex = 8;
+            this.lblBurstBurst.TabIndex = 6;
             this.lblBurstBurst.Text = "Burst Gauge:";
             // 
             // nudBurstValue
@@ -145,7 +145,7 @@
             0});
             this.nudBurstValue.Name = "nudBurstValue";
             this.nudBurstValue.Size = new System.Drawing.Size(80, 20);
-            this.nudBurstValue.TabIndex = 9;
+            this.nudBurstValue.TabIndex = 7;
             // 
             // lblBurstPointDisplay
             // 
@@ -154,7 +154,7 @@
             this.lblBurstPointDisplay.Location = new System.Drawing.Point(340, 73);
             this.lblBurstPointDisplay.Name = "lblBurstPointDisplay";
             this.lblBurstPointDisplay.Size = new System.Drawing.Size(16, 13);
-            this.lblBurstPointDisplay.TabIndex = 10;
+            this.lblBurstPointDisplay.TabIndex = 8;
             this.lblBurstPointDisplay.Text = "---";
             // 
             // gbCheatyUnlocks
@@ -167,7 +167,7 @@
             this.gbCheatyUnlocks.Location = new System.Drawing.Point(527, 3);
             this.gbCheatyUnlocks.Name = "gbCheatyUnlocks";
             this.gbCheatyUnlocks.Size = new System.Drawing.Size(320, 130);
-            this.gbCheatyUnlocks.TabIndex = 14;
+            this.gbCheatyUnlocks.TabIndex = 1;
             this.gbCheatyUnlocks.TabStop = false;
             this.gbCheatyUnlocks.Text = "Misc. Unlocks";
             // 
@@ -225,7 +225,7 @@
             this.gbBasicInfo.Location = new System.Drawing.Point(3, 3);
             this.gbBasicInfo.Name = "gbBasicInfo";
             this.gbBasicInfo.Size = new System.Drawing.Size(518, 130);
-            this.gbBasicInfo.TabIndex = 15;
+            this.gbBasicInfo.TabIndex = 0;
             this.gbBasicInfo.TabStop = false;
             this.gbBasicInfo.Text = "Basic Information";
             // 
@@ -235,7 +235,7 @@
             this.lblCurrentEn.Location = new System.Drawing.Point(6, 48);
             this.lblCurrentEn.Name = "lblCurrentEn";
             this.lblCurrentEn.Size = new System.Drawing.Size(59, 13);
-            this.lblCurrentEn.TabIndex = 20;
+            this.lblCurrentEn.TabIndex = 4;
             this.lblCurrentEn.Text = "Current en:";
             // 
             // txtCurrentEn
@@ -243,7 +243,7 @@
             this.txtCurrentEn.Location = new System.Drawing.Point(88, 45);
             this.txtCurrentEn.Name = "txtCurrentEn";
             this.txtCurrentEn.Size = new System.Drawing.Size(80, 20);
-            this.txtCurrentEn.TabIndex = 21;
+            this.txtCurrentEn.TabIndex = 5;
             // 
             // tableLayoutPanel2
             // 
@@ -278,7 +278,7 @@
             this.txtSkyshipName.MaxLength = 8;
             this.txtSkyshipName.Name = "txtSkyshipName";
             this.txtSkyshipName.Size = new System.Drawing.Size(120, 20);
-            this.txtSkyshipName.TabIndex = 7;
+            this.txtSkyshipName.TabIndex = 3;
             // 
             // spbBurstGauge
             // 
@@ -288,7 +288,7 @@
             this.spbBurstGauge.Maximum = 99;
             this.spbBurstGauge.Name = "spbBurstGauge";
             this.spbBurstGauge.Size = new System.Drawing.Size(150, 20);
-            this.spbBurstGauge.TabIndex = 11;
+            this.spbBurstGauge.TabIndex = 9;
             // 
             // lblSkyshipName
             // 
@@ -297,7 +297,7 @@
             this.lblSkyshipName.Location = new System.Drawing.Point(308, 22);
             this.lblSkyshipName.Name = "lblSkyshipName";
             this.lblSkyshipName.Size = new System.Drawing.Size(78, 13);
-            this.lblSkyshipName.TabIndex = 6;
+            this.lblSkyshipName.TabIndex = 2;
             this.lblSkyshipName.Text = "Skyship Name:";
             // 
             // txtGuildName
@@ -306,7 +306,7 @@
             this.txtGuildName.MaxLength = 8;
             this.txtGuildName.Name = "txtGuildName";
             this.txtGuildName.Size = new System.Drawing.Size(120, 20);
-            this.txtGuildName.TabIndex = 5;
+            this.txtGuildName.TabIndex = 1;
             // 
             // lblGuildName
             // 
@@ -314,7 +314,7 @@
             this.lblGuildName.Location = new System.Drawing.Point(6, 22);
             this.lblGuildName.Name = "lblGuildName";
             this.lblGuildName.Size = new System.Drawing.Size(65, 13);
-            this.lblGuildName.TabIndex = 4;
+            this.lblGuildName.TabIndex = 0;
             this.lblGuildName.Text = "Guild Name:";
             // 
             // tableLayoutPanel1
@@ -331,7 +331,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 400);
-            this.tableLayoutPanel1.TabIndex = 16;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // GameDataEditor
             // 

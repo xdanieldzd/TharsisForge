@@ -14,19 +14,6 @@ namespace EO4SaveEdit.Editors
 {
     public partial class CharacterEditor : UserControl, IEditorControl
     {
-        /* TODO:
-         * Name
-         * Level
-         * HP, TP, EXP
-         * Class, Subclass
-         * Portrait
-         * (BaseFlags & IsGuildCardCharacter) + GuildName
-         * Weapon, Equipment, Armor1, Armor2
-         * AvailableSkillPoints
-         * Skill Levels
-         * (Stats...? However they work)
-        */
-
         Mori4Game gameData;
         Character currentCharacter;
 
@@ -58,9 +45,6 @@ namespace EO4SaveEdit.Editors
                 }
 
                 lbCharacters.DataSource = this.gameData.Characters;
-
-                //TEMP
-                btnCharacterStatsEditor.Enabled = false;
             }
         }
 
@@ -175,7 +159,8 @@ namespace EO4SaveEdit.Editors
 
         private void btnCharacterStatsEditor_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            StatsEditorDialog sed = new StatsEditorDialog(currentCharacter.BaseStats);
+            sed.ShowDialog();
         }
     }
 }

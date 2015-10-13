@@ -183,6 +183,7 @@ namespace EO4SaveEdit.FileHandlers
         }
     }
 
+    [System.Diagnostics.DebuggerDisplay("HP:{HP},TP:{TP},STR:{STR},VIT:{VIT},AGI:{AGI},LUC:{LUC},TEC:{TEC},Unk:{Unknown}")]
     public class Stats : DataChunk
     {
         public uint HP { get; set; }
@@ -248,12 +249,12 @@ namespace EO4SaveEdit.FileHandlers
         public uint Unknown5 { get; set; }
         public uint Unknown6 { get; set; }
         public uint Unknown7 { get; set; }
-        public Stats BaseStats { get; set; }
-        public Stats CumulativeStatsAfterSkills { get; set; }
-        public Stats CumulativeStatsAfterArmor2 { get; set; }
-        public Stats CumulativeStatsAfterArmor1 { get; set; }
-        public Stats CumulativeStatsAfterEquipment { get; set; }
-        public Stats CumulativeStatsAfterWeapon { get; set; }
+        public Stats BaseStats { get; set; }                        // Base stats
+        public Stats CumulativeStatsAfterSkills { get; set; }       // Stats after any Skill-based buffs (TP Boost, etc.)
+        public Stats CumulativeStatsAfterEquipment { get; set; }    // Stats after any buffs from Equipment (forge effects)
+        public Stats CumulativeStatsAfterUnknown1 { get; set; }     // Usually same as after Equipment...? Maybe temporary buffs/debuffs?
+        public Stats CumulativeStatsAfterUnknown2 { get; set; }     // Usually same as after Equipment...? Maybe temporary buffs/debuffs?
+        public Stats CumulativeStatsAfterUnknown3 { get; set; }     // Usually same as after Equipment...? Maybe temporary buffs/debuffs?
         public ushort CurrentHP { get; set; }
         public ushort CurrentTP { get; set; }
         public uint CurrentEXP { get; set; }
@@ -344,10 +345,10 @@ namespace EO4SaveEdit.FileHandlers
             Unknown7 = reader.ReadUInt32();
             BaseStats = new Stats(stream);
             CumulativeStatsAfterSkills = new Stats(stream);
-            CumulativeStatsAfterArmor2 = new Stats(stream);
-            CumulativeStatsAfterArmor1 = new Stats(stream);
             CumulativeStatsAfterEquipment = new Stats(stream);
-            CumulativeStatsAfterWeapon = new Stats(stream);
+            CumulativeStatsAfterUnknown1 = new Stats(stream);
+            CumulativeStatsAfterUnknown2 = new Stats(stream);
+            CumulativeStatsAfterUnknown3 = new Stats(stream);
             CurrentHP = reader.ReadUInt16();
             CurrentTP = reader.ReadUInt16();
             CurrentEXP = reader.ReadUInt32();
@@ -404,10 +405,10 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(Unknown7);
             BaseStats.WriteToStream(stream);
             CumulativeStatsAfterSkills.WriteToStream(stream);
-            CumulativeStatsAfterArmor2.WriteToStream(stream);
-            CumulativeStatsAfterArmor1.WriteToStream(stream);
             CumulativeStatsAfterEquipment.WriteToStream(stream);
-            CumulativeStatsAfterWeapon.WriteToStream(stream);
+            CumulativeStatsAfterUnknown1.WriteToStream(stream);
+            CumulativeStatsAfterUnknown2.WriteToStream(stream);
+            CumulativeStatsAfterUnknown3.WriteToStream(stream);
             writer.Write(CurrentHP);
             writer.Write(CurrentTP);
             writer.Write(CurrentEXP);

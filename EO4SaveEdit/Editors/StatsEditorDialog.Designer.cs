@@ -30,20 +30,20 @@
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.gbStats = new System.Windows.Forms.GroupBox();
-            this.lblSTR = new System.Windows.Forms.Label();
-            this.lblTEC = new System.Windows.Forms.Label();
-            this.lblVIT = new System.Windows.Forms.Label();
-            this.lblAGI = new System.Windows.Forms.Label();
-            this.lblLUC = new System.Windows.Forms.Label();
-            this.lblMaxHP = new System.Windows.Forms.Label();
-            this.lblMaxTP = new System.Windows.Forms.Label();
-            this.txtMaxHP = new System.Windows.Forms.TextBox();
-            this.txtMaxTP = new System.Windows.Forms.TextBox();
-            this.txtSTR = new System.Windows.Forms.TextBox();
-            this.txtTEC = new System.Windows.Forms.TextBox();
-            this.txtVIT = new System.Windows.Forms.TextBox();
-            this.txtAGI = new System.Windows.Forms.TextBox();
             this.txtLUC = new System.Windows.Forms.TextBox();
+            this.txtAGI = new System.Windows.Forms.TextBox();
+            this.txtVIT = new System.Windows.Forms.TextBox();
+            this.txtTEC = new System.Windows.Forms.TextBox();
+            this.txtSTR = new System.Windows.Forms.TextBox();
+            this.txtMaxTP = new System.Windows.Forms.TextBox();
+            this.txtMaxHP = new System.Windows.Forms.TextBox();
+            this.lblMaxTP = new System.Windows.Forms.Label();
+            this.lblMaxHP = new System.Windows.Forms.Label();
+            this.lblLUC = new System.Windows.Forms.Label();
+            this.lblAGI = new System.Windows.Forms.Label();
+            this.lblVIT = new System.Windows.Forms.Label();
+            this.lblTEC = new System.Windows.Forms.Label();
+            this.lblSTR = new System.Windows.Forms.Label();
             this.gbStats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,15 +85,99 @@
             this.gbStats.TabStop = false;
             this.gbStats.Text = "Stats";
             // 
-            // lblSTR
+            // txtLUC
             // 
-            this.lblSTR.AutoSize = true;
-            this.lblSTR.Location = new System.Drawing.Point(6, 48);
-            this.lblSTR.Margin = new System.Windows.Forms.Padding(3, 0, 15, 0);
-            this.lblSTR.Name = "lblSTR";
-            this.lblSTR.Size = new System.Drawing.Size(32, 13);
-            this.lblSTR.TabIndex = 4;
-            this.lblSTR.Text = "STR:";
+            this.txtLUC.Location = new System.Drawing.Point(60, 97);
+            this.txtLUC.Name = "txtLUC";
+            this.txtLUC.Size = new System.Drawing.Size(80, 20);
+            this.txtLUC.TabIndex = 13;
+            // 
+            // txtAGI
+            // 
+            this.txtAGI.Location = new System.Drawing.Point(234, 71);
+            this.txtAGI.Name = "txtAGI";
+            this.txtAGI.Size = new System.Drawing.Size(80, 20);
+            this.txtAGI.TabIndex = 11;
+            // 
+            // txtVIT
+            // 
+            this.txtVIT.Location = new System.Drawing.Point(60, 71);
+            this.txtVIT.Name = "txtVIT";
+            this.txtVIT.Size = new System.Drawing.Size(80, 20);
+            this.txtVIT.TabIndex = 9;
+            // 
+            // txtTEC
+            // 
+            this.txtTEC.Location = new System.Drawing.Point(234, 45);
+            this.txtTEC.Name = "txtTEC";
+            this.txtTEC.Size = new System.Drawing.Size(80, 20);
+            this.txtTEC.TabIndex = 7;
+            // 
+            // txtSTR
+            // 
+            this.txtSTR.Location = new System.Drawing.Point(60, 45);
+            this.txtSTR.Name = "txtSTR";
+            this.txtSTR.Size = new System.Drawing.Size(80, 20);
+            this.txtSTR.TabIndex = 5;
+            // 
+            // txtMaxTP
+            // 
+            this.txtMaxTP.Location = new System.Drawing.Point(234, 19);
+            this.txtMaxTP.Name = "txtMaxTP";
+            this.txtMaxTP.Size = new System.Drawing.Size(80, 20);
+            this.txtMaxTP.TabIndex = 3;
+            // 
+            // txtMaxHP
+            // 
+            this.txtMaxHP.Location = new System.Drawing.Point(60, 19);
+            this.txtMaxHP.Name = "txtMaxHP";
+            this.txtMaxHP.Size = new System.Drawing.Size(80, 20);
+            this.txtMaxHP.TabIndex = 1;
+            // 
+            // lblMaxTP
+            // 
+            this.lblMaxTP.AutoSize = true;
+            this.lblMaxTP.Location = new System.Drawing.Point(181, 22);
+            this.lblMaxTP.Name = "lblMaxTP";
+            this.lblMaxTP.Size = new System.Drawing.Size(47, 13);
+            this.lblMaxTP.TabIndex = 2;
+            this.lblMaxTP.Text = "Max TP:";
+            // 
+            // lblMaxHP
+            // 
+            this.lblMaxHP.AutoSize = true;
+            this.lblMaxHP.Location = new System.Drawing.Point(6, 22);
+            this.lblMaxHP.Name = "lblMaxHP";
+            this.lblMaxHP.Size = new System.Drawing.Size(48, 13);
+            this.lblMaxHP.TabIndex = 0;
+            this.lblMaxHP.Text = "Max HP:";
+            // 
+            // lblLUC
+            // 
+            this.lblLUC.AutoSize = true;
+            this.lblLUC.Location = new System.Drawing.Point(6, 100);
+            this.lblLUC.Name = "lblLUC";
+            this.lblLUC.Size = new System.Drawing.Size(31, 13);
+            this.lblLUC.TabIndex = 12;
+            this.lblLUC.Text = "LUC:";
+            // 
+            // lblAGI
+            // 
+            this.lblAGI.AutoSize = true;
+            this.lblAGI.Location = new System.Drawing.Point(181, 74);
+            this.lblAGI.Name = "lblAGI";
+            this.lblAGI.Size = new System.Drawing.Size(28, 13);
+            this.lblAGI.TabIndex = 10;
+            this.lblAGI.Text = "AGI:";
+            // 
+            // lblVIT
+            // 
+            this.lblVIT.AutoSize = true;
+            this.lblVIT.Location = new System.Drawing.Point(6, 74);
+            this.lblVIT.Name = "lblVIT";
+            this.lblVIT.Size = new System.Drawing.Size(27, 13);
+            this.lblVIT.TabIndex = 8;
+            this.lblVIT.Text = "VIT:";
             // 
             // lblTEC
             // 
@@ -105,99 +189,15 @@
             this.lblTEC.TabIndex = 6;
             this.lblTEC.Text = "TEC:";
             // 
-            // lblVIT
+            // lblSTR
             // 
-            this.lblVIT.AutoSize = true;
-            this.lblVIT.Location = new System.Drawing.Point(6, 74);
-            this.lblVIT.Name = "lblVIT";
-            this.lblVIT.Size = new System.Drawing.Size(27, 13);
-            this.lblVIT.TabIndex = 8;
-            this.lblVIT.Text = "VIT:";
-            // 
-            // lblAGI
-            // 
-            this.lblAGI.AutoSize = true;
-            this.lblAGI.Location = new System.Drawing.Point(181, 74);
-            this.lblAGI.Name = "lblAGI";
-            this.lblAGI.Size = new System.Drawing.Size(28, 13);
-            this.lblAGI.TabIndex = 10;
-            this.lblAGI.Text = "AGI:";
-            // 
-            // lblLUC
-            // 
-            this.lblLUC.AutoSize = true;
-            this.lblLUC.Location = new System.Drawing.Point(6, 100);
-            this.lblLUC.Name = "lblLUC";
-            this.lblLUC.Size = new System.Drawing.Size(31, 13);
-            this.lblLUC.TabIndex = 12;
-            this.lblLUC.Text = "LUC:";
-            // 
-            // lblMaxHP
-            // 
-            this.lblMaxHP.AutoSize = true;
-            this.lblMaxHP.Location = new System.Drawing.Point(6, 22);
-            this.lblMaxHP.Name = "lblMaxHP";
-            this.lblMaxHP.Size = new System.Drawing.Size(48, 13);
-            this.lblMaxHP.TabIndex = 0;
-            this.lblMaxHP.Text = "Max HP:";
-            // 
-            // lblMaxTP
-            // 
-            this.lblMaxTP.AutoSize = true;
-            this.lblMaxTP.Location = new System.Drawing.Point(181, 22);
-            this.lblMaxTP.Name = "lblMaxTP";
-            this.lblMaxTP.Size = new System.Drawing.Size(47, 13);
-            this.lblMaxTP.TabIndex = 2;
-            this.lblMaxTP.Text = "Max TP:";
-            // 
-            // txtMaxHP
-            // 
-            this.txtMaxHP.Location = new System.Drawing.Point(60, 19);
-            this.txtMaxHP.Name = "txtMaxHP";
-            this.txtMaxHP.Size = new System.Drawing.Size(80, 20);
-            this.txtMaxHP.TabIndex = 14;
-            // 
-            // txtMaxTP
-            // 
-            this.txtMaxTP.Location = new System.Drawing.Point(234, 19);
-            this.txtMaxTP.Name = "txtMaxTP";
-            this.txtMaxTP.Size = new System.Drawing.Size(80, 20);
-            this.txtMaxTP.TabIndex = 15;
-            // 
-            // txtSTR
-            // 
-            this.txtSTR.Location = new System.Drawing.Point(60, 45);
-            this.txtSTR.Name = "txtSTR";
-            this.txtSTR.Size = new System.Drawing.Size(80, 20);
-            this.txtSTR.TabIndex = 16;
-            // 
-            // txtTEC
-            // 
-            this.txtTEC.Location = new System.Drawing.Point(234, 45);
-            this.txtTEC.Name = "txtTEC";
-            this.txtTEC.Size = new System.Drawing.Size(80, 20);
-            this.txtTEC.TabIndex = 17;
-            // 
-            // txtVIT
-            // 
-            this.txtVIT.Location = new System.Drawing.Point(60, 71);
-            this.txtVIT.Name = "txtVIT";
-            this.txtVIT.Size = new System.Drawing.Size(80, 20);
-            this.txtVIT.TabIndex = 18;
-            // 
-            // txtAGI
-            // 
-            this.txtAGI.Location = new System.Drawing.Point(234, 71);
-            this.txtAGI.Name = "txtAGI";
-            this.txtAGI.Size = new System.Drawing.Size(80, 20);
-            this.txtAGI.TabIndex = 19;
-            // 
-            // txtLUC
-            // 
-            this.txtLUC.Location = new System.Drawing.Point(60, 97);
-            this.txtLUC.Name = "txtLUC";
-            this.txtLUC.Size = new System.Drawing.Size(80, 20);
-            this.txtLUC.TabIndex = 20;
+            this.lblSTR.AutoSize = true;
+            this.lblSTR.Location = new System.Drawing.Point(6, 48);
+            this.lblSTR.Margin = new System.Windows.Forms.Padding(3, 0, 15, 0);
+            this.lblSTR.Name = "lblSTR";
+            this.lblSTR.Size = new System.Drawing.Size(32, 13);
+            this.lblSTR.TabIndex = 4;
+            this.lblSTR.Text = "STR:";
             // 
             // StatsEditorDialog
             // 

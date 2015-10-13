@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.gbOnHand = new System.Windows.Forms.GroupBox();
-            this.gbKeyItems = new System.Windows.Forms.GroupBox();
-            this.gbStorage = new System.Windows.Forms.GroupBox();
-            this.tlpItems = new System.Windows.Forms.TableLayoutPanel();
             this.dgvInventory = new EO4SaveEdit.Controls.DataGridViewEx();
-            this.dgvStorage = new EO4SaveEdit.Controls.DataGridViewEx();
+            this.gbKeyItems = new System.Windows.Forms.GroupBox();
             this.dgvKeyItems = new EO4SaveEdit.Controls.DataGridViewEx();
+            this.gbStorage = new System.Windows.Forms.GroupBox();
+            this.dgvStorage = new EO4SaveEdit.Controls.DataGridViewEx();
+            this.tlpItems = new System.Windows.Forms.TableLayoutPanel();
             this.gbOnHand.SuspendLayout();
-            this.gbKeyItems.SuspendLayout();
-            this.gbStorage.SuspendLayout();
-            this.tlpItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).BeginInit();
+            this.gbKeyItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKeyItems)).BeginInit();
+            this.gbStorage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).BeginInit();
+            this.tlpItems.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbOnHand
@@ -51,48 +51,9 @@
             this.gbOnHand.Location = new System.Drawing.Point(3, 3);
             this.gbOnHand.Name = "gbOnHand";
             this.gbOnHand.Size = new System.Drawing.Size(194, 294);
-            this.gbOnHand.TabIndex = 4;
+            this.gbOnHand.TabIndex = 0;
             this.gbOnHand.TabStop = false;
             this.gbOnHand.Text = "On Hand";
-            // 
-            // gbKeyItems
-            // 
-            this.gbKeyItems.Controls.Add(this.dgvKeyItems);
-            this.gbKeyItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbKeyItems.Location = new System.Drawing.Point(203, 3);
-            this.gbKeyItems.Name = "gbKeyItems";
-            this.gbKeyItems.Size = new System.Drawing.Size(194, 294);
-            this.gbKeyItems.TabIndex = 5;
-            this.gbKeyItems.TabStop = false;
-            this.gbKeyItems.Text = "Key Items";
-            // 
-            // gbStorage
-            // 
-            this.gbStorage.Controls.Add(this.dgvStorage);
-            this.gbStorage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbStorage.Location = new System.Drawing.Point(403, 3);
-            this.gbStorage.Name = "gbStorage";
-            this.gbStorage.Size = new System.Drawing.Size(194, 294);
-            this.gbStorage.TabIndex = 6;
-            this.gbStorage.TabStop = false;
-            this.gbStorage.Text = "Storage";
-            // 
-            // tlpItems
-            // 
-            this.tlpItems.ColumnCount = 3;
-            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpItems.Controls.Add(this.gbOnHand, 0, 0);
-            this.tlpItems.Controls.Add(this.gbStorage, 2, 0);
-            this.tlpItems.Controls.Add(this.gbKeyItems, 1, 0);
-            this.tlpItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpItems.Location = new System.Drawing.Point(0, 0);
-            this.tlpItems.Name = "tlpItems";
-            this.tlpItems.RowCount = 1;
-            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpItems.Size = new System.Drawing.Size(600, 300);
-            this.tlpItems.TabIndex = 7;
             // 
             // dgvInventory
             // 
@@ -111,31 +72,20 @@
             this.dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvInventory.ShowCellToolTips = false;
             this.dgvInventory.Size = new System.Drawing.Size(182, 269);
-            this.dgvInventory.TabIndex = 1;
+            this.dgvInventory.TabIndex = 0;
             this.dgvInventory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventory_CellClick);
             this.dgvInventory.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvInventory_CellPainting);
             // 
-            // dgvStorage
+            // gbKeyItems
             // 
-            this.dgvStorage.AllowUserToAddRows = false;
-            this.dgvStorage.AllowUserToDeleteRows = false;
-            this.dgvStorage.AllowUserToResizeColumns = false;
-            this.dgvStorage.AllowUserToResizeRows = false;
-            this.dgvStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvStorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvStorage.Location = new System.Drawing.Point(6, 19);
-            this.dgvStorage.MultiSelect = false;
-            this.dgvStorage.Name = "dgvStorage";
-            this.dgvStorage.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvStorage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvStorage.ShowCellToolTips = false;
-            this.dgvStorage.Size = new System.Drawing.Size(182, 269);
-            this.dgvStorage.TabIndex = 3;
-            this.dgvStorage.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStorage_CellClick);
-            this.dgvStorage.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvStorage_CellPainting);
-            this.dgvStorage.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvStorage_CellValidating);
+            this.gbKeyItems.Controls.Add(this.dgvKeyItems);
+            this.gbKeyItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbKeyItems.Location = new System.Drawing.Point(203, 3);
+            this.gbKeyItems.Name = "gbKeyItems";
+            this.gbKeyItems.Size = new System.Drawing.Size(194, 294);
+            this.gbKeyItems.TabIndex = 1;
+            this.gbKeyItems.TabStop = false;
+            this.gbKeyItems.Text = "Key Items";
             // 
             // dgvKeyItems
             // 
@@ -154,9 +104,59 @@
             this.dgvKeyItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvKeyItems.ShowCellToolTips = false;
             this.dgvKeyItems.Size = new System.Drawing.Size(182, 269);
-            this.dgvKeyItems.TabIndex = 2;
+            this.dgvKeyItems.TabIndex = 0;
             this.dgvKeyItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKeyItems_CellClick);
             this.dgvKeyItems.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvKeyItems_CellPainting);
+            // 
+            // gbStorage
+            // 
+            this.gbStorage.Controls.Add(this.dgvStorage);
+            this.gbStorage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbStorage.Location = new System.Drawing.Point(403, 3);
+            this.gbStorage.Name = "gbStorage";
+            this.gbStorage.Size = new System.Drawing.Size(194, 294);
+            this.gbStorage.TabIndex = 2;
+            this.gbStorage.TabStop = false;
+            this.gbStorage.Text = "Storage";
+            // 
+            // dgvStorage
+            // 
+            this.dgvStorage.AllowUserToAddRows = false;
+            this.dgvStorage.AllowUserToDeleteRows = false;
+            this.dgvStorage.AllowUserToResizeColumns = false;
+            this.dgvStorage.AllowUserToResizeRows = false;
+            this.dgvStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvStorage.Location = new System.Drawing.Point(6, 19);
+            this.dgvStorage.MultiSelect = false;
+            this.dgvStorage.Name = "dgvStorage";
+            this.dgvStorage.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvStorage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvStorage.ShowCellToolTips = false;
+            this.dgvStorage.Size = new System.Drawing.Size(182, 269);
+            this.dgvStorage.TabIndex = 0;
+            this.dgvStorage.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStorage_CellClick);
+            this.dgvStorage.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvStorage_CellPainting);
+            this.dgvStorage.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvStorage_CellValidating);
+            // 
+            // tlpItems
+            // 
+            this.tlpItems.ColumnCount = 3;
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpItems.Controls.Add(this.gbOnHand, 0, 0);
+            this.tlpItems.Controls.Add(this.gbStorage, 2, 0);
+            this.tlpItems.Controls.Add(this.gbKeyItems, 1, 0);
+            this.tlpItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpItems.Location = new System.Drawing.Point(0, 0);
+            this.tlpItems.Name = "tlpItems";
+            this.tlpItems.RowCount = 1;
+            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpItems.Size = new System.Drawing.Size(600, 300);
+            this.tlpItems.TabIndex = 0;
             // 
             // ItemEditor
             // 
@@ -166,12 +166,12 @@
             this.Name = "ItemEditor";
             this.Size = new System.Drawing.Size(600, 300);
             this.gbOnHand.ResumeLayout(false);
-            this.gbKeyItems.ResumeLayout(false);
-            this.gbStorage.ResumeLayout(false);
-            this.tlpItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).EndInit();
+            this.gbKeyItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKeyItems)).EndInit();
+            this.gbStorage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStorage)).EndInit();
+            this.tlpItems.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
