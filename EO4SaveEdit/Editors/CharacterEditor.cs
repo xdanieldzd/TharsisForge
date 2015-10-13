@@ -154,13 +154,6 @@ namespace EO4SaveEdit.Editors
                 currentCharacter.Subclass, currentCharacter.SubSkillLevels);
 
             sed.ShowDialog();
-
-        }
-
-        private void btnCharacterStatsEditor_Click(object sender, EventArgs e)
-        {
-            StatsEditorDialog sed = new StatsEditorDialog(currentCharacter.BaseStats);
-            sed.ShowDialog();
         }
     }
 }

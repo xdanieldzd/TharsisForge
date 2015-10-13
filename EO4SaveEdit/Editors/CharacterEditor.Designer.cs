@@ -51,7 +51,7 @@
             this.nudCharacterLevel = new System.Windows.Forms.NumericUpDown();
             this.txtCharacterName = new System.Windows.Forms.TextBox();
             this.lbCharacters = new EO4SaveEdit.Controls.ListBoxEx();
-            this.gbEquipment = new System.Windows.Forms.GroupBox();
+            this.gbEquipmentSkills = new System.Windows.Forms.GroupBox();
             this.cmbCharacterWeapon = new System.Windows.Forms.ComboBox();
             this.lblCharacterWeapon = new System.Windows.Forms.Label();
             this.lblCharacterEquipment = new System.Windows.Forms.Label();
@@ -64,17 +64,13 @@
             this.btnCharacterEditEquipEffect = new System.Windows.Forms.Button();
             this.btnCharacterEditArmor1Effect = new System.Windows.Forms.Button();
             this.btnCharacterEditArmor2Effect = new System.Windows.Forms.Button();
-            this.gbSkillsStats = new System.Windows.Forms.GroupBox();
-            this.lblTempNote = new System.Windows.Forms.Label();
             this.txtCharacterAvailSkillPoints = new System.Windows.Forms.TextBox();
-            this.btnEditBaseStats = new System.Windows.Forms.Button();
             this.btnCharacterSkillEditor = new System.Windows.Forms.Button();
             this.lblCharacterAvailSkillPoints = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbBasicInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharacterLevel)).BeginInit();
-            this.gbEquipment.SuspendLayout();
-            this.gbSkillsStats.SuspendLayout();
+            this.gbEquipmentSkills.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -85,8 +81,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.gbBasicInfo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbCharacters, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbEquipment, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbSkillsStats, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gbEquipmentSkills, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -120,7 +115,7 @@
             this.gbBasicInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbBasicInfo.Location = new System.Drawing.Point(123, 3);
             this.gbBasicInfo.Name = "gbBasicInfo";
-            this.gbBasicInfo.Size = new System.Drawing.Size(384, 160);
+            this.gbBasicInfo.Size = new System.Drawing.Size(384, 170);
             this.gbBasicInfo.TabIndex = 1;
             this.gbBasicInfo.TabStop = false;
             this.gbBasicInfo.Text = "Basic Information";
@@ -318,27 +313,30 @@
             this.lbCharacters.SelectedIndexChanged += new System.EventHandler(this.lbCharacters_SelectedIndexChanged);
             this.lbCharacters.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbCharacters_Format);
             // 
-            // gbEquipment
+            // gbEquipmentSkills
             // 
-            this.gbEquipment.Controls.Add(this.cmbCharacterWeapon);
-            this.gbEquipment.Controls.Add(this.lblCharacterWeapon);
-            this.gbEquipment.Controls.Add(this.lblCharacterEquipment);
-            this.gbEquipment.Controls.Add(this.lblCharacterArmor1);
-            this.gbEquipment.Controls.Add(this.lblCharacterArmor2);
-            this.gbEquipment.Controls.Add(this.btnCharacterEditWeaponEffect);
-            this.gbEquipment.Controls.Add(this.cmbCharacterEquipment);
-            this.gbEquipment.Controls.Add(this.cmbCharacterArmor1);
-            this.gbEquipment.Controls.Add(this.cmbCharacterArmor2);
-            this.gbEquipment.Controls.Add(this.btnCharacterEditEquipEffect);
-            this.gbEquipment.Controls.Add(this.btnCharacterEditArmor1Effect);
-            this.gbEquipment.Controls.Add(this.btnCharacterEditArmor2Effect);
-            this.gbEquipment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbEquipment.Location = new System.Drawing.Point(513, 3);
-            this.gbEquipment.Name = "gbEquipment";
-            this.gbEquipment.Size = new System.Drawing.Size(384, 160);
-            this.gbEquipment.TabIndex = 2;
-            this.gbEquipment.TabStop = false;
-            this.gbEquipment.Text = "Equipment";
+            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterWeapon);
+            this.gbEquipmentSkills.Controls.Add(this.txtCharacterAvailSkillPoints);
+            this.gbEquipmentSkills.Controls.Add(this.lblCharacterWeapon);
+            this.gbEquipmentSkills.Controls.Add(this.lblCharacterEquipment);
+            this.gbEquipmentSkills.Controls.Add(this.btnCharacterSkillEditor);
+            this.gbEquipmentSkills.Controls.Add(this.lblCharacterAvailSkillPoints);
+            this.gbEquipmentSkills.Controls.Add(this.lblCharacterArmor1);
+            this.gbEquipmentSkills.Controls.Add(this.lblCharacterArmor2);
+            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditWeaponEffect);
+            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterEquipment);
+            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterArmor1);
+            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterArmor2);
+            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditEquipEffect);
+            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditArmor1Effect);
+            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditArmor2Effect);
+            this.gbEquipmentSkills.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbEquipmentSkills.Location = new System.Drawing.Point(513, 3);
+            this.gbEquipmentSkills.Name = "gbEquipmentSkills";
+            this.gbEquipmentSkills.Size = new System.Drawing.Size(384, 170);
+            this.gbEquipmentSkills.TabIndex = 2;
+            this.gbEquipmentSkills.TabStop = false;
+            this.gbEquipmentSkills.Text = "Equipment && Skills";
             // 
             // cmbCharacterWeapon
             // 
@@ -464,57 +462,17 @@
             this.btnCharacterEditArmor2Effect.UseVisualStyleBackColor = true;
             this.btnCharacterEditArmor2Effect.Click += new System.EventHandler(this.btnCharacterEditArmor2Effect_Click);
             // 
-            // gbSkillsStats
-            // 
-            this.gbSkillsStats.Controls.Add(this.lblTempNote);
-            this.gbSkillsStats.Controls.Add(this.txtCharacterAvailSkillPoints);
-            this.gbSkillsStats.Controls.Add(this.btnEditBaseStats);
-            this.gbSkillsStats.Controls.Add(this.btnCharacterSkillEditor);
-            this.gbSkillsStats.Controls.Add(this.lblCharacterAvailSkillPoints);
-            this.gbSkillsStats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbSkillsStats.Location = new System.Drawing.Point(123, 169);
-            this.gbSkillsStats.Name = "gbSkillsStats";
-            this.gbSkillsStats.Size = new System.Drawing.Size(384, 328);
-            this.gbSkillsStats.TabIndex = 3;
-            this.gbSkillsStats.TabStop = false;
-            this.gbSkillsStats.Text = "Skills && Stats";
-            // 
-            // lblTempNote
-            // 
-            this.lblTempNote.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTempNote.Location = new System.Drawing.Point(6, 78);
-            this.lblTempNote.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.lblTempNote.Name = "lblTempNote";
-            this.lblTempNote.Size = new System.Drawing.Size(372, 60);
-            this.lblTempNote.TabIndex = 4;
-            this.lblTempNote.Text = "Note: After changing the base stats, you will have to re-equip any one piece of t" +
-    "he character\'s equipment. This is required to make the game properly recalculate" +
-    " and apply the stats.\r\n\r\n";
-            // 
             // txtCharacterAvailSkillPoints
             // 
-            this.txtCharacterAvailSkillPoints.Location = new System.Drawing.Point(74, 19);
+            this.txtCharacterAvailSkillPoints.Location = new System.Drawing.Point(74, 136);
             this.txtCharacterAvailSkillPoints.Name = "txtCharacterAvailSkillPoints";
             this.txtCharacterAvailSkillPoints.Size = new System.Drawing.Size(100, 20);
             this.txtCharacterAvailSkillPoints.TabIndex = 1;
             // 
-            // btnEditBaseStats
-            // 
-            this.btnEditBaseStats.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditBaseStats.Location = new System.Drawing.Point(6, 46);
-            this.btnEditBaseStats.Name = "btnEditBaseStats";
-            this.btnEditBaseStats.Size = new System.Drawing.Size(372, 23);
-            this.btnEditBaseStats.TabIndex = 3;
-            this.btnEditBaseStats.Text = "Edit Base Stats";
-            this.btnEditBaseStats.UseVisualStyleBackColor = true;
-            this.btnEditBaseStats.Click += new System.EventHandler(this.btnCharacterStatsEditor_Click);
-            // 
             // btnCharacterSkillEditor
             // 
             this.btnCharacterSkillEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCharacterSkillEditor.Location = new System.Drawing.Point(258, 17);
+            this.btnCharacterSkillEditor.Location = new System.Drawing.Point(258, 134);
             this.btnCharacterSkillEditor.Name = "btnCharacterSkillEditor";
             this.btnCharacterSkillEditor.Size = new System.Drawing.Size(120, 23);
             this.btnCharacterSkillEditor.TabIndex = 2;
@@ -525,7 +483,7 @@
             // lblCharacterAvailSkillPoints
             // 
             this.lblCharacterAvailSkillPoints.AutoSize = true;
-            this.lblCharacterAvailSkillPoints.Location = new System.Drawing.Point(6, 22);
+            this.lblCharacterAvailSkillPoints.Location = new System.Drawing.Point(6, 139);
             this.lblCharacterAvailSkillPoints.Name = "lblCharacterAvailSkillPoints";
             this.lblCharacterAvailSkillPoints.Size = new System.Drawing.Size(61, 13);
             this.lblCharacterAvailSkillPoints.TabIndex = 0;
@@ -540,10 +498,8 @@
             this.gbBasicInfo.ResumeLayout(false);
             this.gbBasicInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharacterLevel)).EndInit();
-            this.gbEquipment.ResumeLayout(false);
-            this.gbEquipment.PerformLayout();
-            this.gbSkillsStats.ResumeLayout(false);
-            this.gbSkillsStats.PerformLayout();
+            this.gbEquipmentSkills.ResumeLayout(false);
+            this.gbEquipmentSkills.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -559,7 +515,6 @@
         private System.Windows.Forms.TextBox txtCharacterCurrentTP;
         private System.Windows.Forms.Label lblCharacterCurrentHP;
         private System.Windows.Forms.TextBox txtCharacterCurrentHP;
-        private System.Windows.Forms.Button btnEditBaseStats;
         private System.Windows.Forms.Button btnCharacterEditArmor2Effect;
         private System.Windows.Forms.Button btnCharacterEditArmor1Effect;
         private System.Windows.Forms.Button btnCharacterEditEquipEffect;
@@ -588,8 +543,6 @@
         private System.Windows.Forms.CheckBox chkCharacterIsGuildCardChara;
         private System.Windows.Forms.Label lblCharacterOriginGuildName;
         private System.Windows.Forms.TextBox txtCharacterOriginGuildName;
-        private System.Windows.Forms.GroupBox gbEquipment;
-        private System.Windows.Forms.GroupBox gbSkillsStats;
-        private System.Windows.Forms.Label lblTempNote;
+        private System.Windows.Forms.GroupBox gbEquipmentSkills;
     }
 }
