@@ -51,7 +51,7 @@
             this.nudCharacterLevel = new System.Windows.Forms.NumericUpDown();
             this.txtCharacterName = new System.Windows.Forms.TextBox();
             this.lbCharacters = new EO4SaveEdit.Controls.ListBoxEx();
-            this.gbEquipmentSkills = new System.Windows.Forms.GroupBox();
+            this.gbEquipment = new System.Windows.Forms.GroupBox();
             this.cmbCharacterWeapon = new System.Windows.Forms.ComboBox();
             this.lblCharacterWeapon = new System.Windows.Forms.Label();
             this.lblCharacterEquipment = new System.Windows.Forms.Label();
@@ -64,13 +64,34 @@
             this.btnCharacterEditEquipEffect = new System.Windows.Forms.Button();
             this.btnCharacterEditArmor1Effect = new System.Windows.Forms.Button();
             this.btnCharacterEditArmor2Effect = new System.Windows.Forms.Button();
-            this.txtCharacterAvailSkillPoints = new System.Windows.Forms.TextBox();
+            this.gbSkillsBoosts = new System.Windows.Forms.GroupBox();
+            this.lblStatBoostNote = new System.Windows.Forms.Label();
+            this.lblStatBoosts = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.nudLUCBoost = new System.Windows.Forms.NumericUpDown();
+            this.nudAGIBoost = new System.Windows.Forms.NumericUpDown();
+            this.nudVITBoost = new System.Windows.Forms.NumericUpDown();
+            this.nudTECBoost = new System.Windows.Forms.NumericUpDown();
+            this.nudSTRBoost = new System.Windows.Forms.NumericUpDown();
+            this.lblSTRBoost = new System.Windows.Forms.Label();
+            this.lblLUCBoost = new System.Windows.Forms.Label();
+            this.lblAGIBoost = new System.Windows.Forms.Label();
+            this.lblVITBoost = new System.Windows.Forms.Label();
+            this.lblTECBoost = new System.Windows.Forms.Label();
             this.btnCharacterSkillEditor = new System.Windows.Forms.Button();
+            this.txtCharacterAvailSkillPoints = new System.Windows.Forms.TextBox();
             this.lblCharacterAvailSkillPoints = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbBasicInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharacterLevel)).BeginInit();
-            this.gbEquipmentSkills.SuspendLayout();
+            this.gbEquipment.SuspendLayout();
+            this.gbSkillsBoosts.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLUCBoost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAGIBoost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVITBoost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTECBoost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSTRBoost)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -81,13 +102,15 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.gbBasicInfo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbCharacters, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gbEquipmentSkills, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbEquipment, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gbSkillsBoosts, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(900, 500);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -115,7 +138,7 @@
             this.gbBasicInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbBasicInfo.Location = new System.Drawing.Point(123, 3);
             this.gbBasicInfo.Name = "gbBasicInfo";
-            this.gbBasicInfo.Size = new System.Drawing.Size(384, 170);
+            this.gbBasicInfo.Size = new System.Drawing.Size(384, 155);
             this.gbBasicInfo.TabIndex = 1;
             this.gbBasicInfo.TabStop = false;
             this.gbBasicInfo.Text = "Basic Information";
@@ -313,30 +336,27 @@
             this.lbCharacters.SelectedIndexChanged += new System.EventHandler(this.lbCharacters_SelectedIndexChanged);
             this.lbCharacters.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lbCharacters_Format);
             // 
-            // gbEquipmentSkills
+            // gbEquipment
             // 
-            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterWeapon);
-            this.gbEquipmentSkills.Controls.Add(this.txtCharacterAvailSkillPoints);
-            this.gbEquipmentSkills.Controls.Add(this.lblCharacterWeapon);
-            this.gbEquipmentSkills.Controls.Add(this.lblCharacterEquipment);
-            this.gbEquipmentSkills.Controls.Add(this.btnCharacterSkillEditor);
-            this.gbEquipmentSkills.Controls.Add(this.lblCharacterAvailSkillPoints);
-            this.gbEquipmentSkills.Controls.Add(this.lblCharacterArmor1);
-            this.gbEquipmentSkills.Controls.Add(this.lblCharacterArmor2);
-            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditWeaponEffect);
-            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterEquipment);
-            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterArmor1);
-            this.gbEquipmentSkills.Controls.Add(this.cmbCharacterArmor2);
-            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditEquipEffect);
-            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditArmor1Effect);
-            this.gbEquipmentSkills.Controls.Add(this.btnCharacterEditArmor2Effect);
-            this.gbEquipmentSkills.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbEquipmentSkills.Location = new System.Drawing.Point(513, 3);
-            this.gbEquipmentSkills.Name = "gbEquipmentSkills";
-            this.gbEquipmentSkills.Size = new System.Drawing.Size(384, 170);
-            this.gbEquipmentSkills.TabIndex = 2;
-            this.gbEquipmentSkills.TabStop = false;
-            this.gbEquipmentSkills.Text = "Equipment && Skills";
+            this.gbEquipment.Controls.Add(this.cmbCharacterWeapon);
+            this.gbEquipment.Controls.Add(this.lblCharacterWeapon);
+            this.gbEquipment.Controls.Add(this.lblCharacterEquipment);
+            this.gbEquipment.Controls.Add(this.lblCharacterArmor1);
+            this.gbEquipment.Controls.Add(this.lblCharacterArmor2);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditWeaponEffect);
+            this.gbEquipment.Controls.Add(this.cmbCharacterEquipment);
+            this.gbEquipment.Controls.Add(this.cmbCharacterArmor1);
+            this.gbEquipment.Controls.Add(this.cmbCharacterArmor2);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditEquipEffect);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditArmor1Effect);
+            this.gbEquipment.Controls.Add(this.btnCharacterEditArmor2Effect);
+            this.gbEquipment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbEquipment.Location = new System.Drawing.Point(513, 3);
+            this.gbEquipment.Name = "gbEquipment";
+            this.gbEquipment.Size = new System.Drawing.Size(384, 155);
+            this.gbEquipment.TabIndex = 2;
+            this.gbEquipment.TabStop = false;
+            this.gbEquipment.Text = "Equipment";
             // 
             // cmbCharacterWeapon
             // 
@@ -462,17 +482,198 @@
             this.btnCharacterEditArmor2Effect.UseVisualStyleBackColor = true;
             this.btnCharacterEditArmor2Effect.Click += new System.EventHandler(this.btnCharacterEditArmor2Effect_Click);
             // 
-            // txtCharacterAvailSkillPoints
+            // gbSkillsBoosts
             // 
-            this.txtCharacterAvailSkillPoints.Location = new System.Drawing.Point(74, 136);
-            this.txtCharacterAvailSkillPoints.Name = "txtCharacterAvailSkillPoints";
-            this.txtCharacterAvailSkillPoints.Size = new System.Drawing.Size(100, 20);
-            this.txtCharacterAvailSkillPoints.TabIndex = 1;
+            this.gbSkillsBoosts.Controls.Add(this.lblStatBoostNote);
+            this.gbSkillsBoosts.Controls.Add(this.lblStatBoosts);
+            this.gbSkillsBoosts.Controls.Add(this.tableLayoutPanel2);
+            this.gbSkillsBoosts.Controls.Add(this.btnCharacterSkillEditor);
+            this.gbSkillsBoosts.Controls.Add(this.txtCharacterAvailSkillPoints);
+            this.gbSkillsBoosts.Controls.Add(this.lblCharacterAvailSkillPoints);
+            this.gbSkillsBoosts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbSkillsBoosts.Location = new System.Drawing.Point(123, 164);
+            this.gbSkillsBoosts.Name = "gbSkillsBoosts";
+            this.gbSkillsBoosts.Size = new System.Drawing.Size(384, 333);
+            this.gbSkillsBoosts.TabIndex = 3;
+            this.gbSkillsBoosts.TabStop = false;
+            this.gbSkillsBoosts.Text = "Skills && Stat Boosts";
+            // 
+            // lblStatBoostNote
+            // 
+            this.lblStatBoostNote.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStatBoostNote.Location = new System.Drawing.Point(6, 123);
+            this.lblStatBoostNote.Name = "lblStatBoostNote";
+            this.lblStatBoostNote.Size = new System.Drawing.Size(372, 60);
+            this.lblStatBoostNote.TabIndex = 5;
+            this.lblStatBoostNote.Text = "Note: For changes to the stat boosts to take effect, the character will need to l" +
+    "evel up once. This is required to make the game properly recalculate and apply t" +
+    "he stats.";
+            // 
+            // lblStatBoosts
+            // 
+            this.lblStatBoosts.AutoSize = true;
+            this.lblStatBoosts.Location = new System.Drawing.Point(6, 49);
+            this.lblStatBoosts.Margin = new System.Windows.Forms.Padding(3, 12, 3, 0);
+            this.lblStatBoosts.Name = "lblStatBoosts";
+            this.lblStatBoosts.Size = new System.Drawing.Size(64, 13);
+            this.lblStatBoosts.TabIndex = 4;
+            this.lblStatBoosts.Text = "Stat Boosts:";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.12121F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.21212F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.12121F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.21212F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.12121F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.21212F));
+            this.tableLayoutPanel2.Controls.Add(this.nudLUCBoost, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.nudAGIBoost, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.nudVITBoost, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.nudTECBoost, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.nudSTRBoost, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblSTRBoost, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblLUCBoost, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblAGIBoost, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblVITBoost, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblTECBoost, 2, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 65);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(372, 55);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // nudLUCBoost
+            // 
+            this.nudLUCBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudLUCBoost.Location = new System.Drawing.Point(171, 28);
+            this.nudLUCBoost.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudLUCBoost.Name = "nudLUCBoost";
+            this.nudLUCBoost.Size = new System.Drawing.Size(72, 20);
+            this.nudLUCBoost.TabIndex = 13;
+            // 
+            // nudAGIBoost
+            // 
+            this.nudAGIBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudAGIBoost.Location = new System.Drawing.Point(48, 28);
+            this.nudAGIBoost.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudAGIBoost.Name = "nudAGIBoost";
+            this.nudAGIBoost.Size = new System.Drawing.Size(72, 20);
+            this.nudAGIBoost.TabIndex = 12;
+            // 
+            // nudVITBoost
+            // 
+            this.nudVITBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudVITBoost.Location = new System.Drawing.Point(294, 3);
+            this.nudVITBoost.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudVITBoost.Name = "nudVITBoost";
+            this.nudVITBoost.Size = new System.Drawing.Size(75, 20);
+            this.nudVITBoost.TabIndex = 11;
+            // 
+            // nudTECBoost
+            // 
+            this.nudTECBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudTECBoost.Location = new System.Drawing.Point(171, 3);
+            this.nudTECBoost.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudTECBoost.Name = "nudTECBoost";
+            this.nudTECBoost.Size = new System.Drawing.Size(72, 20);
+            this.nudTECBoost.TabIndex = 10;
+            // 
+            // nudSTRBoost
+            // 
+            this.nudSTRBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudSTRBoost.Location = new System.Drawing.Point(48, 3);
+            this.nudSTRBoost.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nudSTRBoost.Name = "nudSTRBoost";
+            this.nudSTRBoost.Size = new System.Drawing.Size(72, 20);
+            this.nudSTRBoost.TabIndex = 5;
+            // 
+            // lblSTRBoost
+            // 
+            this.lblSTRBoost.AutoSize = true;
+            this.lblSTRBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSTRBoost.Location = new System.Drawing.Point(3, 0);
+            this.lblSTRBoost.Name = "lblSTRBoost";
+            this.lblSTRBoost.Size = new System.Drawing.Size(39, 25);
+            this.lblSTRBoost.TabIndex = 5;
+            this.lblSTRBoost.Text = "STR:";
+            this.lblSTRBoost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLUCBoost
+            // 
+            this.lblLUCBoost.AutoSize = true;
+            this.lblLUCBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLUCBoost.Location = new System.Drawing.Point(126, 25);
+            this.lblLUCBoost.Name = "lblLUCBoost";
+            this.lblLUCBoost.Size = new System.Drawing.Size(39, 25);
+            this.lblLUCBoost.TabIndex = 9;
+            this.lblLUCBoost.Text = "LUC:";
+            this.lblLUCBoost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblAGIBoost
+            // 
+            this.lblAGIBoost.AutoSize = true;
+            this.lblAGIBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAGIBoost.Location = new System.Drawing.Point(3, 25);
+            this.lblAGIBoost.Name = "lblAGIBoost";
+            this.lblAGIBoost.Size = new System.Drawing.Size(39, 25);
+            this.lblAGIBoost.TabIndex = 8;
+            this.lblAGIBoost.Text = "AGI:";
+            this.lblAGIBoost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblVITBoost
+            // 
+            this.lblVITBoost.AutoSize = true;
+            this.lblVITBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblVITBoost.Location = new System.Drawing.Point(249, 0);
+            this.lblVITBoost.Name = "lblVITBoost";
+            this.lblVITBoost.Size = new System.Drawing.Size(39, 25);
+            this.lblVITBoost.TabIndex = 7;
+            this.lblVITBoost.Text = "VIT:";
+            this.lblVITBoost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTECBoost
+            // 
+            this.lblTECBoost.AutoSize = true;
+            this.lblTECBoost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTECBoost.Location = new System.Drawing.Point(126, 0);
+            this.lblTECBoost.Name = "lblTECBoost";
+            this.lblTECBoost.Size = new System.Drawing.Size(39, 25);
+            this.lblTECBoost.TabIndex = 6;
+            this.lblTECBoost.Text = "TEC:";
+            this.lblTECBoost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnCharacterSkillEditor
             // 
             this.btnCharacterSkillEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCharacterSkillEditor.Location = new System.Drawing.Point(258, 134);
+            this.btnCharacterSkillEditor.Location = new System.Drawing.Point(258, 19);
             this.btnCharacterSkillEditor.Name = "btnCharacterSkillEditor";
             this.btnCharacterSkillEditor.Size = new System.Drawing.Size(120, 23);
             this.btnCharacterSkillEditor.TabIndex = 2;
@@ -480,10 +681,17 @@
             this.btnCharacterSkillEditor.UseVisualStyleBackColor = true;
             this.btnCharacterSkillEditor.Click += new System.EventHandler(this.btnCharacterSkillEditor_Click);
             // 
+            // txtCharacterAvailSkillPoints
+            // 
+            this.txtCharacterAvailSkillPoints.Location = new System.Drawing.Point(74, 21);
+            this.txtCharacterAvailSkillPoints.Name = "txtCharacterAvailSkillPoints";
+            this.txtCharacterAvailSkillPoints.Size = new System.Drawing.Size(100, 20);
+            this.txtCharacterAvailSkillPoints.TabIndex = 1;
+            // 
             // lblCharacterAvailSkillPoints
             // 
             this.lblCharacterAvailSkillPoints.AutoSize = true;
-            this.lblCharacterAvailSkillPoints.Location = new System.Drawing.Point(6, 139);
+            this.lblCharacterAvailSkillPoints.Location = new System.Drawing.Point(6, 24);
             this.lblCharacterAvailSkillPoints.Name = "lblCharacterAvailSkillPoints";
             this.lblCharacterAvailSkillPoints.Size = new System.Drawing.Size(61, 13);
             this.lblCharacterAvailSkillPoints.TabIndex = 0;
@@ -498,8 +706,17 @@
             this.gbBasicInfo.ResumeLayout(false);
             this.gbBasicInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCharacterLevel)).EndInit();
-            this.gbEquipmentSkills.ResumeLayout(false);
-            this.gbEquipmentSkills.PerformLayout();
+            this.gbEquipment.ResumeLayout(false);
+            this.gbEquipment.PerformLayout();
+            this.gbSkillsBoosts.ResumeLayout(false);
+            this.gbSkillsBoosts.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLUCBoost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAGIBoost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVITBoost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTECBoost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSTRBoost)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -543,6 +760,20 @@
         private System.Windows.Forms.CheckBox chkCharacterIsGuildCardChara;
         private System.Windows.Forms.Label lblCharacterOriginGuildName;
         private System.Windows.Forms.TextBox txtCharacterOriginGuildName;
-        private System.Windows.Forms.GroupBox gbEquipmentSkills;
+        private System.Windows.Forms.GroupBox gbEquipment;
+        private System.Windows.Forms.GroupBox gbSkillsBoosts;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lblStatBoosts;
+        private System.Windows.Forms.Label lblLUCBoost;
+        private System.Windows.Forms.Label lblAGIBoost;
+        private System.Windows.Forms.Label lblVITBoost;
+        private System.Windows.Forms.Label lblTECBoost;
+        private System.Windows.Forms.Label lblSTRBoost;
+        private System.Windows.Forms.NumericUpDown nudSTRBoost;
+        private System.Windows.Forms.NumericUpDown nudLUCBoost;
+        private System.Windows.Forms.NumericUpDown nudAGIBoost;
+        private System.Windows.Forms.NumericUpDown nudVITBoost;
+        private System.Windows.Forms.NumericUpDown nudTECBoost;
+        private System.Windows.Forms.Label lblStatBoostNote;
     }
 }

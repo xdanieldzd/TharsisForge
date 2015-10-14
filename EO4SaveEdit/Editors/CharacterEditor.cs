@@ -72,6 +72,12 @@ namespace EO4SaveEdit.Editors
             cmbCharacterArmor2.SetBinding("SelectedIndex", currentCharacter.ArmorSlot2, "ItemID");
 
             txtCharacterAvailSkillPoints.SetBinding("Text", currentCharacter, "AvailableSkillPoints");
+
+            nudSTRBoost.SetBinding("Value", currentCharacter, "BookSTRModifier");
+            nudTECBoost.SetBinding("Value", currentCharacter, "BookTECModifier");
+            nudVITBoost.SetBinding("Value", currentCharacter, "BookVITModifier");
+            nudAGIBoost.SetBinding("Value", currentCharacter, "BookAGIModifier");
+            nudLUCBoost.SetBinding("Value", currentCharacter, "BookLUCModifier");
         }
 
         private void lbCharacters_SelectedIndexChanged(object sender, EventArgs e)

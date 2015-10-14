@@ -244,11 +244,11 @@ namespace EO4SaveEdit.FileHandlers
         public Item EquipmentSlot { get; set; }
         public Item ArmorSlot1 { get; set; }
         public Item ArmorSlot2 { get; set; }
+        public uint Unknown1 { get; set; }
+        public uint Unknown2 { get; set; }
         public uint Unknown3 { get; set; }
         public uint Unknown4 { get; set; }
         public uint Unknown5 { get; set; }
-        public uint Unknown6 { get; set; }
-        public uint Unknown7 { get; set; }
         public Stats BaseStats { get; set; }                        // Base stats
         public Stats CumulativeStatsAfterSkills { get; set; }       // Stats after any Skill-based buffs (TP Boost, etc.)
         public Stats CumulativeStatsAfterEquipment { get; set; }    // Stats after any buffs from Equipment (forge effects)
@@ -264,7 +264,15 @@ namespace EO4SaveEdit.FileHandlers
         public byte AvailableSkillPoints { get; set; }
         public byte[] MainSkillLevels { get; set; }
         public byte[] SubSkillLevels { get; set; }
-        public ushort Unknown9 { get; set; }
+        public ushort Unknown6 { get; set; }
+        public byte BookSTRModifier { get; set; }
+        public byte BookVITModifier { get; set; }
+        public byte BookAGIModifier { get; set; }
+        public byte BookLUCModifier { get; set; }
+        public byte BookTECModifier { get; set; }
+        public byte Unknown7 { get; set; }
+        public byte Unknown8 { get; set; }
+        public byte Unknown9 { get; set; }
         public byte Unknown10 { get; set; }
         public byte Unknown11 { get; set; }
         public byte Unknown12 { get; set; }
@@ -274,19 +282,11 @@ namespace EO4SaveEdit.FileHandlers
         public byte Unknown16 { get; set; }
         public byte Unknown17 { get; set; }
         public byte Unknown18 { get; set; }
-        public byte Unknown19 { get; set; }
-        public byte Unknown20 { get; set; }
-        public byte Unknown21 { get; set; }
-        public byte Unknown22 { get; set; }
-        public byte Unknown23 { get; set; }
-        public byte Unknown24 { get; set; }
-        public byte Unknown25 { get; set; }
-        public byte Unknown26 { get; set; }
         public byte DuplicateID { get; set; }
         public byte PartySlot { get; set; }
-        public byte Unknown27 { get; set; }
+        public byte Unknown19 { get; set; }
         byte[] originGuildName;
-        public byte[] Unknown28 { get; set; }
+        public byte[] Unknown20 { get; set; }
 
         public bool IsGuildCardCharacter
         {
@@ -338,11 +338,11 @@ namespace EO4SaveEdit.FileHandlers
             EquipmentSlot = new Item(stream);
             ArmorSlot1 = new Item(stream);
             ArmorSlot2 = new Item(stream);
+            Unknown1 = reader.ReadUInt32();
+            Unknown2 = reader.ReadUInt32();
             Unknown3 = reader.ReadUInt32();
             Unknown4 = reader.ReadUInt32();
             Unknown5 = reader.ReadUInt32();
-            Unknown6 = reader.ReadUInt32();
-            Unknown7 = reader.ReadUInt32();
             BaseStats = new Stats(stream);
             CumulativeStatsAfterSkills = new Stats(stream);
             CumulativeStatsAfterEquipment = new Stats(stream);
@@ -358,7 +358,15 @@ namespace EO4SaveEdit.FileHandlers
             AvailableSkillPoints = reader.ReadByte();
             MainSkillLevels = reader.ReadBytes(25);
             SubSkillLevels = reader.ReadBytes(25);
-            Unknown9 = reader.ReadUInt16();
+            Unknown6 = reader.ReadUInt16();
+            BookSTRModifier = reader.ReadByte();
+            BookVITModifier = reader.ReadByte();
+            BookAGIModifier = reader.ReadByte();
+            BookLUCModifier = reader.ReadByte();
+            BookTECModifier = reader.ReadByte();
+            Unknown7 = reader.ReadByte();
+            Unknown8 = reader.ReadByte();
+            Unknown9 = reader.ReadByte();
             Unknown10 = reader.ReadByte();
             Unknown11 = reader.ReadByte();
             Unknown12 = reader.ReadByte();
@@ -368,19 +376,11 @@ namespace EO4SaveEdit.FileHandlers
             Unknown16 = reader.ReadByte();
             Unknown17 = reader.ReadByte();
             Unknown18 = reader.ReadByte();
-            Unknown19 = reader.ReadByte();
-            Unknown20 = reader.ReadByte();
-            Unknown21 = reader.ReadByte();
-            Unknown22 = reader.ReadByte();
-            Unknown23 = reader.ReadByte();
-            Unknown24 = reader.ReadByte();
-            Unknown25 = reader.ReadByte();
-            Unknown26 = reader.ReadByte();
             DuplicateID = reader.ReadByte();
             PartySlot = reader.ReadByte();
-            Unknown27 = reader.ReadByte();
+            Unknown19 = reader.ReadByte();
             originGuildName = reader.ReadBytes(guildNameLength);
-            Unknown28 = reader.ReadBytes(48);
+            Unknown20 = reader.ReadBytes(48);
         }
 
         public override void WriteToStream(Stream stream)
@@ -398,11 +398,11 @@ namespace EO4SaveEdit.FileHandlers
             EquipmentSlot.WriteToStream(stream);
             ArmorSlot1.WriteToStream(stream);
             ArmorSlot2.WriteToStream(stream);
+            writer.Write(Unknown1);
+            writer.Write(Unknown2);
             writer.Write(Unknown3);
             writer.Write(Unknown4);
             writer.Write(Unknown5);
-            writer.Write(Unknown6);
-            writer.Write(Unknown7);
             BaseStats.WriteToStream(stream);
             CumulativeStatsAfterSkills.WriteToStream(stream);
             CumulativeStatsAfterEquipment.WriteToStream(stream);
@@ -418,6 +418,14 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(AvailableSkillPoints);
             writer.Write(MainSkillLevels);
             writer.Write(SubSkillLevels);
+            writer.Write(Unknown6);
+            writer.Write(BookSTRModifier);
+            writer.Write(BookVITModifier);
+            writer.Write(BookAGIModifier);
+            writer.Write(BookLUCModifier);
+            writer.Write(BookTECModifier);
+            writer.Write(Unknown7);
+            writer.Write(Unknown8);
             writer.Write(Unknown9);
             writer.Write(Unknown10);
             writer.Write(Unknown11);
@@ -428,19 +436,11 @@ namespace EO4SaveEdit.FileHandlers
             writer.Write(Unknown16);
             writer.Write(Unknown17);
             writer.Write(Unknown18);
-            writer.Write(Unknown19);
-            writer.Write(Unknown20);
-            writer.Write(Unknown21);
-            writer.Write(Unknown22);
-            writer.Write(Unknown23);
-            writer.Write(Unknown24);
-            writer.Write(Unknown25);
-            writer.Write(Unknown26);
             writer.Write(DuplicateID);
             writer.Write(PartySlot);
-            writer.Write(Unknown27);
+            writer.Write(Unknown19);
             writer.Write(originGuildName);
-            writer.Write(Unknown28);
+            writer.Write(Unknown20);
         }
     }
 
