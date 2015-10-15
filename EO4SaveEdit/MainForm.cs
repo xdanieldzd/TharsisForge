@@ -107,7 +107,9 @@ namespace EO4SaveEdit
             builder.Append(" - ");
             builder.AppendLine(Assembly.GetExecutingAssembly().GetAttribute<AssemblyDescriptionAttribute>().Description);
             builder.AppendLine();
-            builder.AppendFormat("{0} - https://github.com/xdanieldzd/ ", Assembly.GetExecutingAssembly().GetAttribute<AssemblyCopyrightAttribute>().Copyright);
+            builder.AppendLine(string.Format("{0} - https://github.com/xdanieldzd/", Assembly.GetExecutingAssembly().GetAttribute<AssemblyCopyrightAttribute>().Copyright));
+            builder.AppendLine();
+            builder.AppendLine("Thanks to various GBATemp users for feedback!");
 
             MessageBox.Show(builder.ToString(), "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
