@@ -51,12 +51,12 @@ namespace EO4SaveEdit.Editors
                 table.Columns.Add("Skill", typeof(string));
                 table.Columns.Add("Level", typeof(byte));
                 table.Columns.Add("MaxLevel", typeof(byte));
-                for (int i = 0; i < XmlHelper.SkillData[charaClass].Length; i++)
+                for (int i = 0; i < XmlHelper.SkillData[SaveDataHandler.SaveLanguage][charaClass].Length; i++)
                 {
                     DataRow row = table.NewRow();
-                    row["Skill"] = XmlHelper.SkillData[charaClass][i].Item2;
+                    row["Skill"] = XmlHelper.SkillData[SaveDataHandler.SaveLanguage][charaClass][i].Item2;
                     row["Level"] = skillLevels[i];
-                    row["MaxLevel"] = XmlHelper.SkillData[charaClass][i].Item1;
+                    row["MaxLevel"] = XmlHelper.SkillData[SaveDataHandler.SaveLanguage][charaClass][i].Item1;
                     table.Rows.Add(row);
                 }
                 table.AcceptChanges();
@@ -112,11 +112,11 @@ namespace EO4SaveEdit.Editors
             }
 
             byte newLevel;
-            if ((string)e.FormattedValue == string.Empty || !byte.TryParse((string)e.FormattedValue, out newLevel) || newLevel > XmlHelper.SkillData[charaClass][e.RowIndex].Item1)
+            if ((string)e.FormattedValue == string.Empty || !byte.TryParse((string)e.FormattedValue, out newLevel) || newLevel > XmlHelper.SkillData[SaveDataHandler.SaveLanguage][charaClass][e.RowIndex].Item1)
             {
                 cancel = true;
                 errorText = string.Format("Invalid skill level specified. The maximum level for {0} is {1}.",
-                    XmlHelper.SkillData[charaClass][e.RowIndex].Item2, XmlHelper.SkillData[charaClass][e.RowIndex].Item1);
+                    XmlHelper.SkillData[SaveDataHandler.SaveLanguage][charaClass][e.RowIndex].Item2, XmlHelper.SkillData[SaveDataHandler.SaveLanguage][charaClass][e.RowIndex].Item1);
             }
 
             e.Cancel = cancel;

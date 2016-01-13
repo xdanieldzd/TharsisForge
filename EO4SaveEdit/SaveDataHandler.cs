@@ -8,6 +8,8 @@ using EO4SaveEdit.FileHandlers;
 
 namespace EO4SaveEdit
 {
+    public enum SaveLanguages { English, Japanese }
+
     public class SaveDataHandler
     {
         public List<BaseMori4File> DataFiles { get; private set; }
@@ -21,6 +23,8 @@ namespace EO4SaveEdit
         public bool IsDataLoaded { get { return (DataFiles != null && DataFiles.Count != 0); } }
 
         public event EventHandler SaveSucceededEvent;
+
+        public static SaveLanguages SaveLanguage { get; private set; }
 
         public SaveDataHandler()
         {
@@ -37,6 +41,17 @@ namespace EO4SaveEdit
 
                     string signature = Encoding.ASCII.GetString(reader.ReadBytes(8));
                     stream.Seek(0, SeekOrigin.Begin);
+
+                    if (signature == Mori4Game.ExpectedFileSignature)
+                    {
+                        /* Derive save language from size of Mori4Game */
+                        if (stream.Length == 0x865C)
+                            SaveDataHandler.SaveLanguage = SaveLanguages.English;
+                        else if (stream.Length == 0x84DC)
+                            SaveDataHandler.SaveLanguage = SaveLanguages.Japanese;
+                        else
+                            throw new Exception("Unexpected size for file of type Mori4Game");
+                    }
 
                     switch (signature)
                     {

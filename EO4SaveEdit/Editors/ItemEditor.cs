@@ -31,7 +31,7 @@ namespace EO4SaveEdit.Editors
                 set { if (amount != null) amount.Amount = value; }
             }
 
-            public bool IsEquipment { get { return (item.ItemID != 0 && XmlHelper.EquipmentNames.ContainsKey(item.ItemID)); } }
+            public bool IsEquipment { get { return (item.ItemID != 0 && XmlHelper.EquipmentNames[SaveDataHandler.SaveLanguage].ContainsKey(item.ItemID)); } }
             public Item ItemInstance { get { return item; } }
 
             public ItemAdapter(Item item, ItemAmount amount)
@@ -85,7 +85,7 @@ namespace EO4SaveEdit.Editors
             itemColumn.DisplayMember = "Value";
             itemColumn.ValueMember = "Key";
             itemColumn.DataPropertyName = "ItemID";
-            itemColumn.DataSource = new BindingSource(XmlHelper.AllItemNames, null);
+            itemColumn.DataSource = new BindingSource(XmlHelper.AllItemNames[SaveDataHandler.SaveLanguage], null);
 
             DataGridViewButtonColumn effectColumn = new DataGridViewButtonColumn();
             effectColumn.Name = "Effect";

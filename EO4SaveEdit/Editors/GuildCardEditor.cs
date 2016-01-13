@@ -49,7 +49,7 @@ namespace EO4SaveEdit.Editors
 
                 cmbGuildTreasureMap.DisplayMember = "Value";
                 cmbGuildTreasureMap.ValueMember = "Key";
-                cmbGuildTreasureMap.DataSource = new BindingSource(XmlHelper.TreasureMapNames, null);
+                cmbGuildTreasureMap.DataSource = new BindingSource(XmlHelper.TreasureMapNames[SaveDataHandler.SaveLanguage], null);
 
                 cmbRegCharacterClass.DataSource = Enum.GetValues(typeof(Class));
                 cmbRegCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
@@ -58,7 +58,7 @@ namespace EO4SaveEdit.Editors
                 {
                     comboBox.DisplayMember = "Value";
                     comboBox.ValueMember = "Key";
-                    comboBox.DataSource = new BindingSource(XmlHelper.EquipmentNames, null);
+                    comboBox.DataSource = new BindingSource(XmlHelper.EquipmentNames[SaveDataHandler.SaveLanguage], null);
                 }
 
                 lbGuildCards.DataSource = new BindingSource(this.guildCardData.GuildCards, null);

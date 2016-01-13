@@ -65,7 +65,7 @@ namespace EO4SaveEdit.Editors
 
             this.equipmentData = equipment;
 
-            gbItemEffects.Text = XmlHelper.AllItemNames[equipmentData.ItemID];
+            gbItemEffects.Text = XmlHelper.AllItemNames[SaveDataHandler.SaveLanguage][equipmentData.ItemID];
             txtNumForgeableSlots.SetBinding("Text", equipmentData, "NumForgeableSlots");
 
             effectComboBoxes = new ComboBox[] { cmbForgeEffect1, cmbForgeEffect2, cmbForgeEffect3, cmbForgeEffect4, cmbForgeEffect5, cmbForgeEffect6, cmbForgeEffect7, cmbForgeEffect8 };
@@ -86,7 +86,7 @@ namespace EO4SaveEdit.Editors
 
         private void UpdateForgeableSlots()
         {
-            for (int i = XmlHelper.NumForgeSlots[equipmentData.ItemID] - 1, j = equipmentData.NumForgeableSlots - 1; i >= 0; i--, j--)
+            for (int i = XmlHelper.NumForgeSlots[SaveDataHandler.SaveLanguage][equipmentData.ItemID] - 1, j = equipmentData.NumForgeableSlots - 1; i >= 0; i--, j--)
             {
                 effectComboBoxes[i].Enabled = (j >= 0);
                 effectComboBoxes[i].Visible = true;
@@ -111,7 +111,7 @@ namespace EO4SaveEdit.Editors
             byte numSlots = equipmentData.NumForgeableSlots;
             e.Cancel = !byte.TryParse((sender as TextBox).Text, out numSlots);
 
-            if (numSlots < 0 || numSlots > XmlHelper.NumForgeSlots[equipmentData.ItemID])
+            if (numSlots < 0 || numSlots > XmlHelper.NumForgeSlots[SaveDataHandler.SaveLanguage][equipmentData.ItemID])
             {
                 e.Cancel = true;
                 numForgeableSlotsErrorProvider.SetError((sender as TextBox), "Invalid number of slots.");

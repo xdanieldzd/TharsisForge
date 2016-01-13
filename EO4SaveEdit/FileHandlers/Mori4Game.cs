@@ -316,16 +316,18 @@ namespace EO4SaveEdit.FileHandlers
         {
             BinaryReader reader = new BinaryReader(stream);
 
-            if (stream.Length == 0x865C)
+            if (SaveDataHandler.SaveLanguage == SaveLanguages.English)
             {
                 nameLength = NameLengthEng;
                 guildNameLength = GuildNameLengthEng;
             }
-            else if (stream.Length == 0x84DC)
+            else if (SaveDataHandler.SaveLanguage == SaveLanguages.Japanese)
             {
                 nameLength = NameLengthJpn;
                 guildNameLength = GuildNameLengthJpn;
             }
+            else
+                throw new Exception("Unknown language");
 
             BaseFlags = (BaseFlags)reader.ReadByte();
             Portrait = reader.ReadByte();
