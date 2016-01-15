@@ -45,14 +45,24 @@ namespace EO4SaveEdit.Editors
                 portraitComboBoxes = new ImageComboBox[] { icmbCharaListPortrait1, icmbCharaListPortrait2, icmbCharaListPortrait3, icmbCharaListPortrait4, icmbCharaListPortrait5 };
                 regCharaEquipmentComboBoxes = new ComboBox[] { cmbRegCharacterWeapon, cmbRegCharacterEquipment, cmbRegCharacterArmor1, cmbRegCharacterArmor2 };
 
-                foreach (ComboBox comboBox in classComboBoxes) comboBox.DataSource = Enum.GetValues(typeof(Class));
+                foreach (ComboBox comboBox in classComboBoxes)
+                {
+                    comboBox.DisplayMember = "Value";
+                    comboBox.ValueMember = "Key";
+                    comboBox.DataSource = new BindingSource(XmlHelper.ClassNames[SaveDataHandler.SaveLanguage], null);
+                }
 
                 cmbGuildTreasureMap.DisplayMember = "Value";
                 cmbGuildTreasureMap.ValueMember = "Key";
                 cmbGuildTreasureMap.DataSource = new BindingSource(XmlHelper.TreasureMapNames[SaveDataHandler.SaveLanguage], null);
 
-                cmbRegCharacterClass.DataSource = Enum.GetValues(typeof(Class));
-                cmbRegCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
+                cmbRegCharacterClass.DisplayMember = "Value";
+                cmbRegCharacterClass.ValueMember = "Key";
+                cmbRegCharacterClass.DataSource = new BindingSource(XmlHelper.ClassNames[SaveDataHandler.SaveLanguage], null);
+
+                cmbRegCharacterSubclass.DisplayMember = "Value";
+                cmbRegCharacterSubclass.ValueMember = "Key";
+                cmbRegCharacterSubclass.DataSource = new BindingSource(XmlHelper.ClassNames[SaveDataHandler.SaveLanguage], null);
 
                 foreach (ComboBox comboBox in regCharaEquipmentComboBoxes)
                 {
@@ -73,7 +83,7 @@ namespace EO4SaveEdit.Editors
             {
                 nameTextBoxes[i].SetBinding("Text", currentGuildCard.CharacterListings[i], "Name");
                 levelNumericUpDowns[i].SetBinding("Value", currentGuildCard.CharacterListings[i], "Level");
-                classComboBoxes[i].SetBinding("SelectedItem", currentGuildCard.CharacterListings[i], "Class");
+                classComboBoxes[i].SetBinding("SelectedValue", currentGuildCard.CharacterListings[i], "Class");
 
                 ImageHelper.InitializePortraitComboBox(portraitComboBoxes[i], classComboBoxes[i], currentGuildCard.CharacterListings[i]);
             }
@@ -115,8 +125,8 @@ namespace EO4SaveEdit.Editors
             txtRegCharacterCurrentHP.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentHP");
             txtRegCharacterCurrentTP.SetBinding("Text", currentGuildCard.GuildCardCharacter, "CurrentTP");
 
-            cmbRegCharacterClass.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Class");
-            cmbRegCharacterSubclass.SetBinding("SelectedItem", currentGuildCard.GuildCardCharacter, "Subclass");
+            cmbRegCharacterClass.SetBinding("SelectedValue", currentGuildCard.GuildCardCharacter, "Class");
+            cmbRegCharacterSubclass.SetBinding("SelectedValue", currentGuildCard.GuildCardCharacter, "Subclass");
 
             ImageHelper.InitializePortraitComboBox(icmbRegCharacterPortrait, cmbRegCharacterClass, currentGuildCard.GuildCardCharacter);
 

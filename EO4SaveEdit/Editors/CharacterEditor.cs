@@ -34,8 +34,13 @@ namespace EO4SaveEdit.Editors
             {
                 charaEquipmentComboBoxes = new ComboBox[] { cmbCharacterWeapon, cmbCharacterEquipment, cmbCharacterArmor1, cmbCharacterArmor2 };
 
-                cmbCharacterClass.DataSource = Enum.GetValues(typeof(Class));
-                cmbCharacterSubclass.DataSource = Enum.GetValues(typeof(Class));
+                cmbCharacterClass.DisplayMember = "Value";
+                cmbCharacterClass.ValueMember = "Key";
+                cmbCharacterClass.DataSource = new BindingSource(XmlHelper.ClassNames[SaveDataHandler.SaveLanguage], null);
+
+                cmbCharacterSubclass.DisplayMember = "Value";
+                cmbCharacterSubclass.ValueMember = "Key";
+                cmbCharacterSubclass.DataSource = new BindingSource(XmlHelper.ClassNames[SaveDataHandler.SaveLanguage], null);
 
                 foreach (ComboBox comboBox in charaEquipmentComboBoxes)
                 {
@@ -58,8 +63,8 @@ namespace EO4SaveEdit.Editors
             txtCharacterCurrentTP.SetBinding("Text", currentCharacter, "CurrentTP");
             txtCharacterEXP.SetBinding("Text", currentCharacter, "CurrentEXP");
 
-            cmbCharacterClass.SetBinding("SelectedItem", currentCharacter, "Class");
-            cmbCharacterSubclass.SetBinding("SelectedItem", currentCharacter, "Subclass");
+            cmbCharacterClass.SetBinding("SelectedValue", currentCharacter, "Class");
+            cmbCharacterSubclass.SetBinding("SelectedValue", currentCharacter, "Subclass");
 
             ImageHelper.InitializePortraitComboBox(icmbCharacterPortrait, cmbCharacterClass, currentCharacter);
 

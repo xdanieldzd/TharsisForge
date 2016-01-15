@@ -473,6 +473,9 @@
     <Content Include="Data\EquipmentDataJpn.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\ClassNames.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\TreasureMapDataJpn.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

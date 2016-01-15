@@ -69,14 +69,14 @@ namespace EO4SaveEdit
             {
                 ComboBox ccb = (s as ComboBox);
                 ImageComboBox pcb = (ccb.Tag as ImageComboBox);
-                RefreshPortraitComboBox(pcb, (Class)ccb.SelectedItem);
+                RefreshPortraitComboBox(pcb, (Class)ccb.SelectedValue);
             });
 
             portraitComboBox.Items.Clear();
             for (int j = 0; j < 16; j++) portraitComboBox.Items.Add(new ImageComboItem(string.Empty, j));
             portraitComboBox.SetBinding("SelectedIndex", binding, "Portrait");
 
-            RefreshPortraitComboBox(portraitComboBox, (Class)classComboBox.SelectedItem);
+            RefreshPortraitComboBox(portraitComboBox, (Class)classComboBox.SelectedValue);
         }
 
         public static void RefreshPortraitComboBox(ImageComboBox portraitComboBox, Class charaClass)

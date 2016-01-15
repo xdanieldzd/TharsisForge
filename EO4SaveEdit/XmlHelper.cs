@@ -15,6 +15,9 @@ namespace EO4SaveEdit
         public static Dictionary<SaveLanguages, Dictionary<ushort, string>> AllItemNames { get; private set; }
         public static Dictionary<SaveLanguages, Dictionary<byte, string>> TreasureMapNames { get; private set; }
         public static Dictionary<SaveLanguages, Dictionary<Class, Tuple<byte, string>[]>> SkillData { get; private set; }
+        public static Dictionary<SaveLanguages, Dictionary<Class, string>> ClassNames { get; private set; }
+
+        //TODO: rework & rewrite to store both languages in one file, like class names?
 
         static XmlHelper()
         {
@@ -34,6 +37,9 @@ namespace EO4SaveEdit
             SkillData = new Dictionary<SaveLanguages, Dictionary<Class, Tuple<byte, string>[]>>();
             LoadSkillData("Data\\SkillDataEng.xml", SaveLanguages.English);
             LoadSkillData("Data\\SkillDataJpn.xml", SaveLanguages.Japanese);
+
+            ClassNames = new Dictionary<SaveLanguages, Dictionary<Class, string>>();
+            LoadClassNames("Data\\ClassNames.xml");
         }
 
         static void LoadEquipmentData(string filePath, SaveLanguages lang)
@@ -85,6 +91,20 @@ namespace EO4SaveEdit
                 for (int i = 0; i < classSkills.Length; i++)
                     classSkills[i] = new Tuple<byte, string>(byte.Parse(classNode.ChildNodes[i].Attributes["MaxLevel"].InnerText), classNode.ChildNodes[i].InnerText);
                 SkillData[lang][(Class)Enum.Parse(typeof(Class), classNode.Attributes["Name"].InnerText)] = classSkills;
+            }
+        }
+
+        static void LoadClassNames(string filePath)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(filePath);
+
+            foreach (XmlNode langNode in xmlDoc.DocumentElement.ChildNodes)
+            {
+                SaveLanguages lang = (SaveLanguages)Enum.Parse(typeof(SaveLanguages), langNode.Attributes["Name"].InnerText);
+                ClassNames[lang] = new Dictionary<Class, string>();
+                foreach (XmlNode classNode in langNode.ChildNodes)
+                    ClassNames[lang].Add((Class)Enum.Parse(typeof(Class), classNode.Attributes["Value"].InnerText), classNode.InnerText);
             }
         }
     }

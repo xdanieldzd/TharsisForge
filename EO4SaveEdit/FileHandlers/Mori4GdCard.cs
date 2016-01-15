@@ -33,8 +33,9 @@ namespace EO4SaveEdit.FileHandlers
         {
             BinaryReader reader = new BinaryReader(stream);
 
-            if (stream.Length == 0x3F00) nameLength = NameLengthEng;
-            else if (stream.Length == 0x38C0) nameLength = NameLengthJpn;
+            if (SaveDataHandler.SaveLanguage == SaveLanguages.English) nameLength = NameLengthEng;
+            else if (SaveDataHandler.SaveLanguage == SaveLanguages.Japanese) nameLength = NameLengthJpn;
+            else throw new Exception("Unknown language");
 
             Class = (Class)reader.ReadByte();
             Unknown1 = reader.ReadByte();
@@ -89,8 +90,9 @@ namespace EO4SaveEdit.FileHandlers
         {
             BinaryReader reader = new BinaryReader(stream);
 
-            if (stream.Length == 0x3F00) nameLength = NameLengthEng;
-            else if (stream.Length == 0x38C0) nameLength = NameLengthJpn;
+            if (SaveDataHandler.SaveLanguage == SaveLanguages.English) nameLength = NameLengthEng;
+            else if (SaveDataHandler.SaveLanguage == SaveLanguages.Japanese) nameLength = NameLengthJpn;
+            else throw new Exception("Unknown language");
 
             Portrait = reader.ReadByte();
             Level = reader.ReadByte();

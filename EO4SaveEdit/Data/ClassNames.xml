@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table>
+  <Language Name="English">
+    <Class Value="Landsknecht">Landsknecht</Class>
+    <Class Value="Nightseeker">Nightseeker</Class>
+    <Class Value="Fortress">Fortress</Class>
+    <Class Value="Sniper">Sniper</Class>
+    <Class Value="Medic">Medic</Class>
+    <Class Value="Runemaster">Runemaster</Class>
+    <Class Value="Dancer">Dancer</Class>
+    <Class Value="Arcanist">Arcanist</Class>
+    <Class Value="Bushi">Bushi</Class>
+    <Class Value="Imperial">Imperial</Class>
+    <Class Value="None">None</Class>
+  </Language>
+  <Language Name="Japanese">
+    <Class Value="Landsknecht">ソードマン</Class>
+    <Class Value="Nightseeker">ナイトシーカー</Class>
+    <Class Value="Fortress">フォートレス</Class>
+    <Class Value="Sniper">スナイパー</Class>
+    <Class Value="Medic">メディック</Class>
+    <Class Value="Runemaster">ルーンマスター</Class>
+    <Class Value="Dancer">ダンサー</Class>
+    <Class Value="Arcanist">ミスティック</Class>
+    <Class Value="Bushi">モノノフ</Class>
+    <Class Value="Imperial">インペリアル</Class>
+    <Class Value="None">なし</Class>
+  </Language>
+</Table>
