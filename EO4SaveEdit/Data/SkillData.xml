@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table>
+  <Class Value="Landsknecht">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">剣士の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">剣士の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">剣士の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Swordbreaker</Name>
+      <Name Language="Japanese">ソードブレイカー</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Weapon Parry</Name>
+      <Name Language="Japanese">攻防一体</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Initiative</Name>
+      <Name Language="Japanese">先駆けの功名</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Link Mastery</Name>
+      <Name Language="Japanese">リンクマスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Power Boost</Name>
+      <Name Language="Japanese">物理攻撃ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Iron Wall</Name>
+      <Name Language="Japanese">物理防御ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Vanguard</Name>
+      <Name Language="Japanese">ヴァンガード</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Improved Link</Name>
+      <Name Language="Japanese">リンクプラス</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Power Break</Name>
+      <Name Language="Japanese">パワーブレイク</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Mind Break</Name>
+      <Name Language="Japanese">マインドブレイク</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Sonic Raid</Name>
+      <Name Language="Japanese">ソニックレイド</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Blazing Link</Name>
+      <Name Language="Japanese">リンクフレイム</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Freezing Link</Name>
+      <Name Language="Japanese">リンクフリーズ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Electric Link</Name>
+      <Name Language="Japanese">リンクサンダー</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Double Strike</Name>
+      <Name Language="Japanese">ダブルストライク</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Spiral Slice</Name>
+      <Name Language="Japanese">ラウンドソード</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Sword Tempest</Name>
+      <Name Language="Japanese">ソードテンペスト</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Penetrate</Name>
+      <Name Language="Japanese">ペネトレイト</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Swift Stab</Name>
+      <Name Language="Japanese">ハヤブサ突き</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Bandage</Name>
+      <Name Language="Japanese">応急手当</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Mineralogy</Name>
+      <Name Language="Japanese">鉱物学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Muscular Chef</Name>
+      <Name Language="Japanese">剛腕料理</Name>
+    </Skill>
+  </Class>
+  <Class Value="Nightseeker">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">夜賊の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">夜賊の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">夜賊の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Blade Flurry</Name>
+      <Name Language="Japanese">追影の刃</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Follow Trace</Name>
+      <Name Language="Japanese">追影の残滓</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Auto-Cloak</Name>
+      <Name Language="Japanese">先制クローク</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Auto-Spread</Name>
+      <Name Language="Japanese">先制スプレッド</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Foul Mastery</Name>
+      <Name Language="Japanese">闇討マスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Speed Boost</Name>
+      <Name Language="Japanese">速度ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Shadow Cloak</Name>
+      <Name Language="Japanese">ハイドクローク</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Decoy Sign</Name>
+      <Name Language="Japanese">デコイサイン</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Spread Throw</Name>
+      <Name Language="Japanese">スプレッドスロー</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Ice Knife</Name>
+      <Name Language="Japanese">アイスブラッシュ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Biding Slice</Name>
+      <Name Language="Japanese">ディレイスタブ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Assassinate</Name>
+      <Name Language="Japanese">アサシネイション</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Shadow Bite</Name>
+      <Name Language="Japanese">シャドウバイト</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Swift Edge</Name>
+      <Name Language="Japanese">スウィフトソード</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Sand Throw</Name>
+      <Name Language="Japanese">盲目の投刃</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Venom Throw</Name>
+      <Name Language="Japanese">猛毒の投刃</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Sleep Throw</Name>
+      <Name Language="Japanese">睡眠の投刃</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Nerve Throw</Name>
+      <Name Language="Japanese">麻痺の投刃</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Curse Throw</Name>
+      <Name Language="Japanese">呪いの投刃</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Sneak Attack</Name>
+      <Name Language="Japanese">奇襲</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Herbology</Name>
+      <Name Language="Japanese">薬草学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Agile Chef</Name>
+      <Name Language="Japanese">俊敏料理</Name>
+    </Skill>
+  </Class>
+  <Class Value="Fortress">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">城塞騎士の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">城塞騎士の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">城塞騎士の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Knight's Boon</Name>
+      <Name Language="Japanese">騎士の加護</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Healing Wall</Name>
+      <Name Language="Japanese">ヒールウォール</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Auto-Taunt</Name>
+      <Name Language="Japanese">先制挑発</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Guard Mastery</Name>
+      <Name Language="Japanese">ガードマスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Iron Wall</Name>
+      <Name Language="Japanese">物理防御ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">HP Boost</Name>
+      <Name Language="Japanese">HPブースト</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Rampart</Name>
+      <Name Language="Japanese">ランパート</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Taunt</Name>
+      <Name Language="Japanese">挑発</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Bolt Strike</Name>
+      <Name Language="Japanese">ボルトストライク</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Holy Smite</Name>
+      <Name Language="Japanese">ホーリーバッシュ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Vengeance Bash</Name>
+      <Name Language="Japanese">リベンジスマイト</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Earth Break</Name>
+      <Name Language="Japanese">アースブレイク</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Ally Shield</Name>
+      <Name Language="Japanese">ディバイドガード</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Line Shield</Name>
+      <Name Language="Japanese">ラインディバイド</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Party Shield</Name>
+      <Name Language="Japanese">オールディバイド</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Weak Shield</Name>
+      <Name Language="Japanese">ディバイドモード</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Holy Blessing</Name>
+      <Name Language="Japanese">聖なる加護</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Strike Guard</Name>
+      <Name Language="Japanese">防御陣形</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Element Guard</Name>
+      <Name Language="Japanese">防御陣形Ⅱ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Sentry</Name>
+      <Name Language="Japanese">歩哨</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Mineralogy</Name>
+      <Name Language="Japanese">鉱物学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Hardy Chef</Name>
+      <Name Language="Japanese">屈強料理</Name>
+    </Skill>
+  </Class>
+  <Class Value="Sniper">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">狙撃手の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">狙撃手の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">狙撃手の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Scavenger</Name>
+      <Name Language="Japanese">スカベンジャー</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Bullseye</Name>
+      <Name Language="Japanese">正鵠の明</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Chase Bind</Name>
+      <Name Language="Japanese">チェイスバインド</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Snipe Mastery</Name>
+      <Name Language="Japanese">狙撃マスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">High Caution</Name>
+      <Name Language="Japanese">警戒伝令</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Power Boost</Name>
+      <Name Language="Japanese">物理攻撃ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Eagle Eye</Name>
+      <Name Language="Japanese">イーグルアイ</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Spotter</Name>
+      <Name Language="Japanese">観測</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Lock On</Name>
+      <Name Language="Japanese">ロックオン</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Long Shot</Name>
+      <Name Language="Japanese">ロングショット</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Leg Snipe</Name>
+      <Name Language="Japanese">レッグスナイプ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Arm Snipe</Name>
+      <Name Language="Japanese">アームスナイプ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Head Snipe</Name>
+      <Name Language="Japanese">ヘッドスナイプ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Steel Arrow</Name>
+      <Name Language="Japanese">フルメタルアロー</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Silver Arrow</Name>
+      <Name Language="Japanese">シルバーアロー</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Impact Arrow</Name>
+      <Name Language="Japanese">インパクトアロー</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Flank Shot</Name>
+      <Name Language="Japanese">フランクショット</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Squall Volley</Name>
+      <Name Language="Japanese">スコールショット</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Divine Shot</Name>
+      <Name Language="Japanese">ヘブンズショット</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Camouflage</Name>
+      <Name Language="Japanese">カモフラージュ</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Dendrology</Name>
+      <Name Language="Japanese">樹木学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Discerning Eye</Name>
+      <Name Language="Japanese">鑑定眼</Name>
+    </Skill>
+  </Class>
+  <Class Value="Medic">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">医術師の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">医術師の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">医術師の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Patch Up</Name>
+      <Name Language="Japanese">戦後手当</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Auto-Heal</Name>
+      <Name Language="Japanese">オートヒール</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Auto-Revive</Name>
+      <Name Language="Japanese">オートリザレクト</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Heal Mastery</Name>
+      <Name Language="Japanese">ヒールマスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Stretch</Name>
+      <Name Language="Japanese">ストレッチ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">TP Boost</Name>
+      <Name Language="Japanese">TPブースト</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Steady Hands</Name>
+      <Name Language="Japanese">集中治療</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Group Therapy</Name>
+      <Name Language="Japanese">一斉救護</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Healing</Name>
+      <Name Language="Japanese">ヒーリング</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Line Heal</Name>
+      <Name Language="Japanese">ラインヒール</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Party Heal</Name>
+      <Name Language="Japanese">パーティヒール</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Full Heal</Name>
+      <Name Language="Japanese">フルヒーリング</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Revive</Name>
+      <Name Language="Japanese">リザレクト</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Treat</Name>
+      <Name Language="Japanese">トリート</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Refresh</Name>
+      <Name Language="Japanese">リフレッシュ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Recovery</Name>
+      <Name Language="Japanese">リカバリー</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Full Refresh</Name>
+      <Name Language="Japanese">フルリフレッシュ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Heavy Strike</Name>
+      <Name Language="Japanese">ヘヴィストライク</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Knockout Blow</Name>
+      <Name Language="Japanese">スリープブロー</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Star Drop</Name>
+      <Name Language="Japanese">スタードロップ</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Herbology</Name>
+      <Name Language="Japanese">薬草学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Toxin Study</Name>
+      <Name Language="Japanese">危険素材の知識</Name>
+    </Skill>
+  </Class>
+  <Class Value="Runemaster">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">印術師の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">印術師の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">印術師の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Runic Shield</Name>
+      <Name Language="Japanese">ルーンの盾</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Runic Guidance</Name>
+      <Name Language="Japanese">ルーンの導き</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Rune Mastery</Name>
+      <Name Language="Japanese">印術マスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Free Energy</Name>
+      <Name Language="Japanese">TPカット</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">TP Boost</Name>
+      <Name Language="Japanese">TPブースト</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Runic Flare</Name>
+      <Name Language="Japanese">属性攻撃ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Runic Gleam</Name>
+      <Name Language="Japanese">ルーンの輝き</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Fire Rune</Name>
+      <Name Language="Japanese">炎の聖印</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Ice Rune</Name>
+      <Name Language="Japanese">氷の聖印</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Volt Rune</Name>
+      <Name Language="Japanese">雷の聖印</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Origin Rune</Name>
+      <Name Language="Japanese">始原の印術</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Fireball Rune</Name>
+      <Name Language="Japanese">火球の印術</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Flame Rune</Name>
+      <Name Language="Japanese">爆炎の印術</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Inferno Rune</Name>
+      <Name Language="Japanese">劫火の大印術</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Ice Lance Rune</Name>
+      <Name Language="Japanese">氷槍の印術</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Glacier Rune</Name>
+      <Name Language="Japanese">凍牙の印術</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Blizzard Rune</Name>
+      <Name Language="Japanese">吹雪の大印術</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Lightning Rune</Name>
+      <Name Language="Japanese">雷撃の印術</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Storm Rune</Name>
+      <Name Language="Japanese">稲妻の印術</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Galvanic Rune</Name>
+      <Name Language="Japanese">天雷の大印術</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Herbology</Name>
+      <Name Language="Japanese">薬草学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Wise Chef</Name>
+      <Name Language="Japanese">聡明料理</Name>
+    </Skill>
+  </Class>
+  <Class Value="Dancer">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">踊り子の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">踊り子の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">踊り子の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Sword Dance</Name>
+      <Name Language="Japanese">剣の舞</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Fan Dance</Name>
+      <Name Language="Japanese">扇の舞</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Dance Mastery</Name>
+      <Name Language="Japanese">ダンスマスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Burst Saver</Name>
+      <Name Language="Japanese">バーストセーブ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Mist Dance</Name>
+      <Name Language="Japanese">霞の舞</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Speed Boost</Name>
+      <Name Language="Japanese">速度ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Quick Step</Name>
+      <Name Language="Japanese">クイックステップ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Regen Waltz</Name>
+      <Name Language="Japanese">リジェネワルツ</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Freedom Waltz</Name>
+      <Name Language="Japanese">リカバリワルツ</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Refresh Waltz</Name>
+      <Name Language="Japanese">リフレシュワルツ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Attack Tango</Name>
+      <Name Language="Japanese">アタックタンゴ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Guard Tango</Name>
+      <Name Language="Japanese">ガードタンゴ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Energy Tango</Name>
+      <Name Language="Japanese">エナジータンゴ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Counter Samba</Name>
+      <Name Language="Japanese">カウンターサンバ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Chase Samba</Name>
+      <Name Language="Japanese">チェイスサンバ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Trick Samba</Name>
+      <Name Language="Japanese">トリックサンバ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Healing Step</Name>
+      <Name Language="Japanese">ヒールダンス</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Wide Dance</Name>
+      <Name Language="Japanese">ワイドダンス</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Rush Dance</Name>
+      <Name Language="Japanese">ラッシュダンス</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Beat Dance</Name>
+      <Name Language="Japanese">ビートダンス</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Dendrology</Name>
+      <Name Language="Japanese">樹木学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Lucky Chef</Name>
+      <Name Language="Japanese">強運料理</Name>
+    </Skill>
+  </Class>
+  <Class Value="Arcanist">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">方陣師の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">方陣師の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">方陣師の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Warding Mist</Name>
+      <Name Language="Japanese">退魔の霧</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Circle Boon</Name>
+      <Name Language="Japanese">陣回復</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">TP Return</Name>
+      <Name Language="Japanese">TPリターン</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Bracing Walk</Name>
+      <Name Language="Japanese">回復歩行</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Circle Mastery</Name>
+      <Name Language="Japanese">方陣マスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Ailment Boost</Name>
+      <Name Language="Japanese">抑制ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Dismiss Blow</Name>
+      <Name Language="Japanese">破陣:亜空絞破</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Dismiss Blast</Name>
+      <Name Language="Japanese">破陣:亜空鳴動</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Dismiss Heal</Name>
+      <Name Language="Japanese">破陣:命脈活性</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Releasal Spell</Name>
+      <Name Language="Japanese">解魔の札</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Nerve Circle</Name>
+      <Name Language="Japanese">麻痺の方陣</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Sleep Circle</Name>
+      <Name Language="Japanese">催眠の方陣</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Poison Circle</Name>
+      <Name Language="Japanese">毒の方陣</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Chaos Circle</Name>
+      <Name Language="Japanese">幻惑の方陣</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Hood Circle</Name>
+      <Name Language="Japanese">頭封の方陣</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Chain Circle</Name>
+      <Name Language="Japanese">腕封の方陣</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Snare Circle</Name>
+      <Name Language="Japanese">脚封の方陣</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Charm Eye</Name>
+      <Name Language="Japanese">魅了の邪眼</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Atrophic Eye</Name>
+      <Name Language="Japanese">衰身の邪眼</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Tame Ground</Name>
+      <Name Language="Japanese">地脈操作</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Herbology</Name>
+      <Name Language="Japanese">薬草学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Purist Chef</Name>
+      <Name Language="Japanese">精進料理</Name>
+    </Skill>
+  </Class>
+  <Class Value="Bushi">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">武士の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">武士の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">武士の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Defiance</Name>
+      <Name Language="Japanese">背水の陣</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Auto-Surge</Name>
+      <Name Language="Japanese">先制羅刹</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Endure</Name>
+      <Name Language="Japanese">食いしばり</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Ferocity</Name>
+      <Name Language="Japanese">獅子奮迅</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Surge Mastery</Name>
+      <Name Language="Japanese">羅刹マスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Power Boost</Name>
+      <Name Language="Japanese">物理攻撃ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Charge</Name>
+      <Name Language="Japanese">チャージ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Blood Surge</Name>
+      <Name Language="Japanese">羅刹</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Deep Breath</Name>
+      <Name Language="Japanese">羅刹解除</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Roar</Name>
+      <Name Language="Japanese">咆哮</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Nerve Strike</Name>
+      <Name Language="Japanese">峰打</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Shockwave</Name>
+      <Name Language="Japanese">衝破</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Moon Slash</Name>
+      <Name Language="Japanese">弧月</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Ice Slash</Name>
+      <Name Language="Japanese">氷刹</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Flash Slice</Name>
+      <Name Language="Japanese">閃刃</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Multi-Slash</Name>
+      <Name Language="Japanese">無双神楽</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Skull Crusher</Name>
+      <Name Language="Japanese">頭砕</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Fire Strike</Name>
+      <Name Language="Japanese">鉄火</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Meteor Strike</Name>
+      <Name Language="Japanese">流墜衝</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Fierce Strike</Name>
+      <Name Language="Japanese">乾坤一擲</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Dendrology</Name>
+      <Name Language="Japanese">樹木学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Robust Chef</Name>
+      <Name Language="Japanese">強壮料理</Name>
+    </Skill>
+  </Class>
+  <Class Value="Imperial">
+    <Skill MaxLevel="1">
+      <Name Language="English">Proficiency</Name>
+      <Name Language="Japanese">帝国騎士の心得</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Expertise</Name>
+      <Name Language="Japanese">帝国騎士の極意</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Enlightenment</Name>
+      <Name Language="Japanese">帝国騎士の悟り</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Absorber</Name>
+      <Name Language="Japanese">コンバーター</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Wide Effect</Name>
+      <Name Language="Japanese">ワイドエフェクト</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Finisher</Name>
+      <Name Language="Japanese">フィニッシャー</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Drive Mastery</Name>
+      <Name Language="Japanese">ドライブマスタリ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Power Boost</Name>
+      <Name Language="Japanese">物理攻撃ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Element Boost</Name>
+      <Name Language="Japanese">属性攻撃ブースト</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Hawkeye</Name>
+      <Name Language="Japanese">ホークアイ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Rear Guard</Name>
+      <Name Language="Japanese">リアガード</Name>
+    </Skill>
+    <Skill MaxLevel="4">
+      <Name Language="English">Heat Sink</Name>
+      <Name Language="Japanese">強制排熱</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Ignition</Name>
+      <Name Language="Japanese">イグニッション</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Sharp Edge</Name>
+      <Name Language="Japanese">シャープエッジ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Impulse Edge</Name>
+      <Name Language="Japanese">インパルスエッジ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Cool Edge</Name>
+      <Name Language="Japanese">クールエッジ</Name>
+    </Skill>
+    <Skill MaxLevel="6">
+      <Name Language="English">Charge Edge</Name>
+      <Name Language="Japanese">チャージエッジ</Name>
+    </Skill>
+    <Skill MaxLevel="10">
+      <Name Language="English">Assault Drive</Name>
+      <Name Language="Japanese">アサルトドライブ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Flame Drive</Name>
+      <Name Language="Japanese">フレイムドライブ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Freeze Drive</Name>
+      <Name Language="Japanese">フリーズドライブ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Shock Drive</Name>
+      <Name Language="Japanese">ショックドライブ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Accel Drive</Name>
+      <Name Language="Japanese">アクセルドライブ</Name>
+    </Skill>
+    <Skill MaxLevel="8">
+      <Name Language="English">Overdrive</Name>
+      <Name Language="Japanese">オーバードライブ</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Mineralogy</Name>
+      <Name Language="Japanese">鉱物学</Name>
+    </Skill>
+    <Skill MaxLevel="1">
+      <Name Language="English">Hunter Sense</Name>
+      <Name Language="Japanese">狩猟者の嗅覚</Name>
+    </Skill>
+  </Class>
+</Table>

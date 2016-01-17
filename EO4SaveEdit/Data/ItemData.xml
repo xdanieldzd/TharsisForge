@@ -1,0 +1,2607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table>
+  <Item>
+    <Name Language="English">NONE</Name>
+    <Name Language="Japanese">NONE</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Grasseater Leg</Name>
+    <Name Language="Japanese">飛蝗の脚</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Grasseater Jaw</Name>
+    <Name Language="Japanese">飛蝗の大顎</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hard Skin</Name>
+    <Name Language="Japanese">固い皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Roller Shell</Name>
+    <Name Language="Japanese">球状の甲板</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rat Fang</Name>
+    <Name Language="Japanese">ネズミの前歯</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rat Hide</Name>
+    <Name Language="Japanese">ネズミの皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Gritty Scales</Name>
+    <Name Language="Japanese">ざらつくリン粉</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thin Wing</Name>
+    <Name Language="Japanese">極薄の羽根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Baboon Bone</Name>
+    <Name Language="Japanese">狒狒の大骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stunned Tongue</Name>
+    <Name Language="Japanese">痺れた舌筋</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frog Cheek Meat</Name>
+    <Name Language="Japanese">蛙のホホ皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frigid Core</Name>
+    <Name Language="Japanese">極低温核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frog Fluid</Name>
+    <Name Language="Japanese">蛙の体液</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mandrake Root</Name>
+    <Name Language="Japanese">マンドレイクの根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sealed Neck</Name>
+    <Name Language="Japanese">封じられた首根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Soft Plume</Name>
+    <Name Language="Japanese">柔らかな羽毛</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Shocked Talon</Name>
+    <Name Language="Japanese">感電した鳥爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rainbow Skin</Name>
+    <Name Language="Japanese">虹色の皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rickrack Tongue</Name>
+    <Name Language="Japanese">蛇腹状の舌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Needle Tail</Name>
+    <Name Language="Japanese">紫の尾針</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Panic Chakra</Name>
+    <Name Language="Japanese">混乱したチャクラ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Light Hardwood</Name>
+    <Name Language="Japanese">軽量の堅木</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Writhing Bulb</Name>
+    <Name Language="Japanese">うごめく球根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Big Shell</Name>
+    <Name Language="Japanese">大きな甲板</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Elastic Skin</Name>
+    <Name Language="Japanese">伸縮する皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Baboon Skin</Name>
+    <Name Language="Japanese">狒狒の獣皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Purple Wing</Name>
+    <Name Language="Japanese">擬竜の紫翼</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bear Claw</Name>
+    <Name Language="Japanese">熊の爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Locust Horn</Name>
+    <Name Language="Japanese">害蝗の尖角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rending Claw</Name>
+    <Name Language="Japanese">切り裂き爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dangerous Bud</Name>
+    <Name Language="Japanese">危険なつぼみ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fawn Hide</Name>
+    <Name Language="Japanese">鹿の毛皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Huge Feather</Name>
+    <Name Language="Japanese">巨翼の羽根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fawn Hide</Name>
+    <Name Language="Japanese">幼鹿の毛皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fawn Hoof</Name>
+    <Name Language="Japanese">幼鹿の蹄</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dinogator Skin</Name>
+    <Name Language="Japanese">硬質なワニ皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sealed Claw</Name>
+    <Name Language="Japanese">封じられた黒爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Kangaroo Fist</Name>
+    <Name Language="Japanese">跳獣の鉄拳</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Raptor Claw</Name>
+    <Name Language="Japanese">猛禽の封爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Berserker Claw</Name>
+    <Name Language="Japanese">獣王の鉤爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Berserker Skin</Name>
+    <Name Language="Japanese">逆立つ獣王皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sealed Skull</Name>
+    <Name Language="Japanese">封じられた梟頭殻</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rabbit Tail</Name>
+    <Name Language="Japanese">うさぎの尻尾</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rabbit Ear</Name>
+    <Name Language="Japanese">うさぎの長耳</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Muddle Hypha</Name>
+    <Name Language="Japanese">乱茸の菌糸</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Umbrella Lump</Name>
+    <Name Language="Japanese">傘状の塊</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mountain Claw</Name>
+    <Name Language="Japanese">山猫の黒爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Metallic Horn</Name>
+    <Name Language="Japanese">金属質の突角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dangerous Petal</Name>
+    <Name Language="Japanese">危険な香花</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fiery Rind</Name>
+    <Name Language="Japanese">爆弾葛の果皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fiery Seed</Name>
+    <Name Language="Japanese">爆弾葛の種</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ebony Fur</Name>
+    <Name Language="Japanese">漆黒の毛皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ebony Claw</Name>
+    <Name Language="Japanese">黒猩猩の鉤爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bud Tusk</Name>
+    <Name Language="Japanese">球根の歯牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pliant Vine</Name>
+    <Name Language="Japanese">しなやかなツタ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Boar Tusk</Name>
+    <Name Language="Japanese">猛猪の鉄牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Boar Skin</Name>
+    <Name Language="Japanese">猛猪の厚皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mist Wand Shard</Name>
+    <Name Language="Japanese">霞杖の破片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Green Feather</Name>
+    <Name Language="Japanese">巨鳥の緑羽</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Largebill Bone</Name>
+    <Name Language="Japanese">巨鳥の大骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Lance Shard</Name>
+    <Name Language="Japanese">影槍の鉄片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Lizard Back Fin</Name>
+    <Name Language="Japanese">大トカゲの背ビレ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cursed Wool</Name>
+    <Name Language="Japanese">呪いの羊毛</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Violet Wing</Name>
+    <Name Language="Japanese">薄紫の羽</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Moa Beak</Name>
+    <Name Language="Japanese">恐鳥のクチバシ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Spotted Tongue</Name>
+    <Name Language="Japanese">殿様蛙の舌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Soft Sickle</Name>
+    <Name Language="Japanese">柔らかな大鎌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stony Scythe</Name>
+    <Name Language="Japanese">石化した大鎌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dress Scrap</Name>
+    <Name Language="Japanese">玉衣の端切れ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cursed Eye</Name>
+    <Name Language="Japanese">呪われた水晶眼</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Slender Horn</Name>
+    <Name Language="Japanese">重牛の極太角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Zapper Skin</Name>
+    <Name Language="Japanese">電気蛙の皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Zapper Tongue</Name>
+    <Name Language="Japanese">電気蛙の舌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frog Belly Skin</Name>
+    <Name Language="Japanese">穴飛蛙の腹皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Glassy Eye</Name>
+    <Name Language="Japanese">輝くガラス眼</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Tough Leg</Name>
+    <Name Language="Japanese">強靭な脚殻</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hopper Wing</Name>
+    <Name Language="Japanese">バッタの内翅</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hard Shell</Name>
+    <Name Language="Japanese">硬質の殻</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Beetle Sickle</Name>
+    <Name Language="Japanese">甲虫の大鎌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Broken Horn</Name>
+    <Name Language="Japanese">壊れた硬角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bat Fang</Name>
+    <Name Language="Japanese">コウモリの牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Soft Patagium</Name>
+    <Name Language="Japanese">柔らかな飛膜</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Scorch Stone</Name>
+    <Name Language="Japanese">熾火石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hardened Lava</Name>
+    <Name Language="Japanese">凝固した熔岩</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frigid Stone</Name>
+    <Name Language="Japanese">凍氷岩</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ice Core Shard</Name>
+    <Name Language="Japanese">融けた氷核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Withered Vine</Name>
+    <Name Language="Japanese">枯れたツル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thick Bone</Name>
+    <Name Language="Japanese">狒狒の極太骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poison Hypha</Name>
+    <Name Language="Japanese">毒茸の菌糸</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poison Ferrule</Name>
+    <Name Language="Japanese">毒茸の石突き</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Shining Rectrix</Name>
+    <Name Language="Japanese">発光する尾羽根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Armor Shard</Name>
+    <Name Language="Japanese">鎧甲の破片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Giant Wing</Name>
+    <Name Language="Japanese">巨大な飛膜</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poison Trihorn</Name>
+    <Name Language="Japanese">毒竜の三つ角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Raptor Wing</Name>
+    <Name Language="Japanese">猛禽の漆黒羽</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fiery Horn</Name>
+    <Name Language="Japanese">焔蛟の曲角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Effulgent Horn</Name>
+    <Name Language="Japanese">白熱した曲角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frigid Sickle</Name>
+    <Name Language="Japanese">凍てつく大鎌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Kingly Horn</Name>
+    <Name Language="Japanese">狒狒王の豪角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Kingly Skin</Name>
+    <Name Language="Japanese">狒狒王の乱獣皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Crusher's Hide</Name>
+    <Name Language="Japanese">大牙鰐の皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Heavy Iron Ball</Name>
+    <Name Language="Japanese">重い鉄球</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mystery Shard</Name>
+    <Name Language="Japanese">謎の破片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stone Fang</Name>
+    <Name Language="Japanese">石造りの牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Metallic Cord</Name>
+    <Name Language="Japanese">金属糸</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Crimson Fur</Name>
+    <Name Language="Japanese">鮮やかな紅皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Flame Claw</Name>
+    <Name Language="Japanese">猛火の爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Flame Fang</Name>
+    <Name Language="Japanese">火鼠の前歯</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cursed Hypha</Name>
+    <Name Language="Japanese">呪茸の菌糸</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Evil Copal</Name>
+    <Name Language="Japanese">邪悪な香木</Name>
+  </Item>
+  <Item>
+    <Name Language="English">White Ape Skin</Name>
+    <Name Language="Japanese">猩猩の白皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Barbed Needle</Name>
+    <Name Language="Japanese">サソリの金属針</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Barbed Shell</Name>
+    <Name Language="Japanese">サソリの硬殻</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hard Bark</Name>
+    <Name Language="Japanese">硬化した樹皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Tiny Tooth</Name>
+    <Name Language="Japanese">極小の鋭歯</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Blue Ear</Name>
+    <Name Language="Japanese">青毛の長耳</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Wallaby Fist</Name>
+    <Name Language="Japanese">青跳獣の鉄拳</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Peach Feather</Name>
+    <Name Language="Japanese">桃色の羽根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Peach Leg</Name>
+    <Name Language="Japanese">桃色烏の重脚</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Purple Hyoid</Name>
+    <Name Language="Japanese">紫避役の舌骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Spiked Iron Ball</Name>
+    <Name Language="Japanese">トゲつき鉄球</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stone Tusk</Name>
+    <Name Language="Japanese">石の獣牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Earthy Skin</Name>
+    <Name Language="Japanese">土色のヌメ皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Golden Horn</Name>
+    <Name Language="Japanese">黄金鹿の角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Unusual Metal</Name>
+    <Name Language="Japanese">謎の金属片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sintered Body</Name>
+    <Name Language="Japanese">黒い焼結体</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Shell Spike</Name>
+    <Name Language="Japanese">甲羅の硬角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stone Arm</Name>
+    <Name Language="Japanese">石造りの猛振腕</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dream Carapace</Name>
+    <Name Language="Japanese">夢見の硬骨格</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mole Claw</Name>
+    <Name Language="Japanese">土竜の爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mole Skin</Name>
+    <Name Language="Japanese">土竜の柔皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dragonfly Nest</Name>
+    <Name Language="Japanese">大トンボの巣材</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Shocked Bug Eye</Name>
+    <Name Language="Japanese">感電した複眼</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Butterfly Wing</Name>
+    <Name Language="Japanese">蝶の羽</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bloody Fist</Name>
+    <Name Language="Japanese">赤跳獣の剛拳</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sharp Claw</Name>
+    <Name Language="Japanese">闇猫の鋭爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Magma Core</Name>
+    <Name Language="Japanese">熔鉄核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Magma Shard</Name>
+    <Name Language="Japanese">火成岩の欠片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Glacier Core</Name>
+    <Name Language="Japanese">凝氷核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Melted Core</Name>
+    <Name Language="Japanese">融解した氷核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Black Root</Name>
+    <Name Language="Japanese">悪魔の黒根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cold Skin</Name>
+    <Name Language="Japanese">凍土竜の柔皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Spear Shard</Name>
+    <Name Language="Japanese">鋭槍の鉄片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Spear Pole</Name>
+    <Name Language="Japanese">鋭槍の長柄</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Icy Rind</Name>
+    <Name Language="Japanese">氷爆葛の果皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Icy Seed</Name>
+    <Name Language="Japanese">氷爆葛の石種</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thunder Tooth</Name>
+    <Name Language="Japanese">雷兎の鋭歯</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ape Bone</Name>
+    <Name Language="Japanese">赤狒狒の大骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Locust Leg</Name>
+    <Name Language="Japanese">バッタの腿節</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Locust Wing</Name>
+    <Name Language="Japanese">バッタの薄羽</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Beetle Shell</Name>
+    <Name Language="Japanese">赤甲虫の殻</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Crimson Fang</Name>
+    <Name Language="Japanese">深紅の牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Crimson Wing</Name>
+    <Name Language="Japanese">深紅の飛膜</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Lion Claw</Name>
+    <Name Language="Japanese">大獅子の鋭爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ape Hide</Name>
+    <Name Language="Japanese">赤狒狒の厚皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Death's Scythe</Name>
+    <Name Language="Japanese">死神の鎌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Killer Blade</Name>
+    <Name Language="Japanese">執行者の剛刃</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Guardian Shell</Name>
+    <Name Language="Japanese">番獣の石甲</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thorny Shell</Name>
+    <Name Language="Japanese">堅王の棘甲</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Moa Tendon</Name>
+    <Name Language="Japanese">大鳥の足腱</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Desouler Claw</Name>
+    <Name Language="Japanese">裁断者の剛爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Giant Petal</Name>
+    <Name Language="Japanese">大きな花びら</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Drive Gear</Name>
+    <Name Language="Japanese">重砲剣の遊底</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bone Shard</Name>
+    <Name Language="Japanese">巨大骨格の破片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Raptor Beak</Name>
+    <Name Language="Japanese">猛禽の重クチバシ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sand Horn</Name>
+    <Name Language="Japanese">熱砂竜の角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Colorful Skin</Name>
+    <Name Language="Japanese">極彩色の皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stone Shell</Name>
+    <Name Language="Japanese">石造りの鉢甲</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Eryngii Cap</Name>
+    <Name Language="Japanese">角付きの傘</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Eryngii Hypha</Name>
+    <Name Language="Japanese">痺茸の菌糸</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sky Iron Claw</Name>
+    <Name Language="Japanese">天鉄の鉤爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Toxic Bone</Name>
+    <Name Language="Japanese">毒漬の極太骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sky Iron Shell</Name>
+    <Name Language="Japanese">天鉄の甲殻</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sealed Cap</Name>
+    <Name Language="Japanese">封じられた傘</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Golden Shell</Name>
+    <Name Language="Japanese">黄金の甲殻</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Flame Tail</Name>
+    <Name Language="Japanese">炎の尻尾</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Indigo Vine</Name>
+    <Name Language="Japanese">薄藍の花蔓</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Scorched Petal</Name>
+    <Name Language="Japanese">焼け落ちた花弁</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Staff Shard</Name>
+    <Name Language="Japanese">闇杖の破片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frozen Heart</Name>
+    <Name Language="Japanese">凍った心臓</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Petal Stone</Name>
+    <Name Language="Japanese">ペタル石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Broken Core</Name>
+    <Name Language="Japanese">崩れた雷核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Raptor Talon</Name>
+    <Name Language="Japanese">猛禽の稀爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Scorched Sap</Name>
+    <Name Language="Japanese">焼け焦げた樹液</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Deathly Vine</Name>
+    <Name Language="Japanese">死色の細茎</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Deathly Bud</Name>
+    <Name Language="Japanese">破滅のつぼみ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sky Iron Nail</Name>
+    <Name Language="Japanese">天鉄の大爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Blue Blood</Name>
+    <Name Language="Japanese">深青の鮮血</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Writhing Wood</Name>
+    <Name Language="Japanese">うごめく樹材</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poison Branch</Name>
+    <Name Language="Japanese">毒紫の枝</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Red Lion Hide</Name>
+    <Name Language="Japanese">赤獅子の剛皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Red Lion Fang</Name>
+    <Name Language="Japanese">赤獅子の猛牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Horrific Breath</Name>
+    <Name Language="Japanese">惨劇の溜息</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Toxic Eye</Name>
+    <Name Language="Japanese">毒縮の瞳孔</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thorny Bone</Name>
+    <Name Language="Japanese">呪詛の棘骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pale Bone</Name>
+    <Name Language="Japanese">青白い呪骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cursed Bone</Name>
+    <Name Language="Japanese">呪詛の小骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cursed Vine</Name>
+    <Name Language="Japanese">幻惑の稀ツル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cursed Femur</Name>
+    <Name Language="Japanese">小さな呪骨</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pumpkin Head</Name>
+    <Name Language="Japanese">南瓜頭</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Crimson Eye</Name>
+    <Name Language="Japanese">深紅の眼球</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Eerie Scales</Name>
+    <Name Language="Japanese">不思議なリン粉</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Emperor Feather</Name>
+    <Name Language="Japanese">太古の大羽根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー38</Name>
+    <Name Language="Japanese">ダミー38</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Black Horn</Name>
+    <Name Language="Japanese">獅子の黒角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー40</Name>
+    <Name Language="Japanese">ダミー40</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fallen Scale</Name>
+    <Name Language="Japanese">冥竜の逆鱗</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sealed Core</Name>
+    <Name Language="Japanese">封じられた闇核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Damascus Claw</Name>
+    <Name Language="Japanese">ダマスカスの大爪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Chaos Feather</Name>
+    <Name Language="Japanese">乱れた風切り羽</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fire Scale</Name>
+    <Name Language="Japanese">火竜の逆鱗</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fire Fang</Name>
+    <Name Language="Japanese">炎上した竜牙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Reverse Scale</Name>
+    <Name Language="Japanese">氷竜の逆鱗</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frozen Skin</Name>
+    <Name Language="Japanese">凍りついた竜皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thunder Scale</Name>
+    <Name Language="Japanese">雷竜の逆鱗</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Charged Horn</Name>
+    <Name Language="Japanese">帯電した竜角</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Warped Core</Name>
+    <Name Language="Japanese">歪緑の樹核</Name>
+  </Item>
+  <Item>
+    <Name Language="English">未使用</Name>
+    <Name Language="Japanese">未使用</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poison Wing</Name>
+    <Name Language="Japanese">熱砂竜の毒翼</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Colorful Tongue</Name>
+    <Name Language="Japanese">極彩の凍結舌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー219</Name>
+    <Name Language="Japanese">ダミー219</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー220</Name>
+    <Name Language="Japanese">ダミー220</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー221</Name>
+    <Name Language="Japanese">ダミー221</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー222</Name>
+    <Name Language="Japanese">ダミー222</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー223</Name>
+    <Name Language="Japanese">ダミー223</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー224</Name>
+    <Name Language="Japanese">ダミー224</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー225</Name>
+    <Name Language="Japanese">ダミー225</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー226</Name>
+    <Name Language="Japanese">ダミー226</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー227</Name>
+    <Name Language="Japanese">ダミー227</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー228</Name>
+    <Name Language="Japanese">ダミー228</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー229</Name>
+    <Name Language="Japanese">ダミー229</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー230</Name>
+    <Name Language="Japanese">ダミー230</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー231</Name>
+    <Name Language="Japanese">ダミー231</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー232</Name>
+    <Name Language="Japanese">ダミー232</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー233</Name>
+    <Name Language="Japanese">ダミー233</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー234</Name>
+    <Name Language="Japanese">ダミー234</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー235</Name>
+    <Name Language="Japanese">ダミー235</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー236</Name>
+    <Name Language="Japanese">ダミー236</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー237</Name>
+    <Name Language="Japanese">ダミー237</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー238</Name>
+    <Name Language="Japanese">ダミー238</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー239</Name>
+    <Name Language="Japanese">ダミー239</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー240</Name>
+    <Name Language="Japanese">ダミー240</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー241</Name>
+    <Name Language="Japanese">ダミー241</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー242</Name>
+    <Name Language="Japanese">ダミー242</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー243</Name>
+    <Name Language="Japanese">ダミー243</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Granite</Name>
+    <Name Language="Japanese">御影石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cyanite</Name>
+    <Name Language="Japanese">藍結晶</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Iridescent Ore</Name>
+    <Name Language="Japanese">虹翼の欠片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Corundum</Name>
+    <Name Language="Japanese">鋼玉</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dolomite</Name>
+    <Name Language="Japanese">白雲岩</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Akaganeite</Name>
+    <Name Language="Japanese">赤金鉱</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Steel Earth</Name>
+    <Name Language="Japanese">鉄ばん土</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Emerald</Name>
+    <Name Language="Japanese">翠玉</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Chalcedony</Name>
+    <Name Language="Japanese">玉髄</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Red Jasper</Name>
+    <Name Language="Japanese">赤碧玉</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Resin Cylinder</Name>
+    <Name Language="Japanese">筒状の樹脂片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rose Quartz</Name>
+    <Name Language="Japanese">バラ石英</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Nephrite</Name>
+    <Name Language="Japanese">翡翠軟玉</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Odd Wall Chip</Name>
+    <Name Language="Japanese">謎の壁材</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Tourmaline</Name>
+    <Name Language="Japanese">電気石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Tricolor Stone</Name>
+    <Name Language="Japanese">三色混石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dark Pyroxenite</Name>
+    <Name Language="Japanese">黒輝岩</Name>
+  </Item>
+  <Item>
+    <Name Language="English">採掘ダミー264</Name>
+    <Name Language="Japanese">採掘ダミー264</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Forest Aloe</Name>
+    <Name Language="Japanese">樹海アロエ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Small Flower</Name>
+    <Name Language="Japanese">小さな花</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dragon's Blood</Name>
+    <Name Language="Japanese">竜血樹脂</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mint</Name>
+    <Name Language="Japanese">ミント草</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Crane Ginseng</Name>
+    <Name Language="Japanese">仙鶴人参</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Monks Cress</Name>
+    <Name Language="Japanese">金蓮花</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Luminous Moss</Name>
+    <Name Language="Japanese">ヒカリゴケ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Scarlet Sage</Name>
+    <Name Language="Japanese">緋衣草</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Glove Grass</Name>
+    <Name Language="Japanese">テブクロ群草</Name>
+  </Item>
+  <Item>
+    <Name Language="English">White Apple</Name>
+    <Name Language="Japanese">姫リンゴ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Waterlily Leaf</Name>
+    <Name Language="Japanese">睡蓮の浮葉</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Myrciaria Fruit</Name>
+    <Name Language="Japanese">キブドウの果実</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cursed Durian</Name>
+    <Name Language="Japanese">呪王果</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Valerian</Name>
+    <Name Language="Japanese">鹿子草</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Aloe</Name>
+    <Name Language="Japanese">タカロカイ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ambrosia</Name>
+    <Name Language="Japanese">アンブロシア</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Grub Mold</Name>
+    <Name Language="Japanese">冬虫夏草</Name>
+  </Item>
+  <Item>
+    <Name Language="English">採取ダミー282</Name>
+    <Name Language="Japanese">採取ダミー282</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sturdy Timber</Name>
+    <Name Language="Japanese">丈夫な木片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Teak Wood</Name>
+    <Name Language="Japanese">チーク材</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Guaiacum Wood</Name>
+    <Name Language="Japanese">癒瘡木</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mahogany</Name>
+    <Name Language="Japanese">桃花心木</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Jet-Black Pith</Name>
+    <Name Language="Japanese">漆黒檀の心材</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Paulownia Bark</Name>
+    <Name Language="Japanese">白桐の樹皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Trileaf Stalk</Name>
+    <Name Language="Japanese">枳殻の茎針</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poinciana Pod</Name>
+    <Name Language="Japanese">鳳凰木のサヤ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ice Stake</Name>
+    <Name Language="Japanese">氷銀の棒杭</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Wisteria Branch</Name>
+    <Name Language="Japanese">淡紫藤の若枝</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Yggdrasil Trunk</Name>
+    <Name Language="Japanese">千年樹の幹</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thujopsis Root</Name>
+    <Name Language="Japanese">阿天の根</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sequoia Limb</Name>
+    <Name Language="Japanese">曙杉の太枝</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Crystal Vine</Name>
+    <Name Language="Japanese">水晶のツタ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Holly Lumber</Name>
+    <Name Language="Japanese">ヒイラギの幹材</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Polyamide Fiber</Name>
+    <Name Language="Japanese">ケブラー繊維</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stardust Twig</Name>
+    <Name Language="Japanese">星屑の煌枝</Name>
+  </Item>
+  <Item>
+    <Name Language="English">伐採ダミー300</Name>
+    <Name Language="Japanese">伐採ダミー300</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Culantro</Name>
+    <Name Language="Japanese">クラントロ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Night Shard</Name>
+    <Name Language="Japanese">藍夜の破片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cave Palm Bark</Name>
+    <Name Language="Japanese">洞窟椰子の樹皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Shea Fruit</Name>
+    <Name Language="Japanese">シアの実</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Supple Branch</Name>
+    <Name Language="Japanese">しなる枝</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Slate</Name>
+    <Name Language="Japanese">スレート石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Osmunda Frond</Name>
+    <Name Language="Japanese">ゼンマイ茎</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Strong Vine</Name>
+    <Name Language="Japanese">強靭なツタ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Lazurite</Name>
+    <Name Language="Japanese">青金石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fennel</Name>
+    <Name Language="Japanese">ウイ香</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pagoda Branch</Name>
+    <Name Language="Japanese">火槐の分枝</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Tiger's Eye</Name>
+    <Name Language="Japanese">虎目石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hyacinth Petal</Name>
+    <Name Language="Japanese">水葵の花弁</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pachypodium</Name>
+    <Name Language="Japanese">亜阿相界の塊茎</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Serpentinite</Name>
+    <Name Language="Japanese">蛇紋岩</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Life Honey</Name>
+    <Name Language="Japanese">命の蜂蜜</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Aesculus Wood</Name>
+    <Name Language="Japanese">七葉樹の材木</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Unknown Metal</Name>
+    <Name Language="Japanese">謎の鋼片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Moss Strawberry</Name>
+    <Name Language="Japanese">コケイチゴ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Flame Fruit</Name>
+    <Name Language="Japanese">焔模様の木の実</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dried Vine</Name>
+    <Name Language="Japanese">乾いたツタ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Eclogite</Name>
+    <Name Language="Japanese">榴輝岩</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cork Bark</Name>
+    <Name Language="Japanese">黄柏の樹皮</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ27</Name>
+    <Name Language="Japanese">素材バッファ27</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ28</Name>
+    <Name Language="Japanese">素材バッファ28</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ29</Name>
+    <Name Language="Japanese">素材バッファ29</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ30</Name>
+    <Name Language="Japanese">素材バッファ30</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ31</Name>
+    <Name Language="Japanese">素材バッファ31</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ32</Name>
+    <Name Language="Japanese">素材バッファ32</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ33</Name>
+    <Name Language="Japanese">素材バッファ33</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ34</Name>
+    <Name Language="Japanese">素材バッファ34</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ35</Name>
+    <Name Language="Japanese">素材バッファ35</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ36</Name>
+    <Name Language="Japanese">素材バッファ36</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ37</Name>
+    <Name Language="Japanese">素材バッファ37</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ38</Name>
+    <Name Language="Japanese">素材バッファ38</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ39</Name>
+    <Name Language="Japanese">素材バッファ39</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ40</Name>
+    <Name Language="Japanese">素材バッファ40</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ41</Name>
+    <Name Language="Japanese">素材バッファ41</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ42</Name>
+    <Name Language="Japanese">素材バッファ42</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ43</Name>
+    <Name Language="Japanese">素材バッファ43</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ44</Name>
+    <Name Language="Japanese">素材バッファ44</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ45</Name>
+    <Name Language="Japanese">素材バッファ45</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ46</Name>
+    <Name Language="Japanese">素材バッファ46</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ47</Name>
+    <Name Language="Japanese">素材バッファ47</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ48</Name>
+    <Name Language="Japanese">素材バッファ48</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ49</Name>
+    <Name Language="Japanese">素材バッファ49</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ50</Name>
+    <Name Language="Japanese">素材バッファ50</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ51</Name>
+    <Name Language="Japanese">素材バッファ51</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ52</Name>
+    <Name Language="Japanese">素材バッファ52</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ53</Name>
+    <Name Language="Japanese">素材バッファ53</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ54</Name>
+    <Name Language="Japanese">素材バッファ54</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ55</Name>
+    <Name Language="Japanese">素材バッファ55</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ56</Name>
+    <Name Language="Japanese">素材バッファ56</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ57</Name>
+    <Name Language="Japanese">素材バッファ57</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ58</Name>
+    <Name Language="Japanese">素材バッファ58</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ59</Name>
+    <Name Language="Japanese">素材バッファ59</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ60</Name>
+    <Name Language="Japanese">素材バッファ60</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ61</Name>
+    <Name Language="Japanese">素材バッファ61</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ62</Name>
+    <Name Language="Japanese">素材バッファ62</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ63</Name>
+    <Name Language="Japanese">素材バッファ63</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ64</Name>
+    <Name Language="Japanese">素材バッファ64</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ65</Name>
+    <Name Language="Japanese">素材バッファ65</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ66</Name>
+    <Name Language="Japanese">素材バッファ66</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ67</Name>
+    <Name Language="Japanese">素材バッファ67</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ68</Name>
+    <Name Language="Japanese">素材バッファ68</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ69</Name>
+    <Name Language="Japanese">素材バッファ69</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ70</Name>
+    <Name Language="Japanese">素材バッファ70</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ71</Name>
+    <Name Language="Japanese">素材バッファ71</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ72</Name>
+    <Name Language="Japanese">素材バッファ72</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ73</Name>
+    <Name Language="Japanese">素材バッファ73</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ74</Name>
+    <Name Language="Japanese">素材バッファ74</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ75</Name>
+    <Name Language="Japanese">素材バッファ75</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ76</Name>
+    <Name Language="Japanese">素材バッファ76</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ77</Name>
+    <Name Language="Japanese">素材バッファ77</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ78</Name>
+    <Name Language="Japanese">素材バッファ78</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ79</Name>
+    <Name Language="Japanese">素材バッファ79</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ80</Name>
+    <Name Language="Japanese">素材バッファ80</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ81</Name>
+    <Name Language="Japanese">素材バッファ81</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ82</Name>
+    <Name Language="Japanese">素材バッファ82</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ83</Name>
+    <Name Language="Japanese">素材バッファ83</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ84</Name>
+    <Name Language="Japanese">素材バッファ84</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ85</Name>
+    <Name Language="Japanese">素材バッファ85</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ86</Name>
+    <Name Language="Japanese">素材バッファ86</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ87</Name>
+    <Name Language="Japanese">素材バッファ87</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ88</Name>
+    <Name Language="Japanese">素材バッファ88</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ89</Name>
+    <Name Language="Japanese">素材バッファ89</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ90</Name>
+    <Name Language="Japanese">素材バッファ90</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ91</Name>
+    <Name Language="Japanese">素材バッファ91</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ92</Name>
+    <Name Language="Japanese">素材バッファ92</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ93</Name>
+    <Name Language="Japanese">素材バッファ93</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ94</Name>
+    <Name Language="Japanese">素材バッファ94</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ95</Name>
+    <Name Language="Japanese">素材バッファ95</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ96</Name>
+    <Name Language="Japanese">素材バッファ96</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ97</Name>
+    <Name Language="Japanese">素材バッファ97</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ98</Name>
+    <Name Language="Japanese">素材バッファ98</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ99</Name>
+    <Name Language="Japanese">素材バッファ99</Name>
+  </Item>
+  <Item>
+    <Name Language="English">素材バッファ百</Name>
+    <Name Language="Japanese">素材バッファ百</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Medica</Name>
+    <Name Language="Japanese">メディカ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Medica II</Name>
+    <Name Language="Japanese">メディカⅡ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Medica III</Name>
+    <Name Language="Japanese">メディカⅢ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Medica IV</Name>
+    <Name Language="Japanese">メディカⅣ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Amrita</Name>
+    <Name Language="Japanese">アムリタ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Amrita II</Name>
+    <Name Language="Japanese">アムリタⅡ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Amrita III</Name>
+    <Name Language="Japanese">アムリタⅢ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hamao</Name>
+    <Name Language="Japanese">ハマオ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Hamao II</Name>
+    <Name Language="Japanese">ハマオⅡ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Nectar</Name>
+    <Name Language="Japanese">ネクタル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Nectar II</Name>
+    <Name Language="Japanese">ネクタルⅡ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Madora</Name>
+    <Name Language="Japanese">マドラ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Madora II</Name>
+    <Name Language="Japanese">マドラⅡ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Theriaca A</Name>
+    <Name Language="Japanese">テリアカα</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Theriaca B</Name>
+    <Name Language="Japanese">テリアカβ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Metopon</Name>
+    <Name Language="Japanese">ラウダナム</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Unihorn</Name>
+    <Name Language="Japanese">ウニコウル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bravant</Name>
+    <Name Language="Japanese">ブレイバント</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stonard</Name>
+    <Name Language="Japanese">ストナード</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fire Mist</Name>
+    <Name Language="Japanese">耐熱ミスト</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ice Mist</Name>
+    <Name Language="Japanese">耐氷ミスト</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Volt Mist</Name>
+    <Name Language="Japanese">耐雷ミスト</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Cut Mist</Name>
+    <Name Language="Japanese">耐斬ミスト</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bash Mist</Name>
+    <Name Language="Japanese">耐壊ミスト</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stab Mist</Name>
+    <Name Language="Japanese">耐突ミスト</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Blaze Oil</Name>
+    <Name Language="Japanese">ファイアオイル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Freeze Oil</Name>
+    <Name Language="Japanese">フリーズオイル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Shock Oil</Name>
+    <Name Language="Japanese">ショックオイル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Warding Bell</Name>
+    <Name Language="Japanese">獣避けの鈴</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Luring Bell</Name>
+    <Name Language="Japanese">獣寄せの鈴</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ariadne Thread</Name>
+    <Name Language="Japanese">アリアドネの糸</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pole Stone</Name>
+    <Name Language="Japanese">変位磁石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Guard Sole</Name>
+    <Name Language="Japanese">斥候用の長靴</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fire Jar</Name>
+    <Name Language="Japanese">火球の起動符</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Blast Jar</Name>
+    <Name Language="Japanese">爆炎の起動符</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ice Jar</Name>
+    <Name Language="Japanese">氷槍の起動符</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Frost Jar</Name>
+    <Name Language="Japanese">凍牙の起動符</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Volt Jar</Name>
+    <Name Language="Japanese">雷撃の起動符</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Thunderbolt Jar</Name>
+    <Name Language="Japanese">稲妻の起動符</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poison Gas</Name>
+    <Name Language="Japanese">毒の香</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Nerve Gas</Name>
+    <Name Language="Japanese">麻痺の香</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Blind Gas</Name>
+    <Name Language="Japanese">盲目の香</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sleep Gas</Name>
+    <Name Language="Japanese">睡眠の香</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Curse Gas</Name>
+    <Name Language="Japanese">呪いの香</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Addle Gas</Name>
+    <Name Language="Japanese">混乱の香</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Simple Scope</Name>
+    <Name Language="Japanese">簡易遠眼鏡</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Silver Whistle</Name>
+    <Name Language="Japanese">銀色の魔笛</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Power Book</Name>
+    <Name Language="Japanese">力の宝典</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Intelligence Book</Name>
+    <Name Language="Japanese">知の宝典</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Vigor Book</Name>
+    <Name Language="Japanese">体の宝典</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Speed Book</Name>
+    <Name Language="Japanese">速の宝典</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Luck Book</Name>
+    <Name Language="Japanese">運の宝典</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Formaldehyde</Name>
+    <Name Language="Japanese">解剖用水溶液</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Etrian Coin</Name>
+    <Name Language="Japanese">エトリアのコイン</Name>
+  </Item>
+  <Item>
+    <Name Language="English">High Lagaard Gem</Name>
+    <Name Language="Japanese">ハイ・ラガードの宝石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Armoroad Cheese</Name>
+    <Name Language="Japanese">アモロチーズ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Yggdroid Doll</Name>
+    <Name Language="Japanese">アンドロ人形</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Shinjuku Map</Name>
+    <Name Language="Japanese">シンジュクエキの地図</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Instant Curry</Name>
+    <Name Language="Japanese">レトルトカレー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Casino Chip</Name>
+    <Name Language="Japanese">カジノチップ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rafflesia Nectar</Name>
+    <Name Language="Japanese">ラフレシアの蜜</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Small Moai</Name>
+    <Name Language="Japanese">小さなモアイ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pooka Doll</Name>
+    <Name Language="Japanese">プーカのぬいぐるみ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Salmiakki</Name>
+    <Name Language="Japanese">サルミアッキ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Caviar</Name>
+    <Name Language="Japanese">キャビア</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mate De Koka</Name>
+    <Name Language="Japanese">マテ・デ・コカ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mr. Mole's Candy</Name>
+    <Name Language="Japanese">モグラ先輩のアメ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mr. Mole's Love</Name>
+    <Name Language="Japanese">先輩の優しさ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mr. Mole's Meal</Name>
+    <Name Language="Japanese">モグラ先輩のお菓子袋</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mr. Mole's Mag</Name>
+    <Name Language="Japanese">先輩の週刊誌</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mr. Mole Letter</Name>
+    <Name Language="Japanese">先輩の同窓会通知</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mr. Mole's Shame</Name>
+    <Name Language="Japanese">先輩の若気の至り</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Escape Medal</Name>
+    <Name Language="Japanese">脱出の証</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Yggdrasil Score</Name>
+    <Name Language="Japanese">世界樹の楽譜</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム77</Name>
+    <Name Language="Japanese">アイテム77</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム78</Name>
+    <Name Language="Japanese">アイテム78</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム79</Name>
+    <Name Language="Japanese">アイテム79</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム80</Name>
+    <Name Language="Japanese">アイテム80</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム81</Name>
+    <Name Language="Japanese">アイテム81</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム82</Name>
+    <Name Language="Japanese">アイテム82</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム83</Name>
+    <Name Language="Japanese">アイテム83</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム84</Name>
+    <Name Language="Japanese">アイテム84</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム85</Name>
+    <Name Language="Japanese">アイテム85</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム86</Name>
+    <Name Language="Japanese">アイテム86</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム87</Name>
+    <Name Language="Japanese">アイテム87</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム88</Name>
+    <Name Language="Japanese">アイテム88</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム89</Name>
+    <Name Language="Japanese">アイテム89</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム90</Name>
+    <Name Language="Japanese">アイテム90</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム91</Name>
+    <Name Language="Japanese">アイテム91</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム92</Name>
+    <Name Language="Japanese">アイテム92</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム93</Name>
+    <Name Language="Japanese">アイテム93</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム94</Name>
+    <Name Language="Japanese">アイテム94</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム95</Name>
+    <Name Language="Japanese">アイテム95</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム96</Name>
+    <Name Language="Japanese">アイテム96</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム97</Name>
+    <Name Language="Japanese">アイテム97</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム98</Name>
+    <Name Language="Japanese">アイテム98</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム99</Name>
+    <Name Language="Japanese">アイテム99</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アイテム100</Name>
+    <Name Language="Japanese">アイテム100</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Formal Letter</Name>
+    <Name Language="Japanese">領主への紹介状</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Labyrinth Map</Name>
+    <Name Language="Japanese">樹海の地図</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Greeting Letter</Name>
+    <Name Language="Japanese">巫女への手紙</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Memento Ring</Name>
+    <Name Language="Japanese">形見の指輪</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ancient Tablet</Name>
+    <Name Language="Japanese">古ぼけた石板</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Brass Key</Name>
+    <Name Language="Japanese">真鍮の鍵</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Old Breastplate</Name>
+    <Name Language="Japanese">古ぼけた胸当て</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Second Tablet</Name>
+    <Name Language="Japanese">二枚目の石板</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Circle Staff</Name>
+    <Name Language="Japanese">方陣形成の錫杖</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Twinfang Scroll</Name>
+    <Name Language="Japanese">双牙武典</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Titan's Heart</Name>
+    <Name Language="Japanese">巨人の心臓</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Battle Goblet</Name>
+    <Name Language="Japanese">戦用意の杯</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Big Moth Egg</Name>
+    <Name Language="Japanese">ビッグモスの卵</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Moonflower</Name>
+    <Name Language="Japanese">月輪の夜顔</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Morning Glory</Name>
+    <Name Language="Japanese">日輪の昼顔</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Twilight Glory</Name>
+    <Name Language="Japanese">境界の朝顔</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Vine Basket</Name>
+    <Name Language="Japanese">藤蔓のカゴ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Plant Reference</Name>
+    <Name Language="Japanese">植物図鑑</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Oak Barrel</Name>
+    <Name Language="Japanese">オーク材のタル</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Handmade Lunch</Name>
+    <Name Language="Japanese">手作り弁当</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Rose Ice Stone</Name>
+    <Name Language="Japanese">鴇色の凍石</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Insulated Pack</Name>
+    <Name Language="Japanese">氷嚢</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ancient Wing</Name>
+    <Name Language="Japanese">古代生物の翼片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Special Pot</Name>
+    <Name Language="Japanese">特注の網</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Genetics Text</Name>
+    <Name Language="Japanese">遺伝子学概論</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fairy Bellflower</Name>
+    <Name Language="Japanese">妖精の釣鐘草</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Milk Bottle</Name>
+    <Name Language="Japanese">小さなミルク入れ</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Small Necklace</Name>
+    <Name Language="Japanese">小さな首飾り</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Wooden Crate</Name>
+    <Name Language="Japanese">大型の木箱</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Yggdrasil Amber</Name>
+    <Name Language="Japanese">世界樹の琥珀</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Mysterious Pot</Name>
+    <Name Language="Japanese">謎の鉄鍋</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Search Report 01</Name>
+    <Name Language="Japanese">探索達成書01</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Black Flame</Name>
+    <Name Language="Japanese">黒き者の炎</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Drive Blade Key</Name>
+    <Name Language="Japanese">砲剣の認証キー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Great Tree Key</Name>
+    <Name Language="Japanese">大樹の鍵</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fire Fungus</Name>
+    <Name Language="Japanese">火喰い茸</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Canister</Name>
+    <Name Language="Japanese">円筒形の容器</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Count's Cufflinks</Name>
+    <Name Language="Japanese">辺境伯のカフスボタン</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fan-Shaped Shard</Name>
+    <Name Language="Japanese">扇状の鉄片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Half Moon Shard</Name>
+    <Name Language="Japanese">半月状の鉄片</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Old Disc</Name>
+    <Name Language="Japanese">古びた円盤</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Omnikey</Name>
+    <Name Language="Japanese">全にして一なる鍵</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Evil Eye Club</Name>
+    <Name Language="Japanese">邪眼の鎚</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Capital Key</Name>
+    <Name Language="Japanese">煌天破の鍵</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Deep Forest Lore</Name>
+    <Name Language="Japanese">深森古経</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Bushi's Script</Name>
+    <Name Language="Japanese">武士心得之事</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Script of Souls</Name>
+    <Name Language="Japanese">選別されし魂の書</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Epetam</Name>
+    <Name Language="Japanese">エペタム</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Jute Bag</Name>
+    <Name Language="Japanese">丈夫な麻袋</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ4</Name>
+    <Name Language="Japanese">貴重品バッファ4</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ5</Name>
+    <Name Language="Japanese">貴重品バッファ5</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ6</Name>
+    <Name Language="Japanese">貴重品バッファ6</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ7</Name>
+    <Name Language="Japanese">貴重品バッファ7</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ8</Name>
+    <Name Language="Japanese">貴重品バッファ8</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ9</Name>
+    <Name Language="Japanese">貴重品バッファ9</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ10</Name>
+    <Name Language="Japanese">貴重品バッファ10</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ11</Name>
+    <Name Language="Japanese">貴重品バッファ11</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ12</Name>
+    <Name Language="Japanese">貴重品バッファ12</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ13</Name>
+    <Name Language="Japanese">貴重品バッファ13</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ14</Name>
+    <Name Language="Japanese">貴重品バッファ14</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ15</Name>
+    <Name Language="Japanese">貴重品バッファ15</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ16</Name>
+    <Name Language="Japanese">貴重品バッファ16</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ17</Name>
+    <Name Language="Japanese">貴重品バッファ17</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ18</Name>
+    <Name Language="Japanese">貴重品バッファ18</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ19</Name>
+    <Name Language="Japanese">貴重品バッファ19</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ20</Name>
+    <Name Language="Japanese">貴重品バッファ20</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ21</Name>
+    <Name Language="Japanese">貴重品バッファ21</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ22</Name>
+    <Name Language="Japanese">貴重品バッファ22</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ23</Name>
+    <Name Language="Japanese">貴重品バッファ23</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ24</Name>
+    <Name Language="Japanese">貴重品バッファ24</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ25</Name>
+    <Name Language="Japanese">貴重品バッファ25</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ26</Name>
+    <Name Language="Japanese">貴重品バッファ26</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ27</Name>
+    <Name Language="Japanese">貴重品バッファ27</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ28</Name>
+    <Name Language="Japanese">貴重品バッファ28</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ29</Name>
+    <Name Language="Japanese">貴重品バッファ29</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ30</Name>
+    <Name Language="Japanese">貴重品バッファ30</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ31</Name>
+    <Name Language="Japanese">貴重品バッファ31</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ32</Name>
+    <Name Language="Japanese">貴重品バッファ32</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ33</Name>
+    <Name Language="Japanese">貴重品バッファ33</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ34</Name>
+    <Name Language="Japanese">貴重品バッファ34</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ35</Name>
+    <Name Language="Japanese">貴重品バッファ35</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ36</Name>
+    <Name Language="Japanese">貴重品バッファ36</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ37</Name>
+    <Name Language="Japanese">貴重品バッファ37</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ38</Name>
+    <Name Language="Japanese">貴重品バッファ38</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ39</Name>
+    <Name Language="Japanese">貴重品バッファ39</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ40</Name>
+    <Name Language="Japanese">貴重品バッファ40</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ41</Name>
+    <Name Language="Japanese">貴重品バッファ41</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ42</Name>
+    <Name Language="Japanese">貴重品バッファ42</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ43</Name>
+    <Name Language="Japanese">貴重品バッファ43</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ44</Name>
+    <Name Language="Japanese">貴重品バッファ44</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ45</Name>
+    <Name Language="Japanese">貴重品バッファ45</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ46</Name>
+    <Name Language="Japanese">貴重品バッファ46</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ47</Name>
+    <Name Language="Japanese">貴重品バッファ47</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ48</Name>
+    <Name Language="Japanese">貴重品バッファ48</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ49</Name>
+    <Name Language="Japanese">貴重品バッファ49</Name>
+  </Item>
+  <Item>
+    <Name Language="English">貴重品バッファ50</Name>
+    <Name Language="Japanese">貴重品バッファ50</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Might Hammer</Name>
+    <Name Language="Japanese">物攻のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Aim Hammer</Name>
+    <Name Language="Japanese">命中のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Critical Hammer</Name>
+    <Name Language="Japanese">会心のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Power Hammer</Name>
+    <Name Language="Japanese">力のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Smart Hammer</Name>
+    <Name Language="Japanese">知識のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Guard Hammer</Name>
+    <Name Language="Japanese">守りのハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Speed Hammer</Name>
+    <Name Language="Japanese">速さのハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Luck Hammer</Name>
+    <Name Language="Japanese">運のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Fire Hammer</Name>
+    <Name Language="Japanese">火炎のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Ice Hammer</Name>
+    <Name Language="Japanese">氷結のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Volt Hammer</Name>
+    <Name Language="Japanese">電撃のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Head Hammer</Name>
+    <Name Language="Japanese">頭封じのハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Arm Hammer</Name>
+    <Name Language="Japanese">腕封じのハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Leg Hammer</Name>
+    <Name Language="Japanese">脚封じのハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stun Hammer</Name>
+    <Name Language="Japanese">スタンハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Flash Hammer</Name>
+    <Name Language="Japanese">盲目のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Sleep Hammer</Name>
+    <Name Language="Japanese">睡眠のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Poison Hammer</Name>
+    <Name Language="Japanese">毒のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Plague Hammer</Name>
+    <Name Language="Japanese">腐敗のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Addle Hammer</Name>
+    <Name Language="Japanese">混乱のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Numb Hammer</Name>
+    <Name Language="Japanese">麻痺のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Curse Hammer</Name>
+    <Name Language="Japanese">呪いのハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Stone Hammer</Name>
+    <Name Language="Japanese">石化のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Death Hammer</Name>
+    <Name Language="Japanese">死のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Elemental Hammer</Name>
+    <Name Language="Japanese">属攻のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Pierce Hammer</Name>
+    <Name Language="Japanese">貫通のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">Spread Hammer</Name>
+    <Name Language="Japanese">拡散のハンマー</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー478</Name>
+    <Name Language="Japanese">アザー478</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー479</Name>
+    <Name Language="Japanese">アザー479</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー480</Name>
+    <Name Language="Japanese">アザー480</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー481</Name>
+    <Name Language="Japanese">アザー481</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー482</Name>
+    <Name Language="Japanese">アザー482</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー483</Name>
+    <Name Language="Japanese">アザー483</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー484</Name>
+    <Name Language="Japanese">アザー484</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー485</Name>
+    <Name Language="Japanese">アザー485</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー486</Name>
+    <Name Language="Japanese">アザー486</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー487</Name>
+    <Name Language="Japanese">アザー487</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー488</Name>
+    <Name Language="Japanese">アザー488</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー489</Name>
+    <Name Language="Japanese">アザー489</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー490</Name>
+    <Name Language="Japanese">アザー490</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー491</Name>
+    <Name Language="Japanese">アザー491</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー492</Name>
+    <Name Language="Japanese">アザー492</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー493</Name>
+    <Name Language="Japanese">アザー493</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー494</Name>
+    <Name Language="Japanese">アザー494</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー495</Name>
+    <Name Language="Japanese">アザー495</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー496</Name>
+    <Name Language="Japanese">アザー496</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー497</Name>
+    <Name Language="Japanese">アザー497</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー498</Name>
+    <Name Language="Japanese">アザー498</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー499</Name>
+    <Name Language="Japanese">アザー499</Name>
+  </Item>
+  <Item>
+    <Name Language="English">アザー500</Name>
+    <Name Language="Japanese">アザー500</Name>
+  </Item>
+</Table>

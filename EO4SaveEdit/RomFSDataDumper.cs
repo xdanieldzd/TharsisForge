@@ -34,14 +34,17 @@ namespace EO4SaveEdit
             return nameTable;
         }
 
-        public static void DumpItemData(string inPathNames, string inPathData, string outPath)
+        public static void DumpItemData(string inPathEnglish, string inPathJapanese, string inPathData, string outPath)
         {
-            List<string> nameTable = ReadNameTable(inPathNames);
+            List<string> nameTableEng = ReadNameTable(inPathEnglish);
+            List<string> nameTableJpn = ReadNameTable(inPathJapanese);
+            if (nameTableEng.Count != nameTableJpn.Count) throw new Exception();
+
             List<int> numEffectSlots = new List<int>();
 
             using (BinaryReader reader = new BinaryReader(File.OpenRead(inPathData)))
             {
-                for (int i = 0; i < nameTable.Count; i++)
+                for (int i = 0; i < nameTableEng.Count; i++)
                 {
                     reader.BaseStream.Seek(0x2E, SeekOrigin.Current);
                     int forgeableSlots = reader.ReadByte();
@@ -61,11 +64,26 @@ namespace EO4SaveEdit
             {
                 writer.WriteStartDocument();
                 writer.WriteStartElement("Table");
-                for (int i = 0; i < nameTable.Count; i++)
+                for (int i = 0; i < nameTableEng.Count; i++)
                 {
                     writer.WriteStartElement("Item");
-                    writer.WriteAttributeString("NumSlots", numEffectSlots[i].ToString());
-                    writer.WriteValue(nameTable[i]);
+                    {
+                        writer.WriteAttributeString("NumSlots", numEffectSlots[i].ToString());
+
+                        writer.WriteStartElement("Name");
+                        {
+                            writer.WriteAttributeString("Language", "English");
+                            writer.WriteValue(nameTableEng[i]);
+                        }
+                        writer.WriteEndElement();
+
+                        writer.WriteStartElement("Name");
+                        {
+                            writer.WriteAttributeString("Language", "Japanese");
+                            writer.WriteValue(nameTableJpn[i]);
+                        }
+                        writer.WriteEndElement();
+                    }
                     writer.WriteEndElement();
                 }
                 writer.WriteEndElement();
@@ -73,13 +91,16 @@ namespace EO4SaveEdit
             }
         }
 
-        public static void DumpSkillData(string inPathNames, string inPathMaxLevel, string inPathNameIds, string outPath)
+        public static void DumpSkillData(string inPathEnglish, string inPathJapanese, string inPathMaxLevel, string inPathNameIds, string outPath)
         {
-            List<string> nameTable = ReadNameTable(inPathNames);
+            List<string> nameTableEng = ReadNameTable(inPathEnglish);
+            List<string> nameTableJpn = ReadNameTable(inPathJapanese);
+            if (nameTableEng.Count != nameTableJpn.Count) throw new Exception();
+
             List<byte> nameIds = new List<byte>();
             List<byte> maxLevels = new List<byte>();
 
-            List<Tuple<FileHandlers.Class, byte, string>> skills = new List<Tuple<FileHandlers.Class, byte, string>>();
+            List<Tuple<FileHandlers.Class, byte, Dictionary<SaveLanguages, string>>> skills = new List<Tuple<FileHandlers.Class, byte, Dictionary<SaveLanguages, string>>>();
 
             using (BinaryReader reader = new BinaryReader(File.OpenRead(inPathNameIds)))
             {
@@ -107,7 +128,10 @@ namespace EO4SaveEdit
             {
                 for (int j = 0; j < 0x19; j++)  //skills
                 {
-                    skills.Add(new Tuple<FileHandlers.Class, byte, string>(classes[i], maxLevels[n], nameTable[nameIds[n]]));
+                    Dictionary<SaveLanguages, string> names = new Dictionary<SaveLanguages, string>();
+                    names.Add(SaveLanguages.English, nameTableEng[nameIds[n]]);
+                    names.Add(SaveLanguages.Japanese, nameTableJpn[nameIds[n]]);
+                    skills.Add(new Tuple<FileHandlers.Class, byte, Dictionary<SaveLanguages, string>>(classes[i], maxLevels[n], names));
                     n++;
                 }
             }
@@ -121,15 +145,23 @@ namespace EO4SaveEdit
                 writer.WriteStartElement("Table");
                 for (int i = 0; i < classes.Length - 1; i++)
                 {
-                    List<Tuple<FileHandlers.Class, byte, string>> classSkill = skills.Where(x => x.Item1 == classes[i]).ToList();
+                    List<Tuple<FileHandlers.Class, byte, Dictionary<SaveLanguages, string>>> classSkill = skills.Where(x => x.Item1 == classes[i]).ToList();
 
                     writer.WriteStartElement("Class");
-                    writer.WriteAttributeString("Name", classes[i].ToString());
-                    foreach (Tuple<FileHandlers.Class, byte, string> skill in classSkill)
+                    writer.WriteAttributeString("Value", classes[i].ToString());
+                    foreach (Tuple<FileHandlers.Class, byte, Dictionary<SaveLanguages, string>> skill in classSkill)
                     {
                         writer.WriteStartElement("Skill");
                         writer.WriteAttributeString("MaxLevel", skill.Item2.ToString());
-                        writer.WriteValue(skill.Item3);
+                        foreach (KeyValuePair<SaveLanguages, string> name in skill.Item3)
+                        {
+                            writer.WriteStartElement("Name");
+                            {
+                                writer.WriteAttributeString("Language", name.Key.ToString());
+                                writer.WriteValue(name.Value);
+                            }
+                            writer.WriteEndElement();
+                        }
                         writer.WriteEndElement();
                     }
                     writer.WriteEndElement();
@@ -139,9 +171,11 @@ namespace EO4SaveEdit
             }
         }
 
-        public static void DumpTreasureMapData(string inPathNames, string outPath)
+        public static void DumpTreasureMapData(string inPathEnglish, string inPathJapanese, string outPath)
         {
-            List<string> nameTable = ReadNameTable(inPathNames);
+            List<string> nameTableEng = ReadNameTable(inPathEnglish);
+            List<string> nameTableJpn = ReadNameTable(inPathJapanese);
+            if (nameTableEng.Count != nameTableJpn.Count) throw new Exception();
 
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -150,10 +184,24 @@ namespace EO4SaveEdit
             {
                 writer.WriteStartDocument();
                 writer.WriteStartElement("Table");
-                for (int i = 0; i < nameTable.Count; i++)
+                for (int i = 0; i < nameTableEng.Count; i++)
                 {
                     writer.WriteStartElement("Map");
-                    writer.WriteValue(nameTable[i]);
+                    {
+                        writer.WriteStartElement("Name");
+                        {
+                            writer.WriteAttributeString("Language", "English");
+                            writer.WriteValue(nameTableEng[i]);
+                        }
+                        writer.WriteEndElement();
+
+                        writer.WriteStartElement("Name");
+                        {
+                            writer.WriteAttributeString("Language", "Japanese");
+                            writer.WriteValue(nameTableJpn[i]);
+                        }
+                        writer.WriteEndElement();
+                    }
                     writer.WriteEndElement();
                 }
                 writer.WriteEndElement();
@@ -161,9 +209,11 @@ namespace EO4SaveEdit
             }
         }
 
-        public static void DumpUseItemData(string inPathNames, string outPath)
+        public static void DumpUseItemData(string inPathEnglish, string inPathJapanese, string outPath)
         {
-            List<string> nameTable = ReadNameTable(inPathNames);
+            List<string> nameTableEng = ReadNameTable(inPathEnglish);
+            List<string> nameTableJpn = ReadNameTable(inPathJapanese);
+            if (nameTableEng.Count != nameTableJpn.Count) throw new Exception();
 
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -172,15 +222,30 @@ namespace EO4SaveEdit
             {
                 writer.WriteStartDocument();
                 writer.WriteStartElement("Table");
-                for (int i = 0; i < nameTable.Count; i++)
+                for (int i = 0; i < nameTableEng.Count; i++)
                 {
                     writer.WriteStartElement("Item");
-                    writer.WriteValue(nameTable[i]);
+                    {
+                        writer.WriteStartElement("Name");
+                        {
+                            writer.WriteAttributeString("Language", "English");
+                            writer.WriteValue(nameTableEng[i]);
+                        }
+                        writer.WriteEndElement();
+
+                        writer.WriteStartElement("Name");
+                        {
+                            writer.WriteAttributeString("Language", "Japanese");
+                            writer.WriteValue(nameTableJpn[i]);
+                        }
+                        writer.WriteEndElement();
+                    }
                     writer.WriteEndElement();
                 }
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
             }
         }
+
     }
 }

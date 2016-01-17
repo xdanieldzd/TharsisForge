@@ -42,21 +42,25 @@ namespace EO4SaveEdit
             //LoadData(@"E:\[SSD User Data]\Desktop\filer\UserSaveData\20151006190604_editor-test\00000ea6");
 
             /*RomFSDataDumper.DumpItemData(
+                @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-eur\Item\equipitemnametable.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Item\equipitemnametable.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Item\equipitemtable.tbl",
                 @"C:\Temp\equipitemnametable_jp.xml");
 
             RomFSDataDumper.DumpSkillData(
+                @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-eur\Skill\playerskillnametable.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Skill\playerskillnametable.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Skill\playerskilltable.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Skill\SkillTreeTable.tbl",
                 @"C:\Temp\playerskillnametable_jp.xml");
 
             RomFSDataDumper.DumpTreasureMapData(
+                @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-eur\Dungeon\HiddenTreasureName.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Dungeon\HiddenTreasureName.tbl",
                 @"C:\Temp\HiddenTreasureName_jp.xml");
 
             RomFSDataDumper.DumpUseItemData(
+                @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-eur\Item\useitemnametable.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Item\useitemnametable.tbl",
                 @"C:\Temp\useitemnametable_jp.xml");*/
 #endif

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table>
+  <Map>
+    <Name Language="English">NONE</Name>
+    <Name Language="Japanese">NONE</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Sharp Lands</Name>
+    <Name Language="Japanese">尖台地ノ杖</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Ravine Gate</Name>
+    <Name Language="Japanese">谷門ノ宝典</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Hill Horn</Name>
+    <Name Language="Japanese">丘角ノ溶液</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Deep Woods</Name>
+    <Name Language="Japanese">奥林ノ古刀</Name>
+  </Map>
+  <Map>
+    <Name Language="English">The Pit</Name>
+    <Name Language="Japanese">窪地ノ古剣</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Windy Cape</Name>
+    <Name Language="Japanese">風岬ノ腕輪</Name>
+  </Map>
+  <Map>
+    <Name Language="English">High Cliff</Name>
+    <Name Language="Japanese">高壁前ノ面</Name>
+  </Map>
+  <Map>
+    <Name Language="English">River Shore</Name>
+    <Name Language="Japanese">河原ノ帯</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Distant Hill</Name>
+    <Name Language="Japanese">丘離ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Solitary Isle</Name>
+    <Name Language="Japanese">孤島ノ甘露</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Near Falls</Name>
+    <Name Language="Japanese">瀧辺ノ名薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Plains</Name>
+    <Name Language="Japanese">平原ノ符</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Deep Forest</Name>
+    <Name Language="Japanese">奥森ノ香</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Windy Edge</Name>
+    <Name Language="Japanese">風馳隅ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Plateau I</Name>
+    <Name Language="Japanese">台地ノ秘薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Plateau II</Name>
+    <Name Language="Japanese">台地ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Falls Depths</Name>
+    <Name Language="Japanese">瀧淵ノ香</Name>
+  </Map>
+  <Map>
+    <Name Language="English">High Plain I</Name>
+    <Name Language="Japanese">高地ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Green Plains</Name>
+    <Name Language="Japanese">緑野ノ名薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">High Plain II</Name>
+    <Name Language="Japanese">高地ノ宝典</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Forest Wall</Name>
+    <Name Language="Japanese">壁森ノ溶液</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Clifftop</Name>
+    <Name Language="Japanese">崖上ノ宝典</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Lake Cape</Name>
+    <Name Language="Japanese">湖岬ノ溶液</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Garden Knoll</Name>
+    <Name Language="Japanese">庭斜ノ細剣</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Wall Surface</Name>
+    <Name Language="Japanese">壁面ノ古弓</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Plum Grove I</Name>
+    <Name Language="Japanese">高梅林ノ鏡</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Far Cliff</Name>
+    <Name Language="Japanese">崖離ノ護符</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Lakeside</Name>
+    <Name Language="Japanese">湖畔ノ守り</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Center Step</Name>
+    <Name Language="Japanese">段央ノ首飾</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Lakeview</Name>
+    <Name Language="Japanese">池相ノ耳飾</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Plum Grove II</Name>
+    <Name Language="Japanese">梅林ノ溶剤</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Cliff Edge</Name>
+    <Name Language="Japanese">崖淵河ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Far Cliff II</Name>
+    <Name Language="Japanese">崖河離ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Cliff Ring</Name>
+    <Name Language="Japanese">崖囲ノ名薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Central Plain</Name>
+    <Name Language="Japanese">中原ノ符</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Nearby River</Name>
+    <Name Language="Japanese">梅近河ノ香</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Highland I</Name>
+    <Name Language="Japanese">高地ノ甘露</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Cliff Tree I</Name>
+    <Name Language="Japanese">崖梅ノ符</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Cliff Tree II</Name>
+    <Name Language="Japanese">崖梅ノ名薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Near Wall</Name>
+    <Name Language="Japanese">壁近ノ名薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Highland II</Name>
+    <Name Language="Japanese">高地ノ紋章</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Feeding Area</Name>
+    <Name Language="Japanese">餌場ノ宝典</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Domain</Name>
+    <Name Language="Japanese">領域ノ溶液</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Under Cliff</Name>
+    <Name Language="Japanese">嵐下ノ古鎚</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Storm</Name>
+    <Name Language="Japanese">嵐ノ古小刀</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Under Storm</Name>
+    <Name Language="Japanese">嵐下ノ魔除</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Mountain</Name>
+    <Name Language="Japanese">銀嵐ノ帯</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Gorge Bottom</Name>
+    <Name Language="Japanese">谷底ノ祓石</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Deep Waters</Name>
+    <Name Language="Japanese">深潭ノ守り</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Snow Forest</Name>
+    <Name Language="Japanese">雪森ノ宝玉</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Between Cliffs</Name>
+    <Name Language="Japanese">谷間ノ霊薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Ice Ridge I</Name>
+    <Name Language="Japanese">氷面畔ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Ice Ridge II</Name>
+    <Name Language="Japanese">氷面畔ノ油</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Frozen End</Name>
+    <Name Language="Japanese">氷末ノ符</Name>
+  </Map>
+  <Map>
+    <Name Language="English">High Wall</Name>
+    <Name Language="Japanese">高壁前ノ香</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Snowy Peak I</Name>
+    <Name Language="Japanese">雪峰ノ万薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">High Snow</Name>
+    <Name Language="Japanese">高雪ノ霊薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Snowy Peak II</Name>
+    <Name Language="Japanese">雪峰ノ霞</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Icy Cliff</Name>
+    <Name Language="Japanese">氷上崖ノ油</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Small Pond</Name>
+    <Name Language="Japanese">流前ノ紋章</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Near Cliff</Name>
+    <Name Language="Japanese">壁近ノ甘露</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Palace Climb</Name>
+    <Name Language="Japanese">宮上ノ宝典</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Precipice</Name>
+    <Name Language="Japanese">絶壁ノ溶液</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Stone Road</Name>
+    <Name Language="Japanese">石路ノ直刀</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Near Forest</Name>
+    <Name Language="Japanese">森隣ノ刀剣</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Bridge Top I</Name>
+    <Name Language="Japanese">橋上ノ首輪</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Glowing Pillar</Name>
+    <Name Language="Japanese">柱燐ノ聖字</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Bridge Top II</Name>
+    <Name Language="Japanese">橋上ノ耳飾</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Storm Center</Name>
+    <Name Language="Japanese">嵐央ノ守り</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Path Center</Name>
+    <Name Language="Japanese">回央ノ守り</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Near Storm</Name>
+    <Name Language="Japanese">嵐接ノ眼鏡</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Forest Storm</Name>
+    <Name Language="Japanese">森嵐ノ守り</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Water Surface</Name>
+    <Name Language="Japanese">水面ノ甘露</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Low Horn</Name>
+    <Name Language="Japanese">低角ノ霊薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Forest End</Name>
+    <Name Language="Japanese">森末ノ飴</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Forest</Name>
+    <Name Language="Japanese">森ノ凝固体</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Great Tree</Name>
+    <Name Language="Japanese">大樹ノ万薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Lake Environs</Name>
+    <Name Language="Japanese">湖離ノ名薬</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Lake Shore</Name>
+    <Name Language="Japanese">湖畔ノ香</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Low Road</Name>
+    <Name Language="Japanese">低路ノ香</Name>
+  </Map>
+  <Map>
+    <Name Language="English">Ending Wall</Name>
+    <Name Language="Japanese">終壁ノ勾玉</Name>
+  </Map>
+</Table>

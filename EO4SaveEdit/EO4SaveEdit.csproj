@@ -470,13 +470,7 @@
     <Content Include="Data\CharaIcon\11_08.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\EquipmentDataJpn.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Data\ClassNames.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\TreasureMapDataJpn.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\MapIconsSmall.png">
@@ -485,22 +479,16 @@
     <Content Include="Data\MapIconsLarge.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\SkillDataJpn.xml">
+    <Content Include="Data\TreasureMapData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\TreasureMapDataEng.xml">
+    <Content Include="Data\EquipmentData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\EquipmentDataEng.xml">
+    <Content Include="Data\SkillData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\SkillDataEng.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\ItemDataEng.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\ItemDataJpn.xml">
+    <Content Include="Data\ItemData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="EO4.ico" />

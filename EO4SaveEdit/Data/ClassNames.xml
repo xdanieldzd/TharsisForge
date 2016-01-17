@@ -1,29 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Table>
-  <Language Name="English">
-    <Class Value="Landsknecht">Landsknecht</Class>
-    <Class Value="Nightseeker">Nightseeker</Class>
-    <Class Value="Fortress">Fortress</Class>
-    <Class Value="Sniper">Sniper</Class>
-    <Class Value="Medic">Medic</Class>
-    <Class Value="Runemaster">Runemaster</Class>
-    <Class Value="Dancer">Dancer</Class>
-    <Class Value="Arcanist">Arcanist</Class>
-    <Class Value="Bushi">Bushi</Class>
-    <Class Value="Imperial">Imperial</Class>
-    <Class Value="None">None</Class>
-  </Language>
-  <Language Name="Japanese">
-    <Class Value="Landsknecht">ソードマン</Class>
-    <Class Value="Nightseeker">ナイトシーカー</Class>
-    <Class Value="Fortress">フォートレス</Class>
-    <Class Value="Sniper">スナイパー</Class>
-    <Class Value="Medic">メディック</Class>
-    <Class Value="Runemaster">ルーンマスター</Class>
-    <Class Value="Dancer">ダンサー</Class>
-    <Class Value="Arcanist">ミスティック</Class>
-    <Class Value="Bushi">モノノフ</Class>
-    <Class Value="Imperial">インペリアル</Class>
-    <Class Value="None">なし</Class>
-  </Language>
+  <Class Value="Landsknecht">
+    <Name Language="English">Landsknecht</Name>
+    <Name Language="Japanese">ソードマン</Name>
+  </Class>
+  <Class Value="Nightseeker">
+    <Name Language="English">Nightseeker</Name>
+    <Name Language="Japanese">ナイトシーカー</Name>
+  </Class>
+  <Class Value="Fortress">
+    <Name Language="English">Fortress</Name>
+    <Name Language="Japanese">フォートレス</Name>
+  </Class>
+  <Class Value="Sniper">
+    <Name Language="English">Sniper</Name>
+    <Name Language="Japanese">スナイパー</Name>
+  </Class>
+  <Class Value="Medic">
+    <Name Language="English">Medic</Name>
+    <Name Language="Japanese">メディック</Name>
+  </Class>
+  <Class Value="Runemaster">
+    <Name Language="English">Runemaster</Name>
+    <Name Language="Japanese">ルーンマスター</Name>
+  </Class>
+  <Class Value="Dancer">
+    <Name Language="English">Dancer</Name>
+    <Name Language="Japanese">ダンサー</Name>
+  </Class>
+  <Class Value="Arcanist">
+    <Name Language="English">Arcanist</Name>
+    <Name Language="Japanese">ミスティック</Name>
+  </Class>
+  <Class Value="Bushi">
+    <Name Language="English">Bushi</Name>
+    <Name Language="Japanese">モノノフ</Name>
+  </Class>
+  <Class Value="Imperial">
+    <Name Language="English">Imperial</Name>
+    <Name Language="Japanese">インペリアル</Name>
+  </Class>
+  <Class Value="None">
+    <Name Language="English">None</Name>
+    <Name Language="Japanese">なし</Name>
+  </Class>
 </Table>

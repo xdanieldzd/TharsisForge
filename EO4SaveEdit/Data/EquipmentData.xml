@@ -1,0 +1,3587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Table>
+  <Item NumSlots="0">
+    <Name Language="English">NONE</Name>
+    <Name Language="Japanese">NONE</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Shortsword</Name>
+    <Name Language="Japanese">ショートソード</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Kopis</Name>
+    <Name Language="Japanese">コピス</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Scramasax</Name>
+    <Name Language="Japanese">スクラマサクス</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Cutlass</Name>
+    <Name Language="Japanese">カットラス</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Shamshir</Name>
+    <Name Language="Japanese">シャムシール</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Talwaar</Name>
+    <Name Language="Japanese">タルワール</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Macuahuitl</Name>
+    <Name Language="Japanese">マクアフティル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Viking Sword</Name>
+    <Name Language="Japanese">ヴィーキングソード</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Walloon Sword</Name>
+    <Name Language="Japanese">ワルーンソード</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Falchion</Name>
+    <Name Language="Japanese">ファルシオン</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Bastard Sword</Name>
+    <Name Language="Japanese">バスタードソード</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Schiavona</Name>
+    <Name Language="Japanese">スキアヴォーナ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Katzbalger</Name>
+    <Name Language="Japanese">カッツバルゲル</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Macabuin</Name>
+    <Name Language="Japanese">マカブイン</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Dvergr Sword</Name>
+    <Name Language="Japanese">ドヴェルグの魔剣</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Hrunting</Name>
+    <Name Language="Japanese">フルンティング</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Caladbolg</Name>
+    <Name Language="Japanese">カラドボルグ</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Dragonbane</Name>
+    <Name Language="Japanese">真竜の剣</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Sword</Name>
+    <Name Language="Japanese">世界樹の剣</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">King Slicer</Name>
+    <Name Language="Japanese">キングスライサー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Escape Sword</Name>
+    <Name Language="Japanese">ダッシュツソード</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Wiglaf Sword</Name>
+    <Name Language="Japanese">ウィラフの剣</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Poison Blade</Name>
+    <Name Language="Japanese">ポイズンブレイド</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Falx</Name>
+    <Name Language="Japanese">ファルクス</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Harpe</Name>
+    <Name Language="Japanese">ハルパー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Icy Almace</Name>
+    <Name Language="Japanese">氷刃アルマス</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Durandal</Name>
+    <Name Language="Japanese">デュランダル</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Cavalier Killer</Name>
+    <Name Language="Japanese">キャバリエキラー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Ancient Kopis</Name>
+    <Name Language="Japanese">古のコピス</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Ancient Schiavona</Name>
+    <Name Language="Japanese">古のスキアヴォーナ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Sword10</Name>
+    <Name Language="Japanese">レア剣10</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Wakizashi</Name>
+    <Name Language="Japanese">脇差</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Uchigatana</Name>
+    <Name Language="Japanese">打刀</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Warabite</Name>
+    <Name Language="Japanese">ワラビテ刀</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Dangosashi</Name>
+    <Name Language="Japanese">八丁念仏団子刺し</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Kumo Otoshi</Name>
+    <Name Language="Japanese">雲おとし</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Kijin Daiou</Name>
+    <Name Language="Japanese">鬼神大王</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ichimonji</Name>
+    <Name Language="Japanese">姫鶴一文字</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Nenekirimaru</Name>
+    <Name Language="Japanese">波文蛭巻大太刀</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Ameno Habakiri</Name>
+    <Name Language="Japanese">天羽々斬</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Reitou</Name>
+    <Name Language="Japanese">世界樹の霊刀</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Mumeitou</Name>
+    <Name Language="Japanese">無銘刀</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Nikkari</Name>
+    <Name Language="Japanese">ニッカリ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Monohoshizao</Name>
+    <Name Language="Japanese">モノホシ竿</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Kotegiri</Name>
+    <Name Language="Japanese">小手切り</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Youtou Nihiru</Name>
+    <Name Language="Japanese">妖刀ニヒル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Sword06</Name>
+    <Name Language="Japanese">レア刀06</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Sword07</Name>
+    <Name Language="Japanese">レア刀07</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">DUMMY</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Imperial Blade</Name>
+    <Name Language="Japanese">帝国制式砲剣</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Peacemaker</Name>
+    <Name Language="Japanese">ピースメイカー</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Dragoon</Name>
+    <Name Language="Japanese">ドラグーン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Shiden</Name>
+    <Name Language="Japanese">試製砲剣"紫電"</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Fomalhaut</Name>
+    <Name Language="Japanese">フォーマルハウト</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Prince</Name>
+    <Name Language="Japanese">終ノ型"樹皇"</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade07</Name>
+    <Name Language="Japanese">砲剣07</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade08</Name>
+    <Name Language="Japanese">砲剣08</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade09</Name>
+    <Name Language="Japanese">砲剣09</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade10</Name>
+    <Name Language="Japanese">砲剣10</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade11</Name>
+    <Name Language="Japanese">砲剣11</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade12</Name>
+    <Name Language="Japanese">砲剣12</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade13</Name>
+    <Name Language="Japanese">砲剣13</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade14</Name>
+    <Name Language="Japanese">砲剣14</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">A drive blade15</Name>
+    <Name Language="Japanese">砲剣15</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Shiden EX</Name>
+    <Name Language="Japanese">決戦型砲剣"紫電改"</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Reppu</Name>
+    <Name Language="Japanese">限定砲剣"烈風"</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Paralyzer</Name>
+    <Name Language="Japanese">パラライザー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Drive Sword04</Name>
+    <Name Language="Japanese">レア砲剣04</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Drive Sword05</Name>
+    <Name Language="Japanese">レア砲剣05</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Drive Sword06</Name>
+    <Name Language="Japanese">レア砲剣06</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Drive Sword07</Name>
+    <Name Language="Japanese">レア砲剣07</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">ダミー</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dagger</Name>
+    <Name Language="Japanese">ダガー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Makiri</Name>
+    <Name Language="Japanese">マキリ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Pugio</Name>
+    <Name Language="Japanese">グラディウス</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Balisong</Name>
+    <Name Language="Japanese">蝶の短刀</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Machete</Name>
+    <Name Language="Japanese">マチェット</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Spatha</Name>
+    <Name Language="Japanese">スパタ</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ballock Knife</Name>
+    <Name Language="Japanese">ボロックナイフ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Ring Dagger</Name>
+    <Name Language="Japanese">リングダガー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Kunai</Name>
+    <Name Language="Japanese">苦無</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Jamadhar</Name>
+    <Name Language="Japanese">ジャマダハル</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Parazonium</Name>
+    <Name Language="Japanese">パラゾニウム</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Aikuchi</Name>
+    <Name Language="Japanese">七首</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Dirk</Name>
+    <Name Language="Japanese">ダーク</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Baselard</Name>
+    <Name Language="Japanese">バゼラード</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Kukuri</Name>
+    <Name Language="Japanese">ククリ</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Khanjar</Name>
+    <Name Language="Japanese">クファンジャル</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Liuyedao</Name>
+    <Name Language="Japanese">柳葉飛刀</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Futsuno Mitama</Name>
+    <Name Language="Japanese">布都御魂</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Knife</Name>
+    <Name Language="Japanese">世界樹の短剣</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Surgical Scalpel</Name>
+    <Name Language="Japanese">名医のメス</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Main Gauche</Name>
+    <Name Language="Japanese">マンゴーシュ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Sanctus</Name>
+    <Name Language="Japanese">サンクトゥス</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Sonic Dagger</Name>
+    <Name Language="Japanese">ソニックダガー</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Keris</Name>
+    <Name Language="Japanese">クリス</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ancient Makiri</Name>
+    <Name Language="Japanese">古のマキリ</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Narcoleps</Name>
+    <Name Language="Japanese">ナルコレプス</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Stun Knife</Name>
+    <Name Language="Japanese">スタンナイフ</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Epetam</Name>
+    <Name Language="Japanese">エペタム</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ancient Kunai</Name>
+    <Name Language="Japanese">古の苦無</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Assassin Dagger</Name>
+    <Name Language="Japanese">暗殺者の短刀</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Fleuret</Name>
+    <Name Language="Japanese">フルーレ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Panzerstecher</Name>
+    <Name Language="Japanese">ステッチャー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Town Sword</Name>
+    <Name Language="Japanese">タウンソード</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Pallasch</Name>
+    <Name Language="Japanese">パラッシュ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Pigsticker</Name>
+    <Name Language="Japanese">ボアスピアソード</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rapier</Name>
+    <Name Language="Japanese">レイピア</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Espada Ropera</Name>
+    <Name Language="Japanese">エスパダ・ロペラ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Verdun</Name>
+    <Name Language="Japanese">ヴェルダン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Stiletto</Name>
+    <Name Language="Japanese">スティレット</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Moralltach</Name>
+    <Name Language="Japanese">モラルタ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Estoc</Name>
+    <Name Language="Japanese">エストック</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Misericorde</Name>
+    <Name Language="Japanese">ミセリコルデ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Colichemarde</Name>
+    <Name Language="Japanese">コリシュマルド</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Zirah Bouk</Name>
+    <Name Language="Japanese">ジラハボック</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Egeking</Name>
+    <Name Language="Japanese">エルキイン</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Struggle</Name>
+    <Name Language="Japanese">ストラッゲル</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Last Estoc</Name>
+    <Name Language="Japanese">ラストエストック</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Fragarach</Name>
+    <Name Language="Japanese">フラガラッハ</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Rapier</Name>
+    <Name Language="Japanese">世界樹の小剣</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ancient Rapier</Name>
+    <Name Language="Japanese">古のレイピア</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Acupuncture Pin</Name>
+    <Name Language="Japanese">鍼灸師の針</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Matador Rapier</Name>
+    <Name Language="Japanese">闘牛士の突剣</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Blinding Piercer</Name>
+    <Name Language="Japanese">ブラインドピアス</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Sting</Name>
+    <Name Language="Japanese">ビルボ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Joyeuse</Name>
+    <Name Language="Japanese">ジュワユース</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Hauteclaire</Name>
+    <Name Language="Japanese">オートクレール</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Panic Fleuret</Name>
+    <Name Language="Japanese">パニックフルーレ</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ascalon</Name>
+    <Name Language="Japanese">アスカロン</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ancient Estoc</Name>
+    <Name Language="Japanese">古のエストック</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Flamberge</Name>
+    <Name Language="Japanese">フランベルク</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Rapier10</Name>
+    <Name Language="Japanese">レア突剣10</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Wood Bow</Name>
+    <Name Language="Japanese">ウッドボウ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Beast Bow</Name>
+    <Name Language="Japanese">獣の大弓</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Short Bow</Name>
+    <Name Language="Japanese">ショートボウ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Recurve Bow</Name>
+    <Name Language="Japanese">リカーブボウ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hindi</Name>
+    <Name Language="Japanese">ヒンディ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Kamatha</Name>
+    <Name Language="Japanese">カマサ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Long Bow</Name>
+    <Name Language="Japanese">ロングボウ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Hunter Bow</Name>
+    <Name Language="Japanese">ハンティングボウ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Fin Bow</Name>
+    <Name Language="Japanese">コンポジットボウ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Higoyumi</Name>
+    <Name Language="Japanese">弓胎弓</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Gendawa</Name>
+    <Name Language="Japanese">ジェンダワ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Aquael</Name>
+    <Name Language="Japanese">アクゥアル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">War Bow</Name>
+    <Name Language="Japanese">ウォーボウ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Sigurd's Bow</Name>
+    <Name Language="Japanese">シグルドの強弓</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Zamiel Bow</Name>
+    <Name Language="Japanese">ザミエルボウ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Shidgedou</Name>
+    <Name Language="Japanese">滋籐弓</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Tristan's Bow</Name>
+    <Name Language="Japanese">トリスタンの弓</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Bow</Name>
+    <Name Language="Japanese">世界樹の魔弓</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Ancient Hindi</Name>
+    <Name Language="Japanese">古のヒンディ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Quintet Bow</Name>
+    <Name Language="Japanese">クインテットボウ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Arm Shooter</Name>
+    <Name Language="Japanese">アームシューター</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Tension Bow</Name>
+    <Name Language="Japanese">ラップドボウ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Apollo</Name>
+    <Name Language="Japanese">陽弓アポロ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Heaven Bow</Name>
+    <Name Language="Japanese">星天の長弓</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Raijoudou</Name>
+    <Name Language="Japanese">雷上動</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Yumiyawata</Name>
+    <Name Language="Japanese">弓八幡</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Sylvan Bow</Name>
+    <Name Language="Japanese">シルヴァンボウ</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Blaster</Name>
+    <Name Language="Japanese">バスターモス</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Bow 09</Name>
+    <Name Language="Japanese">レア弓09</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Bow10</Name>
+    <Name Language="Japanese">レア弓10</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Light Mace</Name>
+    <Name Language="Japanese">ライトメイス</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Nirrti</Name>
+    <Name Language="Japanese">ニリ・リ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Crushing Club</Name>
+    <Name Language="Japanese">破砕棍</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Spiked Club</Name>
+    <Name Language="Japanese">スパイクドクラブ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Meteor Hammer</Name>
+    <Name Language="Japanese">流星錘</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hex Club</Name>
+    <Name Language="Japanese">六角棒</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Heavy Mace</Name>
+    <Name Language="Japanese">ヘビーメイス</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Volcanic</Name>
+    <Name Language="Japanese">ヴォルカニック</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Kanasaibou</Name>
+    <Name Language="Japanese">金砕棒</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dramborleg</Name>
+    <Name Language="Japanese">ドランボルレグ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Jadagna</Name>
+    <Name Language="Japanese">ジャ・ダグナ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Langyabang</Name>
+    <Name Language="Japanese">狼牙棒</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">War Pick</Name>
+    <Name Language="Japanese">ウォーピック</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Eliminator</Name>
+    <Name Language="Japanese">エリミネイター</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Bolt Warhammer</Name>
+    <Name Language="Japanese">雷の戦鎚</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Gennou</Name>
+    <Name Language="Japanese">玄翁</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Mace</Name>
+    <Name Language="Japanese">世界樹の戦鎚</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Juncto Hammer</Name>
+    <Name Language="Japanese">進駐の大鎚</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">King Salmon</Name>
+    <Name Language="Japanese">キングサーモン</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Lexxy's Hammer</Name>
+    <Name Language="Japanese">フォウのハンマー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Macana</Name>
+    <Name Language="Japanese">マカーナ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Komodo Hammer</Name>
+    <Name Language="Japanese">コモドハンマー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Morgenstern</Name>
+    <Name Language="Japanese">モルゲンステルン</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Metal Keisaku</Name>
+    <Name Language="Japanese">鉄製警策</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Cataphract</Name>
+    <Name Language="Japanese">カタクラフト</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Yagrush</Name>
+    <Name Language="Japanese">ヤグルシ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Ancient Volcanic</Name>
+    <Name Language="Japanese">古のヴォルカニック</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Evil Eye Club</Name>
+    <Name Language="Japanese">邪眼の鎚</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Skull Crusher</Name>
+    <Name Language="Japanese">頭蓋割り</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Bloody Hammer</Name>
+    <Name Language="Japanese">血塗れの大鎚</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Wand</Name>
+    <Name Language="Japanese">ワンド</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Bone Staff</Name>
+    <Name Language="Japanese">ボーンステッキ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Amud Staff</Name>
+    <Name Language="Japanese">アムードの杖</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Feather Staff</Name>
+    <Name Language="Japanese">フェザースタッフ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Rune Wand</Name>
+    <Name Language="Japanese">ルーンワンド</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Fragrant Wand</Name>
+    <Name Language="Japanese">香気の杖</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Mist Rod</Name>
+    <Name Language="Japanese">ミストロッド</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Wind Rod</Name>
+    <Name Language="Japanese">ウインドロッド</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Luck Staff</Name>
+    <Name Language="Japanese">幸運の杖</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Jewel Staff</Name>
+    <Name Language="Japanese">ジュエルスタッフ</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Vajra</Name>
+    <Name Language="Japanese">金剛杵</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Purple Rod</Name>
+    <Name Language="Japanese">濃紫の錫杖</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Mirage Rod</Name>
+    <Name Language="Japanese">ミラージュロッド</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Khakkhara</Name>
+    <Name Language="Japanese">カッカラ</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Thyrsos</Name>
+    <Name Language="Japanese">テュルソス</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Arcana Rod</Name>
+    <Name Language="Japanese">アルカナワンド</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Sage Wand</Name>
+    <Name Language="Japanese">賢者の杖</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Kerykeion</Name>
+    <Name Language="Japanese">ケリケイオン</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Branch</Name>
+    <Name Language="Japanese">世界樹の金枝</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Frigid Staff</Name>
+    <Name Language="Japanese">凍氷の杖</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Whispering Staff</Name>
+    <Name Language="Japanese">囁きの杖</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Goddess Torch</Name>
+    <Name Language="Japanese">女神のトーチ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Yggdrasil Baton</Name>
+    <Name Language="Japanese">世界樹の指揮棒</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Healing Wand</Name>
+    <Name Language="Japanese">ヒールワンド</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Old Wand</Name>
+    <Name Language="Japanese">古びた杖</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Death Wand</Name>
+    <Name Language="Japanese">死者の杖</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Ogre Vajra</Name>
+    <Name Language="Japanese">鬼面金剛杵</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Cranial Chill</Name>
+    <Name Language="Japanese">封頭の杖</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Wand06</Name>
+    <Name Language="Japanese">レア杖06</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Wand07</Name>
+    <Name Language="Japanese">レア杖07</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Wand08</Name>
+    <Name Language="Japanese">レア杖08</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Wand09</Name>
+    <Name Language="Japanese">レア杖09</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Wand10</Name>
+    <Name Language="Japanese">レア杖10</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Test Armor</Name>
+    <Name Language="Japanese">テストアーマー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Scale Mail</Name>
+    <Name Language="Japanese">スケイルメイル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Lorica Squamata</Name>
+    <Name Language="Japanese">ロリカスクワマタ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Studded Mail</Name>
+    <Name Language="Japanese">スタデッドメイル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Ring Mail</Name>
+    <Name Language="Japanese">リングメイル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Fluted Armor</Name>
+    <Name Language="Japanese">フリューテッド</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Alla Romana</Name>
+    <Name Language="Japanese">アラロマーナ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Composite Armor</Name>
+    <Name Language="Japanese">コンポジットアーマー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Plate Mail</Name>
+    <Name Language="Japanese">ロリカセグメンタータ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Brigandine</Name>
+    <Name Language="Japanese">ブリガンダイン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Full Plate</Name>
+    <Name Language="Japanese">フルコンバット</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Plate Coat</Name>
+    <Name Language="Japanese">プレートコート</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Field Armor</Name>
+    <Name Language="Japanese">フィールドアーマー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Kirjonen Thing</Name>
+    <Name Language="Japanese">キルヨネンの鎧</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Kirjonen Thing 2</Name>
+    <Name Language="Japanese">キルヨネンの硬鎧</Name>
+  </Item>
+  <Item NumSlots="6">
+    <Name Language="English">Kirjonen Thing 3</Name>
+    <Name Language="Japanese">キルヨネンの重鎧</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Sarcophagus</Name>
+    <Name Language="Japanese">ミイラの棺桶</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Tourney Mail</Name>
+    <Name Language="Japanese">トーナメントメイル</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Shell Armor</Name>
+    <Name Language="Japanese">シェルアーマー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Heavy Armor</Name>
+    <Name Language="Japanese">ヘヴィアーマー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Adama Armor</Name>
+    <Name Language="Japanese">アダマーの硬鎧</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Demon Mail</Name>
+    <Name Language="Japanese">バーサーカーメイル</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Knight Armor</Name>
+    <Name Language="Japanese">鋼騎士の鎧</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Royal Byrnie</Name>
+    <Name Language="Japanese">ロイヤルバーニー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Leather Vest</Name>
+    <Name Language="Japanese">レザーベスト</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hobblegeon</Name>
+    <Name Language="Japanese">ホバルジェオン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hard Plate</Name>
+    <Name Language="Japanese">ハードブレスト</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Half Armor</Name>
+    <Name Language="Japanese">ハーフアーマー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Leaf Tunic</Name>
+    <Name Language="Japanese">リーフチュニック</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Cuirassair</Name>
+    <Name Language="Japanese">キュイラッサー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hard Leather</Name>
+    <Name Language="Japanese">硬革胴具足</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Aketon</Name>
+    <Name Language="Japanese">アクトン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Iron Plate</Name>
+    <Name Language="Japanese">アイアンブレスト</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Wing Plate</Name>
+    <Name Language="Japanese">ウィングブレスト</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Indigo Chain</Name>
+    <Name Language="Japanese">インディゴチェイン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hide Armor</Name>
+    <Name Language="Japanese">ハイドアーマー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Padded Armor</Name>
+    <Name Language="Japanese">パッディングアーマー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Fusskampf</Name>
+    <Name Language="Japanese">フースカンプ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Sevenfold Hide</Name>
+    <Name Language="Japanese">七重の皮鎧</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Pure Plate</Name>
+    <Name Language="Japanese">純白の胸当て</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Cloth Armor</Name>
+    <Name Language="Japanese">クロースアーマー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Sneaking Plate</Name>
+    <Name Language="Japanese">スニークブレスト</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Studded Leather</Name>
+    <Name Language="Japanese">スタデッドレザー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">General Leather</Name>
+    <Name Language="Japanese">ジェネラルレザー</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Mirage Vest</Name>
+    <Name Language="Japanese">ミラージュベスト</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Fairy Chain</Name>
+    <Name Language="Japanese">フェアリーチェイン</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Hihiirokane</Name>
+    <Name Language="Japanese">緋緋色金二枚胴具足</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Sylpheed</Name>
+    <Name Language="Japanese">シルフィードベスト</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Panacea Vest</Name>
+    <Name Language="Japanese">パナケアベスト</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Tweed</Name>
+    <Name Language="Japanese">ツイード</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Scale Jerkin</Name>
+    <Name Language="Japanese">スケイルジャーキン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Chemise</Name>
+    <Name Language="Japanese">シミーズ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Leaf Jacket</Name>
+    <Name Language="Japanese">リーファージャケット</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Kazak</Name>
+    <Name Language="Japanese">カザック</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Sack Dress</Name>
+    <Name Language="Japanese">サックドレス</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Mist Robe</Name>
+    <Name Language="Japanese">ミストローブ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Cotardie</Name>
+    <Name Language="Japanese">コートハーディ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Mantle</Name>
+    <Name Language="Japanese">マントヴァ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Caster's Coat</Name>
+    <Name Language="Japanese">法術師の外套</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Gilet</Name>
+    <Name Language="Japanese">ジレ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Siren Tunic</Name>
+    <Name Language="Japanese">サイレンチュニック</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Witch Drawers</Name>
+    <Name Language="Japanese">ウィッチドロワーズ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Spirit Cape</Name>
+    <Name Language="Japanese">スピリットケープ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Linen Cuirass</Name>
+    <Name Language="Japanese">リネンキュラッサ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Great Coat</Name>
+    <Name Language="Japanese">グレートコート</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Illusion Cloak</Name>
+    <Name Language="Japanese">変わり身の外套</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Ao Dai</Name>
+    <Name Language="Japanese">アオザイ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Moth Coat</Name>
+    <Name Language="Japanese">モスコート</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Red Doublet</Name>
+    <Name Language="Japanese">レッドダブレット</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Hermit Robe</Name>
+    <Name Language="Japanese">隠者の衣</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Aurora Veil</Name>
+    <Name Language="Japanese">オーロラヴェール</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Verdant Attire</Name>
+    <Name Language="Japanese">深緑の装束</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Mythic Nithsdale</Name>
+    <Name Language="Japanese">神秘のニスデール</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Element Cloak</Name>
+    <Name Language="Japanese">エレメントクローク</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Kranis</Name>
+    <Name Language="Japanese">クラニス</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Cloak09</Name>
+    <Name Language="Japanese">レア布鎧09</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Cloak10</Name>
+    <Name Language="Japanese">レア布鎧10</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Feathered Hat</Name>
+    <Name Language="Japanese">羽根付き帽子</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Deep Forest Pin</Name>
+    <Name Language="Japanese">深森の髪飾り</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Hairpin</Name>
+    <Name Language="Japanese">木彫りの髪飾り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Kettle Hat</Name>
+    <Name Language="Japanese">ケットルハット</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Chain Helm</Name>
+    <Name Language="Japanese">チェインヘルム</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Bascinet</Name>
+    <Name Language="Japanese">バシニット</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Caresche</Name>
+    <Name Language="Japanese">カレーシュ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Round Helm</Name>
+    <Name Language="Japanese">モンテフォルティノ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Crown Hat</Name>
+    <Name Language="Japanese">クラウンハット</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Nightcap</Name>
+    <Name Language="Japanese">ナイトキャップ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Morion</Name>
+    <Name Language="Japanese">モリオン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Barrel Helm</Name>
+    <Name Language="Japanese">バレルヘルム</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Armet</Name>
+    <Name Language="Japanese">アーメット</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Kirjonen's Hat</Name>
+    <Name Language="Japanese">キルヨネンの兜</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Kirjonen's Helm</Name>
+    <Name Language="Japanese">キルヨネンの重兜</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Raht's Helm</Name>
+    <Name Language="Japanese">ラットのヘルム</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Third Eye Cloth</Name>
+    <Name Language="Japanese">心眼の鉢巻</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Jester's Mask</Name>
+    <Name Language="Japanese">道化師の面</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Beast God Collar</Name>
+    <Name Language="Japanese">獣神の首輪</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Dryad's Earring</Name>
+    <Name Language="Japanese">樹霊のピアス</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Ninja Hood</Name>
+    <Name Language="Japanese">隠密の頭巾</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Jade Mask</Name>
+    <Name Language="Japanese">翡翠の仮面</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Barbute</Name>
+    <Name Language="Japanese">バーブート</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Yggdrasil Crown</Name>
+    <Name Language="Japanese">世界樹の冠</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Forest Crown</Name>
+    <Name Language="Japanese">フォレストクラウン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Circlet</Name>
+    <Name Language="Japanese">ルーンサークレット</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Heretic's Mask</Name>
+    <Name Language="Japanese">邪教徒の面</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Helm08</Name>
+    <Name Language="Japanese">レア頭防具08</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Thick Gages</Name>
+    <Name Language="Japanese">厚手の手袋</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Feather Gloves</Name>
+    <Name Language="Japanese">フェザーグラブ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Leather Gloves</Name>
+    <Name Language="Japanese">レザーグラブ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Studded Gloves</Name>
+    <Name Language="Japanese">スタデッドグラブ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Iron Gloves</Name>
+    <Name Language="Japanese">チェイングラブ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hard Gloves</Name>
+    <Name Language="Japanese">ハードグラブ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Stain Gages</Name>
+    <Name Language="Japanese">まだらの手袋</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Exorcism Gloves</Name>
+    <Name Language="Japanese">降魔の手袋</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Gauntlets</Name>
+    <Name Language="Japanese">ゴーントレット</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Rune Gages</Name>
+    <Name Language="Japanese">ルーングラブ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Expel Arms</Name>
+    <Name Language="Japanese">破邪の手甲</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Beast Gauntlets</Name>
+    <Name Language="Japanese">魔獣の手甲</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Brave Bracers</Name>
+    <Name Language="Japanese">ブレイブブレーサー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Kirjonen's Bracers</Name>
+    <Name Language="Japanese">キルヨネンの手甲</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Medic's Gloves</Name>
+    <Name Language="Japanese">医術師の手袋</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Sniper Gauntlets</Name>
+    <Name Language="Japanese">狙撃手の手甲</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Runemaster Bangle</Name>
+    <Name Language="Japanese">印術師の腕輪</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Arms19</Name>
+    <Name Language="Japanese">腕防具19</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Arms20</Name>
+    <Name Language="Japanese">腕防具20</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Arms21</Name>
+    <Name Language="Japanese">腕防具21</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Poofy Mittens</Name>
+    <Name Language="Japanese">アフロミトン</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Strength Bracers</Name>
+    <Name Language="Japanese">不屈の腕甲</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Bracers</Name>
+    <Name Language="Japanese">ヴァンブレイス</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Croc Bracers</Name>
+    <Name Language="Japanese">ワニ革の手甲</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Power Gloves</Name>
+    <Name Language="Japanese">パワーグラブ</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Superior Glove</Name>
+    <Name Language="Japanese">スペリアーグラブ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Arms07</Name>
+    <Name Language="Japanese">レア腕防具07</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Arms08</Name>
+    <Name Language="Japanese">レア腕防具08</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Arms09</Name>
+    <Name Language="Japanese">レア腕防具09</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hide Boots</Name>
+    <Name Language="Japanese">レザーブーツ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Strap Shoes</Name>
+    <Name Language="Japanese">ストラップシューズ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Jackboots</Name>
+    <Name Language="Japanese">ジャッグブーツ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Chain Greaves</Name>
+    <Name Language="Japanese">チェイングリーブ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Ivy Anklets</Name>
+    <Name Language="Japanese">アイビーアンクル</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Front Cuisse</Name>
+    <Name Language="Japanese">フロントキュイス</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Kilt Tassels</Name>
+    <Name Language="Japanese">キルトタッセル</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">War Greaves</Name>
+    <Name Language="Japanese">ウォーグリーブ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Morbarabakets</Name>
+    <Name Language="Japanese">モールバラバケツ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Sabaton</Name>
+    <Name Language="Japanese">サバトン</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">War Boots</Name>
+    <Name Language="Japanese">バトルブーツ</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Talaria</Name>
+    <Name Language="Japanese">タラリア</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Imperial Boots</Name>
+    <Name Language="Japanese">帝国制式ブーツ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Dance Shoes</Name>
+    <Name Language="Japanese">ダンスシューズ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Western Boots</Name>
+    <Name Language="Japanese">ウェスタンブーツ</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Vanguard Boots</Name>
+    <Name Language="Japanese">先陣の長靴</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Kung Fu Shoes</Name>
+    <Name Language="Japanese">カンフーシューズ</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Solid Moccasins</Name>
+    <Name Language="Japanese">ソリッドモカシン</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Poleyn</Name>
+    <Name Language="Japanese">ガードポレイン</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Fairy Boots</Name>
+    <Name Language="Japanese">妖精の靴</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Quill Boots</Name>
+    <Name Language="Japanese">羽飾りのブーツ</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Night Greaves</Name>
+    <Name Language="Japanese">ナイトグリーブ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Commander's Boots</Name>
+    <Name Language="Japanese">指揮官の長靴</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Cianontedae</Name>
+    <Name Language="Japanese">シアノンテダイ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Leg08</Name>
+    <Name Language="Japanese">レア脚防具08</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Leg09</Name>
+    <Name Language="Japanese">レア脚防具09</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Rare Leg10</Name>
+    <Name Language="Japanese">レア脚防具10</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Buckler</Name>
+    <Name Language="Japanese">バックラー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hide Aspis</Name>
+    <Name Language="Japanese">レザーシールド</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Targe</Name>
+    <Name Language="Japanese">タージェ</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Round Shield</Name>
+    <Name Language="Japanese">ラウンドシールド</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Feather Shield</Name>
+    <Name Language="Japanese">フェザーシールド</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Lantern Shield</Name>
+    <Name Language="Japanese">ランタンシールド</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Caetra</Name>
+    <Name Language="Japanese">カエトラ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Aspis</Name>
+    <Name Language="Japanese">アスピス</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Kite Shield</Name>
+    <Name Language="Japanese">カイトシールド</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Silver Shield</Name>
+    <Name Language="Japanese">シルバーシールド</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hoplon</Name>
+    <Name Language="Japanese">ホプロン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Body Aspis</Name>
+    <Name Language="Japanese">タワーシールド</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Singauta</Name>
+    <Name Language="Japanese">シンガータ</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Kirjonen's Shield</Name>
+    <Name Language="Japanese">キルヨネンの盾</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Lexxy's Shield</Name>
+    <Name Language="Japanese">フォウの盾</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Fortress Shield</Name>
+    <Name Language="Japanese">城砦騎士の盾</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Pizza Margherita</Name>
+    <Name Language="Japanese">ピッツァマルゲリータ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Shield18</Name>
+    <Name Language="Japanese">盾18</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Shield19</Name>
+    <Name Language="Japanese">盾19</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Shield20</Name>
+    <Name Language="Japanese">盾20</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Fist Shield</Name>
+    <Name Language="Japanese">拳骨の盾</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Somastes</Name>
+    <Name Language="Japanese">ソマテマス</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Hildebrand</Name>
+    <Name Language="Japanese">ヒルデブラント</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Pelta</Name>
+    <Name Language="Japanese">ペルタ</Name>
+  </Item>
+  <Item NumSlots="4">
+    <Name Language="English">Qibo Shield</Name>
+    <Name Language="Japanese">破毒之盾</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Caesar Shield</Name>
+    <Name Language="Japanese">カイザーシールド</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Life Belt</Name>
+    <Name Language="Japanese">命のベルト</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Stamina Belt</Name>
+    <Name Language="Japanese">生命のベルト</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Brilliance Belt</Name>
+    <Name Language="Japanese">英気のオーブ</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Heavenly Belt</Name>
+    <Name Language="Japanese">神気のオーブ</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Power Ring</Name>
+    <Name Language="Japanese">力の指輪</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Strength Ring</Name>
+    <Name Language="Japanese">怪力の指輪</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Smart Earring</Name>
+    <Name Language="Japanese">知恵のピアス</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Wisdom Earring</Name>
+    <Name Language="Japanese">英知のピアス</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Rabbit Amulet</Name>
+    <Name Language="Japanese">脱兎のお守り</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Gale Amulet</Name>
+    <Name Language="Japanese">疾風のお守り</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Lucky Choker</Name>
+    <Name Language="Japanese">運のネックレス</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Fortune Necklace</Name>
+    <Name Language="Japanese">幸運のネックレス</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Critical Belt</Name>
+    <Name Language="Japanese">会心バンド</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Deathly Belt</Name>
+    <Name Language="Japanese">必殺バンド</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Velocity Choker</Name>
+    <Name Language="Japanese">神速のチョーカー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Aim Goggles</Name>
+    <Name Language="Japanese">百中ゴーグル</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Target Goggles</Name>
+    <Name Language="Japanese">必中ゴーグル</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Fire Charm</Name>
+    <Name Language="Japanese">炎の守り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Ice Charm</Name>
+    <Name Language="Japanese">氷の守り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Bolt Charm</Name>
+    <Name Language="Japanese">雷の守り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Slash Charm</Name>
+    <Name Language="Japanese">斬撃の守り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Stab Charm</Name>
+    <Name Language="Japanese">突撃の守り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="5">
+    <Name Language="English">Bash Charm</Name>
+    <Name Language="Japanese">壊撃の守り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Death Magatama</Name>
+    <Name Language="Japanese">死祓の勾玉</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Stone Charm</Name>
+    <Name Language="Japanese">石祓のアミュレット</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Curse Gem</Name>
+    <Name Language="Japanese">呪祓の法石</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Poison Charm</Name>
+    <Name Language="Japanese">毒祓のタリスマン</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Sleep Guard</Name>
+    <Name Language="Japanese">眠祓の鏡</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Panic Guard</Name>
+    <Name Language="Japanese">乱祓の帯</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Paralysis Ankh</Name>
+    <Name Language="Japanese">痺祓アンク</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Blind Mask</Name>
+    <Name Language="Japanese">盲祓の面</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Head Guard</Name>
+    <Name Language="Japanese">ヘッドガード</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Arm Guard</Name>
+    <Name Language="Japanese">アームガード</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Leg Guard</Name>
+    <Name Language="Japanese">レッグガード</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Stun Seal</Name>
+    <Name Language="Japanese">スタンシール</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Lion Medal</Name>
+    <Name Language="Japanese">獅子の紋章</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Great Hawk Medal</Name>
+    <Name Language="Japanese">大鷲の紋章</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Tharsis Wing</Name>
+    <Name Language="Japanese">タルシス大翼章</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Tharsis Comet</Name>
+    <Name Language="Japanese">タルシス流星章</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Driftwood Dragon</Name>
+    <Name Language="Japanese">木彫りの竜の護符</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Bronze Icon</Name>
+    <Name Language="Japanese">青銅の聖印記章</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dragon Shard</Name>
+    <Name Language="Japanese">竜鱗の欠片</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Silver Icon</Name>
+    <Name Language="Japanese">白銀の聖印記章</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dragon Fangs</Name>
+    <Name Language="Japanese">幼竜の牙の首飾り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Gold Icon</Name>
+    <Name Language="Japanese">黄金の聖印記章</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dragon Stud</Name>
+    <Name Language="Japanese">竜骨の耳飾り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Platinum Icon</Name>
+    <Name Language="Japanese">白金の聖印記章</Name>
+  </Item>
+  <Item NumSlots="8">
+    <Name Language="English">Kirjonen's Charm</Name>
+    <Name Language="Japanese">キルヨネンの護符</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Lightning Ring</Name>
+    <Name Language="Japanese">雷印の指輪</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Binoculars</Name>
+    <Name Language="Japanese">双眼鏡</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Curse Ink</Name>
+    <Name Language="Japanese">呪術の墨</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Combat Gong</Name>
+    <Name Language="Japanese">戦場の警鐘</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Snow Ring</Name>
+    <Name Language="Japanese">スノーリング</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Eagle Eye Visor</Name>
+    <Name Language="Japanese">鷲の目ゴーグル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Knife Pouch</Name>
+    <Name Language="Japanese">投刃のポーチ</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Hawkeye Visor</Name>
+    <Name Language="Japanese">鷹の目ゴーグル</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Helpful Letter</Name>
+    <Name Language="Japanese">歩み出す者への檄文</Name>
+  </Item>
+  <Item NumSlots="2">
+    <Name Language="English">Battle Charm</Name>
+    <Name Language="Japanese">初陣のお守り</Name>
+  </Item>
+  <Item NumSlots="3">
+    <Name Language="English">Analysis Goggles</Name>
+    <Name Language="Japanese">解析ゴーグル</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Maasai Necklace</Name>
+    <Name Language="Japanese">マサイ族の首飾り</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Mr. Mole's Claw</Name>
+    <Name Language="Japanese">モグラ先輩の爪</Name>
+  </Item>
+  <Item NumSlots="1">
+    <Name Language="English">Senpai's Charm</Name>
+    <Name Language="Japanese">先輩のお守り</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+  <Item NumSlots="0">
+    <Name Language="English">Dummy</Name>
+    <Name Language="Japanese">ダミー</Name>
+  </Item>
+</Table>

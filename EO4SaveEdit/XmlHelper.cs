@@ -17,94 +17,146 @@ namespace EO4SaveEdit
         public static Dictionary<SaveLanguages, Dictionary<Class, Tuple<byte, string>[]>> SkillData { get; private set; }
         public static Dictionary<SaveLanguages, Dictionary<Class, string>> ClassNames { get; private set; }
 
-        //TODO: rework & rewrite to store both languages in one file, like class names?
+        //TODO: remove duplicate data, i.e. duplicate numforgeslots for english & japanese; skilldata organization is garbage currently
 
         static XmlHelper()
         {
-            EquipmentNames = new Dictionary<SaveLanguages, Dictionary<ushort, string>>();
-            NumForgeSlots = new Dictionary<SaveLanguages, Dictionary<ushort, int>>();
-            LoadEquipmentData("Data\\EquipmentDataEng.xml", SaveLanguages.English);
-            LoadEquipmentData("Data\\EquipmentDataJpn.xml", SaveLanguages.Japanese);
-
-            AllItemNames = new Dictionary<SaveLanguages, Dictionary<ushort, string>>();
-            LoadItemData("Data\\ItemDataEng.xml", SaveLanguages.English);
-            LoadItemData("Data\\ItemDataJpn.xml", SaveLanguages.Japanese);
-
-            TreasureMapNames = new Dictionary<SaveLanguages, Dictionary<byte, string>>();
-            LoadTreasureMapData("Data\\TreasureMapDataEng.xml", SaveLanguages.English);
-            LoadTreasureMapData("Data\\TreasureMapDataJpn.xml", SaveLanguages.Japanese);
-
-            SkillData = new Dictionary<SaveLanguages, Dictionary<Class, Tuple<byte, string>[]>>();
-            LoadSkillData("Data\\SkillDataEng.xml", SaveLanguages.English);
-            LoadSkillData("Data\\SkillDataJpn.xml", SaveLanguages.Japanese);
-
-            ClassNames = new Dictionary<SaveLanguages, Dictionary<Class, string>>();
+            LoadEquipmentData("Data\\EquipmentData.xml");
+            LoadItemData("Data\\ItemData.xml");
+            LoadTreasureMapData("Data\\TreasureMapData.xml");
+            LoadSkillData("Data\\SkillData.xml");
             LoadClassNames("Data\\ClassNames.xml");
         }
 
-        static void LoadEquipmentData(string filePath, SaveLanguages lang)
+        static Dictionary<SaveLanguages, string> ReadNameNodes(XmlNode parentNode)
         {
+            Dictionary<SaveLanguages, string> names = new Dictionary<SaveLanguages, string>();
+            foreach (XmlNode nameNode in parentNode.ChildNodes)
+            {
+                SaveLanguages nameLang = (SaveLanguages)Enum.Parse(typeof(SaveLanguages), nameNode.Attributes["Language"].InnerText);
+                names.Add(nameLang, nameNode.InnerText);
+            }
+            return names;
+        }
+
+        static void LoadEquipmentData(string filePath)
+        {
+            EquipmentNames = new Dictionary<SaveLanguages, Dictionary<ushort, string>>();
+            NumForgeSlots = new Dictionary<SaveLanguages, Dictionary<ushort, int>>();
+
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
 
-            EquipmentNames[lang] = new Dictionary<ushort, string>();
-            NumForgeSlots[lang] = new Dictionary<ushort, int>();
             for (ushort i = 0; i < xmlDoc.DocumentElement.ChildNodes.Count; i++)
             {
-                XmlNode node = xmlDoc.DocumentElement.ChildNodes[i];
-                EquipmentNames[lang].Add(i, node.InnerText);
-                NumForgeSlots[lang].Add(i, int.Parse(node.Attributes["NumSlots"].InnerText));
+                XmlNode equipmentNode = xmlDoc.DocumentElement.ChildNodes[i];
+
+                int numSlots = int.Parse(equipmentNode.Attributes["NumSlots"].InnerText);
+                Dictionary<SaveLanguages, string> names = ReadNameNodes(equipmentNode);
+                foreach (KeyValuePair<SaveLanguages, string> name in names)
+                {
+                    if (!EquipmentNames.ContainsKey(name.Key)) EquipmentNames[name.Key] = new Dictionary<ushort, string>();
+                    if (!NumForgeSlots.ContainsKey(name.Key)) NumForgeSlots[name.Key] = new Dictionary<ushort, int>();
+
+                    EquipmentNames[name.Key].Add(i, name.Value);
+                    NumForgeSlots[name.Key].Add(i, numSlots);
+                }
             }
         }
 
-        static void LoadItemData(string filePath, SaveLanguages lang)
+        static void LoadItemData(string filePath)
         {
+            AllItemNames = new Dictionary<SaveLanguages, Dictionary<ushort, string>>();
+
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
 
-            AllItemNames[lang] = new Dictionary<ushort, string>();
-            AllItemNames[lang] = AllItemNames[lang].Concat(EquipmentNames[lang]).ToDictionary(x => x.Key, y => y.Value);
             for (ushort i = 1, j = 925; i < xmlDoc.DocumentElement.ChildNodes.Count; i++, j++)
-                AllItemNames[lang].Add(j, xmlDoc.DocumentElement.ChildNodes[i].InnerText);
+            {
+                XmlNode itemNode = xmlDoc.DocumentElement.ChildNodes[i];
+
+                Dictionary<SaveLanguages, string> names = ReadNameNodes(itemNode);
+                foreach (KeyValuePair<SaveLanguages, string> name in names)
+                {
+                    if (!AllItemNames.ContainsKey(name.Key))
+                    {
+                        AllItemNames[name.Key] = new Dictionary<ushort, string>();
+                        AllItemNames[name.Key] = AllItemNames[name.Key].Concat(EquipmentNames[name.Key]).ToDictionary(x => x.Key, y => y.Value);
+                    }
+
+                    AllItemNames[name.Key].Add(j, name.Value);
+                }
+            }
         }
 
-        static void LoadTreasureMapData(string filePath, SaveLanguages lang)
+        static void LoadTreasureMapData(string filePath)
         {
+            TreasureMapNames = new Dictionary<SaveLanguages, Dictionary<byte, string>>();
+
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
 
-            TreasureMapNames[lang] = new Dictionary<byte, string>();
-            for (byte i = 1; i < xmlDoc.DocumentElement.ChildNodes.Count; i++)
-                TreasureMapNames[lang].Add((byte)(i - 1), xmlDoc.DocumentElement.ChildNodes[i].InnerText);
-            TreasureMapNames[lang].Add(byte.MaxValue, xmlDoc.DocumentElement.ChildNodes[0].InnerText);
+            for (int i = 0; i < xmlDoc.DocumentElement.ChildNodes.Count; i++)
+            {
+                XmlNode mapNode = xmlDoc.DocumentElement.ChildNodes[i];
+
+                Dictionary<SaveLanguages, string> names = ReadNameNodes(mapNode);
+                foreach (KeyValuePair<SaveLanguages, string> name in names)
+                {
+                    if (!TreasureMapNames.ContainsKey(name.Key)) TreasureMapNames[name.Key] = new Dictionary<byte, string>();
+                    TreasureMapNames[name.Key].Add(i == 0 ? byte.MaxValue : (byte)(i - 1), name.Value);
+                }
+            }
         }
 
-        static void LoadSkillData(string filePath, SaveLanguages lang)
+        static void LoadSkillData(string filePath)
         {
+            SkillData = new Dictionary<SaveLanguages, Dictionary<Class, Tuple<byte, string>[]>>();
+
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
 
-            SkillData[lang] = new Dictionary<Class, Tuple<byte, string>[]>();
             foreach (XmlNode classNode in xmlDoc.DocumentElement.ChildNodes)
             {
-                Tuple<byte, string>[] classSkills = new Tuple<byte, string>[classNode.ChildNodes.Count];
-                for (int i = 0; i < classSkills.Length; i++)
-                    classSkills[i] = new Tuple<byte, string>(byte.Parse(classNode.ChildNodes[i].Attributes["MaxLevel"].InnerText), classNode.ChildNodes[i].InnerText);
-                SkillData[lang][(Class)Enum.Parse(typeof(Class), classNode.Attributes["Name"].InnerText)] = classSkills;
+                Class classValue = (Class)Enum.Parse(typeof(Class), classNode.Attributes["Value"].InnerText);
+                Tuple<byte, Dictionary<SaveLanguages, string>>[] classSkills = new Tuple<byte, Dictionary<SaveLanguages, string>>[classNode.ChildNodes.Count];
+
+                for (int i = 0; i < classNode.ChildNodes.Count; i++)
+                {
+                    XmlNode skillNode = classNode.ChildNodes[i];
+
+                    byte maxLevel = byte.Parse(skillNode.Attributes["MaxLevel"].InnerText);
+                    classSkills[i] = new Tuple<byte, Dictionary<SaveLanguages, string>>(maxLevel, ReadNameNodes(skillNode));
+                }
+
+                foreach (SaveLanguages lang in Enum.GetValues(typeof(SaveLanguages)))
+                {
+                    if (!SkillData.ContainsKey(lang)) SkillData[lang] = new Dictionary<Class, Tuple<byte, string>[]>();
+
+                    Tuple<byte, string>[] classSkillsLoc = new Tuple<byte, string>[classSkills.Length];
+                    for (int j = 0; j < classSkills.Length; j++)
+                        classSkillsLoc[j] = new Tuple<byte, string>(classSkills[j].Item1, classSkills[j].Item2[lang]);
+                    SkillData[lang].Add(classValue, classSkillsLoc);
+                }
             }
         }
 
         static void LoadClassNames(string filePath)
         {
+            ClassNames = new Dictionary<SaveLanguages, Dictionary<Class, string>>();
+
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
 
-            foreach (XmlNode langNode in xmlDoc.DocumentElement.ChildNodes)
+            foreach (XmlNode classNode in xmlDoc.DocumentElement.ChildNodes)
             {
-                SaveLanguages lang = (SaveLanguages)Enum.Parse(typeof(SaveLanguages), langNode.Attributes["Name"].InnerText);
-                ClassNames[lang] = new Dictionary<Class, string>();
-                foreach (XmlNode classNode in langNode.ChildNodes)
-                    ClassNames[lang].Add((Class)Enum.Parse(typeof(Class), classNode.Attributes["Value"].InnerText), classNode.InnerText);
+                Class classValue = (Class)Enum.Parse(typeof(Class), classNode.Attributes["Value"].InnerText);
+                Dictionary<SaveLanguages, string> names = ReadNameNodes(classNode);
+                foreach (KeyValuePair<SaveLanguages, string> name in names)
+                {
+                    if (!ClassNames.ContainsKey(name.Key)) ClassNames[name.Key] = new Dictionary<Class, string>();
+                    ClassNames[name.Key].Add(classValue, name.Value);
+                }
             }
         }
     }
