@@ -63,6 +63,8 @@ namespace EO4SaveEdit
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-eur\Item\useitemnametable.tbl",
                 @"E:\Translations\3DS Etrian Odyssey 4\Original & Dumps\original-jpn\Item\useitemnametable.tbl",
                 @"C:\Temp\useitemnametable_jp.xml");*/
+
+            //LoadData(@"D:\User Data\Desktop\Notes & Misc\filer\UserSaveData\20150830021743_editor-test\00000ea6");
 #endif
         }
 

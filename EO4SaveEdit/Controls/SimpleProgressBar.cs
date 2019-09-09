@@ -6,14 +6,20 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms.VisualStyles;
+using System.Runtime.InteropServices;
 
 namespace EO4SaveEdit.Controls
 {
     public class SimpleProgressBar : UserControl
     {
+        [DllImport("dwmapi.dll", PreserveSig = false)]
+        static extern bool DwmIsCompositionEnabled();
+
         const int minDefault = 0, maxDefault = 100, valDefault = 0;
 
         int minimum, maximum, val;
+
+        static bool compositionEnabled = DwmIsCompositionEnabled();
 
         protected override Size DefaultSize
         {
@@ -81,22 +87,29 @@ namespace EO4SaveEdit.Controls
             maximum = maxDefault;
             val = valDefault;
 
-            barRenderer = new VisualStyleRenderer("PROGRESS", 5, 0);
+            if (compositionEnabled)
+                barRenderer = new VisualStyleRenderer("PROGRESS", 5, 0);
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
-            //
+            if (compositionEnabled && ProgressBarRenderer.IsSupported)
+                ProgressBarRenderer.DrawHorizontalBar(e.Graphics, e.ClipRectangle);
+            else
+                e.Graphics.FillRectangle(SystemBrushes.Window, e.ClipRectangle);
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            if (!ProgressBarRenderer.IsSupported) throw new Exception("ProgressBarRenderer not supported");
-
-            ProgressBarRenderer.DrawHorizontalBar(e.Graphics, e.ClipRectangle);
-
             if (barRectangle.Width <= 0 || barRectangle.Height <= 0) return;
-            barRenderer.DrawBackground(e.Graphics, barRectangle);
+
+            if (compositionEnabled && ProgressBarRenderer.IsSupported && barRenderer != null)
+                barRenderer.DrawBackground(e.Graphics, barRectangle);
+            else
+            {
+                e.Graphics.FillRectangle(SystemBrushes.ActiveCaption, barRectangle);
+                ControlPaint.DrawBorder3D(e.Graphics, e.ClipRectangle, Border3DStyle.Sunken);
+            }
         }
     }
 }
